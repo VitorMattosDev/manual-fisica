@@ -1,0 +1,139 @@
+---
+title: "Oscilações Amortecidas, Forçadas e Ressonância"
+---
+
+## Motivação
+
+Um pêndulo real não oscila para sempre: ele perde amplitude e para. Um balanço,
+porém, ganha altura se empurrado no ritmo certo — e uma ponte pode desabar se o
+vento ou o passo de soldados a excitar na frequência errada. O MHS ideal do
+capítulo anterior ignora o atrito e as forças externas; este capítulo os
+reintroduz, levando a três fenômenos essenciais: o **amortecimento**, as
+**oscilações forçadas** e a **ressonância** — responsável por desde a sintonia de
+um rádio até o colapso de estruturas.
+
+## Oscilações amortecidas
+
+Toda oscilação real sofre uma força dissipativa. No modelo mais simples, ela é
+proporcional à velocidade (arrasto viscoso): $F_\text{amort} = -b\dot{x}$.
+Somada à força restauradora, a segunda lei dá a equação do oscilador amortecido.
+
+::: {#def-oscilador-amortecido}
+O **oscilador amortecido** obedece a
+$$m\ddot{x} + b\dot{x} + kx = 0,$$ {#eq-oscilador-amortecido}
+onde $b$ é a constante de amortecimento. Define-se a frequência natural
+$\omega_0 = \sqrt{k/m}$ e o coeficiente $\gamma = b/(2m)$.
+:::
+
+A natureza da solução depende da intensidade do amortecimento:
+
+::: {.callout-important}
+## Os três regimes de amortecimento
+- **Subamortecido** ($\gamma < \omega_0$): oscila com amplitude que decai
+  exponencialmente,
+  $$x(t) = A\,e^{-\gamma t}\cos(\omega' t + \varphi), \qquad \omega' = \sqrt{\omega_0^2 - \gamma^2}.$$ {#eq-subamortecido}
+- **Criticamente amortecido** ($\gamma = \omega_0$): retorna ao equilíbrio no
+  **menor tempo possível**, sem oscilar.
+- **Superamortecido** ($\gamma > \omega_0$): retorna lentamente, sem oscilar.
+:::
+
+::: {.callout-note}
+## Amortecimento crítico na engenharia
+O amortecimento crítico é o ideal para amortecedores de carro e fechos de porta:
+queremos que o sistema volte ao equilíbrio rápido, mas **sem** ultrapassar e
+oscilar. Subamortecido balançaria; superamortecido seria lento demais.
+:::
+
+## Oscilações forçadas e ressonância
+
+Aplique agora uma força externa periódica $F_0\cos(\omega t)$. Após um transiente,
+o sistema oscila na frequência **da força**, $\omega$, não na natural — mas com
+amplitude que depende fortemente de quão perto $\omega$ está de $\omega_0$.
+
+::: {.callout-important}
+## Amplitude da oscilação forçada
+No regime estacionário, a amplitude da resposta é
+$$A(\omega) = \frac{F_0/m}{\sqrt{(\omega_0^2 - \omega^2)^2 + (2\gamma\omega)^2}}.$$ {#eq-amplitude-forcada}
+Ela é máxima quando $\omega \approx \omega_0$: é a **ressonância**.
+:::
+
+::: {.callout-important}
+## Ressonância
+Quando a frequência da força externa se aproxima da frequência natural
+($\omega \to \omega_0$), a amplitude cresce drasticamente — tanto mais quanto
+menor o amortecimento. No limite sem amortecimento ($\gamma\to0$), a amplitude
+divergiria.
+:::
+
+::: {.callout-note}
+## A ressonância no cotidiano
+É a ressonância que permite sintonizar um rádio (o circuito responde só à
+frequência da estação), faz uma taça quebrar com a voz, e empurra um balanço com
+pouco esforço se você acerta o ritmo. É também a vilã de desastres estruturais: a
+passarela do Millennium em Londres teve de ser fechada e amortecida por oscilar em
+ressonância com o passo dos pedestres.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-decaimento}
+Um oscilador subamortecido tem $\omega_0 = 10\ \mathrm{rad/s}$ e
+$\gamma = 0{,}50\ \mathrm{s^{-1}}$. Qual sua frequência de oscilação $\omega'$ e
+em quanto tempo a amplitude cai a $1/e$ do valor inicial?
+:::
+
+**Solução.** Por @eq-subamortecido,
+$\omega' = \sqrt{\omega_0^2 - \gamma^2} = \sqrt{100 - 0{,}25} \approx 9{,}99\ \mathrm{rad/s}$ —
+quase igual a $\omega_0$, pois o amortecimento é fraco. A amplitude
+$A\,e^{-\gamma t}$ cai a $1/e$ quando $\gamma t = 1$, ou seja
+$t = 1/\gamma = 2{,}0\ \mathrm{s}$.
+
+::: {#exm-ressonancia}
+Um sistema com $\omega_0 = 50\ \mathrm{rad/s}$ é forçado. Para que frequência de
+excitação a amplitude é máxima, e o que limita seu valor?
+:::
+
+**Solução.** Pela @eq-amplitude-forcada, a amplitude é máxima perto de
+$\omega = \omega_0 = 50\ \mathrm{rad/s}$ (ressonância). O que impede a amplitude de
+divergir é o termo de amortecimento $2\gamma\omega$ no denominador: quanto menor
+$\gamma$, mais alto e estreito o pico de ressonância.
+
+## Exercícios
+
+::: {#exr-regime}
+Um sistema tem $\omega_0 = 4{,}0\ \mathrm{rad/s}$. Classifique o regime se
+(a) $\gamma = 1{,}0\ \mathrm{s^{-1}}$; (b) $\gamma = 4{,}0\ \mathrm{s^{-1}}$;
+(c) $\gamma = 8{,}0\ \mathrm{s^{-1}}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Compare $\gamma$ com $\omega_0 = 4{,}0$: (a) $\gamma<\omega_0$ →
+**subamortecido**; (b) $\gamma=\omega_0$ → **criticamente amortecido**;
+(c) $\gamma>\omega_0$ → **superamortecido**.
+:::
+
+::: {#exr-q-fator}
+Por que o amortecimento crítico é preferido em amortecedores de automóvel, em vez
+de um amortecimento muito fraco?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Amortecimento fraco (subamortecido) faria o carro **balançar** várias vezes após
+um buraco, comprometendo conforto e controle. O crítico devolve o veículo ao
+equilíbrio no menor tempo **sem oscilar**.
+:::
+
+::: {#exr-ponte}
+Soldados são instruídos a "quebrar passo" ao cruzar pontes. Que fenômeno isso
+evita?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **ressonância**: se a cadência do passo coincidir com a frequência natural da
+ponte (@eq-amplitude-forcada com $\omega\approx\omega_0$), a amplitude das
+oscilações cresce perigosamente. Quebrar o passo torna a excitação não periódica,
+evitando o acúmulo ressonante.
+:::

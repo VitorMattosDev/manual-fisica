@@ -1,0 +1,134 @@
+---
+title: "Indução Eletromagnética: Faraday e Lenz"
+---
+
+## Motivação
+
+Correntes criam campos magnéticos — será que campos magnéticos criam correntes? A
+resposta, descoberta por Faraday em 1831, é sutil e poderosa: um campo magnético
+**constante** não faz nada, mas um campo que **varia** induz corrente. Essa
+indução eletromagnética é o coração da civilização elétrica: toda usina —
+hidrelétrica, nuclear, eólica — gera eletricidade movendo ímãs perto de bobinas.
+Este capítulo apresenta a lei de Faraday e a lei de Lenz, que juntas governam o
+fenômeno.
+
+## Fluxo magnético
+
+::: {#def-fluxo-magnetico}
+O **fluxo magnético** através de uma superfície de área $A$ é
+$$\Phi_B = \vec{B}\cdot\vec{A} = B A\cos\theta,$$ {#eq-fluxo-magnetico}
+onde $\theta$ é o ângulo entre o campo e a normal à superfície. A unidade é o
+**weber** ($1\ \mathrm{Wb} = 1\ \mathrm{T\,m^2}$).
+:::
+
+O fluxo pode mudar de três modos: variando $B$, variando a área $A$, ou girando a
+espira (mudando $\theta$). **Qualquer** um deles induz corrente — esta é a chave.
+
+## A lei de Faraday
+
+::: {.callout-important}
+## Lei de Faraday da indução
+A força eletromotriz (fem) induzida numa espira é igual ao negativo da taxa de
+variação do fluxo magnético:
+$$\varepsilon = -\frac{\mathrm{d}\Phi_B}{\mathrm{d}t}.$$ {#eq-faraday}
+Para uma bobina de $N$ espiras, multiplica-se por $N$:
+$\varepsilon = -N\,\mathrm{d}\Phi_B/\mathrm{d}t$.
+:::
+
+A fem induzida não vem de uma pilha: vem da **variação do fluxo**. É um campo
+elétrico induzido, criado por um campo magnético em mudança — a primeira pista de
+que campos elétrico e magnético são facetas de uma só entidade.
+
+## A lei de Lenz
+
+O sinal negativo da @eq-faraday encerra uma lei física com nome próprio.
+
+::: {.callout-important}
+## Lei de Lenz
+A corrente induzida tem sentido tal que **se opõe à variação do fluxo** que a
+produziu. A natureza "resiste" à mudança magnética.
+:::
+
+::: {.callout-note}
+## Lenz é conservação de energia
+Se a corrente induzida *reforçasse* a variação do fluxo, ela criaria mais variação,
+mais corrente, e assim por diante — energia surgindo do nada. A lei de Lenz proíbe
+isso: a corrente induzida sempre **freia** a mudança, exigindo trabalho externo
+para mantê-la. É a conservação de energia disfarçada de regra de sinal. Por isso é
+preciso *empurrar* o ímã contra a resistência ao gerar eletricidade.
+:::
+
+## Fem de movimento
+
+Um caso concreto: uma barra condutora de comprimento $L$ deslizando com velocidade
+$v$ perpendicular a um campo $B$ varre área e induz fem.
+
+::: {.callout-important}
+## Fem de movimento
+$$\varepsilon = B\,L\,v.$$ {#eq-fem-movimento}
+:::
+
+::: {.proof}
+## Dedução da fem de movimento
+A barra deslizando varre área a uma taxa $\mathrm{d}A/\mathrm{d}t = L v$. O fluxo
+varia a $\mathrm{d}\Phi_B/\mathrm{d}t = B\,\mathrm{d}A/\mathrm{d}t = B L v$. Pela lei
+de Faraday (@eq-faraday), em módulo, $\varepsilon = BLv$. $\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-espira}
+Uma espira de área $0{,}020\ \mathrm{m^2}$ está num campo perpendicular que cresce
+de $0{,}10\ \mathrm{T}$ a $0{,}30\ \mathrm{T}$ em $0{,}40\ \mathrm{s}$. Qual a fem
+induzida?
+:::
+
+**Solução.** A variação de fluxo (@eq-fluxo-magnetico) é
+$\Delta\Phi_B = A\,\Delta B = 0{,}020\times(0{,}30-0{,}10) = 4{,}0\times10^{-3}\ \mathrm{Wb}$.
+Pela lei de Faraday (@eq-faraday):
+$$|\varepsilon| = \frac{\Delta\Phi_B}{\Delta t} = \frac{4{,}0\times10^{-3}}{0{,}40} = 1{,}0\times10^{-2}\ \mathrm{V}.$$
+
+::: {#exm-barra-trilhos}
+Uma barra de $0{,}50\ \mathrm{m}$ desliza a $4{,}0\ \mathrm{m/s}$ sobre trilhos num
+campo de $0{,}20\ \mathrm{T}$. Qual a fem gerada?
+:::
+
+**Solução.** Por @eq-fem-movimento:
+$$\varepsilon = BLv = 0{,}20\times0{,}50\times4{,}0 = 0{,}40\ \mathrm{V}.$$
+
+## Exercícios
+
+::: {#exr-bobina}
+Uma bobina de $100$ espiras sofre variação de fluxo de
+$2{,}0\times10^{-3}\ \mathrm{Wb}$ em $0{,}10\ \mathrm{s}$. Qual a fem induzida?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$|\varepsilon| = N\,\Delta\Phi_B/\Delta t = 100\times2{,}0\times10^{-3}/0{,}10 = 2{,}0\ \mathrm{V}$ (@eq-faraday).
+:::
+
+::: {#exr-lenz-sentido}
+Um ímã com o polo norte é aproximado de uma espira. Em que sentido a corrente
+induzida circula, e por quê?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela lei de Lenz, a corrente induzida circula de modo a criar um polo norte voltado
+para o ímã, **repelindo-o** e opondo-se ao aumento de fluxo. A espira resiste à
+aproximação — daí a necessidade de trabalho para empurrar o ímã.
+:::
+
+::: {#exr-gerador}
+Por que é necessário gastar energia mecânica para gerar eletricidade num gerador,
+mesmo idealizando-o sem atrito?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A corrente induzida cria forças magnéticas que, pela lei de Lenz, se opõem ao
+movimento do gerador. É preciso realizar trabalho contra essa oposição — esse
+trabalho é exatamente convertido na energia elétrica produzida (conservação de
+energia).
+:::

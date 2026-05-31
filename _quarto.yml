@@ -45,6 +45,7 @@ book:
         - volumes/v3-mecanica2/03-momento-angular.qmd
         - volumes/v3-mecanica2/04-estatica-corpos-rigidos.qmd
         - volumes/v3-mecanica2/05-gravitacao.qmd
+        - volumes/v3-mecanica2/06-mhs.qmd
   appendices:
     - constantes.qmd
 

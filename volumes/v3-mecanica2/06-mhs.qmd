@@ -1,0 +1,140 @@
+---
+title: "Movimento Harmônico Simples"
+---
+
+## Motivação
+
+Uma massa numa mola, um pêndulo, as cordas de um violão, os átomos num cristal,
+um circuito elétrico oscilante: sistemas fisicamente muito diferentes obedecem à
+**mesma** equação de movimento sempre que há uma força restauradora proporcional
+ao deslocamento. Esse padrão universal é o **movimento harmônico simples** (MHS),
+talvez o modelo mais reaproveitado de toda a física. Dominá-lo aqui pavimenta o
+caminho para as ondas (Volume V), a acústica e até a mecânica quântica do
+oscilador. Este capítulo deduz o MHS e suas propriedades a partir da lei de Hooke.
+
+## A condição do MHS
+
+::: {#def-mhs}
+Um sistema executa **movimento harmônico simples** quando a força resultante é
+restauradora e proporcional ao deslocamento da posição de equilíbrio:
+$$F = -k\,x,$$ {#eq-hooke}
+a **lei de Hooke**, com $k>0$ a constante de força. O sinal negativo indica que a
+força aponta sempre de volta ao equilíbrio.
+:::
+
+Aplicando a segunda lei de Newton ($F = ma = m\ddot{x}$) à @eq-hooke, obtém-se a
+**equação do MHS**:
+$$m\ddot{x} = -k x \;\Longrightarrow\; \ddot{x} = -\omega^2 x, \qquad \omega = \sqrt{\frac{k}{m}}.$$ {#eq-equacao-mhs}
+A grandeza $\omega$ é a **frequência angular**. Toda vez que uma grandeza física
+satisfizer "segunda derivada $= -$ constante $\times$ ela mesma", há MHS.
+
+## A solução: oscilação senoidal
+
+::: {.callout-important}
+## Solução do movimento harmônico simples
+A solução da @eq-equacao-mhs é uma oscilação senoidal
+$$x(t) = A\cos(\omega t + \varphi),$$ {#eq-solucao-mhs}
+onde $A$ é a **amplitude**, $\varphi$ a **fase inicial** e $\omega$ a frequência
+angular. O **período** e a **frequência** são
+$$T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{m}{k}}, \qquad f = \frac{1}{T} = \frac{\omega}{2\pi}.$$ {#eq-periodo-mhs}
+:::
+
+::: {.proof}
+## Verificação da solução
+Derive a @eq-solucao-mhs duas vezes:
+$\dot{x} = -A\omega\,\mathrm{sen}(\omega t + \varphi)$ e
+$\ddot{x} = -A\omega^2\cos(\omega t + \varphi) = -\omega^2 x$. Isso satisfaz
+exatamente a @eq-equacao-mhs. As constantes $A$ e $\varphi$ ficam determinadas
+pelas condições iniciais (posição e velocidade em $t=0$). $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Período independente da amplitude
+Repare que $T$ na @eq-periodo-mhs **não depende de $A$**: oscilações grandes e
+pequenas levam o mesmo tempo. Essa propriedade — o **isocronismo**, notado por
+Galileu nos pêndulos — é o que torna o MHS útil para marcar o tempo em relógios.
+:::
+
+## Energia no MHS
+
+A energia migra continuamente entre cinética e potencial elástica, mas a soma é
+constante (sistema conservativo).
+
+::: {.callout-important}
+## Energia do oscilador harmônico
+Com $U = \tfrac12 k x^2$ e $K = \tfrac12 m v^2$, a energia mecânica total é
+constante e vale
+$$E = \tfrac12 k A^2 = \tfrac12 m v_\text{máx}^2,$$ {#eq-energia-mhs}
+onde a rapidez máxima (no equilíbrio) é $v_\text{máx} = \omega A$.
+:::
+
+## O pêndulo simples
+
+Para pequenas oscilações, o pêndulo também é MHS. A componente restauradora do
+peso é $-mg\,\mathrm{sen}\,\theta \approx -mg\theta$ para $\theta$ pequeno, o que
+reproduz a @eq-equacao-mhs com $\omega^2 = g/L$:
+
+::: {.callout-note}
+## Período do pêndulo simples
+$$T = 2\pi\sqrt{\frac{L}{g}} \qquad (\theta \text{ pequeno}).$$ {#eq-periodo-pendulo}
+Independe da massa e da amplitude (enquanto $\mathrm{sen}\,\theta\approx\theta$
+valer). Confirma o resultado dimensional do @exm-pendulo-dim e a constante
+$2\pi$ que a análise dimensional não dava.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-massa-mola}
+Uma massa de $0{,}50\ \mathrm{kg}$ presa a uma mola de $k = 200\ \mathrm{N/m}$
+oscila com amplitude $0{,}10\ \mathrm{m}$. Ache o período e a rapidez máxima.
+:::
+
+**Solução.** Por @eq-periodo-mhs,
+$\omega = \sqrt{k/m} = \sqrt{200/0{,}50} = 20\ \mathrm{rad/s}$, logo
+$T = 2\pi/\omega \approx 0{,}31\ \mathrm{s}$. A rapidez máxima é
+$v_\text{máx} = \omega A = 20\times0{,}10 = 2{,}0\ \mathrm{m/s}$.
+
+::: {#exm-energia-oscilador}
+No oscilador do @exm-massa-mola, qual a energia total e a rapidez quando
+$x = 0{,}06\ \mathrm{m}$?
+:::
+
+**Solução.** Energia total (@eq-energia-mhs):
+$E = \tfrac12 k A^2 = \tfrac12(200)(0{,}10)^2 = 1{,}0\ \mathrm{J}$. Em
+$x = 0{,}06\ \mathrm{m}$, $U = \tfrac12(200)(0{,}06)^2 = 0{,}36\ \mathrm{J}$, então
+$K = E - U = 0{,}64\ \mathrm{J}$ e $v = \sqrt{2K/m} = \sqrt{2\times0{,}64/0{,}50} \approx 1{,}6\ \mathrm{m/s}$.
+
+## Exercícios
+
+::: {#exr-pendulo-periodo}
+Qual o comprimento de um pêndulo cujo período é exatamente $2{,}0\ \mathrm{s}$
+("pêndulo de segundos")? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+De @eq-periodo-pendulo, $L = g T^2/(4\pi^2) = 9{,}8\times(2{,}0)^2/(4\pi^2) \approx 0{,}99\ \mathrm{m}$.
+:::
+
+::: {#exr-frequencia-mola}
+Uma massa de $0{,}20\ \mathrm{kg}$ oscila a $f = 5{,}0\ \mathrm{Hz}$. Qual a
+constante da mola?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\omega = 2\pi f = 10\pi\ \mathrm{rad/s}$. De $\omega = \sqrt{k/m}$,
+$k = m\omega^2 = 0{,}20\times(10\pi)^2 \approx 0{,}20\times987 \approx 197\ \mathrm{N/m}$.
+:::
+
+::: {#exr-aceleracao-maxima}
+No MHS $x(t) = A\cos(\omega t)$, mostre que a aceleração máxima é
+$a_\text{máx} = \omega^2 A$ e ocorre nos extremos.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\ddot{x} = -\omega^2 A\cos(\omega t)$, de módulo máximo $\omega^2 A$ quando
+$\cos(\omega t) = \pm1$, isto é em $x = \pm A$ (os extremos). No equilíbrio
+($x=0$) a aceleração é nula, mas a rapidez é máxima.
+:::

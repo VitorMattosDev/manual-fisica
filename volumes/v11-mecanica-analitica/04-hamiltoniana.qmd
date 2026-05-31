@@ -1,0 +1,123 @@
+---
+title: "Formulação Hamiltoniana"
+---
+
+## Motivação
+
+A lagrangiana descreve o sistema por posições e velocidades. A formulação
+**hamiltoniana**, desenvolvida por William Rowan Hamilton, troca as velocidades
+pelos **momentos**, e com isso ganha uma simetria e uma estrutura geométrica
+extraordinárias. Suas equações são de primeira ordem, tratam posição e momento em pé
+de igualdade, e abrem a porta para a mecânica estatística e — decisivamente — para a
+mecânica quântica, onde a hamiltoniana se torna o operador de energia. Este capítulo
+faz a transição da lagrangiana para a hamiltoniana.
+
+## A transformada de Legendre e a hamiltoniana
+
+Passamos das velocidades $\dot q$ para os momentos $p$ por uma transformada de
+Legendre, obtendo uma nova função: a hamiltoniana.
+
+::: {.callout-important}
+## A hamiltoniana
+A **hamiltoniana** é
+$$H(q, p, t) = \sum_i p_i\,\dot{q}_i - L,$$ {#eq-hamiltoniana}
+expressa em função das coordenadas $q_i$ e dos momentos $p_i = \partial L/\partial\dot q_i$.
+Para sistemas usuais, ela coincide com a **energia total**:
+$$H = T + U.$$ {#eq-H-energia}
+:::
+
+A diferença em relação à lagrangiana ($L = T - U$) é crucial: a hamiltoniana é a
+energia ($T+U$), uma quantidade física direta, e quando não depende explicitamente do
+tempo, ela se **conserva**.
+
+## As equações de Hamilton
+
+::: {.callout-important}
+## Equações canônicas de Hamilton
+$$\dot{q}_i = \frac{\partial H}{\partial p_i}, \qquad \dot{p}_i = -\frac{\partial H}{\partial q_i}.$$ {#eq-hamilton-canonicas}
+São **$2n$ equações de primeira ordem** (contra $n$ de segunda ordem em Lagrange),
+perfeitamente simétricas entre $q$ e $p$.
+:::
+
+::: {.proof}
+## Das equações de Hamilton à conservação de energia
+Calcule a taxa de variação de $H$ ao longo do movimento:
+$$\frac{\mathrm{d}H}{\mathrm{d}t} = \sum_i\!\left(\frac{\partial H}{\partial q_i}\dot q_i + \frac{\partial H}{\partial p_i}\dot p_i\right) + \frac{\partial H}{\partial t}.$$
+Substituindo as @eq-hamilton-canonicas, os dois primeiros termos se cancelam
+($\partial_q H\,\partial_p H - \partial_p H\,\partial_q H = 0$), restando
+$\mathrm{d}H/\mathrm{d}t = \partial H/\partial t$. Se $H$ não depende explicitamente
+do tempo, $H$ é **constante** — a energia se conserva. $\qquad\blacksquare$
+:::
+
+## O espaço de fase
+
+::: {#def-espaco-fase}
+O **espaço de fase** é o espaço de todas as configurações $(q_i, p_i)$ — de $2n$
+dimensões. O estado de um sistema é um **ponto** nesse espaço, e sua evolução é uma
+**trajetória** governada pelas equações de Hamilton.
+:::
+
+::: {.callout-note}
+## A geometria do movimento
+No espaço de fase, a dinâmica vira geometria: cada estado é um ponto, e o sistema
+flui ao longo de curvas determinadas por $H$. O teorema de Liouville garante que
+esse fluxo preserva volumes no espaço de fase — base da mecânica estatística (Volume
+VI). E é esse mesmo espaço de fase, com $q$ e $p$ promovidos a operadores que não
+comutam, que se torna o palco da mecânica quântica (próximo volume).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-oscilador-ham}
+Construa a hamiltoniana do oscilador harmônico ($T = p^2/2m$, $U = \tfrac12 kx^2$) e
+escreva as equações de Hamilton.
+:::
+
+**Solução.** A hamiltoniana é a energia (@eq-H-energia):
+$$H = \frac{p^2}{2m} + \tfrac12 k x^2.$$
+As equações canônicas (@eq-hamilton-canonicas):
+$$\dot x = \frac{\partial H}{\partial p} = \frac{p}{m}, \qquad \dot p = -\frac{\partial H}{\partial x} = -kx.$$
+Combinando, $m\ddot x = \dot p = -kx$ — a equação do MHS, recuperada.
+
+::: {#exm-particula-livre-ham}
+Escreva a hamiltoniana de uma partícula livre em 1D e mostre que o momento se
+conserva.
+:::
+
+**Solução.** Sem potencial, $H = p^2/2m$. As equações de Hamilton dão
+$\dot x = p/m$ e $\dot p = -\partial H/\partial x = 0$. Logo $p$ é **constante**: o
+momento se conserva (a coordenada $x$ é cíclica, $H$ não depende dela).
+
+## Exercícios
+
+::: {#exr-ham-energia}
+Para uma partícula em queda livre, $H = p^2/2m + mgy$. Escreva as equações de
+Hamilton.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\dot y = \partial H/\partial p = p/m$ e $\dot p = -\partial H/\partial y = -mg$.
+Combinando, $m\ddot y = -mg$, ou $\ddot y = -g$ — queda livre.
+:::
+
+::: {#exr-numero-equacoes}
+Um sistema tem $3$ graus de liberdade. Quantas equações de primeira ordem a
+formulação hamiltoniana fornece?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$2n = 2\times3 = 6$ equações de primeira ordem (uma para cada $\dot q_i$ e cada
+$\dot p_i$).
+:::
+
+::: {#exr-conservacao-H}
+Sob que condição a hamiltoniana se conserva ao longo do movimento?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Quando $H$ **não depende explicitamente do tempo** ($\partial H/\partial t = 0$).
+Nesse caso $\mathrm{d}H/\mathrm{d}t = 0$ e a energia se conserva (ver dedução).
+:::

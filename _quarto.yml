@@ -82,6 +82,7 @@ book:
     - part: "Volume VIII — Eletromagnetismo II"
       chapters:
         - volumes/v8-eletromagnetismo2/01-campo-magnetico.qmd
+        - volumes/v8-eletromagnetismo2/02-fontes-campo-magnetico.qmd
   appendices:
     - constantes.qmd
 

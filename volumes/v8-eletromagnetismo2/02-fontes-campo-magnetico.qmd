@@ -1,0 +1,129 @@
+---
+title: "Fontes do Campo Magnético"
+---
+
+## Motivação
+
+No capítulo anterior, o campo magnético existia e agia sobre cargas — mas de onde
+ele vem? A descoberta de Oersted, em 1820, deu a resposta: uma corrente elétrica
+desvia uma bússola. **Correntes produzem campos magnéticos**. Essa é a unificação
+silenciosa de eletricidade e magnetismo, e a base de eletroímãs, transformadores e
+da própria luz. Este capítulo apresenta as duas leis que calculam o campo gerado
+por correntes: a lei de Biot-Savart e a lei de Ampère.
+
+## A lei de Biot-Savart
+
+Cada pedacinho de corrente contribui para o campo, da mesma forma que cada carga
+contribui para o campo elétrico. A lei de Biot-Savart soma essas contribuições.
+
+::: {.callout-important}
+## Lei de Biot-Savart
+Um elemento de corrente $I\,\mathrm{d}\vec{l}$ produz, num ponto a vetor posição
+$\vec{r}$, um campo
+$$\mathrm{d}\vec{B} = \frac{\mu_0}{4\pi}\,\frac{I\,\mathrm{d}\vec{l}\times\hat{r}}{r^2},$$ {#eq-biot-savart}
+onde $\mu_0 = 4\pi\times10^{-7}\ \mathrm{T\,m/A}$ é a **permeabilidade do vácuo**. O
+campo é perpendicular tanto à corrente quanto a $\vec{r}$.
+:::
+
+Note o paralelo com a lei de Coulomb: ambos caem com $1/r^2$. A diferença é o
+produto vetorial, que faz as linhas de $\vec{B}$ **circularem** em torno da corrente,
+em vez de apontarem para fora.
+
+::: {.callout-important}
+## Campo de um fio retilíneo longo
+Integrando a @eq-biot-savart para um fio infinito de corrente $I$, a uma distância
+$d$:
+$$B = \frac{\mu_0 I}{2\pi d}.$$ {#eq-fio-magnetico}
+As linhas de campo são círculos concêntricos ao fio (regra da mão direita: polegar
+na corrente, dedos no campo).
+:::
+
+## A lei de Ampère
+
+Assim como a lei de Gauss simplifica a eletrostática com simetria, a lei de Ampère
+simplifica a magnetostática.
+
+::: {.callout-important}
+## Lei de Ampère
+A circulação do campo magnético ao longo de um caminho fechado é proporcional à
+corrente total que o atravessa:
+$$\oint \vec{B}\cdot\mathrm{d}\vec{l} = \mu_0\,I_\text{enc}.$$ {#eq-ampere}
+:::
+
+::: {.proof}
+## Campo do fio pela lei de Ampère
+Tome um círculo de raio $d$ centrado no fio. Por simetria, $\vec{B}$ é tangente e
+constante ao longo dele, então $\oint\vec{B}\cdot\mathrm{d}\vec{l} = B(2\pi d)$. A
+corrente envolvida é $I$. Pela @eq-ampere, $B\,2\pi d = \mu_0 I$, donde
+$B = \mu_0 I/(2\pi d)$ — a @eq-fio-magnetico, sem integrar. $\qquad\blacksquare$
+:::
+
+## Solenoides e eletroímãs
+
+::: {.callout-important}
+## Campo no interior de um solenoide
+Um **solenoide** (bobina longa) com $n$ espiras por unidade de comprimento,
+conduzindo corrente $I$, produz em seu interior um campo **uniforme**:
+$$B = \mu_0\,n\,I.$$ {#eq-solenoide}
+Fora dele, o campo é praticamente nulo.
+:::
+
+::: {.callout-note}
+## Não existem monopolos magnéticos
+Diferentemente das cargas elétricas, **não há "cargas magnéticas" isoladas**: todo
+ímã tem polos norte e sul inseparáveis. Quebre um ímã ao meio e obterá dois ímãs
+completos. Em termos de campo, as linhas de $\vec{B}$ são sempre **fechadas** — o
+fluxo magnético através de qualquer superfície fechada é zero. Essa é a lei de Gauss
+do magnetismo, uma das equações de Maxwell.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-campo-fio}
+Qual o campo magnético a $0{,}05\ \mathrm{m}$ de um fio que conduz $10\ \mathrm{A}$?
+($\mu_0 = 4\pi\times10^{-7}\ \mathrm{T\,m/A}$.)
+:::
+
+**Solução.** Por @eq-fio-magnetico:
+$$B = \frac{\mu_0 I}{2\pi d} = \frac{(2\times10^{-7})\,I}{d} = \frac{2\times10^{-7}\times10}{0{,}05} = 4{,}0\times10^{-5}\ \mathrm{T},$$
+usando $\mu_0/2\pi = 2\times10^{-7}\ \mathrm{T\,m/A}$.
+
+::: {#exm-solenoide}
+Um solenoide tem $2000$ espiras por metro e conduz $3{,}0\ \mathrm{A}$. Qual o campo
+em seu interior?
+:::
+
+**Solução.** Por @eq-solenoide:
+$$B = \mu_0 n I = 4\pi\times10^{-7}\times2000\times3{,}0 \approx 7{,}5\times10^{-3}\ \mathrm{T}.$$
+
+## Exercícios
+
+::: {#exr-fio-corrente}
+A que distância de um fio com $20\ \mathrm{A}$ o campo vale
+$1{,}0\times10^{-4}\ \mathrm{T}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+De $B = \mu_0 I/(2\pi d)$, $d = \mu_0 I/(2\pi B) = (4\pi\times10^{-7}\times20)/(2\pi\times1{,}0\times10^{-4}) = (2\times10^{-7}\times20)/10^{-4} = 0{,}04\ \mathrm{m}$.
+:::
+
+::: {#exr-solenoide-corrente}
+Que corrente produz $B = 0{,}010\ \mathrm{T}$ num solenoide de $5000$ espiras/m?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$I = B/(\mu_0 n) = 0{,}010/(4\pi\times10^{-7}\times5000) \approx 0{,}010/(6{,}28\times10^{-3}) \approx 1{,}6\ \mathrm{A}$.
+:::
+
+::: {#exr-monopolo}
+Por que o fluxo magnético através de qualquer superfície fechada é sempre zero?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Porque não existem monopolos magnéticos: as linhas de $\vec{B}$ são sempre
+fechadas, então toda linha que entra numa superfície fechada também sai. O saldo é
+nulo — a lei de Gauss do magnetismo.
+:::

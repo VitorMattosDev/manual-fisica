@@ -1,0 +1,129 @@
+---
+title: "Quadrivetores e o Espaço-Tempo de Minkowski"
+---
+
+## Motivação
+
+Espaço e tempo deixaram de ser absolutos — mas se nada é fixo, o que resta de
+sólido na física? A resposta de Hermann Minkowski, em 1908, foi profunda: embora
+observadores discordem sobre tempos e distâncias, todos concordam sobre os
+**intervalos no espaço-tempo**. Unindo as três dimensões do espaço e a do tempo num
+único palco quadridimensional, ele deu à relatividade sua linguagem definitiva — a
+mesma que, generalizada, sustentará a relatividade geral. Este capítulo apresenta o
+espaço-tempo, o intervalo invariante e os quadrivetores.
+
+## O espaço-tempo e os eventos
+
+::: {#def-evento}
+Um **evento** é um ponto no **espaço-tempo**: um acontecimento com posição
+$(x, y, z)$ e instante $t$ bem definidos. O espaço-tempo de Minkowski é o conjunto
+de todos os eventos, com quatro coordenadas $(ct, x, y, z)$.
+:::
+
+Representa-se o movimento por uma **linha de universo** — a trajetória de uma
+partícula no diagrama espaço-tempo. A luz traça linhas a $45^\circ$ (o **cone de
+luz**), que separam o que pode influenciar um evento (passado/futuro causais) do que
+não pode.
+
+## O intervalo invariante
+
+A grande descoberta: há uma combinação de espaço e tempo que **todos** os
+observadores medem igual.
+
+::: {.callout-important}
+## Intervalo invariante do espaço-tempo
+Entre dois eventos, a quantidade
+$$\Delta s^2 = (c\,\Delta t)^2 - (\Delta x)^2 - (\Delta y)^2 - (\Delta z)^2$$ {#eq-intervalo}
+é a mesma em **todos** os referenciais inerciais (é invariante de Lorentz).
+Diferentemente de $\Delta t$ e $\Delta x$ isolados, $\Delta s^2$ é absoluto.
+:::
+
+::: {.callout-note}
+## A "distância" no espaço-tempo
+O sinal de menos na @eq-intervalo distingue o espaço-tempo do espaço euclidiano
+comum (onde tudo soma). Por isso ele é dito **pseudo-euclidiano**. O intervalo
+classifica os pares de eventos: **tipo tempo** ($\Delta s^2>0$, podem ter relação
+causal), **tipo luz** ($\Delta s^2=0$, ligados por um raio de luz) ou **tipo
+espaço** ($\Delta s^2<0$, sem relação causal possível). A causalidade está
+inscrita na geometria.
+:::
+
+## Quadrivetores
+
+Assim como a posição e o tempo se unem, outras grandezas físicas combinam-se em
+**quadrivetores** de quatro componentes, que se transformam por Lorentz.
+
+::: {.callout-important}
+## Quadrivetores fundamentais
+- **Quadriposição:** $x^\mu = (ct,\ x,\ y,\ z)$.
+- **Quadrimomento:** $p^\mu = (E/c,\ p_x,\ p_y,\ p_z)$, que unifica energia e
+  momento.
+
+O "módulo" (invariante) do quadrimomento dá a relação energia-momento
+(@eq-energia-momento):
+$$\left(\frac{E}{c}\right)^2 - p^2 = (mc)^2 = \text{invariante}.$$ {#eq-invariante-momento}
+:::
+
+::: {.callout-note}
+## Energia e momento são um só objeto
+Que energia e momento formem um único quadrivetor é a versão relativística de uma
+profunda unificação: a conservação de energia e a de momento tornam-se faces de uma
+só lei, a conservação do quadrimomento. O invariante $(mc)^2$ é a massa — a
+"assinatura" da partícula, igual para todos os observadores, ainda que $E$ e $p$
+variem.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-invariante}
+Dois eventos ocorrem no mesmo lugar, separados por $\Delta t = 2{,}0\ \mathrm{s}$ num
+referencial. Qual o intervalo $\Delta s^2$? Ele é tipo tempo, luz ou espaço?
+:::
+
+**Solução.** Mesmo lugar: $\Delta x = \Delta y = \Delta z = 0$. Por @eq-intervalo,
+$$\Delta s^2 = (c\,\Delta t)^2 = (3{,}0\times10^{8}\times2{,}0)^2 = (6{,}0\times10^{8})^2 = 3{,}6\times10^{17}\ \mathrm{m^2}.$$
+Como $\Delta s^2 > 0$, é **tipo tempo** — os eventos podem ter relação causal.
+
+::: {#exm-massa-invariante}
+Mostre que o quadrimomento dá $E^2 = (pc)^2 + (mc^2)^2$.
+:::
+
+**Solução.** O invariante do quadrimomento (@eq-invariante-momento) é
+$(E/c)^2 - p^2 = (mc)^2$. Multiplicando por $c^2$:
+$E^2 - (pc)^2 = (mc^2)^2$, ou seja $E^2 = (pc)^2 + (mc^2)^2$ — exatamente a
+@eq-energia-momento, agora vista como o módulo invariante de um quadrivetor.
+
+## Exercícios
+
+::: {#exr-tipo-intervalo}
+Dois eventos têm $c\,\Delta t = 3\ \mathrm{m}$ e $\Delta x = 5\ \mathrm{m}$
+(demais nulos). Classifique o intervalo.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta s^2 = (3)^2 - (5)^2 = 9 - 25 = -16\ \mathrm{m^2} < 0$: **tipo espaço**. Os
+eventos não podem ter relação causal (nem a luz os conecta).
+:::
+
+::: {#exr-cone-luz}
+Que tipo de intervalo conecta dois eventos ligados por um raio de luz?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+**Tipo luz** ($\Delta s^2 = 0$): a distância espacial iguala $c\,\Delta t$, então
+$(c\Delta t)^2 - (\Delta x)^2 = 0$. São os eventos sobre o cone de luz.
+:::
+
+::: {#exr-quadrimomento}
+Por que a massa de uma partícula é a mesma para todos os observadores, mesmo que
+energia e momento variem?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Porque a massa é o **invariante** do quadrimomento (@eq-invariante-momento):
+$(E/c)^2 - p^2 = (mc)^2$ tem o mesmo valor em todos os referenciais, ainda que $E$
+e $p$ se transformem por Lorentz. A massa é uma propriedade absoluta da partícula.
+:::

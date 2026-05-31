@@ -1,0 +1,125 @@
+---
+title: "Moléculas e Ligações Químicas"
+---
+
+## Motivação
+
+Átomos isolados são a exceção; quase toda a matéria que conhecemos é feita de
+**moléculas** — átomos ligados. Mas o que, fisicamente, *é* uma ligação química? Por
+que dois átomos de hidrogênio formam $\mathrm{H_2}$, mas dois de hélio não se ligam?
+A resposta está na mecânica quântica: ligações são arranjos de elétrons
+compartilhados que **abaixam a energia** do conjunto. Este capítulo explica os tipos
+de ligação e os modos de vibração e rotação que dão às moléculas seus espectros
+característicos.
+
+## Tipos de ligação química
+
+::: {#def-ligacao}
+Uma **ligação química** é a redução de energia que ocorre quando átomos se
+aproximam e seus elétrons se rearranjam. Forma-se quando o estado ligado tem energia
+**menor** que a dos átomos separados. Os principais tipos:
+:::
+
+::: {.callout-important}
+## Os tipos de ligação
+- **Iônica:** um átomo cede elétron(s) a outro; os íons de cargas opostas se atraem
+  (ex.: $\mathrm{NaCl}$). Forte e não direcional.
+- **Covalente:** átomos **compartilham** pares de elétrons (ex.: $\mathrm{H_2}$,
+  $\mathrm{O_2}$). Forte e direcional, define a geometria molecular.
+- **Metálica:** elétrons de valência deslocalizados ("mar de elétrons") ligam um
+  reticulado de íons positivos — base da condução nos metais.
+- **Van der Waals / ligação de hidrogênio:** atrações fracas entre dipolos, que
+  mantêm moléculas unidas (ex.: a água líquida, o DNA).
+:::
+
+::: {.callout-note}
+## A ligação como compromisso energético
+Quando dois átomos de hidrogênio se aproximam, seus orbitais se combinam num orbital
+**ligante** de energia mais baixa (densidade eletrônica entre os núcleos, "colando"
+os átomos) e um **antiligante** de energia mais alta. Se os elétrons ocupam o
+ligante, a energia cai e a molécula se forma. No hélio, os elétrons preencheriam
+também o antiligante, anulando o ganho — por isso $\mathrm{He_2}$ não existe. A
+ligação é mecânica quântica pura.
+:::
+
+## Vibração e rotação molecular
+
+Uma molécula não é rígida: seus átomos vibram em torno do equilíbrio e a molécula
+gira. Ambos os movimentos são **quantizados**.
+
+::: {.callout-important}
+## Níveis vibracionais e rotacionais
+- **Vibração:** modelada como oscilador harmônico (Volume XII), com níveis
+  $E_\text{vib} = (v + \tfrac12)\hbar\omega$. Transições no **infravermelho**.
+- **Rotação:** com momento de inércia $I$, níveis
+  $$E_\text{rot} = \frac{\hbar^2}{2I}\,J(J+1), \qquad J = 0, 1, 2, \dots$$ {#eq-rotacao}
+  Transições nas **micro-ondas**.
+:::
+
+::: {.callout-note}
+## Espectros moleculares e o forno de micro-ondas
+Os modos vibracionais e rotacionais dão às moléculas espectros ricos, usados para
+identificá-las (espectroscopia IR e de micro-ondas) — inclusive no espaço
+interestelar. É também por isso que o **forno de micro-ondas** aquece a comida: a
+radiação excita a rotação das moléculas de água, e a agitação resultante é calor. A
+física molecular está na sua cozinha.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-nacl}
+Por que o cloreto de sódio ($\mathrm{NaCl}$) forma uma ligação iônica?
+:::
+
+**Solução.** O sódio tem um elétron de valência $3s^1$ (fácil de perder); o cloro
+tem $3s^2 3p^5$, faltando **um** elétron para completar a camada. O sódio cede seu
+elétron ao cloro: forma-se $\mathrm{Na^+}$ e $\mathrm{Cl^-}$, que se atraem
+eletrostaticamente. Ambos atingem configuração de gás nobre (estável), abaixando a
+energia — daí a ligação iônica.
+
+::: {#exm-rotacao}
+A molécula de $\mathrm{CO}$ tem momento de inércia
+$I = 1{,}45\times10^{-46}\ \mathrm{kg\,m^2}$. Qual a energia do primeiro nível
+rotacional excitado ($J=1$)? ($\hbar = 1{,}05\times10^{-34}\ \mathrm{J\,s}$.)
+:::
+
+**Solução.** Por @eq-rotacao com $J=1$:
+$$E_\text{rot} = \frac{\hbar^2}{2I}\,J(J+1) = \frac{(1{,}05\times10^{-34})^2}{2\times1{,}45\times10^{-46}}\times2 \approx 7{,}6\times10^{-23}\ \mathrm{J} \approx 0{,}48\ \mathrm{meV}.$$
+Energias dessa ordem correspondem a fótons de micro-ondas.
+
+## Exercícios
+
+::: {#exr-covalente}
+Por que dois átomos de hidrogênio formam $\mathrm{H_2}$, mas dois de hélio não
+formam $\mathrm{He_2}$ estável?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+No $\mathrm{H_2}$, os dois elétrons ocupam o orbital **ligante** (energia menor),
+estabilizando a molécula. No hélio, os quatro elétrons preencheriam ligante **e
+antiligante**, cancelando o ganho de energia — não há redução líquida, então
+$\mathrm{He_2}$ não se forma.
+:::
+
+::: {#exr-tipo-ligacao}
+Que tipo de ligação mantém os átomos num pedaço de cobre metálico?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+**Ligação metálica:** os elétrons de valência ficam deslocalizados num "mar de
+elétrons" que liga os íons positivos do reticulado. Essa deslocalização explica a
+alta condutividade elétrica e térmica dos metais.
+:::
+
+::: {#exr-microondas}
+Por que o forno de micro-ondas aquece bem alimentos com água, mas mal os secos?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+As micro-ondas excitam os níveis **rotacionais** das moléculas de água (que são
+dipolos, @eq-rotacao). A agitação molecular resultante é calor. Alimentos sem água
+têm poucas moléculas que respondam nessa frequência, aquecendo menos.
+:::

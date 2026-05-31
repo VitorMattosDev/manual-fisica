@@ -1,0 +1,127 @@
+---
+title: "Ondas Estacionárias e Ressonância"
+---
+
+## Motivação
+
+A corda de um violão presa nas duas pontas só pode vibrar em certas frequências —
+e são elas que definem a nota. Um tubo de órgão, um copo que canta, a membrana de
+um tambor: todos "escolhem" frequências específicas. Essas são as **ondas
+estacionárias**, padrões de vibração que não viajam, formados pela superposição de
+ondas que vão e voltam refletidas nas fronteiras. Elas explicam como instrumentos
+produzem notas definidas e introduzem a ideia de **quantização** de frequências —
+uma antecipação clássica do que, na mecânica quântica, governará os átomos.
+
+## Formação de ondas estacionárias
+
+Quando uma onda reflete numa fronteira e se superpõe à onda incidente (de mesma
+frequência, sentido oposto), o resultado é uma **onda estacionária**: certos
+pontos nunca se movem (**nós**), outros oscilam com amplitude máxima (**ventres**).
+
+::: {#def-onda-estacionaria}
+Uma **onda estacionária** resulta da superposição de duas ondas idênticas que
+viajam em sentidos opostos:
+$$y(x,t) = 2A\,\mathrm{sen}(kx)\cos(\omega t).$$ {#eq-onda-estacionaria}
+O fator espacial $\mathrm{sen}(kx)$ fixa a forma; o temporal $\cos(\omega t)$ dá a
+oscilação. A onda **não se propaga** — apenas pulsa no lugar.
+:::
+
+Os **nós** ($y=0$ sempre) ocorrem onde $\mathrm{sen}(kx)=0$, espaçados de
+$\lambda/2$; os **ventres** ficam a meio caminho entre eles.
+
+## Modos normais de uma corda
+
+Numa corda de comprimento $L$ presa nas duas extremidades, ambas devem ser nós.
+Isso só é possível para comprimentos de onda especiais.
+
+::: {.callout-important}
+## Frequências naturais de uma corda fixa nas pontas
+A condição de nós nas extremidades exige que um número inteiro de meios
+comprimentos de onda caiba em $L$: $L = n\,\lambda_n/2$. As frequências possíveis
+(**harmônicos**) são
+$$f_n = \frac{n\,v}{2L} = n\,f_1, \qquad n = 1, 2, 3, \dots$$ {#eq-harmonicos-corda}
+A menor, $f_1 = v/2L$, é a **frequência fundamental**; as demais são seus
+múltiplos inteiros.
+:::
+
+::: {.proof}
+## Por que só múltiplos inteiros
+Com nós obrigatórios em $x=0$ e $x=L$, a @eq-onda-estacionaria exige
+$\mathrm{sen}(kL) = 0$, ou seja $kL = n\pi$. Como $k = 2\pi/\lambda$, isso dá
+$\lambda_n = 2L/n$. Usando $v = \lambda f$ (@eq-fundamental-ondas),
+$f_n = v/\lambda_n = nv/2L$. Só essas frequências discretas formam padrões
+estacionários — todas as outras se cancelam. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Quantização clássica e timbre
+As frequências permitidas são **discretas** — um primeiro encontro com a
+quantização. A nota que ouvimos é a fundamental; a mistura de harmônicos presentes
+define o **timbre**, o que distingue um violino de uma flauta tocando a mesma nota.
+:::
+
+## Tubos sonoros
+
+O mesmo princípio governa colunas de ar. As condições de fronteira mudam conforme
+o tubo seja aberto ou fechado:
+
+::: {.callout-note}
+## Tubos abertos e fechados
+- **Tubo aberto nas duas pontas** (ventres nas extremidades): harmônicos
+  $f_n = nv/2L$, todos os inteiros — como a corda.
+- **Tubo fechado numa ponta** (nó no fundo, ventre na abertura):
+  $f_n = nv/4L$ com $n$ **ímpar** apenas. Sua fundamental é uma oitava abaixo de um
+  tubo aberto de mesmo comprimento.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-violao-harmonico}
+Uma corda de $0{,}65\ \mathrm{m}$ tem ondas a $v = 260\ \mathrm{m/s}$. Quais a
+frequência fundamental e o terceiro harmônico?
+:::
+
+**Solução.** Por @eq-harmonicos-corda, a fundamental é
+$f_1 = v/2L = 260/(2\times0{,}65) = 200\ \mathrm{Hz}$. O terceiro harmônico é
+$f_3 = 3 f_1 = 600\ \mathrm{Hz}$.
+
+::: {#exm-tubo-fechado}
+Um tubo fechado numa extremidade tem $0{,}85\ \mathrm{m}$. Qual sua frequência
+fundamental? ($v_\text{som} = 340\ \mathrm{m/s}$.)
+:::
+
+**Solução.** Para tubo fechado, $f_1 = v/4L = 340/(4\times0{,}85) = 100\ \mathrm{Hz}$.
+Os harmônicos seguintes são $300, 500, \dots\ \mathrm{Hz}$ (só ímpares).
+
+## Exercícios
+
+::: {#exr-segundo-harmonico}
+Uma corda fixa nas pontas tem fundamental de $150\ \mathrm{Hz}$. Quais as
+frequências do segundo e do quarto harmônicos?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$f_n = n f_1$: $f_2 = 2\times150 = 300\ \mathrm{Hz}$ e
+$f_4 = 4\times150 = 600\ \mathrm{Hz}$.
+:::
+
+::: {#exr-comprimento-corda}
+Que comprimento deve ter uma corda com $v = 200\ \mathrm{m/s}$ para soar a nota
+fundamental $400\ \mathrm{Hz}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$f_1 = v/2L \Rightarrow L = v/(2f_1) = 200/(2\times400) = 0{,}25\ \mathrm{m}$.
+:::
+
+::: {#exr-tubo-aberto}
+Um tubo aberto nas duas pontas tem $1{,}0\ \mathrm{m}$. Qual sua fundamental?
+($v = 340\ \mathrm{m/s}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Tubo aberto: $f_1 = v/2L = 340/(2\times1{,}0) = 170\ \mathrm{Hz}$.
+:::

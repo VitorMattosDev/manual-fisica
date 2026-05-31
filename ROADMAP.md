@@ -131,7 +131,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume X — Relatividade Especial
 *Objetivo: espaço-tempo. Pré-requisitos: III, VIII. (Matemática: ver nota.)*
 
-- [ ] `volumes/v10-relatividade/01-postulados-cinematica.qmd` — Postulados e cinemática relativística
+- [x] `volumes/v10-relatividade/01-postulados-cinematica.qmd` — Postulados e cinemática relativística
 - [ ] `volumes/v10-relatividade/02-dilatacao-contracao.qmd` — Dilatação do tempo e contração
 - [ ] `volumes/v10-relatividade/03-dinamica-relativistica.qmd` — Energia-momento
 - [ ] `volumes/v10-relatividade/04-quadrivetores-minkowski.qmd` — Quadrivetores e Minkowski

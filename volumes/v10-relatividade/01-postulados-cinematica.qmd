@@ -1,0 +1,128 @@
+---
+title: "Postulados e Cinemática Relativística"
+---
+
+## Motivação
+
+As equações de Maxwell previam a luz viajando a uma velocidade $c$ fixa — mas
+*fixa em relação a quê?* Toda a física até então dizia que velocidades se somam: se
+você corre atrás da luz, ela deveria parecer mais lenta. Os experimentos diziam o
+contrário: a luz tinha sempre a mesma velocidade, para qualquer observador. Em 1905,
+um jovem Einstein resolveu o paradoxo da maneira mais radical possível — abandonando
+a noção de tempo absoluto. A **relatividade especial** reescreveu espaço e tempo, e
+este capítulo, que abre o último volume da física clássica, apresenta seus dois
+postulados e suas consequências cinemáticas.
+
+## Os dois postulados
+
+::: {.callout-important}
+## Postulados da Relatividade Especial
+1. **Princípio da relatividade:** as leis da física são as mesmas em todos os
+   referenciais inerciais. Nenhum experimento distingue repouso de movimento
+   uniforme.
+2. **Constância da velocidade da luz:** a luz se propaga no vácuo com a mesma
+   velocidade $c$ em todos os referenciais inerciais, **independentemente** do
+   movimento da fonte ou do observador.
+:::
+
+O segundo postulado é o explosivo. Se a luz tem a mesma velocidade para todos,
+então **espaço e tempo não podem ser absolutos** — eles têm de se ajustar para
+manter $c$ constante. É dessa exigência que tudo decorre.
+
+## Simultaneidade e o fim do tempo absoluto
+
+::: {.callout-note}
+## A relatividade da simultaneidade
+Dois eventos simultâneos para um observador **não** são necessariamente simultâneos
+para outro em movimento relativo. Não há um "agora" universal. Essa ruptura com o
+senso comum — que Newton supunha um tempo absoluto fluindo igual para todos — é a
+raiz de todos os efeitos relativísticos. O tempo passa a ser parte de uma estrutura
+unificada com o espaço, o **espaço-tempo** (Volume X, capítulo de Minkowski).
+:::
+
+## O fator de Lorentz
+
+Toda a relatividade gira em torno de um único fator adimensional, que mede o quanto
+o movimento aproxima-se de $c$.
+
+::: {.callout-important}
+## Fator de Lorentz
+$$\gamma = \frac{1}{\sqrt{1 - v^2/c^2}}.$$ {#eq-gamma}
+Para $v \ll c$, $\gamma \approx 1$ (recuperamos Newton); quando $v \to c$,
+$\gamma \to \infty$. Os efeitos relativísticos tornam-se grandes apenas a
+velocidades comparáveis à da luz.
+:::
+
+::: {.callout-note}
+## Por que não notamos a relatividade
+A $100\ \mathrm{km/h}$, $v/c \sim 10^{-7}$ e $\gamma$ difere de 1 por $\sim10^{-14}$
+— imperceptível. É por isso que a física de Newton funcionou por séculos: ela é o
+limite $\gamma\to1$ da relatividade (princípio da correspondência, Volume I). Os
+efeitos só aparecem para partículas em aceleradores, múons cósmicos e o GPS, que
+precisa corrigi-los para funcionar.
+:::
+
+## As transformações de Lorentz
+
+Substituindo as transformações de Galileu (que somavam velocidades), as
+**transformações de Lorentz** conectam as coordenadas de um mesmo evento em dois
+referenciais que se movem com velocidade relativa $v$:
+
+::: {.callout-important}
+## Transformações de Lorentz
+$$x' = \gamma(x - vt), \qquad t' = \gamma\!\left(t - \frac{vx}{c^2}\right).$$ {#eq-lorentz-transf}
+Note a mistura de espaço e tempo: $t'$ depende de $x$. No limite $v\ll c$,
+$\gamma\to1$ e recuperam-se as transformações de Galileu.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-gamma}
+Calcule o fator de Lorentz para uma nave a $v = 0{,}80\,c$.
+:::
+
+**Solução.** Por @eq-gamma:
+$$\gamma = \frac{1}{\sqrt{1 - (0{,}80)^2}} = \frac{1}{\sqrt{1 - 0{,}64}} = \frac{1}{\sqrt{0{,}36}} = \frac{1}{0{,}60} \approx 1{,}67.$$
+
+::: {#exm-luz-constante}
+Uma nave a $0{,}50\,c$ acende um farol para a frente. A que velocidade a luz se
+afasta da nave, segundo um observador na Terra?
+:::
+
+**Solução.** Pelo segundo postulado, a luz viaja a $c$ para **todos** os
+observadores — inclusive o da Terra. Não se soma $0{,}50\,c + c$; o resultado é
+simplesmente $c$. (As velocidades se compõem pela regra relativística, que nunca
+ultrapassa $c$, tema do capítulo de dinâmica.)
+
+## Exercícios
+
+::: {#exr-gamma-09}
+Qual o fator de Lorentz para $v = 0{,}60\,c$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\gamma = 1/\sqrt{1 - 0{,}36} = 1/\sqrt{0{,}64} = 1/0{,}80 = 1{,}25$.
+:::
+
+::: {#exr-gamma-pequeno}
+Mostre que, para $v = 0{,}010\,c$, o fator de Lorentz é praticamente 1.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\gamma = 1/\sqrt{1 - (0{,}010)^2} = 1/\sqrt{1 - 10^{-4}} \approx 1 + 0{,}5\times10^{-4} \approx 1{,}00005$.
+Diferença desprezível — regime newtoniano.
+:::
+
+::: {#exr-postulado}
+Um trem viaja a $0{,}90\,c$ e emite luz para trás. Qual a velocidade dessa luz para
+alguém parado na plataforma?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$c$. Pelo segundo postulado, a velocidade da luz no vácuo é a mesma para todos os
+observadores, independentemente do movimento da fonte. A velocidade do trem não
+soma nem subtrai.
+:::

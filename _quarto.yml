@@ -96,6 +96,9 @@ book:
         - volumes/v9-optica/04-interferencia.qmd
         - volumes/v9-optica/05-difracao.qmd
         - volumes/v9-optica/06-polarizacao.qmd
+    - part: "Volume X — Relatividade Especial"
+      chapters:
+        - volumes/v10-relatividade/01-postulados-cinematica.qmd
   appendices:
     - constantes.qmd
 

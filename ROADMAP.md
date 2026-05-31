@@ -60,7 +60,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 *Objetivo: corpos extensos, órbitas e vibrações. Pré-requisitos: II.*
 
 - [x] `volumes/v3-mecanica2/01-cinematica-rotacional.qmd` — Cinemática rotacional
-- [ ] `volumes/v3-mecanica2/02-dinamica-rotacional.qmd` — Torque e dinâmica rotacional
+- [x] `volumes/v3-mecanica2/02-dinamica-rotacional.qmd` — Torque e dinâmica rotacional
 - [ ] `volumes/v3-mecanica2/03-momento-angular.qmd` — Momento angular
 - [ ] `volumes/v3-mecanica2/04-estatica-corpos-rigidos.qmd` — Estática e corpos rígidos
 - [ ] `volumes/v3-mecanica2/05-gravitacao.qmd` — Gravitação universal (Newton, Kepler)

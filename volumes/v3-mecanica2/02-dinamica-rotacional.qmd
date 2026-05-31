@@ -1,0 +1,147 @@
+---
+title: "Torque e Dinâmica Rotacional"
+---
+
+## Motivação
+
+Por que a maçaneta fica na borda da porta, longe das dobradiças? Por que uma chave
+de boca longa afrouxa um parafuso que a curta não vence? Porque, para girar, não
+basta a força: importa **onde** e **como** ela é aplicada. A grandeza que mede a
+capacidade de uma força produzir rotação é o **torque**, e ela faz, na dinâmica de
+rotação, o papel que a força faz na translação. Este capítulo introduz o torque e
+o **momento de inércia**, fechando a segunda lei de Newton em sua forma
+rotacional.
+
+## Torque
+
+::: {#def-torque}
+O **torque** (ou momento de uma força) de $\vec{F}$ aplicada num ponto de vetor
+posição $\vec{r}$ relativo ao eixo é
+$$\vec{\tau} = \vec{r}\times\vec{F}, \qquad |\vec{\tau}| = r\,F\,\mathrm{sen}\,\phi,$$ {#eq-torque}
+onde $\phi$ é o ângulo entre $\vec{r}$ e $\vec{F}$. A unidade é o
+$\mathrm{N\,m}$.
+:::
+
+O fator $\mathrm{sen}\,\phi$ diz que só a componente da força **perpendicular** ao
+braço gira o corpo; uma força ao longo do braço ($\phi=0$) não produz torque.
+Equivalentemente, $|\vec{\tau}| = F\,d$, onde $d = r\,\mathrm{sen}\,\phi$ é o
+**braço de alavanca** — a distância perpendicular do eixo à linha de ação da
+força. Maçaneta longe das dobradiças = braço grande = mais torque.
+
+## Momento de inércia
+
+A inércia de rotação não depende só da massa, mas de **como ela se distribui** em
+relação ao eixo. Massa longe do eixo é muito mais difícil de girar.
+
+::: {#def-momento-inercia}
+O **momento de inércia** de um sistema de partículas em relação a um eixo é
+$$I = \sum_i m_i\,r_i^2 \quad\text{(discreto)}, \qquad I = \int r^2\,\mathrm{d}m \quad\text{(contínuo)},$$ {#eq-momento-inercia}
+onde $r_i$ é a distância de cada massa ao eixo. É o análogo rotacional da massa.
+:::
+
+::: {.callout-note}
+## Momentos de inércia comuns
+Para corpos homogêneos de massa $M$ girando por seus eixos de simetria:
+
+| Corpo | Eixo | $I$ |
+|---|---|---|
+| Anel/casca cilíndrica | central | $MR^2$ |
+| Disco/cilindro maciço | central | $\tfrac12 MR^2$ |
+| Esfera maciça | diâmetro | $\tfrac25 MR^2$ |
+| Barra fina (comprimento $L$) | centro | $\tfrac{1}{12}ML^2$ |
+| Barra fina | extremidade | $\tfrac13 ML^2$ |
+
+O **teorema dos eixos paralelos** desloca o eixo do CM por uma distância $d$:
+$I = I_\text{cm} + M d^2$.
+:::
+
+## A segunda lei da rotação
+
+::: {.callout-important}
+## Segunda Lei de Newton para rotação
+O torque resultante sobre um corpo é o produto de seu momento de inércia pela
+aceleração angular:
+$$\tau_\text{res} = I\,\alpha.$$ {#eq-newton2-rotacional}
+É o análogo de $F = ma$, com $\tau\leftrightarrow F$, $I\leftrightarrow m$,
+$\alpha\leftrightarrow a$.
+:::
+
+::: {.proof}
+## De $F=ma$ para $\tau = I\alpha$
+Para uma partícula de massa $m$ a distância $r$ do eixo, a força tangencial
+produz aceleração tangencial $F_t = m a_t$. Multiplicando por $r$ e usando
+$a_t = r\alpha$ (@eq-ponte-angular):
+$$\tau = r F_t = r\,m\,a_t = m r^2\,\alpha.$$
+Somando sobre todas as partículas do corpo rígido, $\sum m r^2 = I$
+(@eq-momento-inercia), e portanto $\tau_\text{res} = I\alpha$. $\qquad\blacksquare$
+:::
+
+## Energia cinética de rotação
+
+Um corpo que gira armazena energia cinética. Somando $\tfrac12 m_i v_i^2$ com
+$v_i = \omega r_i$:
+
+::: {.callout-important}
+## Energia cinética de rotação
+$$K_\text{rot} = \tfrac12 I\,\omega^2.$$ {#eq-energia-rotacional}
+Um corpo que rola combina translação e rotação:
+$K = \tfrac12 M v_\text{cm}^2 + \tfrac12 I\omega^2$.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-disco-torque}
+Um disco de $M = 2{,}0\ \mathrm{kg}$ e $R = 0{,}10\ \mathrm{m}$ recebe um torque
+de $0{,}50\ \mathrm{N\,m}$. Qual a aceleração angular?
+:::
+
+**Solução.** O momento de inércia do disco é
+$I = \tfrac12 MR^2 = \tfrac12(2{,}0)(0{,}10)^2 = 0{,}010\ \mathrm{kg\,m^2}$. Por
+@eq-newton2-rotacional:
+$$\alpha = \frac{\tau}{I} = \frac{0{,}50}{0{,}010} = 50\ \mathrm{rad/s^2}.$$
+
+::: {#exm-rolamento}
+Uma esfera maciça rola sem deslizar do alto de uma rampa de altura
+$h = 1{,}0\ \mathrm{m}$, partindo do repouso. Qual sua rapidez na base?
+($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Conservação de energia com $I = \tfrac25 MR^2$ e $v = \omega R$:
+$$Mgh = \tfrac12 M v^2 + \tfrac12\left(\tfrac25 MR^2\right)\frac{v^2}{R^2} = \tfrac12 M v^2 + \tfrac15 M v^2 = \tfrac{7}{10}M v^2.$$
+Logo $v = \sqrt{\tfrac{10}{7}gh} = \sqrt{\tfrac{10}{7}\times9{,}8\times1{,}0} \approx 3{,}7\ \mathrm{m/s}$ —
+**menor** que os $4{,}4\ \mathrm{m/s}$ de um bloco deslizante, pois parte da
+energia foi para a rotação.
+
+## Exercícios
+
+::: {#exr-barra-torque}
+Uma barra de $0{,}50\ \mathrm{kg}$ e $1{,}2\ \mathrm{m}$ gira em torno de uma
+extremidade sob torque de $0{,}30\ \mathrm{N\,m}$. Qual a aceleração angular?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$I = \tfrac13 ML^2 = \tfrac13(0{,}50)(1{,}2)^2 = 0{,}24\ \mathrm{kg\,m^2}$.
+$\alpha = \tau/I = 0{,}30/0{,}24 = 1{,}25\ \mathrm{rad/s^2}$.
+:::
+
+::: {#exr-braco}
+Uma força de $20\ \mathrm{N}$ é aplicada à borda de uma porta a
+$0{,}80\ \mathrm{m}$ das dobradiças, formando $60^\circ$ com a porta. Qual o
+torque?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\tau = r F\,\mathrm{sen}\,\phi = 0{,}80\times20\times\mathrm{sen}\,60^\circ = 16\times0{,}866 \approx 13{,}9\ \mathrm{N\,m}$.
+:::
+
+::: {#exr-energia-volante}
+Um volante (disco) de $I = 0{,}50\ \mathrm{kg\,m^2}$ gira a $20\ \mathrm{rad/s}$.
+Quanta energia cinética armazena?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$K_\text{rot} = \tfrac12 I\omega^2 = \tfrac12(0{,}50)(20)^2 = 100\ \mathrm{J}$.
+:::

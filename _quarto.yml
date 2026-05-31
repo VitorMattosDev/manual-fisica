@@ -23,6 +23,7 @@ book:
     - part: "Volume I — Fundamentos da Física"
       chapters:
         - volumes/v1-fundamentos/01-grandezas-unidades.qmd
+        - volumes/v1-fundamentos/02-analise-dimensional.qmd
     - part: "Volume II — Mecânica Clássica I"
       chapters:
         - volumes/v2-mecanica1/06-conservacao-energia.qmd

@@ -1,0 +1,173 @@
+---
+title: "Análise Dimensional"
+---
+
+## Motivação
+
+Em 1947 o matemático G. I. Taylor estimou a energia liberada pela primeira bomba
+atômica apenas olhando fotos publicadas da bola de fogo crescente — um número que
+era segredo militar. Ele não resolveu nenhuma equação de hidrodinâmica: usou
+**análise dimensional**, raciocinando sobre *quais grandezas podiam entrar* e
+*como suas dimensões tinham de se combinar*. A resposta saiu com um erro de poucos
+por cento.
+
+A análise dimensional é isso: extrair a forma de uma lei física a partir das
+dimensões das grandezas envolvidas, sem resolver a física detalhada. No capítulo
+anterior vimos que toda equação correta é dimensionalmente homogênea
+(@eq-homogeneidade); aqui transformamos essa exigência numa ferramenta de
+descoberta.
+
+## Dimensão de uma grandeza
+
+::: {#def-dimensao}
+A **dimensão** de uma grandeza física é a maneira como ela se compõe das
+grandezas de base, escrita como um produto de potências. Em mecânica, usando
+comprimento $\mathsf{L}$, massa $\mathsf{M}$ e tempo $\mathsf{T}$, a dimensão de
+uma grandeza $G$ é
+$$[\,G\,] = \mathsf{M}^{a}\,\mathsf{L}^{b}\,\mathsf{T}^{c},$$ {#eq-dimensao}
+com expoentes $a, b, c$ reais. A grandeza é **adimensional** quando $a=b=c=0$.
+:::
+
+Assim $[\,\text{velocidade}\,] = \mathsf{L}\,\mathsf{T}^{-1}$,
+$[\,\text{aceleração}\,] = \mathsf{L}\,\mathsf{T}^{-2}$,
+$[\,\text{força}\,] = \mathsf{M}\,\mathsf{L}\,\mathsf{T}^{-2}$ e
+$[\,\text{energia}\,] = \mathsf{M}\,\mathsf{L}^{2}\,\mathsf{T}^{-2}$. Ângulos,
+por serem razão de dois comprimentos (arco sobre raio), são **adimensionais** — o
+radiano é uma unidade, mas sua dimensão é 1.
+
+::: {.callout-note}
+## Dimensão não é unidade
+A *dimensão* $\mathsf{L}$ é a ideia abstrata "comprimento"; a *unidade*
+($\mathrm{m}$, $\mathrm{ft}$, $\mathrm{ano\text{-}luz}$) é o padrão concreto de
+medida. Grandezas diferentes podem partilhar dimensão sem ser a mesma coisa
+(torque e energia têm ambas dimensão $\mathsf{M}\,\mathsf{L}^{2}\,\mathsf{T}^{-2}$,
+mas são grandezas distintas).
+:::
+
+## Regras dimensionais
+
+Como toda equação física é homogênea, as dimensões obedecem a uma álgebra simples,
+herdada da @eq-homogeneidade.
+
+::: {.callout-important}
+## Álgebra das dimensões
+Para grandezas $A$ e $B$:
+
+- **Produto e quociente:** $[\,A\,B\,] = [\,A\,]\,[\,B\,]$ e
+  $[\,A/B\,] = [\,A\,]/[\,B\,]$.
+- **Soma e igualdade:** só são possíveis se $[\,A\,] = [\,B\,]$.
+- **Funções transcendentes:** o argumento de $\sin$, $\cos$, $\exp$, $\ln$ etc. é
+  sempre **adimensional**, e o resultado também.
+
+$$[\,A\,B\,] = [\,A\,]\,[\,B\,], \qquad A + B \ \text{exige}\ [\,A\,] = [\,B\,].$$ {#eq-algebra-dim}
+:::
+
+A última regra é poderosa: numa expressão como $e^{-t/\tau}$, a grandeza $\tau$
+*tem* de ter dimensão de tempo, pois $t/\tau$ precisa ser adimensional. A análise
+dimensional já nos diz o que $\tau$ significa fisicamente — um tempo
+característico.
+
+## O método de Rayleigh
+
+Quando suspeitamos que uma grandeza $Q$ depende de outras
+$x_1, x_2, \dots, x_n$, podemos buscar uma lei do tipo potência
+$$Q = C\,x_1^{\,p_1}\,x_2^{\,p_2}\cdots x_n^{\,p_n},$$
+com $C$ adimensional. Impor homogeneidade dimensional fixa os expoentes
+$p_i$ resolvendo um sistema linear. É o **método de Rayleigh**.
+
+::: {.proof}
+## Por que os expoentes ficam determinados
+Escreva a dimensão de cada lado de
+$Q = C\,x_1^{\,p_1}\cdots x_n^{\,p_n}$ usando a @eq-dimensao. O lado direito tem
+dimensão $\prod_i [\,x_i\,]^{p_i}$. Igualar os expoentes de $\mathsf{M}$,
+$\mathsf{L}$ e $\mathsf{T}$ dos dois lados gera **três equações lineares** nos
+$p_i$. Se houver três incógnitas, o sistema as fixa univocamente (a menos de
+casos degenerados); o que sobra é a constante $C$, que a análise dimensional
+**não** determina. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## O que a análise dimensional não vê
+Ela nunca entrega o fator numérico $C$ (o $\tfrac12$ de $\tfrac12 m v^2$, o $2\pi$
+de um período), porque números puros são adimensionais. Também não distingue
+grandezas de mesma dimensão. É uma bússola que aponta a forma da lei, não o mapa
+completo.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-pendulo-dim}
+Suponha que o período $T$ de um pêndulo simples dependa do comprimento $L$, da
+massa $m$ e da gravidade $g$. Encontre a forma da lei por análise dimensional.
+:::
+
+**Solução.** Postule $T = C\,L^{a}\,m^{b}\,g^{c}$. As dimensões são
+$[\,T\,]=\mathsf{T}$, $[\,L\,]=\mathsf{L}$, $[\,m\,]=\mathsf{M}$,
+$[\,g\,]=\mathsf{L}\,\mathsf{T}^{-2}$. Então
+$$\mathsf{T} = \mathsf{L}^{a}\,\mathsf{M}^{b}\,(\mathsf{L}\,\mathsf{T}^{-2})^{c} = \mathsf{M}^{b}\,\mathsf{L}^{a+c}\,\mathsf{T}^{-2c}.$$
+Igualando expoentes: $\mathsf{M}$: $b=0$; $\mathsf{T}$: $-2c = 1 \Rightarrow c = -\tfrac12$;
+$\mathsf{L}$: $a + c = 0 \Rightarrow a = \tfrac12$. Logo
+$$T = C\,\sqrt{\frac{L}{g}}.$$
+A massa **não entra** (resultado físico genuíno!) e a dependência é
+$\sqrt{L/g}$. O cálculo completo dá $C = 2\pi$, que a dimensão não podia prever.
+
+::: {#exm-checagem}
+Um estudante escreve a energia cinética como $K = \tfrac12 m v$. Mostre, sem
+saber a fórmula certa, que está errada.
+:::
+
+**Solução.** A dimensão de energia é
+$\mathsf{M}\,\mathsf{L}^{2}\,\mathsf{T}^{-2}$. O lado direito tem
+$[\,m v\,] = \mathsf{M}\cdot\mathsf{L}\,\mathsf{T}^{-1} = \mathsf{M}\,\mathsf{L}\,\mathsf{T}^{-1}$,
+que não bate. Pela @eq-homogeneidade a fórmula é impossível. Para acertar a
+dimensão, a velocidade precisa entrar ao quadrado: $K \propto m v^2$ — e de fato
+$K = \tfrac12 m v^2$.
+
+## Exercícios
+
+::: {#exr-velocidade-onda}
+A velocidade $v$ de uma onda numa corda depende da tração $F$ (dimensão de força)
+e da densidade linear $\mu$ (massa por comprimento). Mostre, por análise
+dimensional, que $v = C\sqrt{F/\mu}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Postule $v = C\,F^{a}\,\mu^{b}$, com $[\,v\,]=\mathsf{L}\,\mathsf{T}^{-1}$,
+$[\,F\,]=\mathsf{M}\,\mathsf{L}\,\mathsf{T}^{-2}$ e
+$[\,\mu\,]=\mathsf{M}\,\mathsf{L}^{-1}$:
+$$\mathsf{L}\,\mathsf{T}^{-1} = (\mathsf{M}\,\mathsf{L}\,\mathsf{T}^{-2})^{a}\,(\mathsf{M}\,\mathsf{L}^{-1})^{b} = \mathsf{M}^{a+b}\,\mathsf{L}^{a-b}\,\mathsf{T}^{-2a}.$$
+$\mathsf{T}$: $-2a=-1 \Rightarrow a=\tfrac12$; $\mathsf{M}$:
+$a+b=0 \Rightarrow b=-\tfrac12$; $\mathsf{L}$: $a-b = \tfrac12+\tfrac12 = 1$ ✓.
+Logo $v = C\,F^{1/2}\,\mu^{-1/2} = C\sqrt{F/\mu}$ (e o valor exato é $C=1$).
+:::
+
+::: {#exr-argumento}
+Na expressão $x(t) = A\,e^{-\gamma t}\cos(\omega t)$, determine as dimensões de
+$\gamma$ e $\omega$ sabendo que $t$ é tempo.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela @eq-algebra-dim, os argumentos de $e^{(\cdot)}$ e $\cos(\cdot)$ são
+adimensionais. Então $[\,\gamma t\,] = 1 \Rightarrow [\,\gamma\,] = \mathsf{T}^{-1}$
+e $[\,\omega t\,] = 1 \Rightarrow [\,\omega\,] = \mathsf{T}^{-1}$. Ambas têm
+dimensão de frequência; $A$ tem a mesma dimensão de $x$.
+:::
+
+::: {#exr-gota}
+Estime, por análise dimensional, como o período de oscilação de uma gota líquida
+depende de sua densidade $\rho$, raio $R$ e tensão superficial $\sigma$ (dimensão
+$\mathsf{M}\,\mathsf{T}^{-2}$).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Postule $T = C\,\rho^{a}R^{b}\sigma^{c}$, com
+$[\,\rho\,]=\mathsf{M}\,\mathsf{L}^{-3}$, $[\,R\,]=\mathsf{L}$,
+$[\,\sigma\,]=\mathsf{M}\,\mathsf{T}^{-2}$:
+$$\mathsf{T} = \mathsf{M}^{a+c}\,\mathsf{L}^{-3a+b}\,\mathsf{T}^{-2c}.$$
+$\mathsf{T}$: $-2c=1\Rightarrow c=-\tfrac12$; $\mathsf{M}$:
+$a+c=0\Rightarrow a=\tfrac12$; $\mathsf{L}$: $-3a+b=0\Rightarrow b=\tfrac32$.
+Assim $T = C\sqrt{\rho R^3/\sigma}$.
+:::

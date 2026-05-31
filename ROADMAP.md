@@ -38,7 +38,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 *Objetivo: a linguagem da física. Pré-requisitos: nenhum.*
 
 - [x] `volumes/v1-fundamentos/01-grandezas-unidades.qmd` — Grandezas, SI e conversões
-- [ ] `volumes/v1-fundamentos/02-analise-dimensional.qmd` — Análise dimensional
+- [x] `volumes/v1-fundamentos/02-analise-dimensional.qmd` — Análise dimensional
 - [ ] `volumes/v1-fundamentos/03-medicao-erros.qmd` — Medição, algarismos significativos, teoria de erros
 - [ ] `volumes/v1-fundamentos/04-vetores.qmd` — Vetores e álgebra vetorial
 - [ ] `volumes/v1-fundamentos/05-ferramentas-calculo.qmd` — Derivadas e integrais na física

@@ -1,0 +1,127 @@
+---
+title: "Transições de Fase"
+---
+
+## Motivação
+
+A água ferve a $100\ \mathrm{^\circ C}$ ao nível do mar, mas a $70\ \mathrm{^\circ C}$
+no alto de uma montanha. O gelo derrete, a água evapora, o vapor condensa nas
+janelas frias. Essas **transições de fase** — entre sólido, líquido e gás —
+envolvem trocas de energia surpreendentes (suar resfria justamente por isso) e
+seguem regras precisas que conectam pressão, temperatura e calor. Este capítulo
+estuda as mudanças de estado, o calor latente e o diagrama de fases.
+
+## Estados da matéria e calor latente
+
+::: {#def-fase}
+Uma **fase** é uma forma fisicamente homogênea da matéria (sólida, líquida,
+gasosa). Uma **transição de fase** é a mudança entre elas, que ocorre a temperatura
+constante para uma dada pressão.
+:::
+
+A peculiaridade das transições: a temperatura **não muda** enquanto a fase se
+converte, embora calor seja absorvido ou liberado. Esse calor "escondido" tem nome.
+
+::: {.callout-important}
+## Calor latente
+O calor para mudar a fase de uma massa $m$, sem variar a temperatura, é
+$$Q = m\,L,$$ {#eq-calor-latente}
+onde $L$ é o **calor latente** (de fusão, $L_f$, ou de vaporização, $L_v$), em
+$\mathrm{J/kg}$. Para a água, $L_f = 3{,}34\times10^{5}\ \mathrm{J/kg}$ e
+$L_v = 2{,}26\times10^{6}\ \mathrm{J/kg}$.
+:::
+
+::: {.callout-note}
+## Para onde vai a energia
+Durante a fusão ou a vaporização, o calor absorvido não acelera as moléculas
+(temperatura constante), mas **rompe as ligações** que as mantinham coesas. Por
+isso $L_v \gg L_f$: separar moléculas para o estado gasoso custa muito mais do que
+apenas afrouxá-las no líquido. E é por isso que a transpiração resfria — a água que
+evapora rouba esse calor latente da pele.
+:::
+
+## Diagrama de fases
+
+A fase estável de uma substância depende de **pressão e temperatura**. Um
+**diagrama de fases** mapeia isso, com curvas separando as regiões.
+
+::: {.callout-important}
+## Pontos notáveis do diagrama de fases
+- As **curvas de coexistência** (fusão, vaporização, sublimação) marcam onde duas
+  fases coexistem em equilíbrio.
+- O **ponto triplo** é a única condição $(p, T)$ em que as três fases coexistem.
+- O **ponto crítico** é onde a curva de vaporização termina: acima dele não há
+  distinção entre líquido e gás (fluido supercrítico).
+:::
+
+<!-- TODO figura: diagrama de fases p-T com ponto triplo e ponto crítico -->
+
+A inclinação da curva de vaporização explica a panela de pressão e a montanha:
+**maior pressão eleva o ponto de ebulição**; menor pressão o reduz. No alto da
+montanha, a água ferve mais frio e cozinha pior.
+
+## Evaporação versus ebulição
+
+::: {.callout-note}
+## Dois modos de virar vapor
+A **ebulição** ocorre em toda a massa do líquido, a uma temperatura fixa (o ponto
+de ebulição) onde a pressão de vapor iguala a externa. A **evaporação** ocorre só
+na superfície e a qualquer temperatura: as moléculas mais energéticas escapam,
+deixando o líquido mais frio. Ambas consomem calor latente de vaporização.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-derreter-gelo}
+Quanto calor é preciso para transformar $0{,}20\ \mathrm{kg}$ de gelo a
+$0\ \mathrm{^\circ C}$ em água a $0\ \mathrm{^\circ C}$?
+($L_f = 3{,}34\times10^{5}\ \mathrm{J/kg}$.)
+:::
+
+**Solução.** Mudança de fase a temperatura constante, @eq-calor-latente:
+$$Q = m L_f = 0{,}20\times3{,}34\times10^{5} = 6{,}68\times10^{4}\ \mathrm{J}.$$
+
+::: {#exm-aquecer-e-ferver}
+Quanto calor leva $0{,}10\ \mathrm{kg}$ de água de $80\ \mathrm{^\circ C}$ até
+virar vapor a $100\ \mathrm{^\circ C}$?
+($c = 4186\ \mathrm{J/(kg\,K)}$, $L_v = 2{,}26\times10^{6}\ \mathrm{J/kg}$.)
+:::
+
+**Solução.** Duas etapas. Aquecer (@eq-calor-sensivel) de $80$ a
+$100\ \mathrm{^\circ C}$:
+$Q_1 = mc\Delta T = 0{,}10\times4186\times20 \approx 8{,}4\times10^{3}\ \mathrm{J}$.
+Vaporizar (@eq-calor-latente): $Q_2 = mL_v = 0{,}10\times2{,}26\times10^{6} = 2{,}26\times10^{5}\ \mathrm{J}$.
+Total $Q = Q_1 + Q_2 \approx 2{,}3\times10^{5}\ \mathrm{J}$ — a vaporização domina.
+
+## Exercícios
+
+::: {#exr-vaporizar}
+Quanto calor vaporiza $0{,}50\ \mathrm{kg}$ de água já a $100\ \mathrm{^\circ C}$?
+($L_v = 2{,}26\times10^{6}\ \mathrm{J/kg}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$Q = mL_v = 0{,}50\times2{,}26\times10^{6} = 1{,}13\times10^{6}\ \mathrm{J}$.
+:::
+
+::: {#exr-panela-pressao}
+Por que uma panela de pressão cozinha mais rápido?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Ela aumenta a pressão interna, o que **eleva o ponto de ebulição** da água acima de
+$100\ \mathrm{^\circ C}$. A água mais quente cozinha os alimentos mais depressa.
+:::
+
+::: {#exr-suor}
+Por que suar resfria o corpo?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O suor **evapora**, e a vaporização absorve calor latente (@eq-calor-latente)
+retirado da pele. As moléculas mais energéticas escapam, baixando a temperatura da
+superfície.
+:::

@@ -90,7 +90,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 
 - [x] `volumes/v6-termodinamica/01-temperatura-dilatacao.qmd` — Temperatura e dilatação
 - [x] `volumes/v6-termodinamica/02-calor-primeira-lei.qmd` — Calor e primeira lei
-- [ ] `volumes/v6-termodinamica/03-teoria-cinetica.qmd` — Teoria cinética dos gases
+- [x] `volumes/v6-termodinamica/03-teoria-cinetica.qmd` — Teoria cinética dos gases
 - [ ] `volumes/v6-termodinamica/04-segunda-lei-entropia.qmd` — Segunda lei e entropia
 - [ ] `volumes/v6-termodinamica/05-ciclos-maquinas.qmd` — Ciclos e máquinas térmicas
 - [ ] `volumes/v6-termodinamica/06-transicoes-fase.qmd` — Transições de fase

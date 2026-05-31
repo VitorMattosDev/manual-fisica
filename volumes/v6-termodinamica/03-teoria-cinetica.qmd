@@ -1,0 +1,129 @@
+---
+title: "Teoria Cinética dos Gases"
+---
+
+## Motivação
+
+Até aqui tratamos temperatura, calor e pressão como grandezas macroscópicas,
+medidas em termômetros e manômetros. Mas o que são elas, *de verdade*, no nível das
+moléculas? A **teoria cinética** responde: um gás é um enxame de bilhões de
+partículas em movimento caótico, e suas propriedades macroscópicas emergem das
+médias estatísticas desse movimento. Pressão é o bombardeio das paredes;
+temperatura é a energia cinética média. Este capítulo faz a ponte entre o micro e
+o macro — a porta de entrada da física estatística.
+
+## O modelo do gás ideal
+
+::: {#def-gas-ideal}
+Um **gás ideal** é um modelo em que as moléculas: (i) são pontuais (volume
+próprio desprezível); (ii) movem-se aleatoriamente; (iii) só interagem por colisões
+**elásticas** entre si e com as paredes; (iv) não exercem forças à distância. É uma
+boa aproximação para gases reais a baixas densidades.
+:::
+
+A experiência sintetiza o comportamento macroscópico desse gás numa única equação.
+
+::: {.callout-important}
+## Equação de estado do gás ideal
+$$pV = n R T,$$ {#eq-gas-ideal}
+onde $n$ é o número de mols, $T$ a temperatura **absoluta** e
+$R = 8{,}314\ \mathrm{J/(mol\,K)}$ a constante universal dos gases.
+Equivalentemente, em termos do número $N$ de moléculas e da constante de Boltzmann
+$k_B$:
+$$pV = N k_B T, \qquad k_B = \frac{R}{N_A}.$$ {#eq-gas-ideal-boltzmann}
+:::
+
+## A interpretação cinética da pressão
+
+A pressão não é misteriosa: é o resultado médio do incessante choque das moléculas
+contra as paredes.
+
+::: {.callout-important}
+## Pressão e energia cinética
+A teoria cinética relaciona a pressão à velocidade quadrática média
+$\overline{v^2}$ das moléculas de massa $m$ e densidade numérica $N/V$:
+$$p = \frac{1}{3}\,\frac{N}{V}\,m\,\overline{v^2}.$$ {#eq-pressao-cinetica}
+:::
+
+::: {.proof}
+## Esboço da dedução
+Considere moléculas batendo numa parede perpendicular ao eixo $x$. Cada colisão
+elástica inverte $v_x$, transferindo momento $2mv_x$. A taxa de colisões num
+intervalo é proporcional a $v_x$ e à densidade $N/V$; o produto dá uma força
+média $\propto (N/V)m\overline{v_x^2}$ sobre a área. Como o movimento é isotrópico,
+$\overline{v_x^2} = \tfrac13\overline{v^2}$, e dividindo a força pela área resulta a
+@eq-pressao-cinetica. $\qquad\blacksquare$
+:::
+
+Comparando a @eq-pressao-cinetica com $pV = Nk_BT$, obtém-se o resultado central da
+teoria cinética: **temperatura é energia cinética média**.
+
+::: {.callout-important}
+## Temperatura e energia cinética média
+$$\overline{K} = \tfrac12 m\overline{v^2} = \tfrac{3}{2}\,k_B T.$$ {#eq-energia-temperatura}
+A energia cinética média de translação de uma molécula depende **só** da
+temperatura, não do gás. Cada grau de liberdade contribui com $\tfrac12 k_B T$ — o
+**princípio da equipartição da energia**.
+:::
+
+::: {.callout-note}
+## Velocidade das moléculas
+Da @eq-energia-temperatura, a velocidade quadrática média é
+$v_\text{rms} = \sqrt{\overline{v^2}} = \sqrt{3k_BT/m} = \sqrt{3RT/M}$, com $M$ a
+massa molar. À temperatura ambiente, moléculas de ar movem-se a centenas de
+$\mathrm{m/s}$ — mais rápido que o som, o que não é coincidência.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-mols}
+Quantos mols há num gás que ocupa $V = 0{,}025\ \mathrm{m^3}$ a
+$p = 1{,}0\times10^{5}\ \mathrm{Pa}$ e $T = 300\ \mathrm{K}$?
+($R = 8{,}314\ \mathrm{J/(mol\,K)}$.)
+:::
+
+**Solução.** Da @eq-gas-ideal, $n = pV/(RT)$:
+$$n = \frac{1{,}0\times10^{5}\times0{,}025}{8{,}314\times300} = \frac{2500}{2494} \approx 1{,}0\ \mathrm{mol}.$$
+
+::: {#exm-vrms}
+Qual a velocidade quadrática média de moléculas de nitrogênio
+($M = 0{,}028\ \mathrm{kg/mol}$) a $300\ \mathrm{K}$?
+:::
+
+**Solução.** Por $v_\text{rms} = \sqrt{3RT/M}$:
+$$v_\text{rms} = \sqrt{\frac{3\times8{,}314\times300}{0{,}028}} = \sqrt{\frac{7483}{0{,}028}} = \sqrt{2{,}67\times10^{5}} \approx 517\ \mathrm{m/s}.$$
+
+## Exercícios
+
+::: {#exr-lei-gases}
+Um gás ideal a $2{,}0\ \mathrm{atm}$ e $300\ \mathrm{K}$ é aquecido a volume
+constante até $600\ \mathrm{K}$. Qual a nova pressão?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A volume e $n$ constantes, $p/T$ é constante (@eq-gas-ideal):
+$p_2 = p_1 T_2/T_1 = 2{,}0\times600/300 = 4{,}0\ \mathrm{atm}$.
+:::
+
+::: {#exr-energia-media}
+Qual a energia cinética média de translação de uma molécula a $300\ \mathrm{K}$?
+($k_B = 1{,}38\times10^{-23}\ \mathrm{J/K}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\overline{K} = \tfrac32 k_B T = \tfrac32\times1{,}38\times10^{-23}\times300 \approx 6{,}2\times10^{-21}\ \mathrm{J}$
+(@eq-energia-temperatura).
+:::
+
+::: {#exr-dobrar-temp}
+Se a temperatura absoluta de um gás dobra, em quanto varia a velocidade
+quadrática média de suas moléculas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$v_\text{rms}\propto\sqrt{T}$ (@eq-energia-temperatura). Dobrar $T$ multiplica
+$v_\text{rms}$ por $\sqrt{2}\approx1{,}41$.
+:::

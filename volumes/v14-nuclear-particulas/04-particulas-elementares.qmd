@@ -1,0 +1,122 @@
+---
+title: "Partículas Elementares e o Modelo Padrão"
+---
+
+## Motivação
+
+Se prótons e nêutrons compõem o núcleo, do que são feitos eles? A busca pelos
+constituintes últimos da matéria levou, ao longo do século XX, a um zoológico de
+partículas e, finalmente, a uma teoria de extraordinário sucesso: o **Modelo
+Padrão** da física de partículas. Ele descreve **todas** as partículas conhecidas e
+três das quatro forças fundamentais, e prevê fenômenos com precisão de muitas casas
+decimais. Este capítulo apresenta o Modelo Padrão — o retrato mais profundo que
+temos da matéria.
+
+## Quarks e léptons: a matéria
+
+::: {.callout-important}
+## As partículas de matéria (férmions)
+A matéria é feita de dois tipos de férmions fundamentais, em três "gerações":
+
+- **Quarks** (6 sabores: up, down, charm, strange, top, bottom) — sentem a força
+  forte e formam prótons ($uud$), nêutrons ($udd$) e outros **hádrons**.
+- **Léptons** (elétron, múon, tau e seus três neutrinos) — não sentem a força forte.
+
+A matéria comum usa só a primeira geração: quarks $u$, $d$ e o elétron.
+:::
+
+::: {.callout-note}
+## Por que nunca vemos um quark sozinho
+Os quarks têm carga elétrica fracionária ($+\tfrac23 e$ ou $-\tfrac13 e$) e estão
+**confinados**: a força forte entre eles cresce com a distância, de modo que separá-los
+exigiria energia infinita — antes disso, formam-se novos pares quark-antiquark. Por
+isso só observamos combinações de carga inteira (hádrons), nunca um quark livre. É o
+**confinamento de cor**.
+:::
+
+## As forças e seus mediadores
+
+No Modelo Padrão, as forças são transmitidas pela troca de partículas **bósons**.
+
+::: {.callout-important}
+## As interações fundamentais e seus bósons
+| Interação | Bóson mediador | Atua sobre |
+|---|---|---|
+| Eletromagnética | fóton ($\gamma$) | cargas elétricas |
+| Forte | glúons ($g$) | quarks (carga de cor) |
+| Fraca | bósons $W^\pm$, $Z^0$ | quarks e léptons |
+
+A **gravidade** (hipotético gráviton) **não** está no Modelo Padrão — a grande
+lacuna da teoria.
+:::
+
+## O bóson de Higgs
+
+::: {.callout-important}
+## O campo de Higgs e a origem da massa
+O **campo de Higgs**, que permeia todo o espaço, dá **massa** às partículas
+fundamentais: quanto mais fortemente uma partícula interage com ele, mais massiva.
+Sua excitação, o **bóson de Higgs**, foi descoberta no LHC em 2012, completando o
+Modelo Padrão.
+:::
+
+::: {.callout-note}
+## O triunfo e os limites do Modelo Padrão
+O Modelo Padrão é talvez a teoria mais bem testada da história — prevê grandezas com
+precisão de partes por bilhão. Ainda assim, é **incompleto**: não inclui a
+gravidade, não explica a **matéria escura** nem a **energia escura** (que somam
+$\sim95\%$ do universo), nem por que há mais matéria que antimatéria. Essas lacunas
+são as fronteiras da física, exploradas no último volume.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-proton-quarks}
+O próton é feito de dois quarks up ($+\tfrac23 e$ cada) e um down ($-\tfrac13 e$).
+Verifique sua carga total.
+:::
+
+**Solução.** Somando as cargas dos quarks $uud$:
+$$Q = \tfrac23 e + \tfrac23 e - \tfrac13 e = \frac{2 + 2 - 1}{3}\,e = \frac{3}{3}\,e = +e.$$
+Carga $+e$, como observado — as cargas fracionárias dos quarks somam um inteiro.
+
+::: {#exm-neutron-quarks}
+Mostre que o nêutron ($udd$) tem carga nula.
+:::
+
+**Solução.** $Q = \tfrac23 e - \tfrac13 e - \tfrac13 e = \frac{2 - 1 - 1}{3}\,e = 0$.
+O nêutron é neutro, embora composto de quarks carregados.
+
+## Exercícios
+
+::: {#exr-mediador-em}
+Qual partícula media a força eletromagnética entre cargas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O **fóton** ($\gamma$), o bóson mediador da interação eletromagnética. A repulsão e
+atração entre cargas resultam da troca de fótons.
+:::
+
+::: {#exr-lacuna-modelo}
+Cite uma força fundamental que o Modelo Padrão **não** descreve.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **gravidade**. O Modelo Padrão descreve as forças eletromagnética, forte e fraca,
+mas não incorpora a gravitação (cujo hipotético mediador seria o gráviton) — uma de
+suas maiores lacunas.
+:::
+
+::: {#exr-higgs}
+Qual o papel do campo de Higgs?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Dar **massa** às partículas fundamentais: a intensidade da interação de cada
+partícula com o campo de Higgs determina sua massa. Sua excitação, o bóson de Higgs,
+foi detectada em 2012.
+:::

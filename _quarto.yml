@@ -135,6 +135,7 @@ book:
         - volumes/v14-nuclear-particulas/01-estrutura-nuclear.qmd
         - volumes/v14-nuclear-particulas/02-radioatividade.qmd
         - volumes/v14-nuclear-particulas/03-reacoes-nucleares.qmd
+        - volumes/v14-nuclear-particulas/04-particulas-elementares.qmd
   appendices:
     - constantes.qmd
 

@@ -73,7 +73,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v4-fluidos/01-estatica-fluidos.qmd` — Estática (pressão, empuxo)
 - [x] `volumes/v4-fluidos/02-dinamica-fluidos.qmd` — Continuidade e Bernoulli
 - [x] `volumes/v4-fluidos/03-viscosidade.qmd` — Viscosidade e fluidos reais
-- [ ] `volumes/v4-fluidos/04-elasticidade.qmd` — Elasticidade e deformação dos sólidos
+- [x] `volumes/v4-fluidos/04-elasticidade.qmd` — Elasticidade e deformação dos sólidos
 
 ## Volume V — Ondas e Acústica
 *Objetivo: perturbações que se propagam. Pré-requisitos: III (MHS).*

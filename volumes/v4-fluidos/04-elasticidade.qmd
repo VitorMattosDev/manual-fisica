@@ -1,0 +1,134 @@
+---
+title: "Elasticidade e Deformação dos Sólidos"
+---
+
+## Motivação
+
+Nenhum sólido é perfeitamente rígido — aquele "corpo rígido" idealizado da
+mecânica é mais uma aproximação útil. Puxe um fio e ele se alonga; comprima uma
+viga e ela encurta; torça uma barra e ela cede um pouco. Entender **quanto** um
+material se deforma sob carga, e quando ele rompe, é a base da engenharia de
+estruturas e materiais. Este capítulo, que encerra os meios contínuos, trata da
+**elasticidade**: a relação entre a força aplicada (tensão) e a deformação
+resultante, generalizando a lei de Hooke das molas para os sólidos.
+
+## Tensão e deformação
+
+::: {#def-tensao-deformacao}
+A **tensão** $\sigma$ é a força aplicada por unidade de área da seção
+transversal; a **deformação** $\varepsilon$ é a variação relativa de comprimento:
+$$\sigma = \frac{F}{A}, \qquad \varepsilon = \frac{\Delta L}{L_0}.$$ {#eq-tensao-deformacao}
+A tensão tem unidade de pressão ($\mathrm{Pa}$); a deformação é adimensional.
+:::
+
+Separar a força do tamanho do corpo é o que torna a descrição universal: dois fios
+do mesmo material, de espessuras diferentes, têm a mesma relação
+tensão–deformação, embora estiquem de forma distinta sob a mesma força.
+
+## A lei de Hooke para sólidos
+
+Para deformações pequenas, tensão e deformação são proporcionais — a versão
+material da lei de Hooke.
+
+::: {.callout-important}
+## Módulo de Young
+No regime elástico, a tensão de tração/compressão é proporcional à deformação:
+$$\sigma = E\,\varepsilon \quad\Longleftrightarrow\quad \frac{F}{A} = E\,\frac{\Delta L}{L_0},$$ {#eq-young}
+onde $E$ é o **módulo de Young** do material (em $\mathrm{Pa}$), uma medida de sua
+rigidez. O aço tem $E\approx 2\times10^{11}\ \mathrm{Pa}$; a borracha,
+$\sim 10^{6}\ \mathrm{Pa}$.
+:::
+
+::: {.callout-note}
+## A mola é um caso particular
+Reescrevendo a @eq-young como $F = \left(\dfrac{EA}{L_0}\right)\Delta L$,
+reconhecemos a lei de Hooke das molas $F = k\,\Delta L$ (@eq-hooke) com constante
+$k = EA/L_0$. Uma barra é, no fundo, uma mola muito rígida — e o MHS do Volume III
+aplica-se a vibrações de sólidos.
+:::
+
+## Outros módulos elásticos
+
+A tração não é o único modo de deformar. Conforme a geometria da carga, definem-se
+três módulos:
+
+::: {.callout-important}
+## Os três módulos elásticos
+- **Módulo de Young** $E$: resistência a esticar/comprimir ($\sigma = E\varepsilon$).
+- **Módulo de cisalhamento** $G$: resistência a deslizar/torcer
+  ($\tau = G\,\gamma$, com $\gamma$ a deformação angular).
+- **Módulo volumétrico** $B$: resistência à compressão uniforme,
+  $$\Delta p = -B\,\frac{\Delta V}{V}.$$ {#eq-modulo-volumetrico}
+:::
+
+O módulo volumétrico conecta este capítulo aos fluidos: a "incompressibilidade" do
+fluido ideal corresponde a $B\to\infty$.
+
+## Limites: regime elástico, plástico e ruptura
+
+::: {.callout-note}
+## Da elasticidade à ruptura
+A proporcionalidade da @eq-young só vale até o **limite de proporcionalidade**.
+Além dele, o material entra no regime **plástico**: a deformação deixa de ser
+reversível e o corpo não volta ao tamanho original. Aumentando ainda a tensão,
+atinge-se a **tensão de ruptura** e o material se rompe. A área sob a curva
+tensão–deformação mede a energia absorvida — a **tenacidade** do material.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-fio-esticado}
+Um fio de aço ($E = 2{,}0\times10^{11}\ \mathrm{Pa}$) de comprimento
+$2{,}0\ \mathrm{m}$ e seção $1{,}0\times10^{-6}\ \mathrm{m^2}$ sustenta uma carga
+de $100\ \mathrm{N}$. Quanto ele se alonga?
+:::
+
+**Solução.** Da @eq-young, $\Delta L = \dfrac{F L_0}{A E}$:
+$$\Delta L = \frac{100\times2{,}0}{1{,}0\times10^{-6}\times2{,}0\times10^{11}} = \frac{200}{2{,}0\times10^{5}} = 1{,}0\times10^{-3}\ \mathrm{m} = 1{,}0\ \mathrm{mm}.$$
+
+::: {#exm-compressao-volume}
+Um líquido de módulo volumétrico $B = 2{,}2\times10^{9}\ \mathrm{Pa}$ é submetido a
+um aumento de pressão de $1{,}1\times10^{7}\ \mathrm{Pa}$. Qual a variação relativa
+de volume?
+:::
+
+**Solução.** Da @eq-modulo-volumetrico,
+$\dfrac{\Delta V}{V} = -\dfrac{\Delta p}{B} = -\dfrac{1{,}1\times10^{7}}{2{,}2\times10^{9}} = -5{,}0\times10^{-3}$,
+isto é, uma compressão de $0{,}5\%$. Líquidos são quase incompressíveis — daí o
+modelo de fluido ideal.
+
+## Exercícios
+
+::: {#exr-deformacao}
+Um fio de comprimento $1{,}5\ \mathrm{m}$ alonga $0{,}30\ \mathrm{mm}$ sob carga.
+Qual a deformação $\varepsilon$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\varepsilon = \Delta L/L_0 = 0{,}30\times10^{-3}/1{,}5 = 2{,}0\times10^{-4}$
+(adimensional).
+:::
+
+::: {#exr-constante-mola-barra}
+Uma barra tem $E = 1{,}0\times10^{11}\ \mathrm{Pa}$, área
+$2{,}0\times10^{-4}\ \mathrm{m^2}$ e comprimento $0{,}50\ \mathrm{m}$. Qual a
+constante de mola equivalente?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$k = EA/L_0 = (1{,}0\times10^{11})(2{,}0\times10^{-4})/0{,}50 = 4{,}0\times10^{7}\ \mathrm{N/m}$.
+Rigidíssima, como esperado de uma barra.
+:::
+
+::: {#exr-tensao-ruptura}
+Um cabo de seção $0{,}50\ \mathrm{cm^2}$ rompe a uma tensão de
+$4{,}0\times10^{8}\ \mathrm{Pa}$. Qual a força máxima que suporta?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$F = \sigma A = 4{,}0\times10^{8}\times0{,}50\times10^{-4} = 2{,}0\times10^{4}\ \mathrm{N}$
+(com $0{,}50\ \mathrm{cm^2} = 0{,}50\times10^{-4}\ \mathrm{m^2}$).
+:::

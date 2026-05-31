@@ -173,7 +173,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v13-materia/02-espectros.qmd` — Espectros atômicos
 - [x] `volumes/v13-materia/03-moleculas-ligacoes.qmd` — Moléculas e ligações
 - [x] `volumes/v13-materia/04-estatistica-quantica.qmd` — Fermi-Dirac e Bose-Einstein
-- [ ] `volumes/v13-materia/05-estado-solido.qmd` — Bandas e semicondutores
+- [x] `volumes/v13-materia/05-estado-solido.qmd` — Bandas e semicondutores
 - [ ] `volumes/v13-materia/06-supercondutividade.qmd` — Supercondutividade
 
 ## Volume XIV — Física Nuclear e de Partículas

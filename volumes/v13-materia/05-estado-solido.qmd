@@ -1,0 +1,127 @@
+---
+title: "Estado Sólido: Bandas e Semicondutores"
+---
+
+## Motivação
+
+Por que o cobre conduz eletricidade, o vidro não, e o silício fica no meio-termo — a
+base de **toda** a eletrônica moderna? A resposta, que a física clássica não dava,
+está na **teoria de bandas**: quando bilhões de átomos se juntam num cristal, seus
+níveis de energia se fundem em faixas (bandas) permitidas, separadas por lacunas
+proibidas. Como essas bandas são preenchidas determina se o material conduz, isola
+ou semiconduz. Este capítulo explica a teoria de bandas e os semicondutores,
+fundamento da revolução digital.
+
+## A formação das bandas
+
+::: {#def-bandas}
+Num cristal, os níveis de energia atômicos discretos se desdobram em **bandas** de
+energia permitidas (com enorme número de estados próximos), separadas por **lacunas
+proibidas** (*gaps*). As duas bandas decisivas são a **banda de valência** (a mais
+alta cheia ou parcialmente cheia) e a **banda de condução** (a próxima, acima do
+gap).
+:::
+
+::: {.callout-important}
+## A classificação dos materiais
+A condução depende de haver elétrons em estados que possam se mover (banda
+parcialmente preenchida):
+
+- **Condutor:** banda de condução parcialmente cheia — elétrons fluem livremente.
+- **Isolante:** banda de valência cheia e gap **grande** ($\gtrsim 5\ \mathrm{eV}$) —
+  elétrons não conseguem saltar para conduzir.
+- **Semicondutor:** banda de valência cheia mas gap **pequeno** ($\sim 1\ \mathrm{eV}$) —
+  agitação térmica ou dopagem promove alguns elétrons à condução.
+:::
+
+::: {.callout-note}
+## A diferença entre conduzir ou não é o gap
+A distinção entre cobre, vidro e silício não é "ter ou não elétrons", e sim o
+**tamanho do gap** e o preenchimento das bandas. O silício, com gap de
+$\sim1{,}1\ \mathrm{eV}$, está no ponto ideal: isolante a frio, mas controlável por
+temperatura, luz ou dopagem — o que o torna a base dos transistores e chips.
+:::
+
+## Semicondutores dopados
+
+A mágica da eletrônica vem da **dopagem**: adicionar impurezas controladas que
+fornecem portadores de carga extras.
+
+::: {.callout-important}
+## Dopagem tipo n e tipo p
+- **Tipo n:** dopantes doadores (ex.: fósforo no silício) acrescentam **elétrons**
+  livres na banda de condução.
+- **Tipo p:** dopantes aceitadores (ex.: boro) criam **buracos** (ausências de
+  elétron) na banda de valência, que se comportam como cargas positivas móveis.
+:::
+
+## A junção p-n: o diodo
+
+::: {.callout-note}
+## O componente que retifica a corrente
+Unindo um semicondutor tipo p a um tipo n forma-se uma **junção p-n**, que conduz
+corrente num sentido (polarização direta) e bloqueia no outro (reversa) — o
+**diodo**. Combinando junções, obtêm-se **transistores**, os interruptores e
+amplificadores que compõem todo chip. Um processador moderno tem bilhões deles.
+Diodos emissores de luz (LEDs) e células solares são outras junções p-n. A teoria de
+bandas, abstrata, é o alicerce físico do mundo digital.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-gap-silicio}
+O silício tem gap $E_g \approx 1{,}1\ \mathrm{eV}$. Qual o comprimento de onda
+máximo de luz capaz de promover um elétron à banda de condução?
+:::
+
+**Solução.** O fóton precisa de energia $\ge E_g$. No limite, $hf = E_g$, e
+$\lambda = hc/E_g$. Com $E_g = 1{,}1\ \mathrm{eV} = 1{,}76\times10^{-19}\ \mathrm{J}$:
+$$\lambda = \frac{hc}{E_g} = \frac{6{,}63\times10^{-34}\times3{,}0\times10^{8}}{1{,}76\times10^{-19}} \approx 1{,}1\times10^{-6}\ \mathrm{m} = 1{,}1\ \mu\mathrm{m},$$
+no infravermelho próximo — por isso o silício absorve a luz visível (que tem
+energia maior que o gap), o que o torna útil em células solares.
+
+::: {#exm-tipo-dopagem}
+Ao dopar silício com fósforo (5 elétrons de valência, contra 4 do silício), que
+tipo de semicondutor se obtém?
+:::
+
+**Solução.** O fósforo tem um elétron a mais que o silício; esse elétron extra fica
+fracamente ligado e passa facilmente à banda de condução. Cria-se um excesso de
+**elétrons** livres: semicondutor **tipo n** (portadores negativos).
+
+## Exercícios
+
+::: {#exr-isolante-condutor}
+Em termos de bandas, qual a diferença essencial entre um isolante e um condutor?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+No **condutor**, a banda de condução está parcialmente preenchida, com elétrons
+livres para se mover. No **isolante**, a banda de valência está cheia e há um gap
+**grande** até a de condução, que os elétrons não conseguem transpor — sem
+portadores móveis, não há corrente.
+:::
+
+::: {#exr-buraco}
+O que é um "buraco" num semicondutor tipo p, e como ele conduz corrente?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Um **buraco** é a ausência de um elétron na banda de valência, que se comporta como
+uma carga **positiva** móvel: elétrons vizinhos saltam para preenchê-lo, e o buraco
+"se move" no sentido oposto, conduzindo corrente.
+:::
+
+::: {#exr-temperatura-semicondutor}
+Por que a condutividade de um semicondutor **aumenta** com a temperatura, ao
+contrário de um metal?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+No semicondutor, aquecer promove mais elétrons através do gap pequeno para a banda
+de condução, **aumentando** o número de portadores. No metal, o número de portadores
+já é fixo e alto; aquecer só aumenta o espalhamento, **reduzindo** a condutividade.
+:::

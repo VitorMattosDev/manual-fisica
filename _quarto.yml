@@ -128,6 +128,7 @@ book:
         - volumes/v13-materia/02-espectros.qmd
         - volumes/v13-materia/03-moleculas-ligacoes.qmd
         - volumes/v13-materia/04-estatistica-quantica.qmd
+        - volumes/v13-materia/05-estado-solido.qmd
   appendices:
     - constantes.qmd
 

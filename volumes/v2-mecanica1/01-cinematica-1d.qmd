@@ -1,0 +1,147 @@
+---
+title: "Cinemática Unidimensional"
+---
+
+## Motivação
+
+Antes de perguntar *por que* as coisas se movem — tarefa da dinâmica —, é preciso
+saber *descrever* o movimento. Quão rápido? Acelerando ou freando? Onde estará
+daqui a $3\ \mathrm{s}$? A **cinemática** responde a essas perguntas sem se
+importar com as causas. Começamos pelo caso mais simples e mais instrutivo: o
+movimento ao longo de uma única reta. Toda a estrutura conceitual — posição,
+velocidade, aceleração e suas relações via cálculo — já aparece aqui, e se
+estende quase sem mudanças ao espaço tridimensional.
+
+## Posição, deslocamento e distância
+
+::: {#def-posicao}
+A **posição** $x(t)$ de uma partícula é sua coordenada sobre o eixo, medida a
+partir de uma origem. O **deslocamento** entre dois instantes é a variação da
+posição,
+$$\Delta x = x_f - x_i,$$ {#eq-deslocamento}
+uma grandeza com sinal (vetorial em 1D). A **distância percorrida** é o
+comprimento total do caminho, sempre positiva, e pode exceder $|\Delta x|$.
+:::
+
+Se você anda $3\ \mathrm{m}$ para a direita e volta $3\ \mathrm{m}$, o
+deslocamento é nulo mas a distância percorrida é $6\ \mathrm{m}$. Deslocamento
+mede *para onde se foi líquido*; distância, *quanto se andou*.
+
+## Velocidade
+
+::: {#def-velocidade}
+A **velocidade média** num intervalo é o deslocamento dividido pelo tempo; a
+**velocidade instantânea** é o seu limite quando o intervalo tende a zero — a
+derivada da posição:
+$$v_\text{m} = \frac{\Delta x}{\Delta t}, \qquad v = \frac{\mathrm{d}x}{\mathrm{d}t}.$$ {#eq-velocidade}
+O **módulo** da velocidade é a *rapidez* (em inglês, *speed*).
+:::
+
+No gráfico $x \times t$, a velocidade instantânea é a inclinação da tangente.
+Reta inclinada para cima: $v>0$; reta horizontal: repouso; reta para baixo:
+$v<0$.
+
+## Aceleração
+
+::: {#def-aceleracao}
+A **aceleração** é a taxa de variação da velocidade:
+$$a_\text{m} = \frac{\Delta v}{\Delta t}, \qquad a = \frac{\mathrm{d}v}{\mathrm{d}t} = \frac{\mathrm{d}^2 x}{\mathrm{d}t^2}.$$ {#eq-aceleracao}
+:::
+
+Atenção ao sinal: aceleração e velocidade de **mesmo sinal** significam corpo
+ganhando rapidez; de **sinais opostos**, corpo freando. "Acelerar" no sentido
+físico inclui frear — é qualquer mudança de velocidade.
+
+## Movimento com aceleração constante
+
+O caso particular mais importante: $a$ constante. Integrando a @eq-aceleracao
+obtemos toda a cinemática do movimento uniformemente variado (MUV).
+
+::: {.callout-important}
+## Equações do movimento uniformemente variado
+Para aceleração $a$ constante, com posição e velocidade iniciais $x_0, v_0$:
+$$v = v_0 + a\,t,$$ {#eq-muv-v}
+$$x = x_0 + v_0\,t + \tfrac12 a\,t^2,$$ {#eq-muv-x}
+$$v^2 = v_0^2 + 2a\,(x - x_0).$$ {#eq-torricelli}
+A última (equação de Torricelli) não contém o tempo — útil quando ele é
+desconhecido.
+:::
+
+::: {.proof}
+## Dedução por integração
+Como $a$ é constante, integrar $\mathrm{d}v = a\,\mathrm{d}t$ de $0$ a $t$ dá
+$v - v_0 = a t$, isto é a @eq-muv-v. Integrando de novo $\mathrm{d}x = v\,\mathrm{d}t = (v_0 + at)\,\mathrm{d}t$:
+$$x - x_0 = v_0 t + \tfrac12 a t^2,$$
+que é a @eq-muv-x. Para a @eq-torricelli, elimine $t$: de @eq-muv-v,
+$t = (v-v_0)/a$; substituindo em @eq-muv-x e simplificando,
+$v^2 = v_0^2 + 2a(x-x_0)$. $\qquad\blacksquare$
+:::
+
+## Queda livre
+
+::: {.callout-note}
+## Um caso de MUV: a gravidade
+Perto da superfície da Terra, desprezando o ar, todo corpo cai com aceleração
+constante $g \approx 9{,}8\ \mathrm{m/s^2}$ dirigida para baixo,
+**independentemente de sua massa**. A queda livre é apenas MUV com $a = -g$
+(tomando o eixo para cima). As três equações acima valem trocando $a$ por $-g$.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-frenagem}
+Um carro a $20\ \mathrm{m/s}$ freia com aceleração constante de módulo
+$5{,}0\ \mathrm{m/s^2}$. Que distância percorre até parar?
+:::
+
+**Solução.** Como o tempo não é pedido, use Torricelli (@eq-torricelli) com
+$v=0$, $v_0 = 20\ \mathrm{m/s}$ e $a = -5{,}0\ \mathrm{m/s^2}$ (freia, sinal
+oposto a $v_0$):
+$$0 = (20)^2 + 2(-5{,}0)\,d \;\Longrightarrow\; d = \frac{400}{10} = 40\ \mathrm{m}.$$
+
+::: {#exm-lancamento-vertical}
+Uma bola é lançada para cima a $15\ \mathrm{m/s}$. Qual a altura máxima e o tempo
+de subida? Use $g = 9{,}8\ \mathrm{m/s^2}$.
+:::
+
+**Solução.** No ponto mais alto, $v=0$. Por @eq-muv-v, o tempo de subida é
+$$t = \frac{v_0}{g} = \frac{15}{9{,}8} \approx 1{,}5\ \mathrm{s}.$$
+A altura máxima, por Torricelli com $a=-g$:
+$$h = \frac{v_0^2}{2g} = \frac{(15)^2}{2\cdot9{,}8} \approx 11{,}5\ \mathrm{m}.$$
+
+## Exercícios
+
+::: {#exr-encontro}
+Dois corpos partem do mesmo ponto: um com velocidade constante
+$4{,}0\ \mathrm{m/s}$; o outro, do repouso, com aceleração
+$2{,}0\ \mathrm{m/s^2}$. Em que instante têm a mesma velocidade?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A velocidade do segundo é $v = a t = 2{,}0\,t$. Igualando a $4{,}0\ \mathrm{m/s}$:
+$2{,}0\,t = 4{,}0 \Rightarrow t = 2{,}0\ \mathrm{s}$.
+:::
+
+::: {#exr-tempo-queda}
+De que altura cai um objeto, do repouso, para atingir o solo em $2{,}0\ \mathrm{s}$?
+($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por @eq-muv-x com $v_0=0$ e $a=g$:
+$h = \tfrac12 g t^2 = \tfrac12 (9{,}8)(2{,}0)^2 = 19{,}6\ \mathrm{m}$.
+:::
+
+::: {#exr-grafico}
+A velocidade de um corpo varia segundo $v(t) = 2 + 3t$ (SI). Determine a
+aceleração e o deslocamento entre $t=0$ e $t=4\ \mathrm{s}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Aceleração: $a = \mathrm{d}v/\mathrm{d}t = 3\ \mathrm{m/s^2}$ (constante).
+Deslocamento (área sob $v\times t$ ou integral):
+$\Delta x = \int_0^4 (2+3t)\,\mathrm{d}t = [2t + \tfrac32 t^2]_0^4 = 8 + 24 = 32\ \mathrm{m}$.
+:::

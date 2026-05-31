@@ -47,7 +47,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume II — Mecânica Clássica I (Cinemática e Dinâmica)
 *Objetivo: descrever e prever o movimento. Pré-requisitos: I.*
 
-- [ ] `volumes/v2-mecanica1/01-cinematica-1d.qmd` — Cinemática unidimensional
+- [x] `volumes/v2-mecanica1/01-cinematica-1d.qmd` — Cinemática unidimensional
 - [ ] `volumes/v2-mecanica1/02-cinematica-vetorial.qmd` — Vetorial, projéteis, circular
 - [ ] `volumes/v2-mecanica1/03-leis-newton.qmd` — Leis de Newton
 - [ ] `volumes/v2-mecanica1/04-aplicacoes-newton.qmd` — Atrito e aplicações

@@ -70,6 +70,9 @@ book:
         - volumes/v6-termodinamica/05-ciclos-maquinas.qmd
         - volumes/v6-termodinamica/06-transicoes-fase.qmd
         - volumes/v6-termodinamica/07-fisica-estatistica.qmd
+    - part: "Volume VII — Eletromagnetismo I"
+      chapters:
+        - volumes/v7-eletromagnetismo1/01-carga-coulomb.qmd
   appendices:
     - constantes.qmd
 

@@ -1,0 +1,121 @@
+---
+title: "Carga Elétrica e Lei de Coulomb"
+---
+
+## Motivação
+
+Esfregue um balão no cabelo e ele gruda na parede; um relâmpago risca o céu; seu
+celular funciona. Tudo isso é **eletricidade** — e na raiz dela está uma
+propriedade da matéria tão fundamental quanto a massa: a **carga elétrica**. Ao
+contrário da gravidade, que só atrai, a carga vem em dois sinais e pode tanto
+atrair quanto repelir. Este capítulo, que abre o eletromagnetismo, define a carga,
+suas propriedades de conservação e quantização, e a lei que governa a força entre
+cargas — a lei de Coulomb, irmã elétrica da gravitação de Newton.
+
+## Carga elétrica
+
+::: {#def-carga}
+A **carga elétrica** é uma propriedade fundamental da matéria, responsável pelas
+interações eletromagnéticas. Existe em dois tipos, convencionados **positivo** e
+**negativo**. Cargas de **mesmo sinal se repelem**; de **sinais opostos se
+atraem**. A unidade SI é o **coulomb** ($\mathrm{C}$).
+:::
+
+Duas propriedades profundas distinguem a carga:
+
+::: {.callout-important}
+## Conservação e quantização da carga
+- **Conservação:** a carga elétrica total de um sistema isolado é constante. Cargas
+  podem ser transferidas ou criadas em pares $(+,-)$, mas a soma nunca muda.
+- **Quantização:** toda carga é um múltiplo inteiro da **carga elementar**
+  $$e = 1{,}602\times10^{-19}\ \mathrm{C}, \qquad Q = n\,e,\ \ n\in\mathbb{Z}.$$ {#eq-quantizacao-carga}
+:::
+
+O elétron tem carga $-e$; o próton, $+e$. A quantização é exata: nunca se observou
+fração de $e$ livre (embora os quarks, confinados, tenham carga fracionária —
+Volume XIV).
+
+## Condutores e isolantes
+
+::: {.callout-note}
+## Como a carga se move
+Em **condutores** (metais), alguns elétrons são livres e a carga se redistribui
+facilmente. Em **isolantes** (vidro, plástico), os elétrons estão presos e a carga
+fica localizada. A eletrização ocorre por **atrito**, **contato** ou **indução**
+(rearranjo de cargas pela aproximação de um corpo carregado, sem contato).
+:::
+
+## A lei de Coulomb
+
+A força entre duas cargas pontuais foi medida por Coulomb e tem forma idêntica à da
+gravitação — inverso do quadrado da distância.
+
+::: {.callout-important}
+## Lei de Coulomb
+Duas cargas pontuais $q_1$ e $q_2$ separadas por $r$ exercem uma sobre a outra uma
+força de módulo
+$$F = k\,\frac{|q_1 q_2|}{r^2}, \qquad k = \frac{1}{4\pi\varepsilon_0} \approx 8{,}99\times10^{9}\ \mathrm{N\,m^2/C^2},$$ {#eq-coulomb}
+dirigida ao longo da reta que as une: repulsiva se as cargas têm o mesmo sinal,
+atrativa se opostas. A constante $\varepsilon_0$ é a permissividade do vácuo.
+:::
+
+::: {.callout-note}
+## Coulomb × gravitação: a mesma forma, intensidades abissais
+A @eq-coulomb e a @eq-gravitacao têm estrutura idêntica ($\propto 1/r^2$), mas a
+força elétrica é **incomparavelmente mais forte**: entre dois elétrons, a repulsão
+elétrica supera a atração gravitacional por um fator $\sim10^{42}$. É a carga, não
+a massa, que governa átomos, moléculas e química. A gravidade só domina em escala
+astronômica porque a matéria é, em geral, eletricamente **neutra**.
+:::
+
+O **princípio da superposição** vale: a força sobre uma carga é a soma vetorial das
+forças de todas as outras, tomadas aos pares.
+
+## Exemplos resolvidos
+
+::: {#exm-forca-coulomb}
+Duas cargas de $+2{,}0\ \mu\mathrm{C}$ e $-3{,}0\ \mu\mathrm{C}$ estão a
+$0{,}10\ \mathrm{m}$ uma da outra. Qual o módulo e a natureza da força?
+:::
+
+**Solução.** Por @eq-coulomb, com $k = 8{,}99\times10^{9}$:
+$$F = k\frac{|q_1 q_2|}{r^2} = 8{,}99\times10^{9}\frac{(2{,}0\times10^{-6})(3{,}0\times10^{-6})}{(0{,}10)^2} = 8{,}99\times10^{9}\frac{6{,}0\times10^{-12}}{0{,}010} \approx 5{,}4\ \mathrm{N}.$$
+Como as cargas têm sinais opostos, a força é **atrativa**.
+
+::: {#exm-quantizacao}
+Quantos elétrons em excesso há num corpo com carga $-1{,}6\times10^{-15}\ \mathrm{C}$?
+:::
+
+**Solução.** Por @eq-quantizacao-carga, $n = |Q|/e$:
+$$n = \frac{1{,}6\times10^{-15}}{1{,}602\times10^{-19}} \approx 1{,}0\times10^{4}\ \text{elétrons}.$$
+
+## Exercícios
+
+::: {#exr-duas-cargas}
+Duas cargas iguais de $5{,}0\ \mu\mathrm{C}$ estão a $0{,}30\ \mathrm{m}$. Qual a
+força entre elas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$F = k\dfrac{q^2}{r^2} = 8{,}99\times10^{9}\dfrac{(5{,}0\times10^{-6})^2}{(0{,}30)^2} = 8{,}99\times10^{9}\dfrac{2{,}5\times10^{-11}}{0{,}09} \approx 2{,}5\ \mathrm{N}$ (repulsiva).
+:::
+
+::: {#exr-distancia-dobrada}
+Se a distância entre duas cargas dobra, o que acontece com a força entre elas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Como $F\propto 1/r^2$ (@eq-coulomb), dobrar $r$ reduz a força a $1/4$ do valor
+original.
+:::
+
+::: {#exr-carga-total}
+Um corpo ganha $3{,}0\times10^{13}$ elétrons. Qual sua carga?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$Q = -n e = -3{,}0\times10^{13}\times1{,}602\times10^{-19} \approx -4{,}8\times10^{-6}\ \mathrm{C} = -4{,}8\ \mu\mathrm{C}$.
+:::

@@ -99,7 +99,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume VII — Eletromagnetismo I (Eletrostática e Corrente)
 *Objetivo: cargas, campos e circuitos DC. Pré-requisitos: I (vetores, cálculo).*
 
-- [ ] `volumes/v7-eletromagnetismo1/01-carga-coulomb.qmd` — Carga e lei de Coulomb
+- [x] `volumes/v7-eletromagnetismo1/01-carga-coulomb.qmd` — Carga e lei de Coulomb
 - [ ] `volumes/v7-eletromagnetismo1/02-campo-eletrico.qmd` — Campo elétrico
 - [ ] `volumes/v7-eletromagnetismo1/03-lei-gauss.qmd` — Lei de Gauss
 - [ ] `volumes/v7-eletromagnetismo1/04-potencial-eletrico.qmd` — Potencial elétrico

@@ -1,0 +1,133 @@
+---
+title: "As Origens da Física Quântica"
+---
+
+## Motivação
+
+No fim do século XIX, a física parecia completa — restavam "duas nuvenzinhas no
+horizonte", nas palavras de Lord Kelvin. Essas nuvens viraram tempestades. Três
+fenômenos teimavam em desafiar a física clássica: a radiação do corpo negro, o
+efeito fotoelétrico e os espectros atômicos. Resolvê-los exigiu uma ideia
+revolucionária — a de que a energia vem em **pacotes discretos**, os *quanta*. Este
+capítulo, que abre a mecânica quântica, percorre essas três crises e as soluções de
+Planck, Einstein e Bohr que fundaram a física do século XX.
+
+## A catástrofe do ultravioleta e Planck
+
+Um corpo aquecido emite radiação. A física clássica previa que a intensidade
+cresceria sem limite nas altas frequências — a "catástrofe do ultravioleta",
+absurda. Em 1900, Planck resolveu o impasse com uma hipótese radical.
+
+::: {.callout-important}
+## Hipótese de Planck
+A energia de um oscilador de frequência $f$ não é contínua: só pode assumir valores
+discretos, múltiplos de um **quantum** elementar
+$$E = n\,h\,f, \qquad n = 0, 1, 2, \dots$$ {#eq-planck}
+onde $h = 6{,}626\times10^{-34}\ \mathrm{J\,s}$ é a **constante de Planck**.
+:::
+
+A quantização suprime a emissão nas altas frequências (que exigiriam quanta grandes
+demais), eliminando a catástrofe e ajustando perfeitamente os dados. Nascia a
+física quântica — embora o próprio Planck a considerasse, a princípio, um mero
+truque matemático.
+
+## O efeito fotoelétrico e o fóton
+
+A luz incidindo num metal arranca elétrons — mas de um jeito que a teoria
+ondulatória não explicava: a energia dos elétrons dependia da **frequência**, não da
+intensidade. Einstein, em 1905, deu o passo decisivo.
+
+::: {.callout-important}
+## A equação fotoelétrica de Einstein
+A luz é composta de **fótons**, partículas de energia $E = hf$. Ao absorver um
+fóton, um elétron escapa com energia cinética máxima
+$$K_\text{máx} = h f - \phi,$$ {#eq-fotoeletrico}
+onde $\phi$ é a **função trabalho** do metal (energia mínima para arrancar o
+elétron).
+:::
+
+Abaixo de uma frequência de corte ($hf < \phi$), **nenhum** elétron sai, por mais
+intensa que seja a luz — algo inexplicável classicamente, mas imediato com fótons. A
+luz é, portanto, também partícula. (Foi por isso, e não pela relatividade, que
+Einstein ganhou o Nobel.)
+
+## O átomo de Bohr
+
+Os átomos emitem luz apenas em frequências discretas (linhas espectrais), e o átomo
+clássico seria instável (o elétron espiralaria para o núcleo). Bohr, em 1913, impôs
+a quantização às órbitas.
+
+::: {.callout-important}
+## Modelo de Bohr
+O elétron no hidrogênio só ocupa órbitas com momento angular quantizado,
+$L = n\hbar$, resultando em níveis de energia discretos
+$$E_n = -\frac{13{,}6\ \mathrm{eV}}{n^2}, \qquad n = 1, 2, 3, \dots$$ {#eq-bohr}
+A luz é emitida ou absorvida quando o elétron salta entre níveis, com
+$hf = E_i - E_f$.
+:::
+
+::: {.callout-note}
+## O quantum como fio condutor
+Os três avanços compartilham a mesma ideia: grandezas que a física clássica supunha
+contínuas — energia, luz, órbitas — são na verdade **discretas**, em unidades
+ligadas a $h$. A constante de Planck é o "tamanho do pixel" da natureza. O que
+faltava era uma teoria completa que explicasse *por quê* — e ela viria com de
+Broglie, Schrödinger e Heisenberg, nos próximos capítulos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-energia-foton}
+Qual a energia de um fóton de luz verde ($f = 5{,}5\times10^{14}\ \mathrm{Hz}$)?
+($h = 6{,}63\times10^{-34}\ \mathrm{J\,s}$.)
+:::
+
+**Solução.** Por $E = hf$ (@eq-planck com $n=1$):
+$$E = 6{,}63\times10^{-34}\times5{,}5\times10^{14} \approx 3{,}6\times10^{-19}\ \mathrm{J} \approx 2{,}3\ \mathrm{eV}.$$
+
+::: {#exm-fotoeletrico}
+Luz de $f = 1{,}0\times10^{15}\ \mathrm{Hz}$ incide num metal de função trabalho
+$\phi = 2{,}0\ \mathrm{eV}$. Qual a energia cinética máxima dos elétrons?
+:::
+
+**Solução.** A energia do fóton é $hf = 6{,}63\times10^{-34}\times1{,}0\times10^{15} = 6{,}63\times10^{-19}\ \mathrm{J} \approx 4{,}1\ \mathrm{eV}$.
+Por @eq-fotoeletrico:
+$$K_\text{máx} = hf - \phi = 4{,}1 - 2{,}0 = 2{,}1\ \mathrm{eV}.$$
+
+## Exercícios
+
+::: {#exr-transicao-bohr}
+Qual a energia do fóton emitido quando o elétron do hidrogênio salta de $n=3$ para
+$n=2$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E_3 = -13{,}6/9 = -1{,}51\ \mathrm{eV}$, $E_2 = -13{,}6/4 = -3{,}40\ \mathrm{eV}$
+(@eq-bohr). O fóton tem $hf = E_3 - E_2 = -1{,}51 - (-3{,}40) = 1{,}89\ \mathrm{eV}$
+(linha vermelha da série de Balmer).
+:::
+
+::: {#exr-corte}
+Um metal tem função trabalho $\phi = 3{,}0\ \mathrm{eV}$. Qual a frequência mínima
+de luz para arrancar elétrons?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+No corte, $K_\text{máx}=0$, então $hf = \phi$:
+$f = \phi/h = (3{,}0\times1{,}6\times10^{-19})/6{,}63\times10^{-34} \approx 7{,}2\times10^{14}\ \mathrm{Hz}$.
+:::
+
+::: {#exr-intensidade}
+Por que aumentar a intensidade de luz de baixa frequência não arranca elétrons de
+um metal?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Cada fóton tem energia $hf$ fixa (@eq-fotoeletrico). Se $hf < \phi$, nenhum fóton
+individual tem energia suficiente para arrancar um elétron — e aumentar a
+intensidade só envia **mais** fótons fracos, não fótons mais energéticos. Por isso
+existe uma frequência de corte.
+:::

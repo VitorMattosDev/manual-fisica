@@ -156,7 +156,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume XII — Mecânica Quântica
 *Objetivo: o mundo quântico. Pré-requisitos: XI, VIII.*
 
-- [ ] `volumes/v12-quantica/01-origens-quantica.qmd` — Origens (corpo negro, fotoelétrico, Bohr)
+- [x] `volumes/v12-quantica/01-origens-quantica.qmd` — Origens (corpo negro, fotoelétrico, Bohr)
 - [ ] `volumes/v12-quantica/02-dualidade.qmd` — Dualidade onda-partícula (de Broglie)
 - [ ] `volumes/v12-quantica/03-equacao-schrodinger.qmd` — Equação de Schrödinger
 - [ ] `volumes/v12-quantica/04-pocos-barreiras.qmd` — Poços, barreiras, tunelamento

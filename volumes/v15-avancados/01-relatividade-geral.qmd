@@ -1,0 +1,138 @@
+---
+title: "Relatividade Geral"
+---
+
+## Motivação
+
+No Volume X, deixamos uma promessa: o princípio da equivalência sugeria que a
+gravidade não é uma força, mas a **curvatura do espaço-tempo**. Einstein levou dez
+anos para transformar essa intuição em teoria, e o resultado — a **relatividade
+geral**, de 1915 — é considerado o feito intelectual mais belo da física. Ela
+reescreveu a gravitação de Newton, previu buracos negros e ondas gravitacionais, e
+fundou a cosmologia moderna. Este capítulo, que abre o volume final, apresenta suas
+ideias centrais e previsões confirmadas.
+
+## A gravidade como geometria
+
+::: {.callout-important}
+## A ideia central da relatividade geral
+A gravidade não é uma força: é a **curvatura do espaço-tempo** produzida pela
+matéria e energia. Os corpos em queda livre seguem as trajetórias mais "retas"
+possíveis (**geodésicas**) num espaço-tempo curvo. Em síntese (John Wheeler):
+
+> A matéria diz ao espaço-tempo como se curvar; o espaço-tempo curvo diz à matéria
+> como se mover.
+:::
+
+A Terra não orbita o Sol porque uma força a puxa, mas porque o Sol **curva** o
+espaço-tempo ao seu redor, e a Terra segue uma geodésica nessa geometria curva — uma
+"linha reta" num espaço deformado.
+
+## As equações de campo de Einstein
+
+::: {.callout-important}
+## Equações de campo de Einstein
+A relação entre a geometria e o conteúdo de matéria-energia é
+$$G_{\mu\nu} = \frac{8\pi G}{c^4}\,T_{\mu\nu}.$$ {#eq-einstein}
+O lado esquerdo ($G_{\mu\nu}$, tensor de Einstein) codifica a **curvatura** do
+espaço-tempo; o direito ($T_{\mu\nu}$, tensor energia-momento), a **matéria e
+energia** presentes.
+:::
+
+Estas equações reduzem-se à gravitação de Newton no limite de campos fracos e baixas
+velocidades (princípio da correspondência, Volume I) — mas preveem efeitos novos,
+ausentes em Newton.
+
+## Previsões e confirmações
+
+::: {.callout-note}
+## Os testes da relatividade geral
+- **Precessão de Mercúrio:** a órbita de Mercúrio gira lentamente de um modo que
+  Newton não explicava — a RG o reproduz exatamente.
+- **Deflexão da luz:** a luz das estrelas se curva ao passar perto do Sol
+  (confirmado em 1919), e galáxias atuam como **lentes gravitacionais**.
+- **Dilatação gravitacional do tempo:** relógios andam mais devagar em campos fortes
+  — o **GPS** corrige isso diariamente para funcionar.
+- **Ondas gravitacionais:** ondulações no espaço-tempo, previstas em 1916 e
+  detectadas diretamente em 2015 (LIGO), de buracos negros em colisão.
+:::
+
+## Buracos negros
+
+::: {.callout-important}
+## Buracos negros e o horizonte de eventos
+Quando a matéria se concentra o bastante, a curvatura torna-se tão extrema que nem a
+luz escapa: forma-se um **buraco negro**. Seu **horizonte de eventos** tem raio (de
+Schwarzschild)
+$$r_s = \frac{2GM}{c^2}.$$ {#eq-schwarzschild}
+Nada que cruze o horizonte pode retornar. No centro, a teoria prevê uma
+**singularidade**, onde a RG falha e seria preciso uma teoria quântica da gravidade.
+:::
+
+::: {.callout-note}
+## Onde a física encontra seus limites
+Os buracos negros são laboratórios extremos: na singularidade, a relatividade geral
+e a mecânica quântica (Volume XII) colidem e nenhuma sozinha basta. Reconciliá-las —
+a **gravidade quântica** — é o maior problema em aberto da física, ponto de encontro
+de tudo o que estudamos. A imagem do horizonte de um buraco negro (Event Horizon
+Telescope, 2019) tornou visível essa fronteira.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-raio-schwarzschild}
+Qual o raio de Schwarzschild de um buraco negro com a massa do Sol
+($M = 2{,}0\times10^{30}\ \mathrm{kg}$)?
+:::
+
+**Solução.** Por @eq-schwarzschild:
+$$r_s = \frac{2GM}{c^2} = \frac{2\times6{,}674\times10^{-11}\times2{,}0\times10^{30}}{(3{,}0\times10^{8})^2} = \frac{2{,}67\times10^{20}}{9{,}0\times10^{16}} \approx 3{,}0\times10^{3}\ \mathrm{m},$$
+cerca de $3\ \mathrm{km}$. Comprimir o Sol inteiro nesse raio o tornaria um buraco
+negro.
+
+::: {#exm-luz-curva-rg}
+Por que a luz, que não tem massa, é desviada pela gravidade na relatividade geral?
+:::
+
+**Solução.** Na RG, a gravidade não é uma força que age sobre massa, e sim a
+**curvatura do espaço-tempo**. A luz simplesmente segue uma **geodésica** (o caminho
+mais reto) nesse espaço-tempo curvo. Como a geometria perto de uma massa é curva, a
+trajetória da luz se curva — mesmo sem massa. (Antecipado pelo princípio da
+equivalência, @exr-luz-curva.)
+
+## Exercícios
+
+::: {#exr-geodesica}
+Na relatividade geral, por que um planeta orbita o Sol, segundo a frase de Wheeler?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O Sol **curva o espaço-tempo** ao redor; o planeta segue a geodésica (trajetória
+mais reta) nesse espaço-tempo curvo. Não há força puxando-o — a "matéria diz ao
+espaço-tempo como se curvar, e o espaço-tempo curvo diz à matéria como se mover"
+(@eq-einstein).
+:::
+
+::: {#exr-rs-terra}
+Estime o raio de Schwarzschild da Terra ($M = 6{,}0\times10^{24}\ \mathrm{kg}$).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$r_s = 2GM/c^2 = 2\times6{,}674\times10^{-11}\times6{,}0\times10^{24}/(9{,}0\times10^{16}) \approx 8{,}9\times10^{-3}\ \mathrm{m}$
+— cerca de $9\ \mathrm{mm}$! A Terra inteira teria de caber numa bolinha para virar
+buraco negro.
+:::
+
+::: {#exr-gps-rg}
+Por que o sistema GPS precisa levar em conta a relatividade geral?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Os relógios dos satélites, em campo gravitacional mais fraco (mais alto), andam mais
+**rápido** que os da superfície (dilatação gravitacional do tempo). Sem corrigir
+esse efeito (e o da relatividade especial), o GPS acumularia erros de vários km por
+dia.
+:::

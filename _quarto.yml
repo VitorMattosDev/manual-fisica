@@ -137,6 +137,9 @@ book:
         - volumes/v14-nuclear-particulas/03-reacoes-nucleares.qmd
         - volumes/v14-nuclear-particulas/04-particulas-elementares.qmd
         - volumes/v14-nuclear-particulas/05-interacoes-fundamentais.qmd
+    - part: "Volume XV — Tópicos Avançados"
+      chapters:
+        - volumes/v15-avancados/01-relatividade-geral.qmd
   appendices:
     - constantes.qmd
 

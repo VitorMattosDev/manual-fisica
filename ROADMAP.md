@@ -188,7 +188,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume XV — Tópicos Avançados
 *Objetivo: as fronteiras. Pré-requisitos: X, XII. (Matemática: geometria riemanniana p/ RG.)*
 
-- [ ] `volumes/v15-avancados/01-relatividade-geral.qmd` — Relatividade geral (métrica, geodésicas, Einstein)
+- [x] `volumes/v15-avancados/01-relatividade-geral.qmd` — Relatividade geral (métrica, geodésicas, Einstein)
 - [ ] `volumes/v15-avancados/02-teoria-quantica-campos.qmd` — Introdução à teoria quântica de campos
 - [ ] `volumes/v15-avancados/03-cosmologia.qmd` — Cosmologia
 - [ ] `volumes/v15-avancados/04-astrofisica.qmd` — Astrofísica

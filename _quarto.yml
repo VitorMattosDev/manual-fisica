@@ -122,6 +122,9 @@ book:
         - volumes/v12-quantica/07-momento-angular-spin.qmd
         - volumes/v12-quantica/08-atomo-hidrogenio.qmd
         - volumes/v12-quantica/09-metodos-aproximados.qmd
+    - part: "Volume XIII — Física Atômica, Molecular e da Matéria Condensada"
+      chapters:
+        - volumes/v13-materia/01-estrutura-atomica.qmd
   appendices:
     - constantes.qmd
 

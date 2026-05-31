@@ -1,0 +1,121 @@
+---
+title: "Estrutura Atômica e Tabela Periódica"
+---
+
+## Motivação
+
+Por que o sódio é reativo e o néon, inerte? Por que os elementos se repetem em
+"famílias" com propriedades parecidas? Mendeleev organizou a tabela periódica
+empiricamente, mas só a mecânica quântica explicou **por quê** ela tem essa forma. A
+resposta está em como os elétrons se distribuem nos orbitais (Volume XII),
+governados pelos números quânticos e pelo princípio de Pauli. Este capítulo aplica a
+quântica à estrutura dos átomos com muitos elétrons e à periodicidade química.
+
+## Átomos multieletrônicos
+
+::: {#def-configuracao}
+A **configuração eletrônica** de um átomo é a distribuição de seus elétrons pelos
+orbitais ($n, \ell$). Os elétrons preenchem os níveis de energia respeitando o
+**princípio de exclusão de Pauli** (Volume XII): no máximo dois elétrons por
+orbital, com spins opostos.
+:::
+
+::: {.callout-important}
+## Regras de preenchimento
+- **Princípio de Aufbau:** os orbitais são preenchidos em ordem crescente de
+  energia.
+- **Princípio de Pauli:** no máximo 2 elétrons por orbital (spins opostos).
+- **Regra de Hund:** orbitais de mesma energia são ocupados primeiro
+  individualmente, com spins paralelos.
+
+A capacidade de cada camada $n$ é $2n^2$ elétrons.
+:::
+
+## A origem quântica da tabela periódica
+
+A periodicidade não é coincidência: ela reflete o preenchimento sucessivo das
+**subcamadas** $s, p, d, f$.
+
+::: {.callout-important}
+## Por que a tabela é periódica
+As propriedades químicas dependem dos **elétrons de valência** (da camada mais
+externa). Quando uma subcamada se completa e uma nova camada começa, o padrão de
+valência se repete — gerando as colunas (famílias) da tabela. Os **gases nobres**
+têm camadas completas (estáveis, inertes); os **metais alcalinos**, um único elétron
+de valência (reativos).
+:::
+
+::: {.callout-note}
+## Pauli constrói a química
+Sem o princípio de exclusão, todos os elétrons cairiam no orbital $1s$, e todos os
+átomos seriam quimicamente iguais — não haveria diversidade química, nem vida. É a
+exclusão de Pauli que força os elétrons a ocupar camadas sucessivas, criando a
+estrutura em camadas e, com ela, a tabela periódica inteira. A química é uma
+consequência do spin semi-inteiro do elétron.
+:::
+
+## Propriedades periódicas
+
+::: {.callout-note}
+## Tendências na tabela
+- **Raio atômico:** diminui ao longo de um período (mais carga nuclear atraindo) e
+  aumenta ao descer um grupo (mais camadas).
+- **Energia de ionização:** energia para remover um elétron; aumenta ao longo de um
+  período, máxima nos gases nobres.
+- **Eletronegatividade:** tendência a atrair elétrons numa ligação; cresce para a
+  direita e para cima (o flúor é o mais eletronegativo).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-configuracao-oxigenio}
+Escreva a configuração eletrônica do oxigênio ($Z = 8$).
+:::
+
+**Solução.** Preenchendo por Aufbau: $1s$ (2 elétrons), $2s$ (2), $2p$ (4 restantes,
+de um máximo de 6). Logo
+$$\text{O}: 1s^2\,2s^2\,2p^4.$$
+Os 6 elétrons de valência ($2s^2 2p^4$) faltando 2 para completar a camada explicam
+a tendência do oxigênio a formar duas ligações.
+
+::: {#exm-gas-nobre}
+Por que o néon ($Z = 10$) é quimicamente inerte?
+:::
+
+**Solução.** Sua configuração é $1s^2\,2s^2\,2p^6$: a camada $n=2$ está **completa**
+($2\times2^2 = 8$ elétrons). Sem elétrons de valência disponíveis nem vagas
+acessíveis, o néon não tende a ganhar nem perder elétrons — daí ser um gás nobre,
+inerte.
+
+## Exercícios
+
+::: {#exr-config-sodio}
+Escreva a configuração eletrônica do sódio ($Z = 11$) e identifique seu elétron de
+valência.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\text{Na}: 1s^2\,2s^2\,2p^6\,3s^1$. Tem **um** elétron de valência ($3s^1$), que ele
+perde facilmente — por isso o sódio é um metal alcalino reativo.
+:::
+
+::: {#exr-capacidade-camada}
+Qual a capacidade máxima de elétrons da camada $n=3$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$2n^2 = 2\times3^2 = 18$ elétrons (subcamadas $3s$, $3p$, $3d$).
+:::
+
+::: {#exr-familia}
+Por que lítio, sódio e potássio têm propriedades químicas semelhantes?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Todos têm **um único elétron de valência** num orbital $s$ ($2s^1$, $3s^1$, $4s^1$).
+Como as propriedades químicas dependem da valência, esses elementos compartilham
+comportamento (metais alcalinos), ocupando a mesma coluna da tabela.
+:::

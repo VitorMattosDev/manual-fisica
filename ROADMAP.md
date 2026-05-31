@@ -169,7 +169,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume XIII — Física Atômica, Molecular e da Matéria Condensada
 *Objetivo: da estrutura atômica aos sólidos. Pré-requisitos: XII.*
 
-- [ ] `volumes/v13-materia/01-estrutura-atomica.qmd` — Estrutura atômica e tabela periódica
+- [x] `volumes/v13-materia/01-estrutura-atomica.qmd` — Estrutura atômica e tabela periódica
 - [ ] `volumes/v13-materia/02-espectros.qmd` — Espectros atômicos
 - [ ] `volumes/v13-materia/03-moleculas-ligacoes.qmd` — Moléculas e ligações
 - [ ] `volumes/v13-materia/04-estatistica-quantica.qmd` — Fermi-Dirac e Bose-Einstein

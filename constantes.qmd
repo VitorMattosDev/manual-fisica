@@ -20,6 +20,7 @@ constante ou uma relação fundamental nova num capítulo, registre-a aqui.
 | Constante universal dos gases | $R$ | $8{,}314\ \mathrm{J/(mol\,K)}$ |
 | Zero da escala Celsius | $T_0$ | $273{,}15\ \mathrm{K}$ |
 | Permissividade do vácuo | $\varepsilon_0$ | $8{,}854 \times 10^{-12}\ \mathrm{F/m}$ |
+| Constante de Coulomb | $k = 1/4\pi\varepsilon_0$ | $8{,}99 \times 10^{9}\ \mathrm{N\,m^2/C^2}$ |
 | Permeabilidade do vácuo | $\mu_0$ | $1{,}257 \times 10^{-6}\ \mathrm{T\,m/A}$ |
 | Massa do elétron | $m_e$ | $9{,}109 \times 10^{-31}\ \mathrm{kg}$ |
 | Massa do próton | $m_p$ | $1{,}673 \times 10^{-27}\ \mathrm{kg}$ |
@@ -64,5 +65,15 @@ constante ou uma relação fundamental nova num capítulo, registre-a aqui.
 - Gás ideal: $pV = nRT = N k_B T$
 - Energia cinética média: $\overline{K} = \tfrac32 k_B T$; $\ v_\text{rms} = \sqrt{3RT/M}$
 
-*(As demais seções — Eletromagnetismo, Óptica, etc. — são adicionadas à medida que
-os volumes correspondentes são escritos.)*
+### Eletromagnetismo
+
+- Lei de Coulomb: $F = k\,|q_1 q_2|/r^2$; campo $\vec{E} = \vec{F}/q$
+- Campo de carga pontual: $E = kQ/r^2$; potencial $V = kQ/r$
+- Lei de Gauss: $\oint \vec{E}\cdot\mathrm{d}\vec{A} = Q_\text{int}/\varepsilon_0$
+- Capacitância: $C = Q/V$; placas $C = \varepsilon_0 A/d$; energia $U = \tfrac12 CV^2$
+- Corrente: $I = \mathrm{d}Q/\mathrm{d}t$; lei de Ohm $V = RI$
+- Resistividade: $R = \rho L/A$; potência $P = VI = RI^2 = V^2/R$
+- Constante de tempo RC: $\tau = RC$
+
+*(As demais seções — Óptica, Física Moderna, etc. — são adicionadas à medida que os
+volumes correspondentes são escritos.)*

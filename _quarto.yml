@@ -78,6 +78,7 @@ book:
         - volumes/v7-eletromagnetismo1/04-potencial-eletrico.qmd
         - volumes/v7-eletromagnetismo1/05-capacitancia.qmd
         - volumes/v7-eletromagnetismo1/06-corrente-resistencia.qmd
+        - volumes/v7-eletromagnetismo1/07-circuitos-dc.qmd
   appendices:
     - constantes.qmd
 

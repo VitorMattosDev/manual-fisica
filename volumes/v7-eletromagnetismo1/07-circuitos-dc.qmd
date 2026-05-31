@@ -1,0 +1,130 @@
+---
+title: "Circuitos de Corrente Contínua"
+---
+
+## Motivação
+
+Uma pilha, alguns fios, resistores e um capacitor: com esses poucos elementos
+monta-se desde uma lanterna até a temporização de um pisca-pisca. Para prever
+correntes e voltagens em circuitos com mais de um caminho, a lei de Ohm sozinha não
+basta — precisamos das **leis de Kirchhoff**, que são conservação de carga e de
+energia aplicadas a circuitos. Este capítulo, que encerra o eletromagnetismo I,
+trata das associações de resistores, das leis de Kirchhoff e do circuito RC, onde o
+tempo entra em cena.
+
+## Associação de resistores
+
+::: {.callout-important}
+## Resistores em série e em paralelo
+- **Em série** (mesma corrente): as resistências **somam**,
+  $$R_\text{eq} = R_1 + R_2 + \cdots$$ {#eq-resistores-serie}
+- **Em paralelo** (mesma voltagem): somam-se os **inversos**,
+  $$\frac{1}{R_\text{eq}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots$$ {#eq-resistores-paralelo}
+:::
+
+Note que é o oposto das regras de capacitores. Em série, a corrente enfrenta os
+resistores em sequência (resistência cresce); em paralelo, ganha caminhos
+alternativos (resistência cai).
+
+## As leis de Kirchhoff
+
+Para circuitos com múltiplas malhas, duas leis bastam — e ambas são leis de
+conservação já conhecidas.
+
+::: {.callout-important}
+## Leis de Kirchhoff
+- **Lei dos nós** (conservação da carga): a soma das correntes que entram num nó
+  iguala a soma das que saem,
+  $$\sum I_\text{entra} = \sum I_\text{sai}.$$ {#eq-kirchhoff-nos}
+- **Lei das malhas** (conservação da energia): a soma das diferenças de potencial
+  ao longo de qualquer malha fechada é zero,
+  $$\sum V = 0.$$ {#eq-kirchhoff-malhas}
+:::
+
+::: {.callout-note}
+## Força eletromotriz e resistência interna
+Uma fonte real tem **força eletromotriz** (fem) $\varepsilon$ e uma pequena
+**resistência interna** $r$. A voltagem disponível nos terminais cai com a corrente:
+$V = \varepsilon - r I$. É por isso que a luz dos faróis enfraquece ao dar partida
+no motor — a corrente alta derruba a tensão da bateria.
+:::
+
+## O circuito RC
+
+Combinando um resistor e um capacitor, a corrente deixa de ser instantânea: o
+capacitor carrega e descarrega ao longo do tempo, governado por uma constante
+característica.
+
+::: {.callout-important}
+## Carga e descarga do capacitor
+Num circuito RC, a carga do capacitor evolui exponencialmente com **constante de
+tempo** $\tau = RC$. Na carga,
+$$Q(t) = Q_\text{máx}\left(1 - e^{-t/\tau}\right);$$ {#eq-rc-carga}
+na descarga,
+$$Q(t) = Q_0\,e^{-t/\tau}.$$ {#eq-rc-descarga}
+Após $t = \tau$, a carga atinge $\approx63\%$ do final (carga) ou cai a
+$\approx37\%$ (descarga).
+:::
+
+A constante $\tau = RC$ (em segundos) controla a temporização de circuitos —
+piscas, filtros, osciladores — e tem dimensão de tempo, como se verifica facilmente
+por análise dimensional.
+
+## Exemplos resolvidos
+
+::: {#exm-serie-paralelo}
+Dois resistores de $4{,}0\ \Omega$ e $12\ \Omega$ são ligados (a) em série e (b)
+em paralelo. Qual a resistência equivalente em cada caso?
+:::
+
+**Solução.** (a) Série (@eq-resistores-serie):
+$R_\text{eq} = 4{,}0 + 12 = 16\ \Omega$. (b) Paralelo
+(@eq-resistores-paralelo):
+$\dfrac{1}{R_\text{eq}} = \dfrac{1}{4{,}0} + \dfrac{1}{12} = \dfrac{3+1}{12} = \dfrac{4}{12}$,
+logo $R_\text{eq} = 3{,}0\ \Omega$ — menor que o menor dos dois.
+
+::: {#exm-constante-tempo}
+Um capacitor de $100\ \mu\mathrm{F}$ descarrega através de um resistor de
+$10\ \mathrm{k\Omega}$. Qual a constante de tempo, e quanto resta da carga após
+$2{,}0\ \mathrm{s}$?
+:::
+
+**Solução.** $\tau = RC = 10\times10^{3}\times100\times10^{-6} = 1{,}0\ \mathrm{s}$.
+Após $t = 2{,}0\ \mathrm{s} = 2\tau$, por @eq-rc-descarga:
+$$\frac{Q}{Q_0} = e^{-2{,}0/1{,}0} = e^{-2} \approx 0{,}14,$$
+ou seja, restam cerca de $14\%$ da carga inicial.
+
+## Exercícios
+
+::: {#exr-tres-serie}
+Três resistores de $2{,}0\ \Omega$, $3{,}0\ \Omega$ e $5{,}0\ \Omega$ em série são
+ligados a $20\ \mathrm{V}$. Qual a corrente no circuito?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$R_\text{eq} = 2{,}0+3{,}0+5{,}0 = 10\ \Omega$. Pela lei de Ohm,
+$I = V/R_\text{eq} = 20/10 = 2{,}0\ \mathrm{A}$.
+:::
+
+::: {#exr-no}
+Num nó entram correntes de $3{,}0\ \mathrm{A}$ e $2{,}0\ \mathrm{A}$, e sai uma de
+$4{,}0\ \mathrm{A}$ por um ramo. Qual a corrente no outro ramo de saída?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Lei dos nós (@eq-kirchhoff-nos): entra $5{,}0\ \mathrm{A}$, sai $4{,}0\ \mathrm{A}$
+por um ramo, então o outro leva $5{,}0 - 4{,}0 = 1{,}0\ \mathrm{A}$.
+:::
+
+::: {#exr-rc-carga}
+Num circuito RC com $\tau = 2{,}0\ \mathrm{s}$, que fração da carga máxima o
+capacitor atingiu após $t = 2{,}0\ \mathrm{s}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por @eq-rc-carga, $Q/Q_\text{máx} = 1 - e^{-t/\tau} = 1 - e^{-1} \approx 0{,}63$
+— cerca de $63\%$, o valor característico após uma constante de tempo.
+:::

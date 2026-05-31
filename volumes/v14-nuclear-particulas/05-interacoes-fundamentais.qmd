@@ -1,0 +1,122 @@
+---
+title: "As Interações Fundamentais"
+---
+
+## Motivação
+
+Toda a riqueza do universo — galáxias, átomos, vida — resulta de apenas **quatro**
+interações fundamentais. Tudo o que acontece, do decaimento de um núcleo à órbita de
+um planeta, é alguma combinação delas. Compreender essas quatro forças, suas
+intensidades relativas e o sonho de unificá-las numa só é o tema mais profundo da
+física. Este capítulo, que encerra a física nuclear e de partículas, faz o balanço
+das interações fundamentais e aponta para a fronteira da unificação — preparando o
+volume final.
+
+## As quatro forças
+
+::: {.callout-important}
+## As interações fundamentais
+| Interação | Alcance | Intensidade relativa | Papel |
+|---|---|---|---|
+| **Forte** | $\sim10^{-15}\ \mathrm{m}$ | $1$ | liga quarks e núcleons |
+| **Eletromagnética** | infinito | $\sim10^{-2}$ | átomos, química, luz |
+| **Fraca** | $\sim10^{-18}\ \mathrm{m}$ | $\sim10^{-6}$ | decaimento beta, fusão |
+| **Gravitacional** | infinito | $\sim10^{-38}$ | astros, cosmologia |
+:::
+
+A hierarquia de intensidades é dramática: a gravidade é
+$\sim10^{36}$ vezes mais fraca que a eletromagnética. Cada força domina em sua
+escala — a forte e a fraca no núcleo, a eletromagnética nos átomos, a gravidade no
+cosmos.
+
+## Por que cada força domina onde domina
+
+::: {.callout-note}
+## Intensidade × alcance
+A **forte**, embora a mais intensa, tem alcance curtíssimo — só age dentro do
+núcleo. A **fraca**, mais fraca e de alcance ainda menor, governa transformações
+(decaimento beta, primeiro passo da fusão solar). A **eletromagnética**, de alcance
+infinito, molda átomos e moléculas. A **gravidade**, a mais fraca de todas, só
+domina em grande escala porque é sempre atrativa e a matéria é eletricamente neutra:
+suas contribuições se acumulam sem cancelamento, governando planetas, estrelas e o
+universo (Volume XV).
+:::
+
+## O sonho da unificação
+
+Um dos grandes fios condutores da física é a **unificação**: mostrar que forças
+distintas são facetas de uma só.
+
+::: {.callout-important}
+## A trajetória da unificação
+- Maxwell unificou **eletricidade e magnetismo** no eletromagnetismo (Volume VIII).
+- A teoria **eletrofraca** (Glashow, Weinberg, Salam) unificou a eletromagnética e a
+  fraca — a altas energias, são uma só força.
+- As **teorias de grande unificação** (GUTs) buscam juntar também a forte.
+- Uma **teoria de tudo** incluiria a gravidade — o desafio não resolvido, que exige
+  conciliar a relatividade geral com a quântica.
+:::
+
+::: {.callout-note}
+## Rumo às fronteiras
+A unificação das forças e a quantização da gravidade são as grandes questões
+abertas. Candidatas como a teoria de cordas tentam reunir as quatro interações numa
+estrutura única, mas ainda sem confirmação experimental. Compreender a gravidade
+quântica é também compreender o **Big Bang** e o interior dos **buracos negros**,
+onde gravidade e quântica colidem. É para essas fronteiras — relatividade geral,
+teoria quântica de campos, cosmologia e astrofísica — que segue o volume final desta
+obra.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-forca-decaimento}
+Qual interação fundamental é responsável pelo decaimento beta?
+:::
+
+**Solução.** A **interação fraca**. É ela que permite a um nêutron se transformar em
+próton (ou vice-versa), mediada pelos bósons $W$ e $Z$, emitindo elétron e neutrino
+— o decaimento beta (Volume XIV, cap. 2).
+
+::: {#exm-gravidade-fraca}
+Se a gravidade é tão mais fraca que o eletromagnetismo, por que ela domina o
+movimento dos planetas?
+:::
+
+**Solução.** Porque a gravidade é sempre **atrativa** e a matéria astronômica é
+eletricamente **neutra**: as forças elétricas de cargas opostas se cancelam em grande
+escala, enquanto a gravidade de toda a massa se **soma**. Assim, apesar de
+$\sim10^{36}$ vezes mais fraca por partícula, a gravidade vence na escala dos astros.
+
+## Exercícios
+
+::: {#exr-mais-forte}
+Qual é a mais intensa das quatro interações fundamentais, e qual seu alcance?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **interação forte** — a mais intensa, mas de **alcance curtíssimo**
+($\sim10^{-15}\ \mathrm{m}$), agindo apenas dentro do núcleo.
+:::
+
+::: {#exr-eletrofraca}
+Quais duas forças a teoria eletrofraca unifica?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A interação **eletromagnética** e a **fraca**, que a altas energias se revelam como
+manifestações de uma única força eletrofraca.
+:::
+
+::: {#exr-teoria-tudo}
+Qual interação ainda resiste à unificação com as demais, e por quê é difícil?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **gravidade**. Unificá-la exige uma teoria de **gravidade quântica** que concilie a
+relatividade geral (gravidade como geometria do espaço-tempo) com a mecânica
+quântica — algo ainda não alcançado de forma testável.
+:::

@@ -1,0 +1,138 @@
+---
+title: "Segunda Lei e Entropia"
+---
+
+## Motivação
+
+Uma xícara de café esfria; nunca esquenta sozinha. Um copo se quebra; os cacos
+jamais se recompõem. A primeira lei (conservação de energia) permitiria os dois
+sentidos — então por que a natureza escolhe um só? Falta uma lei que dê **direção**
+ao tempo. É a **segunda lei da termodinâmica**, e a grandeza que a expressa é a
+**entropia**. Talvez nenhuma ideia da física tenha implicações tão amplas: da
+eficiência das máquinas à seta do tempo e ao destino do universo. Este capítulo a
+apresenta nas formulações macroscópica e estatística.
+
+## Processos irreversíveis e a segunda lei
+
+::: {#def-reversibilidade}
+Um processo é **reversível** se pode ser desfeito sem deixar nenhuma alteração na
+vizinhança — uma idealização, possível só no limite de processos infinitamente
+lentos e sem atrito. Processos reais são **irreversíveis**: têm um sentido
+preferencial.
+:::
+
+A segunda lei pode ser enunciada de várias formas equivalentes. Duas clássicas:
+
+::: {.callout-important}
+## Segunda Lei da Termodinâmica
+- **Enunciado de Clausius:** o calor não flui espontaneamente de um corpo frio
+  para um quente.
+- **Enunciado de Kelvin:** nenhum processo cíclico pode converter calor
+  **integralmente** em trabalho (não existe máquina térmica $100\%$ eficiente).
+:::
+
+## Entropia
+
+A grandeza que quantifica a irreversibilidade é a entropia, introduzida por
+Clausius.
+
+::: {#def-entropia}
+A variação de **entropia** num processo reversível à temperatura $T$ é
+$$\Delta S = \int \frac{\mathrm{d}Q_\text{rev}}{T},$$ {#eq-entropia}
+com unidade $\mathrm{J/K}$. A entropia é uma **função de estado**: depende só do
+estado, não do caminho.
+:::
+
+::: {.callout-important}
+## Princípio do aumento da entropia
+Em qualquer processo, a entropia do **universo** (sistema + vizinhança) nunca
+diminui:
+$$\Delta S_\text{universo} \ge 0,$$ {#eq-aumento-entropia}
+com igualdade apenas em processos reversíveis. Os irreversíveis (todos os reais)
+**aumentam** a entropia total.
+:::
+
+A entropia de um sistema isolado pode crescer ou, no limite ideal, ficar constante
+— mas nunca diminuir. Ela é a flecha do tempo escrita em equação: o futuro é a
+direção de maior entropia.
+
+## A interpretação estatística: Boltzmann
+
+Por que a entropia aumenta? Boltzmann deu a resposta profunda: entropia mede o
+**número de arranjos microscópicos** compatíveis com o estado macroscópico.
+
+::: {.callout-important}
+## Entropia de Boltzmann
+$$S = k_B \ln \Omega,$$ {#eq-boltzmann-entropia}
+onde $\Omega$ é o número de microestados (configurações microscópicas) que
+realizam o macroestado observado.
+:::
+
+::: {.callout-note}
+## Por que o tempo tem direção
+Estados de **alta** entropia são esmagadoramente mais prováveis simplesmente porque
+correspondem a muito mais arranjos microscópicos. O gás se espalha pela sala porque
+há incontavelmente mais formas de estar espalhado do que concentrado num canto.
+Não é proibido o café esquentar sozinho — é apenas tão improvável que nunca se
+observa. A seta do tempo é estatística.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-fusao-gelo}
+Quanto varia a entropia ao fundir $0{,}10\ \mathrm{kg}$ de gelo a $0\ \mathrm{^\circ C}$?
+($L_\text{fusão} = 3{,}34\times10^{5}\ \mathrm{J/kg}$, $T = 273\ \mathrm{K}$.)
+:::
+
+**Solução.** À temperatura constante, $\Delta S = Q/T$ (@eq-entropia) com
+$Q = mL = 0{,}10\times3{,}34\times10^{5} = 3{,}34\times10^{4}\ \mathrm{J}$:
+$$\Delta S = \frac{3{,}34\times10^{4}}{273} \approx 122\ \mathrm{J/K}.$$
+A entropia **aumenta**: o líquido é mais desordenado que o sólido.
+
+::: {#exm-troca-calor}
+Um corpo quente a $400\ \mathrm{K}$ cede $1000\ \mathrm{J}$ a um frio a
+$300\ \mathrm{K}$. Qual a variação total de entropia? O processo é possível?
+:::
+
+**Solução.** O quente perde entropia, o frio ganha (@eq-entropia):
+$$\Delta S = -\frac{1000}{400} + \frac{1000}{300} = -2{,}5 + 3{,}33 = +0{,}83\ \mathrm{J/K}.$$
+Como $\Delta S_\text{universo} > 0$ (@eq-aumento-entropia), o processo é possível e
+irreversível. (O sentido inverso daria $\Delta S<0$ — proibido.)
+
+## Exercícios
+
+::: {#exr-entropia-aquecimento}
+Por que misturar água quente e fria, atingindo uma temperatura intermediária,
+aumenta a entropia, mesmo que a energia total se conserve?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A energia se conserva (primeira lei), mas o calor flui do quente para o frio,
+e a soma $-Q/T_\text{quente} + Q/T_\text{frio}$ é positiva pois $T_\text{frio}<T_\text{quente}$.
+Estatisticamente (@eq-boltzmann-entropia), o estado misturado corresponde a muito
+mais microestados — é mais provável e tem maior entropia.
+:::
+
+::: {#exr-entropia-gas}
+Um gás se expande livremente no vácuo (sem realizar trabalho nem trocar calor).
+A energia interna não muda. E a entropia?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+**Aumenta.** Embora $Q=0$, o processo é irreversível: o gás passa a ocupar mais
+volume, com mais microestados disponíveis ($\Omega$ maior, @eq-boltzmann-entropia).
+O gás jamais se recomprime espontaneamente.
+:::
+
+::: {#exr-microestados}
+Um sistema tem seu número de microestados $\Omega$ multiplicado por $e^{2}$. Qual a
+variação de entropia?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta S = k_B\ln(e^2\Omega) - k_B\ln\Omega = k_B\ln(e^2) = 2k_B$
+(@eq-boltzmann-entropia).
+:::

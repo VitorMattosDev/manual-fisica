@@ -1,0 +1,114 @@
+---
+title: "Som e Acústica"
+---
+
+## Motivação
+
+O som é a onda que mais usamos para nos comunicar e perceber o mundo. Mas o que,
+fisicamente, distingue um sussurro de um grito, um som grave de um agudo, a voz de
+um amigo da de um estranho? E por que dobrar a "intensidade" não soa duas vezes
+mais alto? Este capítulo aplica a teoria ondulatória ao som: sua natureza como
+onda de pressão, como medimos sua intensidade na escala (logarítmica) de decibéis,
+e como o ouvido traduz frequência e amplitude em altura e volume.
+
+## A natureza do som
+
+::: {#def-som}
+O **som** é uma onda mecânica **longitudinal**: regiões de compressão e
+rarefação do meio se propagam, oscilando a pressão em torno do valor de equilíbrio.
+Precisa de um meio material — **não há som no vácuo**. No ar a $20\ \mathrm{^\circ C}$,
+sua velocidade é $v \approx 343\ \mathrm{m/s}$.
+:::
+
+Características perceptivas mapeiam grandezas físicas: a **altura** (grave/agudo)
+corresponde à **frequência**; o **volume** (forte/fraco), à **amplitude/intensidade**;
+o **timbre**, à composição de harmônicos (Volume anterior). O ouvido humano percebe
+de cerca de $20\ \mathrm{Hz}$ a $20\,000\ \mathrm{Hz}$.
+
+## Intensidade sonora
+
+::: {#def-intensidade}
+A **intensidade** de uma onda sonora é a potência que atravessa uma área unitária
+perpendicular à propagação:
+$$I = \frac{P}{A}, \qquad [\,I\,] = \mathrm{W/m^2}.$$ {#eq-intensidade}
+Para uma fonte pontual que irradia igualmente em todas as direções, a potência se
+espalha sobre esferas de área $4\pi r^2$, logo
+$$I = \frac{P}{4\pi r^2} \propto \frac{1}{r^2}.$$ {#eq-intensidade-distancia}
+:::
+
+A queda com $1/r^2$ explica por que o som enfraquece rápido com a distância:
+dobrar a distância reduz a intensidade a um quarto.
+
+## A escala de decibéis
+
+O ouvido responde a uma faixa enorme de intensidades — do limiar da audição
+($10^{-12}\ \mathrm{W/m^2}$) ao limiar da dor ($1\ \mathrm{W/m^2}$), doze ordens de
+grandeza. Por isso usamos uma escala **logarítmica**.
+
+::: {.callout-important}
+## Nível sonoro em decibéis
+O **nível de intensidade sonora** $\beta$, em decibéis ($\mathrm{dB}$), é
+$$\beta = 10\,\log_{10}\!\left(\frac{I}{I_0}\right), \qquad I_0 = 10^{-12}\ \mathrm{W/m^2}.$$ {#eq-decibel}
+Cada fator de $10$ na intensidade adiciona $10\ \mathrm{dB}$; cada fator de $2$
+adiciona cerca de $3\ \mathrm{dB}$.
+:::
+
+::: {.callout-note}
+## Por que dobrar a intensidade não dobra o volume
+Como a escala é logarítmica, somar uma segunda fonte idêntica (intensidade $2I$)
+eleva o nível em apenas $\sim3\ \mathrm{dB}$ — um aumento perceptível, mas longe de
+"duas vezes mais alto". Subjetivamente, é preciso cerca de $+10\ \mathrm{dB}$
+(dez vezes a intensidade) para o som parecer duas vezes mais forte.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-decibel-soma}
+Uma fonte produz $60\ \mathrm{dB}$ num ponto. Qual o nível se uma segunda fonte
+idêntica for ligada ao lado?
+:::
+
+**Solução.** Duas fontes iguais dobram a intensidade ($I \to 2I$). Por
+@eq-decibel, o acréscimo é
+$$\Delta\beta = 10\log_{10}(2) \approx 3{,}0\ \mathrm{dB},$$
+então o nível passa a $\approx 63\ \mathrm{dB}$ — não $120\ \mathrm{dB}$, erro
+comum de quem soma decibéis diretamente.
+
+::: {#exm-intensidade-distancia}
+A $2{,}0\ \mathrm{m}$ de uma fonte pontual a intensidade é
+$8{,}0\times10^{-4}\ \mathrm{W/m^2}$. Qual a intensidade a $8{,}0\ \mathrm{m}$?
+:::
+
+**Solução.** Por @eq-intensidade-distancia, $I\propto 1/r^2$. A distância
+quadruplica ($2{,}0\to8{,}0\ \mathrm{m}$), então $I$ cai por $4^2 = 16$:
+$$I = \frac{8{,}0\times10^{-4}}{16} = 5{,}0\times10^{-5}\ \mathrm{W/m^2}.$$
+
+## Exercícios
+
+::: {#exr-nivel}
+Uma intensidade de $10^{-6}\ \mathrm{W/m^2}$ corresponde a que nível em decibéis?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\beta = 10\log_{10}(10^{-6}/10^{-12}) = 10\log_{10}(10^{6}) = 10\times6 = 60\ \mathrm{dB}$.
+:::
+
+::: {#exr-potencia-fonte}
+Uma fonte pontual emite $1{,}0\ \mathrm{W}$ de potência sonora. Qual a intensidade
+a $10\ \mathrm{m}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$I = P/(4\pi r^2) = 1{,}0/(4\pi\times10^2) = 1{,}0/(1256) \approx 8{,}0\times10^{-4}\ \mathrm{W/m^2}$.
+:::
+
+::: {#exr-aumento-db}
+Quantos decibéis aumenta o nível se a intensidade for multiplicada por $1000$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta\beta = 10\log_{10}(1000) = 10\times3 = 30\ \mathrm{dB}$.
+:::

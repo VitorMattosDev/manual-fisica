@@ -82,7 +82,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v5-ondas/02-ondas-meios.qmd` — Ondas em cordas e meios
 - [x] `volumes/v5-ondas/03-superposicao-interferencia.qmd` — Superposição e interferência
 - [x] `volumes/v5-ondas/04-ondas-estacionarias.qmd` — Ondas estacionárias e ressonância
-- [ ] `volumes/v5-ondas/05-som-acustica.qmd` — Som e acústica
+- [x] `volumes/v5-ondas/05-som-acustica.qmd` — Som e acústica
 - [ ] `volumes/v5-ondas/06-efeito-doppler.qmd` — Efeito Doppler
 
 ## Volume VI — Termodinâmica e Física Estatística

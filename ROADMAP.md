@@ -170,7 +170,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 *Objetivo: da estrutura atômica aos sólidos. Pré-requisitos: XII.*
 
 - [x] `volumes/v13-materia/01-estrutura-atomica.qmd` — Estrutura atômica e tabela periódica
-- [ ] `volumes/v13-materia/02-espectros.qmd` — Espectros atômicos
+- [x] `volumes/v13-materia/02-espectros.qmd` — Espectros atômicos
 - [ ] `volumes/v13-materia/03-moleculas-ligacoes.qmd` — Moléculas e ligações
 - [ ] `volumes/v13-materia/04-estatistica-quantica.qmd` — Fermi-Dirac e Bose-Einstein
 - [ ] `volumes/v13-materia/05-estado-solido.qmd` — Bandas e semicondutores

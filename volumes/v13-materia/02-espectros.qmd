@@ -1,0 +1,114 @@
+---
+title: "Espectros Atômicos"
+---
+
+## Motivação
+
+Como sabemos do que são feitas as estrelas, a milhões de anos-luz, sem nunca tocá-las?
+Pela **luz** que emitem. Cada elemento químico imprime na luz uma "impressão
+digital" única — um conjunto de linhas espectrais em frequências precisas. A
+espectroscopia, nascida dessa descoberta, é uma das ferramentas mais poderosas da
+ciência, do diagnóstico de plasmas à composição de galáxias. Este capítulo explica a
+origem quântica dos espectros e como eles revelam a estrutura dos átomos.
+
+## Emissão e absorção
+
+::: {#def-espectro}
+Um **espectro de emissão** é o conjunto de frequências que um átomo emite ao decair
+de níveis excitados; um **espectro de absorção** é o conjunto que ele absorve,
+saltando para níveis superiores. Ambos consistem em **linhas discretas**, nas
+frequências dadas por
+$$h f = E_i - E_f,$$ {#eq-emissao}
+a diferença de energia entre os níveis envolvidos (Volume XII).
+:::
+
+Como os níveis são quantizados (@eq-niveis-h), as frequências são discretas e
+**características de cada elemento** — duas digitais idênticas só vêm do mesmo
+elemento. O espectro de absorção é o "negativo" do de emissão: linhas escuras
+exatamente onde o de emissão tem linhas brilhantes.
+
+## A fórmula de Rydberg
+
+Para o hidrogênio, as linhas seguem um padrão numérico simples, descoberto antes
+mesmo da teoria quântica.
+
+::: {.callout-important}
+## Fórmula de Rydberg
+As frequências (ou comprimentos de onda) das linhas do hidrogênio obedecem a
+$$\frac{1}{\lambda} = R_H\!\left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right),$$ {#eq-rydberg}
+onde $R_H \approx 1{,}097\times10^{7}\ \mathrm{m^{-1}}$ é a constante de Rydberg, e
+$n_i > n_f$ são inteiros. As séries: Lyman ($n_f=1$, UV), Balmer ($n_f=2$, visível),
+Paschen ($n_f=3$, IR).
+:::
+
+A @eq-rydberg decorre diretamente dos níveis $E_n = -13{,}6\ \mathrm{eV}/n^2$
+(Volume XII) via @eq-emissao — outro triunfo da teoria quântica, que explicou uma
+fórmula empírica de décadas.
+
+## Espectroscopia: lendo os átomos
+
+::: {.callout-note}
+## A digital da matéria
+Cada elemento tem um padrão espectral único. Foi assim que o **hélio** foi descoberto
+no Sol (no espectro solar) antes de ser achado na Terra — daí o nome (*helios*, sol).
+A análise das linhas revela não só a composição, mas a temperatura, a densidade, o
+campo magnético (efeito Zeeman) e a velocidade (desvio Doppler, Volume V) de
+estrelas e galáxias. Toda a astrofísica moderna repousa sobre os espectros atômicos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-balmer-alfa}
+Calcule o comprimento de onda da linha $H_\alpha$ da série de Balmer
+($n_i=3 \to n_f=2$). ($R_H = 1{,}097\times10^{7}\ \mathrm{m^{-1}}$.)
+:::
+
+**Solução.** Por @eq-rydberg:
+$$\frac{1}{\lambda} = R_H\!\left(\frac{1}{2^2} - \frac{1}{3^2}\right) = 1{,}097\times10^{7}\left(\frac{1}{4} - \frac{1}{9}\right) = 1{,}097\times10^{7}\times\frac{5}{36} \approx 1{,}52\times10^{6}\ \mathrm{m^{-1}}.$$
+Logo $\lambda \approx 6{,}56\times10^{-7}\ \mathrm{m} = 656\ \mathrm{nm}$ — a linha
+vermelha característica do hidrogênio.
+
+::: {#exm-serie-lyman}
+Qual a maior frequência da série de Lyman ($n_f=1$)?
+:::
+
+**Solução.** A maior frequência (menor $\lambda$) é o limite da série,
+$n_i\to\infty$. Por @eq-rydberg, $1/\lambda = R_H(1/1 - 0) = R_H$, então
+$\lambda = 1/R_H \approx 91\ \mathrm{nm}$ — corresponde à energia de ionização
+$13{,}6\ \mathrm{eV}$, no ultravioleta.
+
+## Exercícios
+
+::: {#exr-balmer-beta}
+Calcule $1/\lambda$ para a transição $n_i=4 \to n_f=2$ (linha $H_\beta$).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$1/\lambda = R_H(1/4 - 1/16) = 1{,}097\times10^{7}\times(3/16) \approx 2{,}06\times10^{6}\ \mathrm{m^{-1}}$,
+logo $\lambda \approx 486\ \mathrm{nm}$ (azul-verde).
+:::
+
+::: {#exr-emissao-absorcao}
+Por que o espectro de absorção de um elemento tem linhas escuras exatamente onde o
+de emissão tem linhas brilhantes?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+As mesmas transições entre níveis (@eq-emissao) ocorrem nos dois sentidos: na
+emissão, o átomo decai e **emite** o fóton de energia $E_i - E_f$; na absorção, ele
+sobe e **absorve** exatamente essa energia, retirando-a da luz que o atravessa. Logo,
+as frequências coincidem.
+:::
+
+::: {#exr-helio-sol}
+Como foi possível descobrir o hélio observando o Sol?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O espectro solar continha linhas em frequências que **não correspondiam a nenhum
+elemento conhecido** na Terra. Como cada elemento tem um espectro único, concluiu-se
+tratar-se de um elemento novo — o hélio —, depois confirmado na Terra.
+:::

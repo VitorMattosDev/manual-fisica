@@ -125,6 +125,7 @@ book:
     - part: "Volume XIII — Física Atômica, Molecular e da Matéria Condensada"
       chapters:
         - volumes/v13-materia/01-estrutura-atomica.qmd
+        - volumes/v13-materia/02-espectros.qmd
   appendices:
     - constantes.qmd
 

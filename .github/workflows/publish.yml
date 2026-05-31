@@ -20,6 +20,11 @@ jobs:
         with:
           tinytex: true
 
+      # O grafo de pré-requisitos (mermaid) em index.qmd precisa de um Chromium
+      # headless para ser convertido em imagem no PDF. Sem ele, o render trava.
+      - name: Instalar Chromium headless (mermaid no PDF)
+        run: quarto install chrome-headless-shell
+
       - name: Renderizar e publicar
         uses: quarto-dev/quarto-actions/publish@v2
         with:

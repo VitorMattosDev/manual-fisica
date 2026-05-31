@@ -1,0 +1,117 @@
+---
+title: "Estática e Corpos Rígidos"
+---
+
+## Motivação
+
+Uma ponte sustenta milhares de toneladas sem se mover; um guindaste ergue uma
+carga sem tombar; uma escada apoiada na parede ou escorrega ou fica firme. A
+**estática** estuda os corpos em equilíbrio — e é a base da engenharia de
+estruturas. Para um corpo extenso, não basta que a força resultante seja nula
+(como na primeira lei): ele também não pode girar. Este capítulo reúne as
+**duas** condições de equilíbrio e as aplica a vigas, escadas e alavancas.
+
+## As condições de equilíbrio
+
+Um corpo rígido está em equilíbrio quando nem translada nem gira aceleradamente.
+Isso exige anular a força resultante **e** o torque resultante.
+
+::: {.callout-important}
+## Condições de equilíbrio do corpo rígido
+$$\sum \vec{F} = \vec{0} \qquad\text{(equilíbrio de translação)},$$ {#eq-equilibrio-forca}
+$$\sum \vec{\tau} = \vec{0} \qquad\text{(equilíbrio de rotação)}.$$ {#eq-equilibrio-torque}
+A segunda vale em relação a **qualquer** ponto; escolher o eixo numa força
+desconhecida a elimina dos cálculos.
+:::
+
+::: {.callout-note}
+## Por que o eixo pode ser qualquer um
+Se $\sum\vec{F} = \vec{0}$, o torque resultante tem o mesmo valor em relação a
+todos os pontos. Logo, se ele se anula em relação a um ponto, anula-se em relação
+a todos. Isso dá liberdade estratégica: ponha o eixo onde mais incógnitas se
+cruzam, para que seus torços (braço nulo) sumam da equação.
+:::
+
+## Centro de gravidade
+
+::: {#def-centro-gravidade}
+O **centro de gravidade** é o ponto onde se pode considerar aplicado o peso total
+do corpo, para fins de torque. Num campo gravitacional uniforme, ele **coincide
+com o centro de massa** (@eq-centro-massa).
+:::
+
+Por isso um corpo tomba quando a vertical que passa pelo seu centro de gravidade
+cai fora da base de apoio: nesse instante o peso gera torque desequilibrado. Uma
+torre é estável enquanto o centro de gravidade se projeta dentro da base.
+
+## Estratégia para problemas de estática
+
+A receita é sempre a mesma: (1) isole o corpo num diagrama de corpo livre; (2)
+marque todas as forças e seus pontos de aplicação; (3) escolha eixos e um ponto de
+torque conveniente; (4) escreva as três equações escalares
+($\sum F_x = 0$, $\sum F_y = 0$, $\sum\tau = 0$) e resolva.
+
+<!-- TODO figura: escada apoiada em parede com forças (peso, normais, atrito) -->
+
+## Exemplos resolvidos
+
+::: {#exm-gangorra}
+Uma criança de $30\ \mathrm{kg}$ senta a $2{,}0\ \mathrm{m}$ do apoio de uma
+gangorra. A que distância do apoio, do outro lado, deve sentar um adulto de
+$80\ \mathrm{kg}$ para equilibrar?
+:::
+
+**Solução.** Equilíbrio de torque em torno do apoio (@eq-equilibrio-torque). Os
+pesos produzem torques opostos:
+$$m_1 g\,d_1 = m_2 g\,d_2 \;\Longrightarrow\; d_2 = \frac{m_1 d_1}{m_2} = \frac{30\times2{,}0}{80} = 0{,}75\ \mathrm{m}.$$
+A gravidade $g$ cancela; é a lei da alavanca.
+
+::: {#exm-viga}
+Uma viga uniforme de $40\ \mathrm{kg}$ e $4{,}0\ \mathrm{m}$ é apoiada em suas
+duas extremidades $A$ e $B$. Uma carga de $120\ \mathrm{kg}$ repousa a
+$1{,}0\ \mathrm{m}$ de $A$. Quais as forças de apoio? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Pesos: viga $40g = 392\ \mathrm{N}$ no centro ($2{,}0\ \mathrm{m}$ de
+$A$); carga $120g = 1176\ \mathrm{N}$ a $1{,}0\ \mathrm{m}$. Torque em torno de
+$A$ (@eq-equilibrio-torque), com $N_B$ a $4{,}0\ \mathrm{m}$:
+$$N_B\times4{,}0 = 392\times2{,}0 + 1176\times1{,}0 = 784 + 1176 = 1960 \;\Longrightarrow\; N_B = 490\ \mathrm{N}.$$
+Por @eq-equilibrio-forca, $N_A + N_B = 392 + 1176 = 1568\ \mathrm{N}$, logo
+$N_A = 1078\ \mathrm{N}$. O apoio mais próximo da carga suporta mais.
+
+## Exercícios
+
+::: {#exr-balanca}
+Numa balança de braços, uma massa de $5{,}0\ \mathrm{kg}$ fica a
+$0{,}30\ \mathrm{m}$ do eixo. A que distância, do outro lado, equilibra uma massa
+de $3{,}0\ \mathrm{kg}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$m_1 d_1 = m_2 d_2 \Rightarrow d_2 = (5{,}0\times0{,}30)/3{,}0 = 0{,}50\ \mathrm{m}$.
+:::
+
+::: {#exr-placa}
+Uma placa retangular homogênea está pendurada por um único prego. Onde deve estar
+o prego para que a placa fique em qualquer orientação em equilíbrio?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Para não haver torque do peso em nenhuma orientação, o prego deve estar no
+**centro de gravidade** (= centro de massa), o centro geométrico da placa. Aí o
+braço do peso é nulo.
+:::
+
+::: {#exr-guindaste}
+Um guindaste tem braço horizontal de $6{,}0\ \mathrm{m}$ e ergue
+$500\ \mathrm{kg}$ na ponta. Um contrapeso fica a $2{,}0\ \mathrm{m}$ do apoio do
+outro lado. Que massa de contrapeso equilibra o torque da carga? (Despreze o peso
+do braço; $g$ cancela.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$m_c\,d_c = m_\text{carga}\,d_\text{carga} \Rightarrow m_c = (500\times6{,}0)/2{,}0 = 1500\ \mathrm{kg}$.
+:::

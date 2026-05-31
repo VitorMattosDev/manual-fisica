@@ -43,6 +43,7 @@ book:
         - volumes/v3-mecanica2/01-cinematica-rotacional.qmd
         - volumes/v3-mecanica2/02-dinamica-rotacional.qmd
         - volumes/v3-mecanica2/03-momento-angular.qmd
+        - volumes/v3-mecanica2/04-estatica-corpos-rigidos.qmd
   appendices:
     - constantes.qmd
 

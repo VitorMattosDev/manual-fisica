@@ -1,0 +1,128 @@
+---
+title: "Corrente, Resistência e Lei de Ohm"
+---
+
+## Motivação
+
+Até aqui as cargas estavam paradas (eletrostática). Mas a eletricidade que ilumina,
+aquece e move o mundo é a carga **em movimento** — a **corrente elétrica**. Por que
+um fio esquenta ao conduzir? Por que um chuveiro elétrico consome tanto? O que
+distingue um bom condutor de um resistor? Este capítulo abre o estudo das correntes
+e circuitos, com os conceitos de corrente, resistência, a lei de Ohm e a
+dissipação de energia — a base de toda a eletrônica.
+
+## Corrente elétrica
+
+::: {#def-corrente}
+A **corrente elétrica** é a taxa de fluxo de carga através de uma seção de um
+condutor:
+$$I = \frac{\mathrm{d}Q}{\mathrm{d}t}, \qquad [\,I\,] = \mathrm{C/s} = \mathrm{ampère\ (A)}.$$ {#eq-corrente}
+Por convenção, o sentido da corrente é o do movimento de cargas **positivas** —
+oposto ao do fluxo real de elétrons nos metais.
+:::
+
+A corrente é mantida por uma diferença de potencial: uma **fonte** (pilha, gerador)
+fornece a energia que "empurra" as cargas pelo circuito, à custa de energia química
+ou mecânica.
+
+## Resistência e a lei de Ohm
+
+Aplicada uma voltagem a um condutor, estabelece-se uma corrente. A razão entre elas
+define a resistência.
+
+::: {#def-resistencia}
+A **resistência** de um condutor é
+$$R = \frac{V}{I}, \qquad [\,R\,] = \mathrm{V/A} = \mathrm{ohm\ (\Omega)}.$$ {#eq-resistencia}
+Ela mede a oposição à passagem de corrente.
+:::
+
+::: {.callout-important}
+## Lei de Ohm
+Para muitos materiais (os **ôhmicos**), a resistência é **constante** — a corrente
+é proporcional à voltagem:
+$$V = R\,I.$$ {#eq-ohm}
+Materiais não ôhmicos (diodos, lâmpadas) têm $R$ que varia com $V$ ou $I$.
+:::
+
+A resistência de um fio depende do material e da geometria:
+$$R = \rho\,\frac{L}{A},$$ {#eq-resistividade}
+onde $\rho$ é a **resistividade** do material, $L$ o comprimento e $A$ a seção. Fios
+longos e finos resistem mais; o cobre tem $\rho$ baixíssima, daí seu uso.
+
+## Potência elétrica
+
+A corrente, ao vencer a resistência, dissipa energia — em geral como calor (efeito
+Joule).
+
+::: {.callout-important}
+## Potência dissipada
+$$P = V I = R I^2 = \frac{V^2}{R}.$$ {#eq-potencia-eletrica}
+:::
+
+::: {.proof}
+## Origem da potência elétrica
+Cada carga $\mathrm{d}Q$ que atravessa uma diferença de potencial $V$ perde energia
+$\mathrm{d}U = V\,\mathrm{d}Q$ (@eq-potencial). A potência é a taxa dessa perda:
+$$P = \frac{\mathrm{d}U}{\mathrm{d}t} = V\frac{\mathrm{d}Q}{\mathrm{d}t} = V I,$$
+e usando a lei de Ohm (@eq-ohm) obtêm-se as formas $RI^2$ e $V^2/R$.
+$\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Por que linhas de transmissão usam alta tensão
+A potência perdida no fio é $P = R I^2$. Para transmitir uma dada potência
+$P = VI$, usar **alta tensão** reduz a corrente $I$ na mesma proporção, e a perda
+$RI^2$ cai com o **quadrado** — daí as linhas de centenas de milhares de volts.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-corrente-lampada}
+Uma lâmpada de resistência $240\ \Omega$ é ligada a $120\ \mathrm{V}$. Qual a
+corrente e a potência?
+:::
+
+**Solução.** Pela lei de Ohm (@eq-ohm), $I = V/R = 120/240 = 0{,}50\ \mathrm{A}$. A
+potência (@eq-potencia-eletrica) é $P = VI = 120\times0{,}50 = 60\ \mathrm{W}$.
+
+::: {#exm-resistencia-fio}
+Um fio de cobre ($\rho = 1{,}7\times10^{-8}\ \Omega\,\mathrm{m}$) tem
+$L = 10\ \mathrm{m}$ e seção $A = 1{,}0\times10^{-6}\ \mathrm{m^2}$. Qual sua
+resistência?
+:::
+
+**Solução.** Por @eq-resistividade:
+$$R = \rho\frac{L}{A} = 1{,}7\times10^{-8}\frac{10}{1{,}0\times10^{-6}} = 1{,}7\times10^{-8}\times10^{7} = 0{,}17\ \Omega.$$
+
+## Exercícios
+
+::: {#exr-chuveiro}
+Um chuveiro de $4400\ \mathrm{W}$ opera a $220\ \mathrm{V}$. Qual a corrente que
+ele puxa?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$I = P/V = 4400/220 = 20\ \mathrm{A}$ (@eq-potencia-eletrica).
+:::
+
+::: {#exr-resistencia-ohm}
+Por um resistor passa $2{,}0\ \mathrm{A}$ quando submetido a $6{,}0\ \mathrm{V}$.
+Qual sua resistência e a potência dissipada?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$R = V/I = 6{,}0/2{,}0 = 3{,}0\ \Omega$. Potência
+$P = VI = 6{,}0\times2{,}0 = 12\ \mathrm{W}$.
+:::
+
+::: {#exr-fio-dobro}
+Se o comprimento de um fio dobra (mantida a seção), o que acontece com sua
+resistência?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por @eq-resistividade, $R\propto L$. Dobrar $L$ **dobra** a resistência.
+:::

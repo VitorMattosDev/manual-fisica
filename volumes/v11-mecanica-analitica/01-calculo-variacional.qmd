@@ -88,7 +88,7 @@ comprimento $S = \int\sqrt{1 + (y')^2}\,\mathrm{d}x$.
 
 **Solução.** Aqui $L = \sqrt{1 + (y')^2}$ não depende de $y$, só de $y'$. A
 @eq-euler-lagrange dá $\mathrm{d}/\mathrm{d}x\,(\partial L/\partial y') = 0$, logo
-$\partial L/\partial y' = $ constante. Como $\partial L/\partial y' = y'/\sqrt{1+(y')^2}$
+$\partial L/\partial y'$ é constante. Como $\partial L/\partial y' = y'/\sqrt{1+(y')^2}$
 constante implica $y'$ constante, o caminho é uma **reta**. (Como esperado: a menor
 distância entre dois pontos é uma reta.)
 
@@ -125,6 +125,6 @@ equação de Euler-Lagrange garante?
 ## Solução
 Se $\partial L/\partial q = 0$, a @eq-euler-lagrange dá
 $\mathrm{d}/\mathrm{d}t\,(\partial L/\partial\dot q) = 0$, ou seja
-$\partial L/\partial\dot q = $ constante. Essa grandeza conservada é o **momento
+$\partial L/\partial\dot q$ é constante. Essa grandeza conservada é o **momento
 generalizado** associado a $q$ — base do teorema de Noether (próximo capítulo).
 :::

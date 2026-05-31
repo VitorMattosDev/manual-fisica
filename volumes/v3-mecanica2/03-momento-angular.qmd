@@ -61,7 +61,7 @@ Ao recolher os braços, a patinadora reduz seu $I$; com $L = I\omega$ constante,
 $\omega$ cresce e ela gira mais rápido — sem nenhum torque externo. A mesma lei,
 aplicada a um planeta sob a força central do Sol (que não exerce torque em relação
 ao Sol), dá a **segunda lei de Kepler**: o raio-vetor varre áreas iguais em tempos
-iguais, pois a taxa de varredura de área é $\tfrac{1}{2}L/m = $ constante.
+iguais, pois a taxa de varredura de área $\tfrac{1}{2}L/m$ é constante.
 :::
 
 ## Exemplos resolvidos

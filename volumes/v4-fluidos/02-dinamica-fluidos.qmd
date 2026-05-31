@@ -68,7 +68,7 @@ que é a @eq-bernoulli. $\qquad\blacksquare$
 ::: {.callout-note}
 ## Onde a velocidade é maior, a pressão é menor
 Para um tubo horizontal ($y$ constante), a @eq-bernoulli reduz-se a
-$p + \tfrac12\rho v^2 = $ constante: **mais velocidade significa menos pressão**.
+$p + \tfrac12\rho v^2$ é constante: **mais velocidade significa menos pressão**.
 Esse é o princípio por trás da sustentação da asa de um avião (ar mais rápido por
 cima, pressão menor), do atomizador de perfume e da atração entre dois navios
 próximos.

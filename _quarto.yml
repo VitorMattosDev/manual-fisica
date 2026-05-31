@@ -107,6 +107,7 @@ book:
       chapters:
         - volumes/v11-mecanica-analitica/01-calculo-variacional.qmd
         - volumes/v11-mecanica-analitica/02-lagrangiana.qmd
+        - volumes/v11-mecanica-analitica/03-aplicacoes-lagrangiana.qmd
   appendices:
     - constantes.qmd
 

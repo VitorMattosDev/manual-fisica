@@ -1,0 +1,118 @@
+---
+title: "Aplicações Lagrangianas"
+---
+
+## Motivação
+
+A formulação lagrangiana brilha justamente nos problemas em que Newton tropeça:
+sistemas com vínculos, muitos corpos acoplados, coordenadas curvilíneas. Neste
+capítulo, consolidamos a técnica resolvendo problemas clássicos — a máquina de
+Atwood, o pêndulo duplo, contas em trilhos — e introduzimos os multiplicadores de
+Lagrange para, quando preciso, recuperar as forças de vínculo. O objetivo é
+prático: ganhar fluência num método que reaparecerá na hamiltoniana e na física
+moderna.
+
+## A receita lagrangiana
+
+::: {.callout-important}
+## Procedimento sistemático
+1. Escolha coordenadas generalizadas $q_i$ que respeitem os vínculos.
+2. Escreva $T$ e $U$ em função de $q_i$ e $\dot q_i$.
+3. Forme $L = T - U$.
+4. Aplique a equação de Euler-Lagrange (@eq-euler-lagrange-multi) a cada $q_i$.
+5. Resolva as equações de movimento resultantes.
+:::
+
+A vantagem decisiva: nunca é preciso desenhar diagramas de forças nem calcular
+trações, normais ou outras forças de vínculo — elas não fazem trabalho nas
+coordenadas generalizadas e somem da formulação.
+
+## Multiplicadores de Lagrange
+
+Quando se **quer** conhecer uma força de vínculo, mantêm-se as coordenadas
+redundantes e impõe-se o vínculo com um multiplicador.
+
+::: {.callout-note}
+## Recuperando forças de vínculo
+Para um vínculo $g(q) = 0$, acrescenta-se um termo $\lambda\,g$ à formulação. As
+equações ganham um termo $\lambda\,\partial g/\partial q_i$, que **é** a força de
+vínculo generalizada. O multiplicador $\lambda$ — antes apenas uma incógnita
+matemática — adquire significado físico: a intensidade da tração, da normal, etc.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-atwood-lag}
+Resolva a máquina de Atwood (massas $m_1$ e $m_2$ num fio sobre polia ideal) pela
+lagrangiana, usando como coordenada a posição $x$ de descida de $m_1$.
+:::
+
+**Solução.** Se $m_1$ desce $x$, $m_2$ sobe $x$; ambas têm rapidez $\dot x$. A
+energia cinética é $T = \tfrac12(m_1+m_2)\dot x^2$, e a potencial
+$U = -m_1 g x + m_2 g x$. Então $L = \tfrac12(m_1+m_2)\dot x^2 + (m_1-m_2)gx$. A
+@eq-euler-lagrange-multi dá
+$$(m_1+m_2)\ddot x - (m_1-m_2)g = 0 \;\Longrightarrow\; \ddot x = \frac{(m_1-m_2)g}{m_1+m_2},$$
+exatamente o resultado de @exr-atwood (Volume II), sem mencionar a tração.
+
+::: {#exm-conta-aro}
+Uma conta desliza sem atrito num aro circular de raio $R$ que está no plano
+vertical. Use o ângulo $\theta$ (a partir do fundo) como coordenada e ache a
+equação de movimento.
+:::
+
+**Solução.** A posição da conta é fixada por $\theta$; sua rapidez é $R\dot\theta$.
+Então $T = \tfrac12 m R^2\dot\theta^2$ e $U = mgR(1-\cos\theta)$. Logo
+$L = \tfrac12 mR^2\dot\theta^2 - mgR(1-\cos\theta)$, e a @eq-euler-lagrange-multi dá
+$$mR^2\ddot\theta + mgR\,\mathrm{sen}\,\theta = 0 \;\Longrightarrow\; \ddot\theta = -\frac{g}{R}\,\mathrm{sen}\,\theta.$$
+Idêntico ao pêndulo (@exm-pendulo-lagrangiana) com $L\to R$ — pois fisicamente é o
+mesmo problema.
+
+## O pêndulo duplo
+
+::: {.callout-note}
+## Um sistema caótico
+O pêndulo duplo (um pêndulo pendurado em outro) tem **dois** graus de liberdade,
+$\theta_1$ e $\theta_2$. Sua lagrangiana é direta de montar, mas as equações de
+Euler-Lagrange resultantes são **acopladas e não lineares**, exibindo
+**caos**: trajetórias que divergem exponencialmente com pequenas mudanças iniciais.
+É um exemplo célebre de como a mecânica determinística gera comportamento
+imprevisível — e de como a lagrangiana organiza um problema que por Newton seria
+quase intratável.
+:::
+
+## Exercícios
+
+::: {#exr-plano-inclinado-lag}
+Um bloco desliza sem atrito por um plano inclinado de ângulo $\alpha$. Usando a
+distância $s$ ao longo do plano, escreva $L$ e ache $\ddot s$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$T = \tfrac12 m\dot s^2$ e $U = -mgs\,\mathrm{sen}\,\alpha$ (altura desce
+$s\,\mathrm{sen}\,\alpha$). Então $L = \tfrac12 m\dot s^2 + mgs\,\mathrm{sen}\,\alpha$,
+e a @eq-euler-lagrange-multi dá $m\ddot s = mg\,\mathrm{sen}\,\alpha$, ou seja
+$\ddot s = g\,\mathrm{sen}\,\alpha$ (como em Newton).
+:::
+
+::: {#exr-graus-liberdade}
+Quantos graus de liberdade tem (a) um pêndulo simples no plano; (b) uma partícula
+livre no espaço; (c) um pêndulo duplo no plano?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+(a) **1** (o ângulo); (b) **3** (as três coordenadas); (c) **2** (os dois ângulos).
+:::
+
+::: {#exr-vantagem-lag}
+Cite a principal vantagem da formulação lagrangiana sobre a newtoniana em problemas
+com vínculos.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+As **forças de vínculo** (tração, normal) **não aparecem**: ao escolher coordenadas
+generalizadas que já respeitam os vínculos, elimina-se a necessidade de calcular
+essas forças, simplificando enormemente o problema.
+:::

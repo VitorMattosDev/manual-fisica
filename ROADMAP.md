@@ -164,7 +164,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v12-quantica/06-oscilador-harmonico.qmd` — Oscilador harmônico quântico
 - [x] `volumes/v12-quantica/07-momento-angular-spin.qmd` — Momento angular e spin
 - [x] `volumes/v12-quantica/08-atomo-hidrogenio.qmd` — Átomo de hidrogênio
-- [ ] `volumes/v12-quantica/09-metodos-aproximados.qmd` — Teoria de perturbação
+- [x] `volumes/v12-quantica/09-metodos-aproximados.qmd` — Teoria de perturbação
 
 ## Volume XIII — Física Atômica, Molecular e da Matéria Condensada
 *Objetivo: da estrutura atômica aos sólidos. Pré-requisitos: XII.*

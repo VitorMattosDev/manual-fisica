@@ -1,0 +1,130 @@
+---
+title: "Métodos Aproximados: Teoria de Perturbação"
+---
+
+## Motivação
+
+O átomo de hidrogênio e o oscilador harmônico têm solução exata — mas são quase os
+únicos. O átomo de hélio (dois elétrons), as moléculas, os sólidos, qualquer
+sistema real: nenhum se resolve exatamente. A mecânica quântica seria estéril sem
+**métodos aproximados** que extraiam previsões precisas de problemas insolúveis. O
+principal deles é a **teoria de perturbação**, que trata um problema difícil como um
+problema fácil ligeiramente "perturbado". Este capítulo, que encerra a mecânica
+quântica, apresenta essa ferramenta indispensável e o método variacional.
+
+## A ideia da perturbação
+
+::: {#def-perturbacao}
+Na **teoria de perturbação**, escreve-se a hamiltoniana como uma parte solúvel mais
+uma pequena correção:
+$$\hat{H} = \hat{H}_0 + \lambda\,\hat{H}',$$ {#eq-perturbacao}
+onde $\hat{H}_0$ tem solução conhecida e $\lambda\hat{H}'$ é a **perturbação**
+pequena. As correções à energia e aos estados são calculadas como séries em
+potências de $\lambda$.
+:::
+
+::: {.callout-important}
+## Correção de energia de primeira ordem
+A correção de primeira ordem à energia do nível $n$ é o **valor esperado** da
+perturbação no estado não perturbado:
+$$E_n^{(1)} = \langle\psi_n^{(0)}|\hat{H}'|\psi_n^{(0)}\rangle.$$ {#eq-correcao-energia}
+:::
+
+A interpretação é intuitiva: em primeira aproximação, o deslocamento de energia é
+simplesmente a "energia média" da perturbação no estado original. Ordens superiores
+refinam o resultado, mas a primeira já costuma capturar o essencial.
+
+## O método variacional
+
+Uma estratégia alternativa, poderosa para o estado fundamental, baseia-se num
+princípio de mínimo.
+
+::: {.callout-important}
+## Princípio variacional
+Para **qualquer** função de onda tentativa $\psi$, o valor esperado da energia é um
+**limite superior** da energia do estado fundamental $E_0$:
+$$\frac{\langle\psi|\hat{H}|\psi\rangle}{\langle\psi|\psi\rangle} \ge E_0.$$ {#eq-variacional}
+Minimizando sobre parâmetros da função tentativa, aproxima-se $E_0$ por cima.
+:::
+
+::: {.callout-note}
+## Como se calcula a química de verdade
+O método variacional é o motor da química quântica computacional. Escolhe-se uma
+função tentativa com parâmetros ajustáveis, calcula-se a energia e minimiza-se —
+obtendo energias de moléculas que nenhuma solução exata forneceria. Combinado à
+teoria de perturbação, ele permite prever espectros, ligações e reações com
+precisão impressionante. É assim que a mecânica quântica deixa de ser filosofia e
+vira engenharia de materiais e fármacos.
+:::
+
+## Aplicações típicas
+
+::: {.callout-note}
+## Onde a perturbação aparece
+- **Efeito Stark e Zeeman:** deslocamento de níveis atômicos por campos elétrico e
+  magnético externos (a perturbação é a energia de interação com o campo).
+- **Estrutura fina:** pequenas correções relativísticas e de spin aos níveis do
+  hidrogênio.
+- **Forças intermoleculares e ligações químicas:** tratadas perturbativamente a
+  partir de átomos isolados.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-perturbacao-poco}
+Uma partícula num poço infinito (Volume XII) sofre uma pequena perturbação constante
+$\hat{H}' = V_0$ em toda a caixa. Qual a correção de primeira ordem à energia?
+:::
+
+**Solução.** Por @eq-correcao-energia, com $\hat H' = V_0$ constante:
+$$E_n^{(1)} = \langle\psi_n|V_0|\psi_n\rangle = V_0\langle\psi_n|\psi_n\rangle = V_0,$$
+pois os estados são normalizados. Cada nível sobe uniformemente por $V_0$ — como
+esperado: somar uma constante ao potencial soma-a a todas as energias.
+
+::: {#exm-variacional-limite}
+Por que uma função tentativa **nunca** dá energia menor que a verdadeira
+$E_0$?
+:::
+
+**Solução.** Qualquer $\psi$ pode ser expandida nos autoestados de $\hat H$, com
+energias $E_n \ge E_0$. O valor esperado $\langle\psi|\hat H|\psi\rangle$ é uma média
+ponderada dessas energias (pesos $\ge 0$ somando 1), logo não pode ser menor que a
+menor delas, $E_0$ (@eq-variacional). A igualdade só ocorre se $\psi$ for o próprio
+estado fundamental.
+
+## Exercícios
+
+::: {#exr-correcao}
+A correção de energia de primeira ordem é o valor esperado de quê, e em que estado?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+É o valor esperado da **perturbação** $\hat H'$ no estado **não perturbado**
+$\psi_n^{(0)}$: $E_n^{(1)} = \langle\psi_n^{(0)}|\hat H'|\psi_n^{(0)}\rangle$
+(@eq-correcao-energia).
+:::
+
+::: {#exr-stark}
+No efeito Stark, um átomo é colocado num campo elétrico. O que faz o papel da
+perturbação $\hat H'$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **energia de interação** entre o átomo e o campo elétrico externo (o termo
+$-\vec p\cdot\vec E$, do dipolo no campo). Tratada como perturbação, ela desloca e
+desdobra os níveis atômicos.
+:::
+
+::: {#exr-variacional-uso}
+Qual a vantagem do método variacional para estimar a energia do estado fundamental
+de um sistema sem solução exata?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Ele garante um **limite superior** confiável para $E_0$ (@eq-variacional): qualquer
+função tentativa dá energia $\ge E_0$, então minimizando sobre parâmetros chega-se o
+mais perto possível por cima — sem precisar resolver a equação exatamente.
+:::

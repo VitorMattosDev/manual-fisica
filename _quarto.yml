@@ -121,6 +121,7 @@ book:
         - volumes/v12-quantica/06-oscilador-harmonico.qmd
         - volumes/v12-quantica/07-momento-angular-spin.qmd
         - volumes/v12-quantica/08-atomo-hidrogenio.qmd
+        - volumes/v12-quantica/09-metodos-aproximados.qmd
   appendices:
     - constantes.qmd
 

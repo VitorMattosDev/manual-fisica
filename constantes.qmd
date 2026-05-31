@@ -108,5 +108,15 @@ constante ou uma relação fundamental nova num capítulo, registre-a aqui.
 - Equações de Hamilton: $\dot q = \partial H/\partial p$, $\dot p = -\partial H/\partial q$
 - Parênteses de Poisson: $\{q, p\} = 1$; $\ \mathrm{d}f/\mathrm{d}t = \{f, H\} + \partial f/\partial t$
 
-*(As demais seções — Quântica, Nuclear, Avançada — são adicionadas à medida que os
-volumes correspondentes são escritos.)*
+### Mecânica quântica
+
+- Energia do fóton: $E = hf$; de Broglie $\lambda = h/p$
+- Fotoelétrico: $K_\text{máx} = hf - \phi$
+- Níveis do hidrogênio: $E_n = -13{,}6\ \mathrm{eV}/n^2$
+- Equação de Schrödinger: $i\hbar\,\partial_t\psi = -\frac{\hbar^2}{2m}\partial_x^2\psi + V\psi$
+- Poço infinito: $E_n = n^2 h^2/(8mL^2)$; oscilador $E_n = (n+\tfrac12)\hbar\omega$
+- Incerteza: $\Delta x\,\Delta p \ge \hbar/2$; comutador $[\hat x,\hat p] = i\hbar$
+- Momento angular: $|\vec L| = \sqrt{\ell(\ell+1)}\,\hbar$; $\ L_z = m_\ell\hbar$; spin do elétron $\tfrac12$
+
+*(As demais seções — Nuclear, Avançada — são adicionadas à medida que os volumes
+correspondentes são escritos.)*

@@ -1,0 +1,131 @@
+---
+title: "Formalismo: Espaço de Hilbert e Operadores"
+---
+
+## Motivação
+
+Até aqui usamos a função de onda de modo intuitivo. Mas a mecânica quântica tem uma
+estrutura matemática precisa e poderosa, formulada por Dirac e von Neumann: estados
+são **vetores** num espaço abstrato (de Hilbert), grandezas físicas são
+**operadores**, e medir é projetar. Esse formalismo unifica tudo, dá origem ao
+**princípio da incerteza** de Heisenberg e revela por que certas grandezas não podem
+ser conhecidas simultaneamente. Este capítulo apresenta a linguagem definitiva da
+quântica.
+
+## Estados e observáveis
+
+::: {#def-estado-operador}
+O **estado** de um sistema quântico é um vetor $|\psi\rangle$ num espaço de Hilbert
+(espaço vetorial complexo com produto interno). Cada **observável** físico
+(posição, momento, energia) é representado por um **operador** linear $\hat{A}$ que
+atua sobre os estados.
+:::
+
+Os operadores fundamentais são a posição $\hat{x}$ (multiplicação por $x$) e o
+momento $\hat{p} = -i\hbar\,\partial/\partial x$. A energia é a hamiltoniana
+$\hat{H}$, e a equação de Schrödinger estacionária é a equação de autovalores
+$\hat{H}|\phi\rangle = E|\phi\rangle$.
+
+## Medições e autovalores
+
+::: {.callout-important}
+## Postulado da medição
+Os únicos resultados possíveis de medir um observável $\hat{A}$ são seus
+**autovalores** $a_n$ (definidos por $\hat{A}|a_n\rangle = a_n|a_n\rangle$). Ao
+medir, o estado **colapsa** no autovetor correspondente, e a probabilidade de obter
+$a_n$ é $|\langle a_n|\psi\rangle|^2$.
+:::
+
+O **valor esperado** (média de muitas medições) de um observável é
+$$\langle A\rangle = \langle\psi|\hat{A}|\psi\rangle.$$ {#eq-valor-esperado}
+Observáveis físicos correspondem a operadores **hermitianos**, cujos autovalores
+são reais — garantindo resultados de medição reais.
+
+## Comutadores e o princípio da incerteza
+
+A ordem em que se aplicam dois operadores importa. A medida dessa diferença é o
+**comutador**, herdeiro direto dos parênteses de Poisson (Volume XI).
+
+::: {.callout-important}
+## Relação de comutação canônica
+$$[\hat{x}, \hat{p}] = \hat{x}\hat{p} - \hat{p}\hat{x} = i\hbar.$$ {#eq-comutador}
+Operadores que **não comutam** representam grandezas que não podem ter valores
+definidos simultaneamente.
+:::
+
+Disso decorre o resultado mais célebre da quântica:
+
+::: {.callout-important}
+## Princípio da incerteza de Heisenberg
+Não é possível conhecer simultaneamente, com precisão arbitrária, a posição e o
+momento de uma partícula:
+$$\Delta x\,\Delta p \ge \frac{\hbar}{2}.$$ {#eq-incerteza}
+Quanto melhor se conhece a posição, mais incerto o momento, e vice-versa.
+:::
+
+::: {.callout-note}
+## Não é limitação dos instrumentos
+A incerteza não vem de imperfeição dos aparelhos: é uma propriedade **fundamental**
+da natureza. Uma partícula simplesmente não *tem* posição e momento simultaneamente
+definidos — são incompatíveis, como atestam operadores que não comutam. Há um par
+análogo energia-tempo, $\Delta E\,\Delta t \ge \hbar/2$, que permite flutuações de
+energia em intervalos curtos (base das partículas virtuais, Volume XV).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-incerteza-eletron}
+Um elétron está localizado com incerteza $\Delta x = 1{,}0\times10^{-10}\ \mathrm{m}$
+(um átomo). Qual a incerteza mínima em seu momento?
+:::
+
+**Solução.** Por @eq-incerteza:
+$$\Delta p \ge \frac{\hbar}{2\Delta x} = \frac{1{,}05\times10^{-34}}{2\times1{,}0\times10^{-10}} \approx 5{,}3\times10^{-25}\ \mathrm{kg\,m/s}.$$
+Localizar o elétron num átomo impõe momento (e energia cinética) considerável — a
+origem da energia de ponto zero (capítulo anterior).
+
+::: {#exm-comutador}
+Verifique que $[\hat{x}, \hat{p}]\,\psi = i\hbar\,\psi$ usando
+$\hat{p} = -i\hbar\,\mathrm{d}/\mathrm{d}x$.
+:::
+
+**Solução.** Aplique a uma função teste $\psi$:
+$$\hat{x}\hat{p}\psi = x(-i\hbar\psi'), \qquad \hat{p}\hat{x}\psi = -i\hbar\frac{\mathrm{d}}{\mathrm{d}x}(x\psi) = -i\hbar(\psi + x\psi').$$
+Subtraindo: $(\hat{x}\hat{p} - \hat{p}\hat{x})\psi = -i\hbar x\psi' + i\hbar\psi + i\hbar x\psi' = i\hbar\psi$.
+Confirma a @eq-comutador.
+
+## Exercícios
+
+::: {#exr-incerteza-bola}
+Por que o princípio da incerteza é irrelevante para uma bola de futebol?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A incerteza $\Delta x\,\Delta p \ge \hbar/2$ envolve $\hbar \sim 10^{-34}$,
+minúsculo. Para objetos macroscópicos, as incertezas correspondentes são
+imensuravelmente pequenas frente às escalas do objeto — por isso a bola tem posição
+e momento bem definidos na prática.
+:::
+
+::: {#exr-hermitiano}
+Por que os operadores que representam observáveis físicos devem ser hermitianos?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Porque os autovalores de operadores hermitianos são **reais**, e os resultados de
+medições físicas são números reais. Operadores não hermitianos dariam autovalores
+complexos, sem sentido como medida.
+:::
+
+::: {#exr-valor-esperado}
+O que representa fisicamente o valor esperado $\langle A\rangle = \langle\psi|\hat A|\psi\rangle$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+É a **média** dos resultados que se obteria ao medir o observável $\hat A$ em muitos
+sistemas identicamente preparados no estado $|\psi\rangle$ (@eq-valor-esperado). Não
+é o resultado de uma medição única, e sim a média estatística.
+:::

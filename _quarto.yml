@@ -26,6 +26,7 @@ book:
         - volumes/v1-fundamentos/02-analise-dimensional.qmd
         - volumes/v1-fundamentos/03-medicao-erros.qmd
         - volumes/v1-fundamentos/04-vetores.qmd
+        - volumes/v1-fundamentos/05-ferramentas-calculo.qmd
     - part: "Volume II — Mecânica Clássica I"
       chapters:
         - volumes/v2-mecanica1/06-conservacao-energia.qmd

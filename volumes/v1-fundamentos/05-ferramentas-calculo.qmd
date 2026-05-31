@@ -1,0 +1,147 @@
+---
+title: "Derivadas e Integrais na Física"
+---
+
+## Motivação
+
+A física é a ciência da **mudança**: posições que variam no tempo, temperaturas
+que caem, campos que crescem com a distância. O cálculo é a matemática da
+mudança, e por isso é a língua nativa da física desde Newton. Este capítulo não
+substitui um curso de cálculo — apresenta o cálculo *como o físico o usa*: a
+**derivada** como taxa de variação instantânea e a **integral** como acúmulo. Com
+essas duas ideias, "velocidade", "aceleração", "trabalho" e "distância
+percorrida" deixam de ser fórmulas isoladas e viram aspectos de uma mesma
+estrutura.
+
+## A derivada como taxa de variação
+
+Considere a posição $x(t)$ de um corpo. A velocidade média num intervalo é
+$\Delta x / \Delta t$. Encolhendo o intervalo até zero, obtemos a velocidade
+*instantânea* — a derivada.
+
+::: {#def-derivada}
+A **derivada** de uma função $f(t)$ é o limite da taxa de variação média quando o
+intervalo tende a zero:
+$$\frac{\mathrm{d}f}{\mathrm{d}t} = \lim_{\Delta t \to 0} \frac{f(t+\Delta t) - f(t)}{\Delta t}.$$ {#eq-derivada}
+Geometricamente, é a **inclinação da reta tangente** ao gráfico de $f$ no ponto
+$t$.
+:::
+
+Em cinemática, isso dá de imediato as duas grandezas centrais:
+$$v(t) = \frac{\mathrm{d}x}{\mathrm{d}t}, \qquad a(t) = \frac{\mathrm{d}v}{\mathrm{d}t} = \frac{\mathrm{d}^2 x}{\mathrm{d}t^2}.$$ {#eq-cinematica-derivadas}
+A velocidade é a taxa de variação da posição; a aceleração, a taxa de variação da
+velocidade.
+
+::: {.callout-important}
+## Regras de derivação essenciais
+Para constantes $c, n$ e funções $u(t), w(t)$:
+
+- **Potência:** $\dfrac{\mathrm{d}}{\mathrm{d}t}\,t^{n} = n\,t^{n-1}$.
+- **Linearidade:** $\dfrac{\mathrm{d}}{\mathrm{d}t}(c\,u + w) = c\,\dfrac{\mathrm{d}u}{\mathrm{d}t} + \dfrac{\mathrm{d}w}{\mathrm{d}t}$.
+- **Produto:** $(u\,w)' = u'\,w + u\,w'$.
+- **Cadeia:** $\dfrac{\mathrm{d}}{\mathrm{d}t}\,f(u(t)) = f'(u)\,\dfrac{\mathrm{d}u}{\mathrm{d}t}$.
+- **Trigonométricas/exponencial:** $(\mathrm{sen}\,t)' = \cos t$, $(\cos t)' = -\,\mathrm{sen}\,t$, $(e^{t})' = e^{t}$.
+:::
+
+## A integral como acúmulo
+
+A operação inversa: dada a taxa, recuperar o total acumulado. Se conhecemos a
+velocidade $v(t)$, qual é a distância percorrida? Somamos as contribuições
+$v\,\Delta t$ de cada instante — e no limite isso é a integral.
+
+::: {#def-integral}
+A **integral definida** de $f(t)$ entre $a$ e $b$ é o limite da soma de Riemann:
+$$\int_a^b f(t)\,\mathrm{d}t = \lim_{\Delta t \to 0} \sum_i f(t_i)\,\Delta t,$$ {#eq-integral}
+e representa a **área** sob o gráfico de $f$ entre $a$ e $b$ (áreas abaixo do eixo
+contam como negativas).
+:::
+
+A ponte entre derivar e integrar é um dos resultados mais importantes da
+matemática.
+
+::: {.callout-important}
+## Teorema Fundamental do Cálculo
+Derivar e integrar são operações inversas. Se $F$ é uma **primitiva** de $f$
+(isto é, $F' = f$), então
+$$\int_a^b f(t)\,\mathrm{d}t = F(b) - F(a).$$ {#eq-tfc}
+:::
+
+::: {.proof}
+## Esboço do teorema fundamental
+Defina a área acumulada $A(x) = \int_a^x f(t)\,\mathrm{d}t$. Ao avançar $x$ por
+$\Delta x$, a área cresce aproximadamente pela fatia retangular
+$f(x)\,\Delta x$, logo $A(x+\Delta x) - A(x) \approx f(x)\,\Delta x$. Dividindo por
+$\Delta x$ e tomando o limite (@eq-derivada), $A'(x) = f(x)$: a área acumulada é
+uma primitiva de $f$. Como duas primitivas diferem por constante, avaliar entre
+$a$ e $b$ cancela a constante e dá a @eq-tfc. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Integral indefinida e a constante
+Sem limites, a integral devolve a família de primitivas:
+$\int t^{n}\,\mathrm{d}t = \frac{t^{n+1}}{n+1} + C$ (para $n\neq -1$). A constante
+$C$ é fixada por uma **condição inicial** — por exemplo, a posição em $t=0$. Por
+isso integrar a aceleração exige saber a velocidade e a posição iniciais.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-mru-derivada}
+A posição de uma partícula é $x(t) = 5 + 3t - 2t^2$ (em metros, com $t$ em
+segundos). Encontre $v(t)$ e $a(t)$ e o instante em que a partícula para.
+:::
+
+**Solução.** Derivando termo a termo (@eq-cinematica-derivadas) com a regra da
+potência:
+$$v(t) = \frac{\mathrm{d}x}{\mathrm{d}t} = 3 - 4t\ \ (\mathrm{m/s}), \qquad a(t) = \frac{\mathrm{d}v}{\mathrm{d}t} = -4\ \ (\mathrm{m/s^2}).$$
+A partícula para quando $v=0$: $3 - 4t = 0 \Rightarrow t = 0{,}75\ \mathrm{s}$. A
+aceleração é constante e negativa — movimento uniformemente desacelerado.
+
+::: {#exm-integral-velocidade}
+Um corpo parte do repouso ($v_0 = 0$) com aceleração constante $a$. Use a integral
+para obter $v(t)$ e $x(t)$.
+:::
+
+**Solução.** Integrando a aceleração (@eq-tfc) com $v(0)=0$:
+$$v(t) = \int_0^t a\,\mathrm{d}t' = a\,t.$$
+Integrando de novo, com $x(0) = x_0$:
+$$x(t) = x_0 + \int_0^t a\,t'\,\mathrm{d}t' = x_0 + \tfrac12 a\,t^2.$$
+Reobtivemos as equações do movimento uniformemente acelerado — não como fórmulas
+decoradas, mas como consequência direta de integrar a definição de aceleração.
+
+## Exercícios
+
+::: {#exr-derivada-trig}
+Uma partícula oscila segundo $x(t) = A\cos(\omega t)$, com $A$ e $\omega$
+constantes. Encontre $v(t)$ e $a(t)$ e mostre que $a = -\omega^2 x$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela regra da cadeia, $v = \dot{x} = -A\omega\,\mathrm{sen}(\omega t)$ e
+$a = \dot{v} = -A\omega^2\cos(\omega t)$. Como $x = A\cos(\omega t)$, segue
+$a = -\omega^2 x$ — a assinatura do movimento harmônico simples (Volume III).
+:::
+
+::: {#exr-area-velocidade}
+A velocidade de um corpo é $v(t) = 6t$ (m/s). Use a integral para achar a
+distância percorrida entre $t=0$ e $t=2\ \mathrm{s}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\displaystyle d = \int_0^2 6t\,\mathrm{d}t = \left[3t^2\right]_0^2 = 3\cdot4 - 0 = 12\ \mathrm{m}$.
+Equivale à área do triângulo sob a reta $v=6t$: $\tfrac12 \cdot 2 \cdot 12 = 12\ \mathrm{m}$.
+:::
+
+::: {#exr-trabalho-mola}
+A força de uma mola é $F(x) = -kx$. Sabendo que o trabalho é
+$W = \int_0^{d} F\,\mathrm{d}x$ (com sinal trocado para a energia armazenada),
+mostre que a energia potencial elástica é $U = \tfrac12 k d^2$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A energia armazenada é
+$U = -\int_0^{d}(-kx)\,\mathrm{d}x = \int_0^{d} kx\,\mathrm{d}x = \left[\tfrac12 k x^2\right]_0^{d} = \tfrac12 k d^2$.
+:::

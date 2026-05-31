@@ -53,6 +53,9 @@ book:
         - volumes/v4-fluidos/02-dinamica-fluidos.qmd
         - volumes/v4-fluidos/03-viscosidade.qmd
         - volumes/v4-fluidos/04-elasticidade.qmd
+    - part: "Volume V — Ondas e Acústica"
+      chapters:
+        - volumes/v5-ondas/01-movimento-ondulatorio.qmd
   appendices:
     - constantes.qmd
 

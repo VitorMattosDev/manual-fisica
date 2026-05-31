@@ -78,7 +78,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume V — Ondas e Acústica
 *Objetivo: perturbações que se propagam. Pré-requisitos: III (MHS).*
 
-- [ ] `volumes/v5-ondas/01-movimento-ondulatorio.qmd` — Movimento ondulatório
+- [x] `volumes/v5-ondas/01-movimento-ondulatorio.qmd` — Movimento ondulatório
 - [ ] `volumes/v5-ondas/02-ondas-meios.qmd` — Ondas em cordas e meios
 - [ ] `volumes/v5-ondas/03-superposicao-interferencia.qmd` — Superposição e interferência
 - [ ] `volumes/v5-ondas/04-ondas-estacionarias.qmd` — Ondas estacionárias e ressonância

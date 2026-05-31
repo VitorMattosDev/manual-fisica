@@ -1,0 +1,128 @@
+---
+title: "Movimento Ondulatório"
+---
+
+## Motivação
+
+Jogue uma pedra num lago e veja os anéis se afastarem: a água sobe e desce no
+lugar, mas a *perturbação* viaja. Esse é o paradoxo central das ondas — algo se
+propaga sem que a matéria se desloque junto. Som, luz, terremotos, sinais de
+rádio, e até a matéria na mecânica quântica, são ondas. Tendo estudado o
+movimento harmônico simples (Volume III), estamos prontos para o passo seguinte:
+um MHS que se propaga no espaço. Este capítulo abre o estudo das ondas com seus
+conceitos fundamentais e a equação que as governa.
+
+## O que é uma onda
+
+::: {#def-onda}
+Uma **onda** é uma perturbação que se propaga transportando **energia e momento**,
+mas **não matéria**. Classificam-se em:
+
+- **transversais**, quando a perturbação é perpendicular à direção de propagação
+  (onda numa corda, luz);
+- **longitudinais**, quando é paralela (som, ondas de compressão).
+:::
+
+Ondas mecânicas (corda, som) precisam de um **meio** material para se propagar;
+ondas eletromagnéticas (luz) propagam-se até no vácuo (Volume VIII).
+
+## Grandezas de uma onda periódica
+
+Uma onda periódica repete-se no espaço e no tempo. Quatro grandezas a descrevem.
+
+::: {#def-grandezas-onda}
+- **Comprimento de onda** $\lambda$: distância entre dois pontos idênticos
+  consecutivos (período espacial).
+- **Período** $T$ e **frequência** $f = 1/T$: período e ritmo temporais.
+- **Amplitude** $A$: deslocamento máximo em relação ao equilíbrio.
+- **Velocidade de propagação** $v$: rapidez com que a perturbação avança.
+:::
+
+::: {.callout-important}
+## Equação fundamental da ondulatória
+A onda avança um comprimento de onda a cada período, logo
+$$v = \lambda\,f = \frac{\lambda}{T}.$$ {#eq-fundamental-ondas}
+A velocidade $v$ é fixada pelo **meio**; mudando a frequência da fonte, muda
+$\lambda$ na proporção inversa.
+:::
+
+## A função de onda
+
+Uma onda harmônica que viaja no sentido $+x$ é descrita por uma função que é
+senoidal tanto no espaço quanto no tempo.
+
+::: {.callout-important}
+## Função de onda harmônica
+$$y(x,t) = A\cos(kx - \omega t),$$ {#eq-funcao-onda}
+onde $k = \dfrac{2\pi}{\lambda}$ é o **número de onda** e
+$\omega = \dfrac{2\pi}{T}$ a frequência angular. A velocidade de propagação é
+$v = \omega/k = \lambda f$.
+:::
+
+O argumento $(kx - \omega t)$ é a **fase**. Um ponto de fase constante move-se com
+$x = (\omega/k)t$ — daí $v = \omega/k$. Trocar o sinal para $(kx + \omega t)$
+descreve uma onda que viaja no sentido $-x$.
+
+::: {.callout-note}
+## A equação de onda
+Derivando a @eq-funcao-onda, verifica-se que ela satisfaz a **equação de onda**
+$$\frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2}\frac{\partial^2 y}{\partial t^2}.$$ {#eq-equacao-onda}
+Esta equação diferencial é o "DNA" de toda onda: sempre que uma grandeza física a
+obedecer, há propagação ondulatória com velocidade $v$. Ela reaparecerá no
+eletromagnetismo, dando origem à luz.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-onda-corda}
+Uma onda numa corda tem $\lambda = 0{,}40\ \mathrm{m}$ e $f = 25\ \mathrm{Hz}$.
+Qual sua velocidade de propagação?
+:::
+
+**Solução.** Pela @eq-fundamental-ondas:
+$$v = \lambda f = 0{,}40\times25 = 10\ \mathrm{m/s}.$$
+
+::: {#exm-parametros-onda}
+Uma onda é descrita por $y(x,t) = 0{,}02\cos(4\pi x - 200\pi t)$ (SI). Determine
+$\lambda$, $f$ e $v$.
+:::
+
+**Solução.** Comparando com a @eq-funcao-onda: $k = 4\pi\ \mathrm{rad/m}$ e
+$\omega = 200\pi\ \mathrm{rad/s}$. Então
+$$\lambda = \frac{2\pi}{k} = \frac{2\pi}{4\pi} = 0{,}50\ \mathrm{m}, \quad f = \frac{\omega}{2\pi} = \frac{200\pi}{2\pi} = 100\ \mathrm{Hz}, \quad v = \lambda f = 50\ \mathrm{m/s}.$$
+
+## Exercícios
+
+::: {#exr-radio}
+Uma estação de rádio FM transmite a $100\ \mathrm{MHz}$. Sabendo que ondas de
+rádio viajam à velocidade da luz ($c = 3{,}0\times10^{8}\ \mathrm{m/s}$), qual seu
+comprimento de onda?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\lambda = c/f = 3{,}0\times10^{8}/(100\times10^{6}) = 3{,}0\ \mathrm{m}$.
+:::
+
+::: {#exr-periodo-onda}
+Uma onda do mar tem cristas separadas por $6{,}0\ \mathrm{m}$ que passam por um
+poste a cada $3{,}0\ \mathrm{s}$. Qual sua velocidade?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\lambda = 6{,}0\ \mathrm{m}$, $T = 3{,}0\ \mathrm{s}$, logo
+$v = \lambda/T = 6{,}0/3{,}0 = 2{,}0\ \mathrm{m/s}$.
+:::
+
+::: {#exr-numero-onda}
+Uma onda tem $\lambda = 0{,}25\ \mathrm{m}$ e $v = 20\ \mathrm{m/s}$. Calcule o
+número de onda $k$ e a frequência angular $\omega$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$k = 2\pi/\lambda = 2\pi/0{,}25 = 8\pi \approx 25{,}1\ \mathrm{rad/m}$. A frequência
+é $f = v/\lambda = 20/0{,}25 = 80\ \mathrm{Hz}$, então
+$\omega = 2\pi f = 160\pi \approx 503\ \mathrm{rad/s}$.
+:::

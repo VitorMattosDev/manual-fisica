@@ -1,0 +1,34 @@
+---
+title: "Constantes e Formulário"
+---
+
+Apêndice de referência rápida. Mantenha-o atualizado: ao introduzir uma
+constante ou uma relação fundamental nova num capítulo, registre-a aqui.
+
+## Constantes físicas fundamentais
+
+| Constante | Símbolo | Valor (SI) |
+|---|---|---|
+| Velocidade da luz no vácuo | $c$ | $2{,}998 \times 10^{8}\ \mathrm{m/s}$ |
+| Constante gravitacional | $G$ | $6{,}674 \times 10^{-11}\ \mathrm{N\,m^2/kg^2}$ |
+| Gravidade padrão na Terra | $g$ | $9{,}807\ \mathrm{m/s^2}$ |
+| Constante de Planck | $h$ | $6{,}626 \times 10^{-34}\ \mathrm{J\,s}$ |
+| Planck reduzida | $\hbar$ | $1{,}055 \times 10^{-34}\ \mathrm{J\,s}$ |
+| Carga elementar | $e$ | $1{,}602 \times 10^{-19}\ \mathrm{C}$ |
+| Constante de Boltzmann | $k_B$ | $1{,}381 \times 10^{-23}\ \mathrm{J/K}$ |
+| Constante de Avogadro | $N_A$ | $6{,}022 \times 10^{23}\ \mathrm{mol^{-1}}$ |
+| Permissividade do vácuo | $\varepsilon_0$ | $8{,}854 \times 10^{-12}\ \mathrm{F/m}$ |
+| Permeabilidade do vácuo | $\mu_0$ | $1{,}257 \times 10^{-6}\ \mathrm{T\,m/A}$ |
+| Massa do elétron | $m_e$ | $9{,}109 \times 10^{-31}\ \mathrm{kg}$ |
+| Massa do próton | $m_p$ | $1{,}673 \times 10^{-27}\ \mathrm{kg}$ |
+
+## Formulário (preenchido ao longo da obra)
+
+### Mecânica
+
+- Energia cinética: $K = \tfrac12 m v^2$
+- Energia potencial gravitacional (uniforme): $U = m g y$
+- Conservação da energia mecânica: $K_i + U_i = K_f + U_f$
+
+*(As demais seções — Termodinâmica, Eletromagnetismo, etc. — são adicionadas à
+medida que os volumes correspondentes são escritos.)*

@@ -1,0 +1,68 @@
+---
+title: "Apresentação"
+---
+
+# Sobre este manual {.unnumbered}
+
+O **Manual de Física** é o segundo título da série *Manuais de Ciências* (o
+primeiro é o Manual de Matemática). É um livro aberto, escrito em
+[Quarto](https://quarto.org) e publicado no GitHub Pages, que percorre a física
+**do básico ao avançado**: começa em grandezas e unidades e termina em
+relatividade geral, teoria quântica de campos e cosmologia.
+
+O tom é **didático antes de formal**: cada conceito é motivado fisicamente antes
+de ser definido, e cada lei aparece acompanhada de dedução, exemplo resolvido
+(com números e unidades) e exercícios com soluções.
+
+## Como ler {.unnumbered}
+
+A obra está dividida em **15 volumes**, agrupados em duas fases — a física
+clássica (Volumes I–X) e a física moderna e avançada (Volumes XI–XV). A ordem de
+leitura recomendada **não** é simplesmente a numérica: siga o grafo de
+pré-requisitos abaixo.
+
+```{mermaid}
+flowchart TD
+    V1["I — Fundamentos"]
+    V2["II — Mecânica I"]
+    V3["III — Mecânica II"]
+    V4["IV — Fluidos"]
+    V5["V — Ondas"]
+    V6["VI — Termodinâmica"]
+    V7["VII — Eletromag. I"]
+    V8["VIII — Eletromag. II"]
+    V9["IX — Óptica"]
+    V10["X — Relatividade Esp."]
+    V11["XI — Mecânica Analítica"]
+    V12["XII — Quântica"]
+    V13["XIII — Matéria"]
+    V14["XIV — Nuclear/Partículas"]
+    V15["XV — Tópicos Avançados"]
+    MAT["Manual de Matemática:\nCálculo Tensorial e\nGeometria Riemanniana"]
+
+    V1 --> V2 --> V3
+    V2 --> V4
+    V3 --> V5
+    V2 --> V6
+    V1 --> V7 --> V8 --> V9
+    V5 --> V9
+    V8 --> V10
+    V3 --> V10
+    V3 --> V11
+    V11 --> V12
+    V8 --> V12
+    V12 --> V13
+    V12 --> V14
+    V10 --> V15
+    V12 --> V15
+    MAT -.pré-requisito.-> V15
+    MAT -.pré-requisito.-> V10
+```
+
+::: {.callout-note}
+## Pré-requisito cruzado com o Manual de Matemática
+A relatividade (Volume X) e, sobretudo, a relatividade geral (Volume XV) exigem
+**cálculo tensorial e geometria riemanniana**, que estão no Manual de Matemática.
+Este manual não reensina tensores: nos capítulos relevantes, aponta para o
+volume correspondente da Matemática.
+:::

@@ -1,0 +1,67 @@
+project:
+  type: book
+  output-dir: _book
+
+# IMPORTANTE: lang vai no NÍVEL RAIZ, nunca dentro de `book:`.
+# (`book.lang` é inválido e foi o erro que travou o manual de Matemática.)
+lang: pt
+
+book:
+  title: "Manual de Física"
+  subtitle: "Do básico ao avançado"
+  author: "SEU-NOME"
+  date: today
+  search: true
+  repo-url: https://github.com/SEU-USUARIO/manual-fisica
+  repo-actions: [edit, issue]
+  sidebar:
+    style: docked
+  chapters:
+    - index.qmd
+    # --- Apenas arquivos que EXISTEM ficam ativos aqui. ---
+    # O capítulo abaixo é o GABARITO DE ESTILO (ver PLANO.md / CLAUDE.md).
+    - part: "Volume II — Mecânica Clássica I"
+      chapters:
+        - volumes/v2-mecanica1/06-conservacao-energia.qmd
+  appendices:
+    - constantes.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    html-math-method: mathjax
+  pdf:
+    documentclass: scrbook
+    number-sections: true
+    toc: true
+
+# =============================================================================
+# TEMPLATE DA ESTRUTURA COMPLETA (descomente os blocos conforme criar os arquivos).
+# A ordem AQUI deve sempre seguir a ordem do ROADMAP.md.
+# =============================================================================
+#
+#   - part: "Volume I — Fundamentos da Física"
+#     chapters:
+#       - volumes/v1-fundamentos/01-grandezas-unidades.qmd
+#       - volumes/v1-fundamentos/02-analise-dimensional.qmd
+#       - volumes/v1-fundamentos/03-medicao-erros.qmd
+#       - volumes/v1-fundamentos/04-vetores.qmd
+#       - volumes/v1-fundamentos/05-ferramentas-calculo.qmd
+#       - volumes/v1-fundamentos/06-modelagem.qmd
+#
+#   - part: "Volume II — Mecânica Clássica I"
+#     chapters:
+#       - volumes/v2-mecanica1/01-cinematica-1d.qmd
+#       - volumes/v2-mecanica1/02-cinematica-vetorial.qmd
+#       - volumes/v2-mecanica1/03-leis-newton.qmd
+#       - volumes/v2-mecanica1/04-aplicacoes-newton.qmd
+#       - volumes/v2-mecanica1/05-trabalho-energia.qmd
+#       - volumes/v2-mecanica1/06-conservacao-energia.qmd   # gabarito
+#       - volumes/v2-mecanica1/07-momento-linear.qmd
+#       - volumes/v2-mecanica1/08-centro-massa.qmd
+#
+#   ... (Volumes III a XV seguem o mesmo padrão; ver ROADMAP.md)
+# =============================================================================

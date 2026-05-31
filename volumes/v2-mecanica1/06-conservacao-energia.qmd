@@ -1,0 +1,111 @@
+---
+title: "Conservação de Energia"
+---
+
+> **Capítulo-gabarito.** Este capítulo é o *modelo de estilo* do manual. Todo
+> capítulo novo deve espelhar a estrutura, os ambientes e as convenções daqui.
+> As regras estão em `PLANO.md`.
+
+## Motivação
+
+Empurre um bloco rampa acima e ele perde velocidade; solte-o e ele a recupera ao
+descer. Algo se conserva nessa troca entre "movimento" e "altura". Esse algo é a
+**energia**, e a afirmação de que ela não some nem aparece do nada — apenas muda
+de forma — é uma das ideias mais poderosas da física. Neste capítulo formalizamos
+a versão mecânica desse princípio e aprendemos a usá-lo para resolver problemas
+sem nunca calcular uma força.
+
+No capítulo anterior (Trabalho e Energia) definimos o **trabalho** $W$ de uma
+força e provamos o teorema trabalho–energia. Aqui partimos dele.
+
+## Energia cinética e potencial
+
+::: {#def-energia-cinetica}
+A **energia cinética** de uma partícula de massa $m$ e velocidade de módulo $v$ é
+$$K = \tfrac{1}{2}\,m\,v^2.$$ {#eq-cinetica}
+:::
+
+Uma força é **conservativa** quando o trabalho que ela realiza entre dois pontos
+não depende do caminho — só dos extremos. Para toda força conservativa
+$\vec{F}$ existe uma **energia potencial** $U$ tal que o trabalho é a queda de
+$U$:
+$$W = -\Delta U = U_i - U_f.$$ {#eq-trabalho-potencial}
+
+::: {#def-energia-potencial-grav}
+Perto da superfície da Terra, onde a gravidade vale $\vec{g}$ (módulo
+$g \approx 9{,}8\ \mathrm{m/s^2}$), a **energia potencial gravitacional** de um
+corpo de massa $m$ a uma altura $y$ é
+$$U = m\,g\,y.$$ {#eq-potencial-grav}
+:::
+
+A **energia mecânica** é a soma das duas:
+$$E = K + U.$$ {#eq-energia-mecanica}
+
+## O princípio da conservação
+
+::: {.callout-important}
+## Conservação da energia mecânica
+Se **todas** as forças que realizam trabalho sobre um sistema são conservativas,
+então a energia mecânica permanece constante:
+$$E = K + U = \text{constante} \quad\Longleftrightarrow\quad K_i + U_i = K_f + U_f.$$ {#eq-conservacao}
+:::
+
+A condição em negrito é essencial: havendo atrito ou outra força dissipativa, a
+@eq-conservacao falha e voltamos ao teorema trabalho–energia geral.
+
+::: {.proof}
+Seja um sistema sob ação apenas de forças conservativas. Pelo teorema
+trabalho–energia, $W = \Delta K = K_f - K_i$. Por @eq-trabalho-potencial, esse
+mesmo trabalho é $W = U_i - U_f$. Igualando,
+$$K_f - K_i = U_i - U_f \;\Longrightarrow\; K_f + U_f = K_i + U_i,$$
+que é exatamente a @eq-conservacao. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Quando há atrito
+Se uma força dissipativa atua, a energia mecânica não se conserva, mas a energia
+*total* sim: a parte perdida vira calor. Nesse caso,
+$E_f - E_i = -|W_\text{atrito}|$.
+:::
+
+## Exemplo resolvido
+
+::: {#exm-rampa}
+Um bloco parte do repouso no alto de uma rampa lisa (sem atrito) de altura
+$h = 1{,}8\ \mathrm{m}$. Qual é sua velocidade ao chegar à base?
+:::
+
+**Solução.** Só a gravidade realiza trabalho (a normal é perpendicular ao
+movimento e não trabalha), então a @eq-conservacao se aplica. Tomando a base
+como $y = 0$:
+$$\underbrace{K_i}_{0} + \underbrace{U_i}_{m g h} = \underbrace{K_f}_{\frac12 m v^2} + \underbrace{U_f}_{0}.$$
+A massa se cancela, e isolando $v$:
+$$v = \sqrt{2 g h} = \sqrt{2 \cdot 9{,}8 \cdot 1{,}8}\ \mathrm{m/s} \approx 5{,}9\ \mathrm{m/s}.$$
+Repare que a resposta **não depende da massa** nem do formato da rampa — só da
+altura. Isso é o tipo de simplificação que a conservação de energia oferece.
+
+## Exercícios
+
+::: {#exr-pendulo}
+Um pêndulo de comprimento $L$ é solto do repouso na horizontal. Mostre que a
+velocidade no ponto mais baixo é $v = \sqrt{2 g L}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A altura de queda do ponto mais baixo até a horizontal é o próprio $L$. Sem
+atrito, $\tfrac12 m v^2 = m g L$, logo $v = \sqrt{2 g L}$ — idêntico à rampa de
+@exm-rampa com $h = L$, como esperado.
+:::
+
+::: {#exr-mola}
+Um bloco de massa $m$ comprime uma mola de constante $k$ por uma distância $x$ e
+é solto numa superfície horizontal lisa. Usando $U_\text{mola} = \tfrac12 k x^2$,
+encontre a velocidade do bloco ao se separar da mola.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Toda a energia potencial elástica vira cinética:
+$\tfrac12 k x^2 = \tfrac12 m v^2$, donde $v = x\sqrt{k/m}$.
+:::

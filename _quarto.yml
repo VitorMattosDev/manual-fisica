@@ -73,6 +73,7 @@ book:
     - part: "Volume VII — Eletromagnetismo I"
       chapters:
         - volumes/v7-eletromagnetismo1/01-carga-coulomb.qmd
+        - volumes/v7-eletromagnetismo1/02-campo-eletrico.qmd
   appendices:
     - constantes.qmd
 

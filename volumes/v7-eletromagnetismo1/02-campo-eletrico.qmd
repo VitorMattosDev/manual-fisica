@@ -1,0 +1,121 @@
+---
+title: "Campo Elétrico"
+---
+
+## Motivação
+
+Como uma carga "sabe" que outra está a metros de distância, sem nada entre elas? A
+resposta de Faraday revolucionou a física: a carga não age diretamente à distância,
+mas **modifica o espaço ao seu redor**, criando um **campo elétrico**; outra carga
+responde ao campo no ponto onde está. Essa ideia de campo — uma entidade física que
+preenche o espaço e carrega energia e informação — tornou-se o conceito central de
+toda a física moderna, da luz à teoria quântica de campos. Este capítulo a
+desenvolve para a eletrostática.
+
+## Definição de campo elétrico
+
+::: {#def-campo-eletrico}
+O **campo elétrico** num ponto é a força elétrica por unidade de carga que uma
+carga de prova $q_0$ (positiva, pequena) sofreria ali:
+$$\vec{E} = \frac{\vec{F}}{q_0}, \qquad [\,\vec{E}\,] = \mathrm{N/C} = \mathrm{V/m}.$$ {#eq-campo-eletrico}
+É um campo **vetorial**: tem módulo, direção e sentido em cada ponto do espaço.
+:::
+
+Conhecido o campo, a força sobre **qualquer** carga $q$ colocada ali é
+$\vec{F} = q\vec{E}$ — apontando no sentido de $\vec{E}$ se $q>0$ e no oposto se
+$q<0$.
+
+## Campo de uma carga pontual
+
+Dividindo a lei de Coulomb (@eq-coulomb) pela carga de prova, obtém-se o campo
+gerado por uma carga pontual $Q$.
+
+::: {.callout-important}
+## Campo de uma carga pontual
+$$E = k\,\frac{|Q|}{r^2} = \frac{1}{4\pi\varepsilon_0}\frac{|Q|}{r^2}.$$ {#eq-campo-pontual}
+O campo aponta **para fora** de cargas positivas e **para dentro** de cargas
+negativas. Para várias cargas, vale a **superposição**: $\vec{E} = \sum_i \vec{E}_i$.
+:::
+
+## Linhas de campo
+
+Faraday representou o campo por **linhas de campo**: curvas tangentes a $\vec{E}$ em
+cada ponto.
+
+::: {.callout-note}
+## Regras das linhas de campo
+- Saem de cargas **positivas** e entram em cargas **negativas**.
+- Nunca se cruzam (o campo tem direção única em cada ponto).
+- A **densidade** de linhas indica a intensidade do campo: mais densas onde
+  $\vec{E}$ é forte.
+:::
+
+<!-- TODO figura: linhas de campo de cargas + e - e de um dipolo -->
+
+## O dipolo elétrico
+
+::: {#def-dipolo}
+Um **dipolo elétrico** é um par de cargas iguais e opostas $(+q, -q)$ separadas por
+uma distância $d$. Caracteriza-se pelo **momento de dipolo** $\vec{p} = q\vec{d}$,
+que aponta da carga negativa para a positiva.
+:::
+
+Dipolos são onipresentes: a molécula de água é um dipolo, e é por isso que ela
+dissolve sais e absorve micro-ondas. Num campo externo $\vec{E}$, um dipolo sofre
+um **torque** $\vec{\tau} = \vec{p}\times\vec{E}$ que tende a alinhá-lo ao campo.
+
+## Exemplos resolvidos
+
+::: {#exm-campo-carga}
+Qual o campo elétrico a $0{,}20\ \mathrm{m}$ de uma carga de $+4{,}0\ \mu\mathrm{C}$?
+:::
+
+**Solução.** Por @eq-campo-pontual:
+$$E = k\frac{|Q|}{r^2} = 8{,}99\times10^{9}\frac{4{,}0\times10^{-6}}{(0{,}20)^2} = 8{,}99\times10^{9}\frac{4{,}0\times10^{-6}}{0{,}040} \approx 9{,}0\times10^{5}\ \mathrm{N/C},$$
+apontando radialmente para fora da carga.
+
+::: {#exm-forca-no-campo}
+Uma carga de $-2{,}0\ \mathrm{nC}$ é colocada num ponto onde o campo é
+$5{,}0\times10^{4}\ \mathrm{N/C}$ apontando para a direita. Qual a força sobre ela?
+:::
+
+**Solução.** Por $\vec{F} = q\vec{E}$ (@eq-campo-eletrico):
+$$F = |q|E = 2{,}0\times10^{-9}\times5{,}0\times10^{4} = 1{,}0\times10^{-4}\ \mathrm{N}.$$
+Como $q<0$, a força aponta para a **esquerda** (sentido oposto a $\vec{E}$).
+
+## Exercícios
+
+::: {#exr-campo-distancia}
+A que distância de uma carga de $9{,}0\ \mu\mathrm{C}$ o campo vale
+$1{,}0\times10^{5}\ \mathrm{N/C}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+De $E = kQ/r^2$, $r = \sqrt{kQ/E} = \sqrt{8{,}99\times10^{9}\times9{,}0\times10^{-6}/1{,}0\times10^{5}} = \sqrt{0{,}809} \approx 0{,}90\ \mathrm{m}$.
+:::
+
+::: {#exr-superposicao-campo}
+Duas cargas de $+3{,}0\ \mu\mathrm{C}$ e $-3{,}0\ \mu\mathrm{C}$ estão a
+$0{,}10\ \mathrm{m}$. No ponto médio entre elas, qual a direção do campo
+resultante?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+No ponto médio, ambos os campos apontam **da carga positiva para a negativa** (o de
+$+q$ aponta para longe dela; o de $-q$ aponta para ela — mesmo sentido). Eles se
+somam, e o campo resultante aponta da positiva para a negativa.
+:::
+
+::: {#exr-eletron-campo}
+Um elétron ($q = -e$, $m = 9{,}1\times10^{-31}\ \mathrm{kg}$) está num campo de
+$200\ \mathrm{N/C}$. Qual sua aceleração?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$F = eE = 1{,}6\times10^{-19}\times200 = 3{,}2\times10^{-17}\ \mathrm{N}$. Então
+$a = F/m = 3{,}2\times10^{-17}/9{,}1\times10^{-31} \approx 3{,}5\times10^{13}\ \mathrm{m/s^2}$ —
+enorme, pois o elétron é leviano.
+:::

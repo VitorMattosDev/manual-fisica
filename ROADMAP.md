@@ -100,7 +100,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 *Objetivo: cargas, campos e circuitos DC. Pré-requisitos: I (vetores, cálculo).*
 
 - [x] `volumes/v7-eletromagnetismo1/01-carga-coulomb.qmd` — Carga e lei de Coulomb
-- [ ] `volumes/v7-eletromagnetismo1/02-campo-eletrico.qmd` — Campo elétrico
+- [x] `volumes/v7-eletromagnetismo1/02-campo-eletrico.qmd` — Campo elétrico
 - [ ] `volumes/v7-eletromagnetismo1/03-lei-gauss.qmd` — Lei de Gauss
 - [ ] `volumes/v7-eletromagnetismo1/04-potencial-eletrico.qmd` — Potencial elétrico
 - [ ] `volumes/v7-eletromagnetismo1/05-capacitancia.qmd` — Capacitância e dielétricos

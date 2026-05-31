@@ -1,0 +1,127 @@
+---
+title: "Estrutura Nuclear"
+---
+
+## Motivação
+
+No centro de cada átomo há um objeto minúsculo e densíssimo — o **núcleo** — que
+concentra quase toda a massa em um volume bilhões de vezes menor que o do átomo. O
+que mantém prótons positivos, que se repelem ferozmente, confinados num espaço tão
+pequeno? Que energia está aprisionada ali, e que a fissão e a fusão liberam? Este
+capítulo, que abre a física nuclear, descreve a composição do núcleo, a força que o
+mantém coeso e a energia de ligação — a chave para entender a energia nuclear e as
+estrelas.
+
+## Composição do núcleo
+
+::: {#def-nucleo}
+O **núcleo** é composto de **núcleons**: prótons (carga $+e$) e nêutrons (sem
+carga). Caracteriza-se por:
+
+- **número atômico** $Z$ — número de prótons (define o elemento);
+- **número de massa** $A$ — total de núcleons ($A = Z + N$, com $N$ nêutrons).
+
+**Isótopos** são núcleos de mesmo $Z$ e diferentes $N$ (ex.: $^{12}\mathrm{C}$ e
+$^{14}\mathrm{C}$).
+:::
+
+O raio nuclear cresce com $A$ segundo $R \approx r_0\,A^{1/3}$, com
+$r_0 \approx 1{,}2\times10^{-15}\ \mathrm{m}$ (1,2 femtômetros). A densidade nuclear
+é praticamente constante e colossal — da ordem de $10^{17}\ \mathrm{kg/m^3}$.
+
+## A força nuclear forte
+
+::: {.callout-important}
+## A interação forte
+Os núcleons são mantidos unidos pela **força nuclear forte**, que:
+
+- é **atrativa** e muitíssimo mais intensa que a repulsão elétrica, a curtas
+  distâncias;
+- tem **alcance curtíssimo** ($\sim 10^{-15}\ \mathrm{m}$), agindo só entre vizinhos;
+- é **independente de carga** (atua igual entre p-p, n-n, p-n).
+:::
+
+O equilíbrio entre a força forte (atrativa, de curto alcance) e a repulsão de
+Coulomb (de longo alcance) explica por que núcleos grandes precisam de **mais
+nêutrons** que prótons para serem estáveis — os nêutrons adicionam atração forte sem
+adicionar repulsão elétrica.
+
+## Energia de ligação e o defeito de massa
+
+A massa de um núcleo é **menor** que a soma das massas de seus núcleons separados. A
+diferença, pela relação de Einstein (Volume X), é a energia que os mantém ligados.
+
+::: {.callout-important}
+## Energia de ligação nuclear
+$$E_l = \Delta m\,c^2 = \left[Z\,m_p + N\,m_n - m_\text{núcleo}\right]c^2.$$ {#eq-energia-ligacao}
+O **defeito de massa** $\Delta m$ é a massa "que faltou"; é a energia necessária
+para desmontar o núcleo em núcleons livres.
+:::
+
+::: {.callout-note}
+## A curva de energia de ligação e a origem da energia nuclear
+A energia de ligação **por núcleon** cresce dos núcleos leves, atinge um máximo no
+**ferro** ($A \approx 56$) e decresce nos pesados. Essa curva é a chave da energia
+nuclear: **fundir** núcleos leves (em direção ao ferro) ou **fissionar** núcleos
+pesados (também em direção ao ferro) **libera** energia, pois aumenta a ligação por
+núcleon. O ferro é o ponto mais estável — para além dele, nem fusão nem fissão
+liberam energia, o que sela o destino das estrelas (Volume XV).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-raio-nuclear}
+Estime o raio do núcleo de chumbo-208 ($A = 208$).
+($r_0 = 1{,}2\times10^{-15}\ \mathrm{m}$.)
+:::
+
+**Solução.** $R = r_0 A^{1/3} = 1{,}2\times10^{-15}\times(208)^{1/3}$. Como
+$208^{1/3} \approx 5{,}9$:
+$$R \approx 1{,}2\times10^{-15}\times5{,}9 \approx 7{,}1\times10^{-15}\ \mathrm{m} = 7{,}1\ \mathrm{fm}.$$
+
+::: {#exm-energia-ligacao-he}
+O hélio-4 tem defeito de massa $\Delta m \approx 0{,}0304\ \mathrm{u}$
+($1\ \mathrm{u} = 931\ \mathrm{MeV}/c^2$). Qual sua energia de ligação?
+:::
+
+**Solução.** Por @eq-energia-ligacao, convertendo via $1\ \mathrm{u}\,c^2 = 931\ \mathrm{MeV}$:
+$$E_l = 0{,}0304\times931 \approx 28{,}3\ \mathrm{MeV},$$
+ou cerca de $7{,}1\ \mathrm{MeV}$ por núcleon — o hélio-4 é excepcionalmente ligado,
+o que o torna tão estável (e a partícula alfa, tão comum em decaimentos).
+
+## Exercícios
+
+::: {#exr-isotopos}
+Os núcleos $^{14}\mathrm{C}$ e $^{14}\mathrm{N}$ têm o mesmo $A$. São isótopos?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+**Não.** Isótopos têm o mesmo $Z$ (mesmo elemento). $^{14}\mathrm{C}$ tem $Z=6$ e
+$^{14}\mathrm{N}$ tem $Z=7$ — são elementos diferentes (mesmo $A$, $Z$ distinto:
+são **isóbaros**).
+:::
+
+::: {#exr-neutrons-pesados}
+Por que núcleos pesados estáveis têm mais nêutrons que prótons?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A força forte tem alcance curto (só vizinhos), mas a repulsão elétrica entre prótons
+é de longo alcance e cresce com $Z$. Nêutrons adicionam atração forte **sem**
+adicionar repulsão elétrica, ajudando a compensar a repulsão crescente dos prótons —
+por isso núcleos pesados precisam de excesso de nêutrons.
+:::
+
+::: {#exr-fissao-fusao}
+Por que tanto a fusão de núcleos leves quanto a fissão de núcleos pesados liberam
+energia?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Ambas movem os núcleos em direção ao **ferro** ($A \approx 56$), o pico da energia
+de ligação por núcleon. Como a ligação por núcleon aumenta, parte da massa é
+liberada como energia ($E = \Delta m\,c^2$, @eq-energia-ligacao).
+:::

@@ -130,6 +130,9 @@ book:
         - volumes/v13-materia/04-estatistica-quantica.qmd
         - volumes/v13-materia/05-estado-solido.qmd
         - volumes/v13-materia/06-supercondutividade.qmd
+    - part: "Volume XIV — Física Nuclear e de Partículas"
+      chapters:
+        - volumes/v14-nuclear-particulas/01-estrutura-nuclear.qmd
   appendices:
     - constantes.qmd
 

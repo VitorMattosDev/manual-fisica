@@ -179,7 +179,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume XIV — Física Nuclear e de Partículas
 *Objetivo: o núcleo e o que é fundamental. Pré-requisitos: XII.*
 
-- [ ] `volumes/v14-nuclear-particulas/01-estrutura-nuclear.qmd` — Estrutura nuclear
+- [x] `volumes/v14-nuclear-particulas/01-estrutura-nuclear.qmd` — Estrutura nuclear
 - [ ] `volumes/v14-nuclear-particulas/02-radioatividade.qmd` — Radioatividade e decaimento
 - [ ] `volumes/v14-nuclear-particulas/03-reacoes-nucleares.qmd` — Reações, fissão e fusão
 - [ ] `volumes/v14-nuclear-particulas/04-particulas-elementares.qmd` — Partículas e Modelo Padrão

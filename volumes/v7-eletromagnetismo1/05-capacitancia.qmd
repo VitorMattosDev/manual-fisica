@@ -1,0 +1,127 @@
+---
+title: "Capacitância e Dielétricos"
+---
+
+## Motivação
+
+O flash de uma câmera dispara energia acumulada em frações de segundo; a memória de
+um computador guarda bits como cargas; um desfibrilador salva vidas com um pulso
+elétrico. O componente por trás de todos é o **capacitor** — um dispositivo que
+armazena carga e energia no campo elétrico. Sua grandeza característica, a
+**capacitância**, e o efeito dos materiais isolantes (**dielétricos**) que se
+colocam entre suas placas são o tema deste capítulo, que fecha a eletrostática
+antes de passarmos às correntes.
+
+## Capacitância
+
+::: {#def-capacitor}
+Um **capacitor** é um par de condutores que armazenam cargas opostas $+Q$ e $-Q$.
+A **capacitância** é a razão entre a carga armazenada e a diferença de potencial
+entre as placas:
+$$C = \frac{Q}{V}, \qquad [\,C\,] = \mathrm{C/V} = \mathrm{farad\ (F)}.$$ {#eq-capacitancia}
+Ela depende **só da geometria** — não de $Q$ nem de $V$.
+:::
+
+::: {.callout-important}
+## Capacitor de placas paralelas
+Para duas placas de área $A$ separadas por uma distância $d$ no vácuo,
+$$C = \frac{\varepsilon_0\,A}{d}.$$ {#eq-capacitor-placas}
+Mais área ou menor separação ⟹ maior capacitância.
+:::
+
+## Energia armazenada
+
+Carregar um capacitor exige trabalho — empurrar carga contra a repulsão da carga já
+presente. Esse trabalho fica armazenado como energia no campo elétrico.
+
+::: {.callout-important}
+## Energia de um capacitor
+$$U = \tfrac12\,C V^2 = \frac{Q^2}{2C} = \tfrac12\,Q V.$$ {#eq-energia-capacitor}
+:::
+
+::: {.proof}
+## Dedução da energia
+Ao carregar de $0$ a $Q$, quando a carga acumulada é $q$ o potencial é $q/C$. O
+trabalho para adicionar $\mathrm{d}q$ é $\mathrm{d}W = (q/C)\,\mathrm{d}q$. Integrando:
+$$U = \int_0^Q \frac{q}{C}\,\mathrm{d}q = \frac{Q^2}{2C},$$
+que, usando $Q = CV$, equivale às formas da @eq-energia-capacitor.
+$\qquad\blacksquare$
+:::
+
+## Dielétricos
+
+Inserir um isolante (dielétrico) entre as placas **aumenta** a capacitância. As
+moléculas do dielétrico se polarizam, criando um campo interno que se opõe
+parcialmente ao do capacitor, reduzindo a voltagem para a mesma carga.
+
+::: {.callout-important}
+## Efeito do dielétrico
+Um dielétrico de **constante dielétrica** $\kappa>1$ multiplica a capacitância:
+$$C = \kappa\,\frac{\varepsilon_0 A}{d}.$$ {#eq-dieletrico}
+A água tem $\kappa\approx80$; o papel, $\sim3$; o ar, $\approx1$.
+:::
+
+## Associação de capacitores
+
+::: {.callout-note}
+## Capacitores em série e em paralelo
+- **Em paralelo** (mesma voltagem), as capacitâncias **somam**:
+  $C_\text{eq} = C_1 + C_2 + \cdots$
+- **Em série** (mesma carga), somam-se os inversos:
+  $\dfrac{1}{C_\text{eq}} = \dfrac{1}{C_1} + \dfrac{1}{C_2} + \cdots$
+
+Note que é o **oposto** das regras de resistores (próximo capítulo) — uma simetria
+útil de lembrar.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-capacitor-placas}
+Um capacitor de placas paralelas tem $A = 0{,}020\ \mathrm{m^2}$ e
+$d = 1{,}0\ \mathrm{mm}$, no vácuo. Qual sua capacitância?
+($\varepsilon_0 = 8{,}85\times10^{-12}\ \mathrm{F/m}$.)
+:::
+
+**Solução.** Por @eq-capacitor-placas:
+$$C = \frac{\varepsilon_0 A}{d} = \frac{8{,}85\times10^{-12}\times0{,}020}{1{,}0\times10^{-3}} \approx 1{,}8\times10^{-10}\ \mathrm{F} = 180\ \mathrm{pF}.$$
+
+::: {#exm-energia-flash}
+Um capacitor de $C = 100\ \mu\mathrm{F}$ é carregado a $V = 300\ \mathrm{V}$.
+Quanta energia armazena?
+:::
+
+**Solução.** Por @eq-energia-capacitor:
+$$U = \tfrac12 C V^2 = \tfrac12\times100\times10^{-6}\times(300)^2 = \tfrac12\times100\times10^{-6}\times9{,}0\times10^{4} = 4{,}5\ \mathrm{J}.$$
+
+## Exercícios
+
+::: {#exr-carga-capacitor}
+Um capacitor de $50\ \mu\mathrm{F}$ está sob $12\ \mathrm{V}$. Qual a carga
+armazenada?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$Q = CV = 50\times10^{-6}\times12 = 6{,}0\times10^{-4}\ \mathrm{C}$ (@eq-capacitancia).
+:::
+
+::: {#exr-dieletrico}
+Inserir um dielétrico de $\kappa = 4{,}0$ num capacitor de $20\ \mathrm{pF}$ (no
+vácuo) resulta em que capacitância?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$C = \kappa C_0 = 4{,}0\times20 = 80\ \mathrm{pF}$ (@eq-dieletrico).
+:::
+
+::: {#exr-paralelo}
+Dois capacitores de $3{,}0\ \mu\mathrm{F}$ e $6{,}0\ \mu\mathrm{F}$ são ligados em
+paralelo. Qual a capacitância equivalente?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Em paralelo, somam-se: $C_\text{eq} = 3{,}0 + 6{,}0 = 9{,}0\ \mu\mathrm{F}$.
+(Em série seria $1/C = 1/3 + 1/6 \Rightarrow C = 2{,}0\ \mu\mathrm{F}$.)
+:::

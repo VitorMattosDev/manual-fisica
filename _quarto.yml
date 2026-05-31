@@ -76,6 +76,7 @@ book:
         - volumes/v7-eletromagnetismo1/02-campo-eletrico.qmd
         - volumes/v7-eletromagnetismo1/03-lei-gauss.qmd
         - volumes/v7-eletromagnetismo1/04-potencial-eletrico.qmd
+        - volumes/v7-eletromagnetismo1/05-capacitancia.qmd
   appendices:
     - constantes.qmd
 

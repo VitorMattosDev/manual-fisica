@@ -92,6 +92,7 @@ book:
       chapters:
         - volumes/v9-optica/01-natureza-luz.qmd
         - volumes/v9-optica/02-optica-geometrica.qmd
+        - volumes/v9-optica/03-espelhos-lentes.qmd
   appendices:
     - constantes.qmd
 

@@ -1,0 +1,127 @@
+---
+title: "Espelhos, Lentes e Instrumentos Ópticos"
+---
+
+## Motivação
+
+Óculos, lupas, câmeras, microscópios, telescópios, o próprio olho: todos formam
+**imagens** dobrando a luz com espelhos e lentes. As leis da reflexão e da refração
+do capítulo anterior, aplicadas a superfícies curvas, levam a uma única equação —
+a equação dos pontos conjugados — que prevê onde a imagem se forma, seu tamanho e
+se é real ou virtual. Este capítulo desenvolve essa ferramenta e a aplica aos
+instrumentos ópticos.
+
+## Espelhos esféricos
+
+::: {#def-espelho-esferico}
+Um **espelho esférico** é uma calota refletora. Tem um **centro de curvatura** $C$,
+um raio $R$ e um **foco** $F$ a meia distância: a **distância focal** é
+$$f = \frac{R}{2}.$$ {#eq-foco-espelho}
+Espelhos **côncavos** (convergentes) têm $f>0$; **convexos** (divergentes), $f<0$.
+:::
+
+## A equação dos pontos conjugados
+
+A mesma equação governa espelhos e lentes, relacionando a distância do objeto $p$,
+da imagem $p'$ e a focal $f$.
+
+::: {.callout-important}
+## Equação dos pontos conjugados e aumento
+$$\frac{1}{p} + \frac{1}{p'} = \frac{1}{f}, \qquad m = -\frac{p'}{p} = \frac{h'}{h}.$$ {#eq-pontos-conjugados}
+O **aumento** $m$ dá o tamanho relativo da imagem; $m<0$ indica imagem invertida.
+Convenção: $p'>0$ para imagem **real** (do mesmo lado de onde a luz emerge),
+$p'<0$ para **virtual**.
+:::
+
+## Lentes delgadas
+
+::: {#def-lente}
+Uma **lente delgada** desvia a luz por refração em duas superfícies curvas.
+**Convergentes** (mais grossas no centro) têm $f>0$ e concentram raios paralelos no
+foco; **divergentes** (mais finas no centro) têm $f<0$ e os espalham. A
+**vergência** (grau dos óculos) é $D = 1/f$, em **dioptrias** ($\mathrm{m^{-1}}$).
+:::
+
+A equação dos pontos conjugados (@eq-pontos-conjugados) vale igualmente para
+lentes, com a mesma convenção de sinais.
+
+::: {.callout-note}
+## Imagens reais e virtuais
+Uma imagem **real** forma-se onde os raios de fato se cruzam — pode ser projetada
+numa tela (a imagem na retina, no sensor da câmera). Uma imagem **virtual** forma-se
+onde os prolongamentos dos raios parecem se cruzar — não se projeta, mas é vista (a
+imagem no espelho plano, na lupa). Lentes/espelhos convergentes formam ambos os
+tipos conforme a posição do objeto; divergentes formam sempre virtual.
+:::
+
+## Instrumentos ópticos
+
+::: {.callout-note}
+## Como os instrumentos usam lentes
+- **Lupa:** lente convergente com o objeto dentro do foco, formando imagem virtual
+  ampliada.
+- **Câmera/olho:** lente convergente formando imagem real e invertida no
+  sensor/retina; o olho ajusta $f$ (acomodação).
+- **Microscópio:** duas lentes convergentes em série, multiplicando os aumentos.
+- **Telescópio:** uma objetiva de grande $f$ coleta a luz de objetos distantes; a
+  ocular a amplia.
+
+Óculos corrigem a focal do olho: lentes divergentes para a miopia, convergentes
+para a hipermetropia.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-lente-convergente}
+Um objeto está a $p = 30\ \mathrm{cm}$ de uma lente convergente de
+$f = 10\ \mathrm{cm}$. Onde se forma a imagem e qual o aumento?
+:::
+
+**Solução.** Por @eq-pontos-conjugados:
+$$\frac{1}{p'} = \frac{1}{f} - \frac{1}{p} = \frac{1}{10} - \frac{1}{30} = \frac{3-1}{30} = \frac{2}{30} \;\Longrightarrow\; p' = 15\ \mathrm{cm}.$$
+A imagem é **real** ($p'>0$). O aumento é $m = -p'/p = -15/30 = -0{,}5$: invertida e
+reduzida à metade.
+
+::: {#exm-espelho-concavo}
+Um objeto está a $20\ \mathrm{cm}$ de um espelho côncavo de raio
+$R = 60\ \mathrm{cm}$. Onde está a imagem?
+:::
+
+**Solução.** A focal (@eq-foco-espelho) é $f = R/2 = 30\ \mathrm{cm}$. Por
+@eq-pontos-conjugados:
+$$\frac{1}{p'} = \frac{1}{30} - \frac{1}{20} = \frac{2-3}{60} = -\frac{1}{60} \;\Longrightarrow\; p' = -60\ \mathrm{cm}.$$
+A imagem é **virtual** ($p'<0$), atrás do espelho, e ampliada ($m = -p'/p = +3$):
+direita e três vezes maior — o objeto está dentro do foco, como numa lupa.
+
+## Exercícios
+
+::: {#exr-dioptria}
+Qual a vergência (em dioptrias) de uma lente de distância focal $0{,}25\ \mathrm{m}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$D = 1/f = 1/0{,}25 = 4{,}0\ \mathrm{dioptrias}$.
+:::
+
+::: {#exr-lente-imagem}
+Um objeto a $15\ \mathrm{cm}$ de uma lente convergente de $f = 10\ \mathrm{cm}$.
+Onde está a imagem?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$1/p' = 1/10 - 1/15 = (3-2)/30 = 1/30 \Rightarrow p' = 30\ \mathrm{cm}$ (imagem real,
+invertida, ampliada $m=-2$).
+:::
+
+::: {#exr-divergente}
+Por que uma lente divergente nunca forma imagem real de um objeto real?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Com $f<0$, a equação $1/p' = 1/f - 1/p$ dá sempre $p'<0$ para qualquer $p>0$: a
+imagem é sempre **virtual** (do mesmo lado do objeto), direita e reduzida. Lentes
+divergentes só espalham os raios, que nunca se cruzam de fato.
+:::

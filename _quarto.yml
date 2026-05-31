@@ -19,7 +19,10 @@ book:
   chapters:
     - index.qmd
     # --- Apenas arquivos que EXISTEM ficam ativos aqui. ---
-    # O capítulo abaixo é o GABARITO DE ESTILO (ver PLANO.md / CLAUDE.md).
+    # A ordem segue o ROADMAP.md. O capítulo 06 do Volume II é o GABARITO DE ESTILO.
+    - part: "Volume I — Fundamentos da Física"
+      chapters:
+        - volumes/v1-fundamentos/01-grandezas-unidades.qmd
     - part: "Volume II — Mecânica Clássica I"
       chapters:
         - volumes/v2-mecanica1/06-conservacao-energia.qmd

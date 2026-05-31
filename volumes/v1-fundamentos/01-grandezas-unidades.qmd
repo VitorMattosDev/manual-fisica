@@ -1,0 +1,246 @@
+---
+title: "Grandezas, Unidades e o SI"
+---
+
+## Motivação
+
+Em 1999 a sonda *Mars Climate Orbiter* desintegrou-se na atmosfera de Marte. A
+causa não foi um erro de física, mas de **unidades**: um software entregava o
+impulso dos propulsores em libra-força·segundo, enquanto o outro o lia como
+newton·segundo. O número estava certo; a unidade, não — e US\$ 125 milhões
+viraram poeira marciana.
+
+A lição é simples e é o ponto de partida de toda a física: **uma medida é um
+número acompanhado de uma unidade**. O número sozinho não diz nada — "a mesa tem
+2" é uma frase sem sentido até dizermos *2 metros*. Este capítulo estabelece a
+linguagem comum das medidas: o Sistema Internacional de Unidades (SI), como
+combinar e converter unidades, e como verificar se uma equação ao menos *poderia*
+estar certa.
+
+## Grandezas físicas e unidades
+
+::: {#def-grandeza}
+Uma **grandeza física** é uma propriedade de um objeto ou fenômeno que pode ser
+medida, expressa como o produto de um **valor numérico** por uma **unidade**:
+$$\text{grandeza} = \{\text{número}\} \times [\text{unidade}].$$ {#eq-grandeza}
+:::
+
+Medir uma grandeza é compará-la com um padrão tomado como unidade. Dizer que uma
+corda tem comprimento $L = 3\ \mathrm{m}$ significa que ela cabe três vezes o
+padrão "metro". Se trocarmos a unidade, o número muda na proporção inversa — a
+corda continua a mesma: $L = 300\ \mathrm{cm} = 3\ \mathrm{m}$.
+
+Nem toda grandeza precisa de uma unidade independente. Algumas são escolhidas
+como **fundamentais** e a partir delas todas as outras se constroem.
+
+::: {#def-grandeza-base}
+Uma **grandeza de base** é uma das grandezas fundamentais escolhidas por convenção
+como independentes; as demais, obtidas por combinação destas, são **grandezas
+derivadas**. A unidade de uma grandeza derivada é o produto e/ou quociente
+correspondente das unidades de base.
+:::
+
+O SI adota **sete** grandezas de base, cada uma com sua unidade:
+
+| Grandeza de base | Unidade | Símbolo |
+|---|---|---|
+| Comprimento | metro | $\mathrm{m}$ |
+| Massa | quilograma | $\mathrm{kg}$ |
+| Tempo | segundo | $\mathrm{s}$ |
+| Corrente elétrica | ampère | $\mathrm{A}$ |
+| Temperatura termodinâmica | kelvin | $\mathrm{K}$ |
+| Quantidade de matéria | mol | $\mathrm{mol}$ |
+| Intensidade luminosa | candela | $\mathrm{cd}$ |
+
+: As sete grandezas de base do SI. {#tbl-base}
+
+::: {.callout-note}
+## O SI ancorado em constantes da natureza (2019)
+Desde a redefinição de 20 de maio de 2019, as unidades do SI não dependem mais de
+artefatos físicos (como o antigo cilindro-padrão do quilograma), e sim de
+**constantes fundamentais com valores fixados por definição**: a velocidade da
+luz $c$, a constante de Planck $h$, a carga elementar $e$, a constante de
+Boltzmann $k_B$ e a constante de Avogadro $N_A$. O segundo, por exemplo, é
+definido a partir de uma frequência de transição do átomo de césio-133. Assim,
+qualquer laboratório do universo pode reconstruir o metro ou o quilograma a
+partir das mesmas leis da física.
+:::
+
+## Unidades derivadas e homogeneidade
+
+A maior parte das grandezas da física é derivada. A velocidade é comprimento por
+tempo; a força, pela segunda lei de Newton, é massa vezes aceleração.
+
+::: {#def-unidade-derivada}
+Uma **unidade derivada** é uma combinação de potências das unidades de base. Por
+exemplo, a unidade de força no SI, o **newton**, é
+$$1\ \mathrm{N} = 1\ \mathrm{kg\,m/s^2}.$$ {#eq-newton-unidade}
+:::
+
+Muitas unidades derivadas recebem nome próprio, mas todas se reduzem às de base:
+
+| Grandeza | Unidade | Símbolo | Em unidades de base |
+|---|---|---|---|
+| Frequência | hertz | $\mathrm{Hz}$ | $\mathrm{s^{-1}}$ |
+| Força | newton | $\mathrm{N}$ | $\mathrm{kg\,m/s^2}$ |
+| Pressão | pascal | $\mathrm{Pa}$ | $\mathrm{kg/(m\,s^2)}$ |
+| Energia | joule | $\mathrm{J}$ | $\mathrm{kg\,m^2/s^2}$ |
+| Potência | watt | $\mathrm{W}$ | $\mathrm{kg\,m^2/s^3}$ |
+| Carga elétrica | coulomb | $\mathrm{C}$ | $\mathrm{A\,s}$ |
+
+: Algumas unidades derivadas com nome próprio. {#tbl-derivadas}
+
+A cada grandeza associamos sua **dimensão**: a combinação de grandezas de base de
+que ela é feita, independentemente da unidade escolhida. Denotando comprimento
+por $\mathsf{L}$, massa por $\mathsf{M}$ e tempo por $\mathsf{T}$, a velocidade
+tem dimensão $\mathsf{L}\,\mathsf{T}^{-1}$ e a força, $\mathsf{M}\,\mathsf{L}\,\mathsf{T}^{-2}$.
+Disso nasce uma regra de ouro:
+
+::: {.callout-important}
+## Princípio da homogeneidade dimensional
+Numa equação física correta, **todos os termos somados ou igualados têm a mesma
+dimensão**:
+$$[\,A\,] = [\,B\,] \quad\text{sempre que}\quad A = B \text{ ou } A + B \text{ aparece}.$$ {#eq-homogeneidade}
+Não se soma metro com segundo, nem se iguala energia a força. Toda equação que
+viola a @eq-homogeneidade está necessariamente errada.
+:::
+
+A homogeneidade é a verificação mais barata e poderosa da física: antes de
+confiar em qualquer fórmula, confira se os dois lados têm a mesma dimensão. O
+capítulo seguinte (Análise Dimensional) transforma essa ideia numa ferramenta de
+descoberta.
+
+## Prefixos do SI e notação científica
+
+Grandezas físicas variam por dezenas de ordens de magnitude — do raio do próton
+($\sim 10^{-15}\ \mathrm{m}$) ao raio do universo observável
+($\sim 10^{26}\ \mathrm{m}$). Para não escrever filas de zeros, usamos a
+**notação científica** e os **prefixos** do SI.
+
+::: {#def-notacao-cientifica}
+Na **notação científica**, todo número positivo é escrito como
+$$a \times 10^{n}, \qquad 1 \le a < 10,\quad n \in \mathbb{Z}.$$ {#eq-notacao-cientifica}
+O expoente $n$ é a **ordem de grandeza** do número.
+:::
+
+Os prefixos são apenas potências de dez com nome:
+
+| Fator | Prefixo | Símbolo | Fator | Prefixo | Símbolo |
+|---|---|---|---|---|---|
+| $10^{12}$ | tera | $\mathrm{T}$ | $10^{-2}$ | centi | $\mathrm{c}$ |
+| $10^{9}$ | giga | $\mathrm{G}$ | $10^{-3}$ | mili | $\mathrm{m}$ |
+| $10^{6}$ | mega | $\mathrm{M}$ | $10^{-6}$ | micro | $\mathrm{\mu}$ |
+| $10^{3}$ | quilo | $\mathrm{k}$ | $10^{-9}$ | nano | $\mathrm{n}$ |
+| $10^{-1}$ | deci | $\mathrm{d}$ | $10^{-12}$ | pico | $\mathrm{p}$ |
+
+: Prefixos do SI mais usados. {#tbl-prefixos}
+
+Assim $2{,}4\ \mathrm{GHz} = 2{,}4 \times 10^{9}\ \mathrm{Hz}$ e
+$15\ \mathrm{nm} = 15 \times 10^{-9}\ \mathrm{m} = 1{,}5 \times 10^{-8}\ \mathrm{m}$.
+
+## Conversão de unidades
+
+Converter unidades é multiplicar pela quantidade certa de "uns". Como
+$1\ \mathrm{min} = 60\ \mathrm{s}$, o quociente
+$$\frac{60\ \mathrm{s}}{1\ \mathrm{min}} = 1$$
+é igual a 1 — um **fator de conversão**. Multiplicar uma grandeza por 1 não a
+altera, mas cancela as unidades indesejadas.
+
+::: {.callout-important}
+## Método do fator de conversão
+Para mudar de unidade, multiplique a grandeza por fatores iguais a 1, dispostos
+de modo que as unidades a eliminar se cancelem:
+$$\text{grandeza} \times \underbrace{\frac{[\text{unidade nova}]}{[\text{unidade velha}]}}_{=\,1} = \text{mesma grandeza, unidade nova}.$$ {#eq-fator-conversao}
+:::
+
+::: {.proof}
+Seja uma igualdade entre unidades, como $1\ \mathrm{min} = 60\ \mathrm{s}$.
+Dividindo ambos os lados por $1\ \mathrm{min}$, obtém-se
+$1 = 60\ \mathrm{s}/\mathrm{min}$: o fator de conversão é literalmente o número 1
+escrito de outro jeito. Multiplicar qualquer grandeza por esse fator preserva seu
+valor físico (multiplicação por 1), e o cancelamento algébrico das unidades —
+tratadas como fatores comuns — entrega a nova unidade. $\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-kmh-ms}
+Um carro trafega a $72\ \mathrm{km/h}$. Qual é sua velocidade em $\mathrm{m/s}$?
+:::
+
+**Solução.** Usamos dois fatores de conversão, um para o comprimento
+($1\ \mathrm{km} = 10^{3}\ \mathrm{m}$) e outro para o tempo
+($1\ \mathrm{h} = 3600\ \mathrm{s}$):
+$$72\ \frac{\mathrm{km}}{\mathrm{h}} \times \frac{10^{3}\ \mathrm{m}}{1\ \mathrm{km}} \times \frac{1\ \mathrm{h}}{3600\ \mathrm{s}} = \frac{72 \times 10^{3}}{3600}\ \frac{\mathrm{m}}{\mathrm{s}} = 20\ \mathrm{m/s}.$$
+O atalho prático: dividir por $3{,}6$ converte $\mathrm{km/h}$ em $\mathrm{m/s}$;
+multiplicar por $3{,}6$ faz o caminho inverso.
+
+::: {#exm-densidade}
+A densidade da água é $1\ \mathrm{g/cm^3}$. Expresse-a em $\mathrm{kg/m^3}$.
+:::
+
+**Solução.** Aqui o comprimento aparece **ao cubo**, então o fator de conversão
+de comprimento entra elevado a 3. Com $1\ \mathrm{g} = 10^{-3}\ \mathrm{kg}$ e
+$1\ \mathrm{cm} = 10^{-2}\ \mathrm{m}$:
+$$1\ \frac{\mathrm{g}}{\mathrm{cm^3}} \times \frac{10^{-3}\ \mathrm{kg}}{1\ \mathrm{g}} \times \left(\frac{1\ \mathrm{cm}}{10^{-2}\ \mathrm{m}}\right)^{3} = 10^{-3} \times 10^{6}\ \frac{\mathrm{kg}}{\mathrm{m^3}} = 10^{3}\ \mathrm{kg/m^3}.$$
+A água tem, portanto, $1000\ \mathrm{kg/m^3}$ — uma tonelada por metro cúbico.
+
+::: {#exm-ordem-grandeza}
+Estime quantas vezes o coração humano bate ao longo de uma vida. Basta a **ordem
+de grandeza**.
+:::
+
+**Solução.** Estimativas de ordem de grandeza (estimativas de Fermi) usam valores
+redondos e só perseguem a potência de dez. Tome uma frequência cardíaca de cerca
+de $1$ batimento por segundo e uma vida de cerca de $80$ anos:
+$$N \approx \left(1\ \frac{\text{bat}}{\mathrm{s}}\right) \times 80\ \text{anos} \times 3{,}15 \times 10^{7}\ \frac{\mathrm{s}}{\text{ano}} \approx 2{,}5 \times 10^{9}\ \text{batimentos}.$$
+A resposta — alguns **bilhões** de batimentos, ordem de grandeza $10^{9}$ — está
+certa apesar de não conhecermos a frequência exata de ninguém. É assim que o
+físico calibra a intuição antes de qualquer cálculo fino.
+
+## Exercícios
+
+::: {#exr-area}
+Uma folha A4 mede $21{,}0\ \mathrm{cm} \times 29{,}7\ \mathrm{cm}$. Calcule sua
+área em $\mathrm{m^2}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A área é $A = 21{,}0 \times 29{,}7 = 623{,}7\ \mathrm{cm^2}$. Convertendo com
+$(1\ \mathrm{cm} = 10^{-2}\ \mathrm{m})^2$, ou seja
+$1\ \mathrm{cm^2} = 10^{-4}\ \mathrm{m^2}$:
+$$A = 623{,}7\ \mathrm{cm^2} \times 10^{-4}\ \frac{\mathrm{m^2}}{\mathrm{cm^2}} = 6{,}237 \times 10^{-2}\ \mathrm{m^2} \approx 0{,}062\ \mathrm{m^2}.$$
+:::
+
+::: {#exr-consumo}
+Um carro consome combustível à taxa de $12\ \mathrm{km/L}$. Expresse esse consumo
+em $\mathrm{m/m^3}$ (metros percorridos por metro cúbico de combustível).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Use $1\ \mathrm{km} = 10^{3}\ \mathrm{m}$ e
+$1\ \mathrm{L} = 10^{-3}\ \mathrm{m^3}$:
+$$12\ \frac{\mathrm{km}}{\mathrm{L}} \times \frac{10^{3}\ \mathrm{m}}{1\ \mathrm{km}} \times \frac{1\ \mathrm{L}}{10^{-3}\ \mathrm{m^3}} = 12 \times 10^{3} \times 10^{3}\ \frac{\mathrm{m}}{\mathrm{m^3}} = 1{,}2 \times 10^{7}\ \mathrm{m/m^3}.$$
+:::
+
+::: {#exr-homogeneidade}
+A posição de um corpo em queda é dada por $x = x_0 + v_0\,t + \tfrac12 a\,t^2$.
+Verifique, pela @eq-homogeneidade, que os três termos do lado direito têm a mesma
+dimensão de comprimento.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Use $[\,x_0\,] = \mathsf{L}$, $[\,v_0\,] = \mathsf{L}\,\mathsf{T}^{-1}$,
+$[\,a\,] = \mathsf{L}\,\mathsf{T}^{-2}$ e $[\,t\,] = \mathsf{T}$:
+
+- $[\,x_0\,] = \mathsf{L}$;
+- $[\,v_0\,t\,] = \mathsf{L}\,\mathsf{T}^{-1}\cdot\mathsf{T} = \mathsf{L}$;
+- $[\,\tfrac12 a\,t^2\,] = \mathsf{L}\,\mathsf{T}^{-2}\cdot\mathsf{T}^2 = \mathsf{L}$.
+
+Os três termos têm dimensão $\mathsf{L}$ (o fator $\tfrac12$ é adimensional), logo
+a equação é dimensionalmente homogênea — condição necessária, embora não
+suficiente, para estar correta.
+:::

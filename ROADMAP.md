@@ -50,7 +50,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v2-mecanica1/01-cinematica-1d.qmd` — Cinemática unidimensional
 - [x] `volumes/v2-mecanica1/02-cinematica-vetorial.qmd` — Vetorial, projéteis, circular
 - [x] `volumes/v2-mecanica1/03-leis-newton.qmd` — Leis de Newton
-- [ ] `volumes/v2-mecanica1/04-aplicacoes-newton.qmd` — Atrito e aplicações
+- [x] `volumes/v2-mecanica1/04-aplicacoes-newton.qmd` — Atrito e aplicações
 - [ ] `volumes/v2-mecanica1/05-trabalho-energia.qmd` — Trabalho e energia
 - [x] `volumes/v2-mecanica1/06-conservacao-energia.qmd` — Conservação de energia (GABARITO)
 - [ ] `volumes/v2-mecanica1/07-momento-linear.qmd` — Momento linear e colisões

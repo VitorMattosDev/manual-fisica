@@ -1,0 +1,137 @@
+---
+title: "Atrito e Aplicações das Leis de Newton"
+---
+
+## Motivação
+
+Sem atrito, nada disso seria possível: andar, frear um carro, segurar um lápis,
+até existir um nó. O atrito é a força que se opõe ao deslizamento entre
+superfícies, e é a que mais separa a física idealizada da real. Neste capítulo
+acrescentamos o atrito ao arsenal das leis de Newton e o aplicamos a três
+situações-chave — planos inclinados, sistemas conectados e movimento circular —
+consolidando a técnica do diagrama de corpo livre.
+
+## Atrito seco
+
+Quando duas superfícies em contato tendem a deslizar uma sobre a outra, surge uma
+força paralela à superfície que se opõe ao movimento relativo. Ela tem dois
+regimes.
+
+::: {#def-atrito}
+O **atrito estático** atua enquanto não há deslizamento e ajusta-se para impedir o
+movimento, até um valor máximo:
+$$f_s \le \mu_s N.$$ {#eq-atrito-estatico}
+Uma vez iniciado o deslizamento, atua o **atrito cinético**, de módulo
+aproximadamente constante:
+$$f_k = \mu_k N,$$ {#eq-atrito-cinetico}
+onde $N$ é a força normal e $\mu_s, \mu_k$ são os coeficientes de atrito
+(adimensionais), com $\mu_k < \mu_s$ em geral.
+:::
+
+::: {.callout-note}
+## Por que o atrito não depende da área (de contato aparente)
+Curiosamente, $f$ depende de $N$, não do tamanho da superfície. Em escala
+microscópica, o contato real ocorre só nas asperezas; aumentar a área aparente
+reduz a pressão local na mesma proporção, e o produto — que determina o atrito —
+se mantém. Por isso $f = \mu N$ basta como modelo.
+:::
+
+## Plano inclinado
+
+O plano inclinado é o laboratório clássico das leis de Newton. Num plano de
+inclinação $\theta$, decompõe-se o peso em componentes paralela e perpendicular à
+rampa:
+$$P_\parallel = mg\,\mathrm{sen}\,\theta, \qquad P_\perp = mg\cos\theta.$$ {#eq-plano-inclinado}
+A normal equilibra a componente perpendicular ($N = mg\cos\theta$, se não há
+aceleração perpendicular), e a componente paralela é a que tende a fazer o bloco
+descer.
+
+::: {.callout-important}
+## Condição de iminência de deslizamento
+Um bloco em repouso na rampa começa a deslizar quando a componente paralela do
+peso supera o atrito estático máximo. No limite ($f_s = \mu_s N$):
+$$mg\,\mathrm{sen}\,\theta_c = \mu_s\,mg\cos\theta_c \;\Longrightarrow\; \tan\theta_c = \mu_s.$$ {#eq-angulo-critico}
+O **ângulo crítico** $\theta_c$ mede diretamente $\mu_s$.
+:::
+
+## Dinâmica do movimento circular
+
+No movimento circular, a @eq-newton2 aplicada à direção radial diz que a
+resultante das forças *reais* deve fornecer a aceleração centrípeta.
+
+::: {.callout-important}
+## Força centrípeta resultante
+Para um corpo em trajetória circular de raio $R$ com rapidez $v$, a soma das
+forças na direção radial (positiva para o centro) vale
+$$\sum F_\text{radial} = m\,\frac{v^2}{R}.$$ {#eq-forca-centripeta}
+Não existe uma "força centrípeta" à parte: ela é o **nome do papel** que tração,
+atrito, normal ou gravidade desempenham ao apontar para o centro.
+:::
+
+::: {.callout-note}
+## A "força centrífuga" não existe (num referencial inercial)
+A sensação de ser "jogado para fora" numa curva é inércia: seu corpo tende a
+seguir reto (primeira lei) enquanto o carro curva. Num referencial inercial não há
+força para fora; há a falta de força centrípeta suficiente. A força centrífuga só
+aparece como artifício em referenciais girantes (não inerciais).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-bloco-rampa-atrito}
+Um bloco de $2{,}0\ \mathrm{kg}$ desce uma rampa de $30^\circ$ com
+$\mu_k = 0{,}20$. Qual é sua aceleração? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Ao longo da rampa (positivo para baixo), atuam $P_\parallel$ (a favor)
+e $f_k$ (contra). Com $N = mg\cos\theta$ (@eq-plano-inclinado) e
+$f_k = \mu_k N$:
+$$ma = mg\,\mathrm{sen}\,\theta - \mu_k\,mg\cos\theta \;\Longrightarrow\; a = g(\mathrm{sen}\,\theta - \mu_k\cos\theta).$$
+A massa cancela. Numericamente,
+$a = 9{,}8(0{,}50 - 0{,}20\times0{,}866) = 9{,}8(0{,}327) \approx 3{,}2\ \mathrm{m/s^2}$.
+
+::: {#exm-curva}
+Um carro de massa $m$ faz uma curva plana de raio $R = 50\ \mathrm{m}$. Qual a
+máxima rapidez sem derrapar, se $\mu_s = 0{,}80$? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Numa curva plana, a única força horizontal é o atrito estático, que
+faz o papel de força centrípeta (@eq-forca-centripeta). No limite,
+$f_s = \mu_s N = \mu_s mg$ iguala $mv^2/R$:
+$$\mu_s m g = \frac{m v^2}{R} \;\Longrightarrow\; v_\text{máx} = \sqrt{\mu_s g R} = \sqrt{0{,}80\times9{,}8\times50} \approx 19{,}8\ \mathrm{m/s}.$$
+A massa cancela: caminhão e moto têm o mesmo limite (com o mesmo $\mu_s$).
+
+## Exercícios
+
+::: {#exr-empurrar}
+Que força horizontal mínima coloca em movimento um caixote de $20\ \mathrm{kg}$
+sobre solo plano com $\mu_s = 0{,}50$? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Iminência: $F = f_s^\text{máx} = \mu_s N = \mu_s mg = 0{,}50\times20\times9{,}8 = 98\ \mathrm{N}$.
+:::
+
+::: {#exr-atwood}
+Na máquina de Atwood, dois blocos $m_1 = 3{,}0\ \mathrm{kg}$ e
+$m_2 = 5{,}0\ \mathrm{kg}$ pendem de um fio ideal sobre uma polia sem atrito.
+Encontre a aceleração do sistema. ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Aplicando @eq-newton2 a cada bloco e somando (a tração é interna e se cancela):
+$a = \dfrac{(m_2 - m_1)g}{m_1 + m_2} = \dfrac{(5{,}0-3{,}0)\times9{,}8}{8{,}0} = 2{,}45\ \mathrm{m/s^2}$.
+O bloco mais pesado desce.
+:::
+
+::: {#exr-coeficiente}
+Um bloco começa a deslizar quando a rampa atinge $25^\circ$. Qual é o coeficiente
+de atrito estático?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pelo ângulo crítico (@eq-angulo-critico): $\mu_s = \tan 25^\circ \approx 0{,}47$.
+:::

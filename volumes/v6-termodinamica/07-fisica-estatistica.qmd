@@ -1,0 +1,134 @@
+---
+title: "Introdução à Física Estatística"
+---
+
+## Motivação
+
+A termodinâmica descreve o calor com grandezas macroscópicas — temperatura,
+pressão, entropia — sem perguntar de que a matéria é feita. A **física
+estatística** vai mais fundo: deriva essas leis a partir do comportamento
+**probabilístico** de bilhões de partículas. Por que, num gás em equilíbrio, certas
+energias são mais comuns? Como a entropia de Boltzmann emerge da contagem de
+estados? Este capítulo, que encerra o volume, abre essa ponte entre o micro e o
+macro, cuja linguagem reaparecerá na física quântica da matéria (Volume XIII).
+
+## Microestados, macroestados e probabilidade
+
+::: {#def-micro-macro}
+Um **macroestado** é a descrição macroscópica de um sistema (sua temperatura,
+pressão, energia total). Um **microestado** é uma configuração microscópica
+específica (posições e velocidades de todas as partículas) compatível com ele. Um
+mesmo macroestado corresponde a um número enorme $\Omega$ de microestados.
+:::
+
+::: {.callout-important}
+## Postulado fundamental
+Num sistema isolado em equilíbrio, **todos os microestados acessíveis são
+igualmente prováveis**. A probabilidade de um macroestado é então proporcional ao
+número $\Omega$ de microestados que o realizam.
+:::
+
+Disso decorre tudo: o macroestado observado é o de maior $\Omega$ simplesmente
+porque é o mais provável. A entropia de Boltzmann (@eq-boltzmann-entropia),
+$S = k_B\ln\Omega$, transforma essa contagem em termodinâmica.
+
+## A distribuição de Boltzmann
+
+E se o sistema não está isolado, mas em contato com um reservatório à temperatura
+$T$? A probabilidade de encontrá-lo num estado de energia $E$ é dada pela lei mais
+importante da física estatística.
+
+::: {.callout-important}
+## Distribuição de Boltzmann
+A probabilidade de um sistema em equilíbrio a temperatura $T$ ocupar um estado de
+energia $E$ é proporcional ao **fator de Boltzmann**:
+$$P(E) \propto e^{-E/k_B T}.$$ {#eq-boltzmann-dist}
+Estados de **maior energia** são exponencialmente **menos prováveis**, e tanto mais
+quanto menor a temperatura.
+:::
+
+::: {.callout-note}
+## A energia térmica como referência
+A combinação $k_B T$ é a **energia térmica** característica. Um estado é facilmente
+acessível se sua energia for $\lesssim k_B T$, e raro se $\gg k_B T$. Essa escala
+decide se uma reação química ocorre, se um átomo está excitado, se um material
+conduz — $k_B T$ é o "orçamento de energia" que a temperatura distribui.
+:::
+
+## A distribuição de velocidades de Maxwell-Boltzmann
+
+Aplicando o fator de Boltzmann à energia cinética $\tfrac12 mv^2$ das moléculas de
+um gás, obtém-se a distribuição de suas velocidades.
+
+::: {.callout-important}
+## Distribuição de Maxwell-Boltzmann
+A fração de moléculas com velocidade próxima de $v$ num gás ideal a temperatura
+$T$ é proporcional a
+$$f(v) \propto v^2\,e^{-mv^2/2k_B T}.$$ {#eq-maxwell-boltzmann}
+A distribuição tem um pico (velocidade mais provável) e uma cauda de altas
+velocidades que se estende mais à medida que $T$ aumenta.
+:::
+
+::: {.callout-note}
+## A cauda que faz o mundo funcionar
+A cauda de alta energia da @eq-maxwell-boltzmann é pequena, mas decisiva: são as
+poucas moléculas muito rápidas que evaporam de um líquido, que vencem a barreira de
+uma reação química, que escapam da atmosfera de um planeta. Aquecer desloca a
+distribuição e engrossa essa cauda — por isso reações aceleram com a temperatura.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-razao-populacoes}
+Dois estados de um sistema diferem em energia por $\Delta E = k_B T$. Qual a razão
+entre suas probabilidades de ocupação?
+:::
+
+**Solução.** Pela @eq-boltzmann-dist, a razão é o fator de Boltzmann da diferença:
+$$\frac{P_2}{P_1} = e^{-\Delta E/k_B T} = e^{-1} \approx 0{,}37.$$
+O estado mais energético é ocupado cerca de $37\%$ tão frequentemente quanto o de
+menor energia.
+
+::: {#exm-microestados-moedas}
+Quatro moedas são lançadas. Compare o número de microestados do macroestado "2
+caras" com o de "4 caras", e relacione à entropia.
+:::
+
+**Solução.** "4 caras" tem $\Omega = 1$ microestado (CCCC). "2 caras" tem
+$\Omega = \binom{4}{2} = 6$ microestados. O macroestado "2 caras" é 6 vezes mais
+provável e tem maior entropia ($S = k_B\ln\Omega$, @eq-boltzmann-entropia): a
+desordem "equilibrada" domina, como num gás.
+
+## Exercícios
+
+::: {#exr-fator-boltzmann}
+A que temperatura a energia térmica $k_B T$ iguala $\Delta E = 1{,}0\times10^{-20}\ \mathrm{J}$?
+($k_B = 1{,}38\times10^{-23}\ \mathrm{J/K}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$T = \Delta E/k_B = 1{,}0\times10^{-20}/1{,}38\times10^{-23} \approx 725\ \mathrm{K}$.
+:::
+
+::: {#exr-probabilidade-relativa}
+Dois estados diferem por $\Delta E = 2k_B T$. Qual a razão de ocupação $P_2/P_1$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$P_2/P_1 = e^{-2} \approx 0{,}135$ (@eq-boltzmann-dist) — o estado superior é cerca
+de 7 vezes menos provável.
+:::
+
+::: {#exr-temperatura-cauda}
+Por que aumentar a temperatura acelera reações químicas, em termos da distribuição
+de Maxwell-Boltzmann?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Aumentar $T$ engrossa a **cauda de altas velocidades** da @eq-maxwell-boltzmann.
+Mais moléculas passam a ter energia suficiente para vencer a barreira de ativação
+da reação, então a taxa de reações sobe rapidamente com a temperatura.
+:::

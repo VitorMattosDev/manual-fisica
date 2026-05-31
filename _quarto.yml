@@ -69,6 +69,7 @@ book:
         - volumes/v6-termodinamica/04-segunda-lei-entropia.qmd
         - volumes/v6-termodinamica/05-ciclos-maquinas.qmd
         - volumes/v6-termodinamica/06-transicoes-fase.qmd
+        - volumes/v6-termodinamica/07-fisica-estatistica.qmd
   appendices:
     - constantes.qmd
 

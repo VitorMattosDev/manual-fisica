@@ -94,7 +94,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v6-termodinamica/04-segunda-lei-entropia.qmd` — Segunda lei e entropia
 - [x] `volumes/v6-termodinamica/05-ciclos-maquinas.qmd` — Ciclos e máquinas térmicas
 - [x] `volumes/v6-termodinamica/06-transicoes-fase.qmd` — Transições de fase
-- [ ] `volumes/v6-termodinamica/07-fisica-estatistica.qmd` — Introdução à física estatística
+- [x] `volumes/v6-termodinamica/07-fisica-estatistica.qmd` — Introdução à física estatística
 
 ## Volume VII — Eletromagnetismo I (Eletrostática e Corrente)
 *Objetivo: cargas, campos e circuitos DC. Pré-requisitos: I (vetores, cálculo).*

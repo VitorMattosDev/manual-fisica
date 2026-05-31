@@ -1,0 +1,126 @@
+---
+title: "Introdução à Teoria Quântica de Campos"
+---
+
+## Motivação
+
+A mecânica quântica (Volume XII) descreve partículas, mas trata o número delas como
+fixo — não explica como um fóton é **criado** quando um átomo emite luz, ou como um
+elétron e um pósitron se **aniquilam**. E ela não é compatível com a relatividade
+especial. A **teoria quântica de campos** (TQC) resolve ambos: unifica mecânica
+quântica e relatividade, e descreve partículas como **excitações de campos** que
+permeiam todo o espaço. É a linguagem do Modelo Padrão (Volume XIV) e a teoria mais
+precisa já construída. Este capítulo apresenta suas ideias centrais.
+
+## Partículas como excitações de campos
+
+::: {.callout-important}
+## O conceito central da TQC
+Na teoria quântica de campos, o objeto fundamental não é a partícula, mas o
+**campo** — uma entidade que existe em cada ponto do espaço-tempo. As **partículas**
+são **excitações quantizadas** desses campos:
+
+- o campo eletromagnético, excitado, dá **fótons**;
+- o campo do elétron dá **elétrons**;
+- cada tipo de partícula é o quantum de um campo.
+:::
+
+Isso generaliza o oscilador harmônico quântico (Volume XII): assim como
+$\hat{a}^\dagger$ cria um quantum de energia no oscilador, em TQC ele **cria uma
+partícula**. Por isso todos os elétrons são idênticos — são excitações do **mesmo**
+campo universal.
+
+## Interações e diagramas de Feynman
+
+As forças, em TQC, resultam da **troca de partículas mediadoras** (Volume XIV).
+Richard Feynman criou uma representação gráfica para calcular esses processos.
+
+::: {.callout-important}
+## Diagramas de Feynman
+Cada interação é representada por um **diagrama**: linhas para partículas, vértices
+para interações. A repulsão entre dois elétrons, por exemplo, é a **troca de um
+fóton** (mediador). Cada diagrama corresponde a um termo de cálculo, e somá-los dá a
+probabilidade do processo.
+:::
+
+::: {.callout-note}
+## A teoria mais precisa da física
+A eletrodinâmica quântica (QED), a TQC do eletromagnetismo, prevê o momento magnético
+do elétron com concordância de **doze casas decimais** com o experimento — a previsão
+mais precisa de toda a ciência. Os diagramas de Feynman, somando contribuições de
+complexidade crescente, são a ferramenta que torna isso possível. A TQC é o ápice da
+precisão da física teórica.
+:::
+
+## O vácuo quântico e partículas virtuais
+
+::: {.callout-important}
+## O vácuo não é vazio
+Em TQC, o **vácuo** é o estado de menor energia dos campos — mas, pela energia de
+ponto zero (Volume XII), ele **flutua**. Pares de **partículas virtuais** surgem e
+se aniquilam continuamente, permitidos pela incerteza energia-tempo
+$\Delta E\,\Delta t \gtrsim \hbar$.
+:::
+
+::: {.callout-note}
+## Efeitos reais do vácuo
+As flutuações do vácuo não são ficção: produzem o **efeito Casimir** (uma força
+atrativa entre placas no vácuo), o **deslocamento de Lamb** nos níveis atômicos, e
+contribuem para o momento magnético do elétron. Levadas à cosmologia, a energia do
+vácuo é uma candidata à **energia escura** (próximo capítulo) — embora o valor
+calculado e o observado discordem por $120$ ordens de grandeza, o maior enigma
+quantitativo da física.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-foton-mediador}
+Na TQC, como se descreve a força de repulsão entre dois elétrons?
+:::
+
+**Solução.** Como a **troca de um fóton virtual** entre eles. Um elétron emite um
+fóton, o outro o absorve, e a transferência de momento resultante é a força. Num
+diagrama de Feynman, é representada por duas linhas de elétron unidas por uma linha
+de fóton (o mediador da força eletromagnética, Volume XIV).
+
+::: {#exm-vacuo-flutua}
+Por que o vácuo quântico não pode ter energia exatamente zero?
+:::
+
+**Solução.** Cada modo de campo é um oscilador quântico, com energia de ponto zero
+$\tfrac12\hbar\omega \neq 0$ (Volume XII). Somada sobre todos os modos, ela dá ao
+vácuo uma energia não nula e flutuações — pares virtuais surgindo e se aniquilando,
+permitidos pela incerteza energia-tempo.
+
+## Exercícios
+
+::: {#exr-particula-campo}
+Na TQC, o que é um elétron?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Uma **excitação quantizada do campo do elétron**, que permeia todo o espaço. Por
+isso todos os elétrons são idênticos — são quanta do mesmo campo universal.
+:::
+
+::: {#exr-diagrama}
+O que representa um vértice num diagrama de Feynman?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Uma **interação** entre partículas (emissão ou absorção de uma partícula mediadora).
+Cada vértice corresponde a um fator no cálculo da probabilidade do processo.
+:::
+
+::: {#exr-casimir}
+O efeito Casimir é evidência de quê?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Das **flutuações do vácuo quântico**: as partículas virtuais e a energia de ponto
+zero dos campos produzem uma força mensurável entre placas próximas no vácuo,
+confirmando que o vácuo não é verdadeiramente vazio.
+:::

@@ -140,6 +140,7 @@ book:
     - part: "Volume XV — Tópicos Avançados"
       chapters:
         - volumes/v15-avancados/01-relatividade-geral.qmd
+        - volumes/v15-avancados/02-teoria-quantica-campos.qmd
   appendices:
     - constantes.qmd
 

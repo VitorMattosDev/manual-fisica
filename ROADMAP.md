@@ -147,7 +147,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 *Objetivo: reformular a mecânica. Pré-requisitos: III. (Matemática: cálculo variacional.)*
 
 - [x] `volumes/v11-mecanica-analitica/01-calculo-variacional.qmd` — Cálculo variacional e princípio de Hamilton
-- [ ] `volumes/v11-mecanica-analitica/02-lagrangiana.qmd` — Formulação lagrangiana e vínculos
+- [x] `volumes/v11-mecanica-analitica/02-lagrangiana.qmd` — Formulação lagrangiana e vínculos
 - [ ] `volumes/v11-mecanica-analitica/03-aplicacoes-lagrangiana.qmd` — Aplicações lagrangianas
 - [ ] `volumes/v11-mecanica-analitica/04-hamiltoniana.qmd` — Formulação hamiltoniana
 - [ ] `volumes/v11-mecanica-analitica/05-transformacoes-canonicas.qmd` — Transformações canônicas e Poisson

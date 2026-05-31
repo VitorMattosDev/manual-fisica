@@ -106,6 +106,7 @@ book:
     - part: "Volume XI — Mecânica Analítica"
       chapters:
         - volumes/v11-mecanica-analitica/01-calculo-variacional.qmd
+        - volumes/v11-mecanica-analitica/02-lagrangiana.qmd
   appendices:
     - constantes.qmd
 

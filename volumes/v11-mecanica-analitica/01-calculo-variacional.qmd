@@ -1,0 +1,130 @@
+---
+title: "Cálculo Variacional e o Princípio de Hamilton"
+---
+
+## Motivação
+
+A mecânica de Newton descreve o movimento por forças e acelerações. Há, porém, uma
+formulação alternativa, mais profunda e mais geral, que parte de um princípio único:
+de todos os caminhos possíveis entre dois pontos, a natureza "escolhe" aquele que
+torna uma certa quantidade — a **ação** — extrema. É o **princípio de Hamilton**, e
+a ferramenta matemática para extraí-lo é o **cálculo variacional**. Essa abordagem,
+que abre a Fase 2, não só reproduz Newton como se estende à relatividade, à óptica
+(princípio de Fermat) e à mecânica quântica, sendo a linguagem natural da física
+moderna.
+
+## O problema variacional
+
+O cálculo comum encontra os pontos que extremizam uma *função*. O cálculo
+variacional encontra a *função* (o caminho) que extremiza uma **integral**.
+
+::: {#def-funcional}
+Um **funcional** associa um número a uma função inteira. Na mecânica, o funcional
+central é a **ação**:
+$$S[q] = \int_{t_1}^{t_2} L(q, \dot{q}, t)\,\mathrm{d}t,$$ {#eq-acao}
+onde $q(t)$ é a trajetória e $L$ é a **lagrangiana** do sistema (definida no próximo
+capítulo). Buscamos o caminho $q(t)$ que torna $S$ extremo.
+:::
+
+## A equação de Euler-Lagrange
+
+A condição para que um caminho extremize a ação é uma equação diferencial — a
+equação central de toda a mecânica analítica.
+
+::: {.callout-important}
+## Equação de Euler-Lagrange
+O caminho $q(t)$ que extremiza a ação @eq-acao satisfaz
+$$\frac{\mathrm{d}}{\mathrm{d}t}\!\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0.$$ {#eq-euler-lagrange}
+:::
+
+::: {.proof}
+## Dedução por variação do caminho
+Considere um caminho vizinho $q(t) + \epsilon\,\eta(t)$, com $\eta$ anulando-se nos
+extremos. A ação torna-se função de $\epsilon$, e o extremo exige
+$\mathrm{d}S/\mathrm{d}\epsilon|_{0} = 0$. Expandindo,
+$$\frac{\mathrm{d}S}{\mathrm{d}\epsilon}\bigg|_0 = \int_{t_1}^{t_2}\!\left(\frac{\partial L}{\partial q}\eta + \frac{\partial L}{\partial \dot q}\dot\eta\right)\mathrm{d}t.$$
+Integrando o segundo termo por partes (e usando $\eta(t_1)=\eta(t_2)=0$):
+$$\int_{t_1}^{t_2}\!\left(\frac{\partial L}{\partial q} - \frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial L}{\partial \dot q}\right)\eta\,\mathrm{d}t = 0.$$
+Como $\eta$ é arbitrário, o parêntese deve anular-se — a @eq-euler-lagrange.
+$\qquad\blacksquare$
+:::
+
+## O princípio de Hamilton
+
+::: {.callout-important}
+## Princípio de Hamilton (da ação estacionária)
+A trajetória real de um sistema mecânico entre dois instantes é aquela que torna a
+ação @eq-acao **estacionária** (em geral mínima):
+$$\delta S = 0.$$ {#eq-hamilton}
+Toda a dinâmica decorre desse único princípio.
+:::
+
+::: {.callout-note}
+## A unidade dos princípios extremos
+O princípio de Hamilton ecoa o princípio de Fermat da óptica (Volume IX): a luz
+segue o caminho de tempo extremo; a matéria, o de ação extrema. Essa não é
+coincidência — na mecânica quântica (Volume XII), a partícula "explora" todos os
+caminhos, e o de ação estacionária domina por interferência construtiva. Os
+princípios variacionais são a forma mais profunda de enunciar as leis da natureza.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-particula-livre}
+Para uma partícula livre, $L = \tfrac12 m\dot{x}^2$. Mostre que a equação de
+Euler-Lagrange dá movimento uniforme.
+:::
+
+**Solução.** Calcule os termos da @eq-euler-lagrange:
+$\partial L/\partial \dot x = m\dot x$ e $\partial L/\partial x = 0$. Então
+$$\frac{\mathrm{d}}{\mathrm{d}t}(m\dot x) - 0 = 0 \;\Longrightarrow\; m\ddot x = 0,$$
+isto é, aceleração nula — a primeira lei de Newton. A partícula livre move-se em
+linha reta com velocidade constante.
+
+::: {#exm-geodesica}
+Que caminho minimiza a distância entre dois pontos no plano? Use o funcional
+comprimento $S = \int\sqrt{1 + (y')^2}\,\mathrm{d}x$.
+:::
+
+**Solução.** Aqui $L = \sqrt{1 + (y')^2}$ não depende de $y$, só de $y'$. A
+@eq-euler-lagrange dá $\mathrm{d}/\mathrm{d}x\,(\partial L/\partial y') = 0$, logo
+$\partial L/\partial y' = $ constante. Como $\partial L/\partial y' = y'/\sqrt{1+(y')^2}$
+constante implica $y'$ constante, o caminho é uma **reta**. (Como esperado: a menor
+distância entre dois pontos é uma reta.)
+
+## Exercícios
+
+::: {#exr-queda}
+Para uma partícula em queda, $L = \tfrac12 m\dot{y}^2 - mgy$. Encontre a equação de
+movimento via Euler-Lagrange.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\partial L/\partial\dot y = m\dot y$, $\partial L/\partial y = -mg$. A
+@eq-euler-lagrange dá $m\ddot y + mg = 0$, ou seja $\ddot y = -g$: queda livre, como
+em Newton.
+:::
+
+::: {#exr-acao-unidade}
+Quais são as unidades da ação $S$ no SI?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A ação é energia $\times$ tempo, $[\,S\,] = \mathrm{J\,s}$. (É também a unidade da
+constante de Planck $\hbar$ — não por acaso: $\hbar$ é o "quantum de ação".)
+:::
+
+::: {#exr-coordenada-ciclica}
+Se a lagrangiana não depende de uma coordenada $q$ (dita **cíclica**), o que a
+equação de Euler-Lagrange garante?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Se $\partial L/\partial q = 0$, a @eq-euler-lagrange dá
+$\mathrm{d}/\mathrm{d}t\,(\partial L/\partial\dot q) = 0$, ou seja
+$\partial L/\partial\dot q = $ constante. Essa grandeza conservada é o **momento
+generalizado** associado a $q$ — base do teorema de Noether (próximo capítulo).
+:::

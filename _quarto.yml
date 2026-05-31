@@ -103,6 +103,9 @@ book:
         - volumes/v10-relatividade/03-dinamica-relativistica.qmd
         - volumes/v10-relatividade/04-quadrivetores-minkowski.qmd
         - volumes/v10-relatividade/05-ponte-relatividade-geral.qmd
+    - part: "Volume XI — Mecânica Analítica"
+      chapters:
+        - volumes/v11-mecanica-analitica/01-calculo-variacional.qmd
   appendices:
     - constantes.qmd
 

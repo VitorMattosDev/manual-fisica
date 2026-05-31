@@ -1,0 +1,139 @@
+---
+title: "Lei de Gauss"
+---
+
+## Motivação
+
+Calcular o campo elétrico de uma carga pontual é fácil; somar os campos de uma
+esfera, um fio ou uma placa infinita de carga, por integração direta, é
+trabalhoso. A **lei de Gauss** oferece um atalho de elegância surpreendente: em
+situações com simetria, ela dá o campo quase sem cálculo, relacionando o campo numa
+superfície fechada à carga **dentro** dela. É também uma das quatro equações de
+Maxwell — uma lei fundamental, não apenas um truque. Este capítulo introduz o fluxo
+elétrico e a lei de Gauss, e a aplica às simetrias clássicas.
+
+## Fluxo elétrico
+
+::: {#def-fluxo}
+O **fluxo elétrico** através de uma superfície mede quantas linhas de campo a
+atravessam. Para um campo uniforme $\vec{E}$ e uma superfície plana de área
+vetorial $\vec{A}$ (normal à superfície),
+$$\Phi_E = \vec{E}\cdot\vec{A} = E A\cos\theta.$$ {#eq-fluxo}
+Em geral, $\Phi_E = \displaystyle\oint \vec{E}\cdot\mathrm{d}\vec{A}$, a unidade
+sendo $\mathrm{N\,m^2/C}$.
+:::
+
+O fluxo é máximo quando o campo é perpendicular à superfície ($\theta=0$) e nulo
+quando paralelo ($\theta=90^\circ$) — as linhas "deslizam" sem atravessar.
+
+## A lei de Gauss
+
+::: {.callout-important}
+## Lei de Gauss
+O fluxo elétrico através de **qualquer** superfície fechada é proporcional à carga
+total $Q_\text{int}$ encerrada por ela:
+$$\oint \vec{E}\cdot\mathrm{d}\vec{A} = \frac{Q_\text{int}}{\varepsilon_0}.$$ {#eq-gauss}
+Cargas **fora** da superfície não contribuem para o fluxo total.
+:::
+
+::: {.callout-note}
+## Por que cargas externas não contam
+Uma carga externa tem suas linhas de campo *entrando* na superfície fechada de um
+lado e *saindo* do outro: o fluxo líquido que ela produz é zero. Só a carga
+**interna** deixa um saldo de linhas — daí a lei depender apenas de
+$Q_\text{int}$. A lei de Gauss é, no fundo, a lei do inverso do quadrado
+(@eq-coulomb) reescrita: é a geometria de $1/r^2$ que faz o fluxo independer da
+forma da superfície.
+:::
+
+## Aplicações por simetria
+
+O poder da lei de Gauss aparece quando a simetria permite escolher uma **superfície
+gaussiana** sobre a qual $\vec{E}$ é constante e perpendicular. O campo "sai" da
+integral.
+
+::: {.callout-important}
+## Campos clássicos via lei de Gauss
+- **Esfera/carga pontual** (simetria esférica): $E = \dfrac{1}{4\pi\varepsilon_0}\dfrac{Q}{r^2}$.
+- **Fio infinito** de densidade linear $\lambda$:
+  $$E = \frac{\lambda}{2\pi\varepsilon_0\,r}\quad (\propto 1/r).$$ {#eq-fio-infinito}
+- **Placa infinita** de densidade superficial $\sigma$:
+  $$E = \frac{\sigma}{2\varepsilon_0}\quad (\text{uniforme, independe da distância}).$$ {#eq-placa-infinita}
+:::
+
+::: {.proof}
+## Campo do fio infinito
+Escolha um cilindro gaussiano coaxial ao fio, de raio $r$ e comprimento $L$. Por
+simetria, $\vec{E}$ é radial e constante na lateral; o fluxo pelas tampas é nulo
+(campo paralelo a elas). Então $\Phi_E = E\,(2\pi r L)$. A carga interna é
+$\lambda L$. Pela @eq-gauss, $E\,2\pi r L = \lambda L/\varepsilon_0$, donde
+$E = \lambda/(2\pi\varepsilon_0 r)$. $\qquad\blacksquare$
+:::
+
+## Condutores em equilíbrio
+
+::: {.callout-note}
+## O campo dentro de um condutor é nulo
+Num condutor em equilíbrio eletrostático, as cargas livres se rearranjam até que o
+campo **interno** seja zero (senão continuariam a se mover). Pela lei de Gauss,
+toda a carga excedente fica na **superfície**. Daí a **blindagem eletrostática**
+(gaiola de Faraday): o interior de um condutor oco é protegido de campos externos —
+por isso você está seguro dentro de um carro num raio.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-fluxo-cubo}
+Uma carga de $8{,}85\times10^{-12}\ \mathrm{C}$ está no centro de um cubo. Qual o
+fluxo elétrico através de **toda** a superfície do cubo?
+($\varepsilon_0 = 8{,}85\times10^{-12}\ \mathrm{F/m}$.)
+:::
+
+**Solução.** Pela @eq-gauss, o fluxo total depende só da carga interna, não da
+forma:
+$$\Phi_E = \frac{Q_\text{int}}{\varepsilon_0} = \frac{8{,}85\times10^{-12}}{8{,}85\times10^{-12}} = 1{,}0\ \mathrm{N\,m^2/C}.$$
+(Por uma única face, seria $1/6$ disso, por simetria.)
+
+::: {#exm-placa}
+Qual o campo elétrico próximo a uma placa infinita com densidade superficial
+$\sigma = 2{,}0\times10^{-6}\ \mathrm{C/m^2}$?
+:::
+
+**Solução.** Por @eq-placa-infinita:
+$$E = \frac{\sigma}{2\varepsilon_0} = \frac{2{,}0\times10^{-6}}{2\times8{,}85\times10^{-12}} \approx 1{,}1\times10^{5}\ \mathrm{N/C},$$
+uniforme e independente da distância à placa.
+
+## Exercícios
+
+::: {#exr-fluxo-carga}
+Qual o fluxo total através de uma superfície fechada que envolve cargas de
+$+5{,}0\ \mu\mathrm{C}$ e $-3{,}0\ \mu\mathrm{C}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$Q_\text{int} = +5{,}0 - 3{,}0 = +2{,}0\ \mu\mathrm{C}$. Por @eq-gauss,
+$\Phi_E = Q_\text{int}/\varepsilon_0 = 2{,}0\times10^{-6}/8{,}85\times10^{-12} \approx 2{,}3\times10^{5}\ \mathrm{N\,m^2/C}$.
+:::
+
+::: {#exr-fio}
+Qual o campo a $0{,}050\ \mathrm{m}$ de um fio infinito com
+$\lambda = 1{,}0\times10^{-6}\ \mathrm{C/m}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E = \dfrac{\lambda}{2\pi\varepsilon_0 r} = \dfrac{1{,}0\times10^{-6}}{2\pi\times8{,}85\times10^{-12}\times0{,}050} \approx 3{,}6\times10^{5}\ \mathrm{N/C}$ (@eq-fio-infinito).
+:::
+
+::: {#exr-condutor-oco}
+Por que um aparelho eletrônico sensível costuma ser envolvido por uma malha
+metálica?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A malha forma uma **gaiola de Faraday**: como o campo no interior de um condutor é
+nulo (lei de Gauss), o aparelho fica blindado contra campos e interferências
+elétricas externas.
+:::

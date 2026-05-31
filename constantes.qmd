@@ -126,5 +126,11 @@ constante ou uma relação fundamental nova num capítulo, registre-a aqui.
 - Valor Q da reação: $Q = (m_\text{inicial} - m_\text{final})c^2$
 - Próton $= uud$, nêutron $= udd$; quatro interações: forte, EM, fraca, gravitacional
 
-*(A seção de Física Avançada é adicionada à medida que o volume correspondente é
-escrito.)*
+### Física avançada
+
+- Equações de Einstein: $G_{\mu\nu} = (8\pi G/c^4)\,T_{\mu\nu}$
+- Raio de Schwarzschild: $r_s = 2GM/c^2$
+- Lei de Hubble: $v = H_0\,d$, $\ H_0 \approx 70\ \mathrm{km/s/Mpc}$
+- Composição do universo: $\sim5\%$ matéria comum, $\sim27\%$ matéria escura, $\sim68\%$ energia escura
+- Idade do universo: $\approx 13{,}8$ bilhões de anos
+- Limite de Chandrasekhar (anã branca): $\sim1{,}4\ M_\odot$

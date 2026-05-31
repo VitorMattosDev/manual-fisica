@@ -1,0 +1,142 @@
+---
+title: "Astrofísica"
+---
+
+## Motivação
+
+Encerramos a obra olhando para o céu — mas agora com toda a física que construímos
+nas mãos. As estrelas são reatores de **fusão** (Volume XIV) equilibrados pela
+**gravidade** (Volume III), governados pela **termodinâmica** (Volume VI) e pela
+**física quântica** (Volume XII), e seus destinos finais são objetos de
+**relatividade geral** (cap. 1). A astrofísica é a grande síntese: o laboratório
+onde todas as leis que estudamos atuam juntas, em escalas extremas. Este capítulo
+final mostra como a física explica as estrelas — e como elas nos fizeram.
+
+## A vida das estrelas
+
+::: {.callout-important}
+## O equilíbrio estelar
+Uma estrela é um equilíbrio entre duas tendências opostas:
+
+- a **gravidade**, que tende a comprimi-la;
+- a **pressão** da fusão nuclear em seu núcleo, que tende a expandi-la.
+
+Enquanto há combustível, a fusão (Volume XIV) sustenta a estrela. Quando ele se
+esgota, a gravidade vence — e o destino depende da **massa**.
+:::
+
+::: {.callout-note}
+## A nucleossíntese estelar: somos poeira de estrelas
+As estrelas fundem hidrogênio em hélio, depois em carbono, oxigênio, e assim por
+diante, até o **ferro** (o pico da energia de ligação, Volume XIV). Os elementos mais
+pesados que o ferro forjam-se em **supernovas** — explosões que dispersam esses
+átomos pelo espaço. O carbono dos nossos corpos, o oxigênio que respiramos, o ferro
+do nosso sangue: todos foram cozidos em estrelas e espalhados quando elas morreram.
+Como disse Carl Sagan, somos feitos de "poeira de estrelas".
+:::
+
+## Os destinos finais
+
+Quando o combustível acaba, a gravidade colapsa o núcleo. O resultado depende da
+massa, e cada destino é sustentado (ou não) por uma física que estudamos.
+
+::: {.callout-important}
+## Os três finais estelares
+- **Anã branca** (estrelas como o Sol): o colapso é freado pela **pressão de
+  degenerescência dos elétrons** (princípio de Pauli, Volume XII), abaixo do **limite
+  de Chandrasekhar** ($\sim1{,}4$ massas solares).
+- **Estrela de nêutrons** (estrelas mais massivas): elétrons e prótons fundem-se em
+  nêutrons, e a degenerescência **dos nêutrons** sustenta o colapso — uma estrela do
+  tamanho de uma cidade, densíssima.
+- **Buraco negro** (as mais massivas): nenhuma pressão resiste, e o núcleo colapsa
+  além do horizonte de eventos (cap. 1).
+:::
+
+::: {.callout-note}
+## Pauli contra a gravidade
+É notável que o princípio de exclusão de Pauli — a mesma regra que organiza a tabela
+periódica (Volume XIII) — seja o que impede estrelas de colapsarem. A pressão de
+degenerescência não é térmica: vem da recusa quântica de dois férmions ocuparem o
+mesmo estado. Quando nem ela basta (acima dos limites de massa), a gravidade vence em
+definitivo e forma um buraco negro. O micro e o macro decidem juntos o destino das
+estrelas.
+:::
+
+## A física como uma obra única
+
+::: {.callout-important}
+## A unidade da física
+Uma estrela reúne, num só objeto, quase tudo o que esta obra percorreu: a
+**gravitação** que a liga, a **termodinâmica** do seu interior, a **fusão nuclear**
+que a acende, a **física quântica** que a sustenta, a **relatividade** que governa
+seu fim, e o **eletromagnetismo** da luz que nos traz toda essa informação. As leis
+não são fragmentos isolados — são faces de uma descrição única e coerente da
+natureza.
+:::
+
+::: {.callout-note}
+## O fim do mapa, não do território
+Chegamos ao fim desta obra, mas não ao fim da física. A gravidade quântica, a
+natureza da matéria e da energia escuras, a origem do universo, a possível
+unificação das forças (Volume XIV) — tudo isso permanece aberto. A física é um mapa
+em expansão de um território sem bordas conhecidas. Que este manual tenha dado ao
+leitor não apenas as respostas que temos, mas o gosto pelas perguntas que ainda não
+respondemos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-chandrasekhar}
+O que impede uma anã branca de colapsar sob a própria gravidade, e qual o limite
+dessa resistência?
+:::
+
+**Solução.** A **pressão de degenerescência dos elétrons** — consequência do
+princípio de exclusão de Pauli (Volume XII), que impede dois elétrons de ocuparem o
+mesmo estado quântico. Essa pressão sustenta a anã branca até o **limite de
+Chandrasekhar**, $\sim1{,}4$ massas solares; acima dele, ela cede e a estrela colapsa
+em estrela de nêutrons ou buraco negro.
+
+::: {#exm-origem-elementos}
+De onde vieram os átomos de carbono e oxigênio do nosso corpo?
+:::
+
+**Solução.** Da **nucleossíntese estelar**: foram produzidos por fusão nuclear no
+interior de estrelas (Volume XIV) e dispersos pelo espaço quando essas estrelas
+morreram (supernovas, ventos estelares). A matéria que nos compõe é, literalmente,
+resíduo de gerações anteriores de estrelas.
+
+## Exercícios
+
+::: {#exr-equilibrio-estelar}
+Que duas forças se equilibram numa estrela estável?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **gravidade** (que comprime a estrela) e a **pressão** gerada pela fusão nuclear no
+núcleo (que a expande). O equilíbrio entre elas mantém a estrela estável enquanto há
+combustível.
+:::
+
+::: {#exr-destino-sol}
+Qual será o destino final do Sol?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Uma **anã branca**: a massa do Sol está abaixo do limite de Chandrasekhar, então,
+após esgotar o combustível, seu núcleo será sustentado pela pressão de
+degenerescência dos elétrons, sem colapsar em estrela de nêutrons ou buraco negro.
+:::
+
+::: {#exr-elementos-pesados}
+Onde se formam os elementos mais pesados que o ferro?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Em **supernovas** (e fusões de estrelas de nêutrons). A fusão estelar comum só vai
+até o ferro (o pico da energia de ligação, Volume XIV); formar elementos mais pesados
+**absorve** energia, o que só ocorre nas condições extremas dessas explosões.
+:::

@@ -1,0 +1,137 @@
+---
+title: "Dinâmica dos Fluidos: Continuidade e Bernoulli"
+---
+
+## Motivação
+
+Tape parcialmente a saída de uma mangueira e o jato dispara mais longe. Um avião de
+centenas de toneladas se sustenta no ar. Dois navios próximos são "sugados" um
+contra o outro. Esses efeitos, aparentemente sem relação, decorrem de duas leis da
+**dinâmica dos fluidos** — a equação da continuidade e a equação de Bernoulli —,
+que expressam, para fluidos em movimento, a conservação da massa e da energia.
+Este capítulo as deduz no modelo idealizado do fluido ideal e mostra sua surpreendente
+gama de aplicações.
+
+## O modelo do fluido ideal
+
+::: {#def-fluido-ideal}
+Um **fluido ideal** é incompressível (densidade $\rho$ constante) e não viscoso
+(sem atrito interno), em escoamento **estacionário** (a velocidade em cada ponto
+não muda no tempo) e **laminar** (sem turbulência). As linhas que o fluido segue
+chamam-se **linhas de corrente**.
+:::
+
+É uma idealização — água e ar reais têm viscosidade —, mas excelente em muitos
+casos e indispensável como ponto de partida. A viscosidade entra no próximo
+capítulo.
+
+## A equação da continuidade
+
+A massa não some: o que entra por um trecho do tubo tem de sair pelo outro. Para
+fluido incompressível, isso vira uma relação entre área e velocidade.
+
+::: {.callout-important}
+## Equação da continuidade
+Num tubo de seções de áreas $A_1$ e $A_2$, com velocidades $v_1$ e $v_2$:
+$$A_1 v_1 = A_2 v_2 = \text{constante}.$$ {#eq-continuidade}
+O produto $A v$ é a **vazão volumétrica** $Q$ (em $\mathrm{m^3/s}$).
+:::
+
+A consequência é direta e contraintuitiva: onde o tubo é **mais estreito**, o
+fluido corre **mais rápido**. É por isso que estreitar a mangueira aumenta a
+velocidade do jato.
+
+## A equação de Bernoulli
+
+Aplicando a conservação de energia a um fluido ideal em escoamento, obtém-se a
+relação mais célebre da hidrodinâmica.
+
+::: {.callout-important}
+## Equação de Bernoulli
+Ao longo de uma linha de corrente, num fluido ideal,
+$$p + \tfrac12\rho v^2 + \rho g y = \text{constante}.$$ {#eq-bernoulli}
+A soma da pressão, da "pressão dinâmica" $\tfrac12\rho v^2$ e da pressão
+gravitacional $\rho g y$ é a mesma em todos os pontos.
+:::
+
+::: {.proof}
+## Bernoulli a partir do trabalho–energia
+Considere uma porção de fluido que avança no tubo. O trabalho líquido das forças
+de pressão nas extremidades, $p_1 A_1\,\Delta x_1 - p_2 A_2\,\Delta x_2$, mais o
+trabalho da gravidade, iguala a variação de energia cinética (teorema
+trabalho–energia, @eq-trabalho-energia). Usando que o volume $A_1\Delta x_1 = A_2\Delta x_2$
+é o mesmo (incompressível) e dividindo tudo por ele, resulta
+$$p_1 + \tfrac12\rho v_1^2 + \rho g y_1 = p_2 + \tfrac12\rho v_2^2 + \rho g y_2,$$
+que é a @eq-bernoulli. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Onde a velocidade é maior, a pressão é menor
+Para um tubo horizontal ($y$ constante), a @eq-bernoulli reduz-se a
+$p + \tfrac12\rho v^2 = $ constante: **mais velocidade significa menos pressão**.
+Esse é o princípio por trás da sustentação da asa de um avião (ar mais rápido por
+cima, pressão menor), do atomizador de perfume e da atração entre dois navios
+próximos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-mangueira}
+A água corre a $1{,}0\ \mathrm{m/s}$ num cano de raio $2{,}0\ \mathrm{cm}$, que
+afina para um bico de raio $0{,}50\ \mathrm{cm}$. Qual a velocidade na saída?
+:::
+
+**Solução.** Pela continuidade (@eq-continuidade), $A_1 v_1 = A_2 v_2$, e como
+$A \propto r^2$:
+$$v_2 = v_1\frac{A_1}{A_2} = v_1\left(\frac{r_1}{r_2}\right)^2 = 1{,}0\times\left(\frac{2{,}0}{0{,}50}\right)^2 = 1{,}0\times16 = 16\ \mathrm{m/s}.$$
+Reduzir o raio à quarta parte multiplica a velocidade por 16.
+
+::: {#exm-torricelli-tanque}
+Um tanque aberto tem um furo a uma profundidade $h = 5{,}0\ \mathrm{m}$ abaixo da
+superfície. Com que velocidade a água jorra? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Aplique Bernoulli (@eq-bernoulli) entre a superfície (velocidade
+$\approx 0$, pressão atmosférica) e o furo (mesma pressão atmosférica). As
+pressões se cancelam e sobra $\rho g h = \tfrac12\rho v^2$:
+$$v = \sqrt{2 g h} = \sqrt{2\times9{,}8\times5{,}0} \approx 9{,}9\ \mathrm{m/s}.$$
+É o **teorema de Torricelli**: o fluido sai com a mesma velocidade que teria caído
+livremente da altura $h$.
+
+## Exercícios
+
+::: {#exr-vazao}
+Um cano de área $0{,}010\ \mathrm{m^2}$ transporta água a $3{,}0\ \mathrm{m/s}$.
+Qual a vazão volumétrica?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$Q = A v = 0{,}010\times3{,}0 = 0{,}030\ \mathrm{m^3/s}$ (30 litros por segundo).
+:::
+
+::: {#exr-asa}
+Sobre uma asa, o ar flui a $80\ \mathrm{m/s}$; por baixo, a $70\ \mathrm{m/s}$.
+Estime a diferença de pressão (use $\rho_\text{ar} = 1{,}2\ \mathrm{kg/m^3}$ e tube
+horizontal).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Bernoulli horizontal: $\Delta p = \tfrac12\rho(v_\text{baixo}^2 - v_\text{cima}^2)$... cuidado com o sinal: a
+pressão é maior embaixo. $\Delta p = \tfrac12(1{,}2)(80^2 - 70^2) = 0{,}6\times(6400-4900) = 0{,}6\times1500 = 900\ \mathrm{Pa}$
+a mais por baixo — a sustentação.
+:::
+
+::: {#exr-continuidade-rio}
+Um rio de $10\ \mathrm{m}$ de largura e $2{,}0\ \mathrm{m}$ de profundidade corre a
+$1{,}0\ \mathrm{m/s}$. Ao estreitar para $5{,}0\ \mathrm{m}$ (mesma profundidade),
+qual a nova velocidade?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$A_1 v_1 = A_2 v_2$, com $A_1 = 10\times2{,}0 = 20\ \mathrm{m^2}$ e
+$A_2 = 5{,}0\times2{,}0 = 10\ \mathrm{m^2}$:
+$v_2 = v_1 A_1/A_2 = 1{,}0\times20/10 = 2{,}0\ \mathrm{m/s}$.
+:::

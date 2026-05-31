@@ -50,6 +50,7 @@ book:
     - part: "Volume IV — Fluidos e Meios Contínuos"
       chapters:
         - volumes/v4-fluidos/01-estatica-fluidos.qmd
+        - volumes/v4-fluidos/02-dinamica-fluidos.qmd
   appendices:
     - constantes.qmd
 

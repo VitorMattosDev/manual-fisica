@@ -71,7 +71,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 *Objetivo: matéria que flui e deforma. Pré-requisitos: II.*
 
 - [x] `volumes/v4-fluidos/01-estatica-fluidos.qmd` — Estática (pressão, empuxo)
-- [ ] `volumes/v4-fluidos/02-dinamica-fluidos.qmd` — Continuidade e Bernoulli
+- [x] `volumes/v4-fluidos/02-dinamica-fluidos.qmd` — Continuidade e Bernoulli
 - [ ] `volumes/v4-fluidos/03-viscosidade.qmd` — Viscosidade e fluidos reais
 - [ ] `volumes/v4-fluidos/04-elasticidade.qmd` — Elasticidade e deformação dos sólidos
 

@@ -1,0 +1,142 @@
+---
+title: "Princípio da Equivalência: Ponte para a Relatividade Geral"
+---
+
+## Motivação
+
+A relatividade especial trata de referenciais que se movem a velocidade
+**constante** — mas e a aceleração? E a gravidade, que Newton descrevia como uma
+força à distância, incompatível com o limite de velocidade $c$? Einstein levou dez
+anos para responder, e o ponto de partida foi o que ele chamou de "a ideia mais
+feliz da minha vida": o **princípio da equivalência**. Este capítulo, que fecha a
+física clássica, apresenta essa ideia-ponte e antecipa a revolução da relatividade
+geral, retomada no Volume XV.
+
+## A igualdade que intriga: massa inercial e gravitacional
+
+Desde o Volume II, dois papéis da massa convivem: a **massa inercial** (resistência
+à aceleração, em $F=ma$) e a **massa gravitacional** (a "carga" da gravidade, em
+$F = GMm/r^2$). Experimentalmente, elas são **idênticas** a altíssima precisão — e
+é por isso que todos os corpos caem com a mesma aceleração $g$.
+
+::: {.callout-note}
+## Uma coincidência suspeita
+Na física de Newton, a igualdade entre massa inercial e gravitacional é um acidente
+sem explicação. Por que a propriedade que resiste à aceleração seria exatamente a
+mesma que gera e sente a gravidade? Einstein recusou-se a aceitar uma coincidência
+tão perfeita e fez dela o alicerce de uma nova teoria.
+:::
+
+## O princípio da equivalência
+
+::: {.callout-important}
+## Princípio da equivalência de Einstein
+Localmente, **um referencial em queda livre num campo gravitacional é
+indistinguível de um referencial inercial sem gravidade**; e um referencial
+acelerado é indistinguível de um em repouso num campo gravitacional. Nenhum
+experimento local separa gravidade de aceleração.
+:::
+
+::: {.callout-note}
+## O elevador de Einstein
+Numa cabine fechada, você não consegue dizer se está parado na Terra (sentindo o
+peso) ou acelerando a $9{,}8\ \mathrm{m/s^2}$ no espaço profundo — as sensações são
+idênticas. E em queda livre (ou em órbita), você flutua como se a gravidade tivesse
+sumido. A gravidade, conclui Einstein, **não é uma força como as outras**: é um
+efeito do referencial.
+:::
+
+## Consequências: a luz cai e o tempo se curva
+
+Se aceleração e gravidade são equivalentes, tudo o que a aceleração faz, a gravidade
+também faz. Dois efeitos imediatos:
+
+::: {.callout-important}
+## Previsões do princípio da equivalência
+- **Deflexão da luz:** num referencial acelerado, um raio de luz parece curvar; logo
+  a **gravidade encurva a trajetória da luz** — confirmado em 1919, na deflexão da
+  luz das estrelas pelo Sol.
+- **Dilatação gravitacional do tempo:** relógios em potenciais gravitacionais mais
+  baixos (mais "fundo" no campo) andam **mais devagar**. O GPS corrige esse efeito
+  diariamente.
+:::
+
+## A grande ideia: gravidade é geometria
+
+::: {.callout-important}
+## A semente da relatividade geral
+Se a gravidade curva a luz e afeta o tempo, e se ela é localmente eliminável por
+queda livre, então a gravidade não é uma força no espaço-tempo — **é a curvatura do
+próprio espaço-tempo**. Matéria e energia dizem ao espaço-tempo como se curvar; o
+espaço-tempo curvo diz à matéria como se mover. Essa é a relatividade geral,
+formalizada no Volume XV.
+:::
+
+::: {.callout-note}
+## O fim da Fase 1
+Com esta ponte, encerramos a física clássica — de Newton a Einstein 1905, passando
+por Maxwell. A próxima fase (Volumes XI a XV) reformula a mecânica (lagrangiana e
+hamiltoniana), mergulha no mundo quântico e culmina justamente na realização desta
+promessa: a gravidade como geometria, na relatividade geral, e as fronteiras da
+física. O espaço-tempo curvo que vislumbramos aqui será o destino final da obra.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-elevador}
+Um astronauta numa nave sente um "peso" idêntico ao da Terra. Que aceleração a nave
+tem, se ele não consegue distinguir da gravidade terrestre?
+:::
+
+**Solução.** Pelo princípio da equivalência, a aceleração que imita a gravidade
+terrestre é exatamente $g$:
+$$a = g \approx 9{,}8\ \mathrm{m/s^2}.$$
+Nenhum experimento local dentro da nave distinguiria essa aceleração da gravidade
+da Terra.
+
+::: {#exm-relogios}
+Dois relógios idênticos ficam um no térreo e outro no alto de um arranha-céu. Qual
+anda mais devagar, segundo a relatividade geral?
+:::
+
+**Solução.** Pela dilatação gravitacional do tempo, o relógio em **potencial
+gravitacional mais baixo** (o do térreo, mais fundo no campo da Terra) anda mais
+devagar. A diferença é minúscula, mas medível com relógios atômicos — e real.
+
+## Exercícios
+
+::: {#exr-queda-livre}
+Por que um astronauta em órbita flutua, se a gravidade da Terra ali ainda é forte?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Ele está em **queda livre** permanente (a órbita é uma queda contínua em torno da
+Terra). Pelo princípio da equivalência, um referencial em queda livre é
+indistinguível de um inercial sem gravidade — por isso ele e a nave caem juntos e
+ele "flutua". Não é ausência de gravidade, é queda livre.
+:::
+
+::: {#exr-luz-curva}
+O que o princípio da equivalência prevê para um raio de luz que atravessa um campo
+gravitacional intenso?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Que ele se **curva**. Como num referencial acelerado a luz aparenta curvar, e
+aceleração equivale a gravidade, a luz deve encurvar ao passar perto de massas — o
+que foi confirmado na deflexão da luz estelar pelo Sol em 1919.
+:::
+
+::: {#exr-massa-igual}
+Que fato experimental o princípio da equivalência eleva de "coincidência" a
+princípio fundamental?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **igualdade entre massa inercial e massa gravitacional** — o fato de todos os
+corpos caírem com a mesma aceleração. Einstein a transforma na base de que gravidade
+e aceleração são localmente indistinguíveis, semente da relatividade geral.
+:::

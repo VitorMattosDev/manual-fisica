@@ -135,7 +135,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v10-relatividade/02-dilatacao-contracao.qmd` — Dilatação do tempo e contração
 - [x] `volumes/v10-relatividade/03-dinamica-relativistica.qmd` — Energia-momento
 - [x] `volumes/v10-relatividade/04-quadrivetores-minkowski.qmd` — Quadrivetores e Minkowski
-- [ ] `volumes/v10-relatividade/05-ponte-relatividade-geral.qmd` — Princípio da equivalência (ponte p/ RG)
+- [x] `volumes/v10-relatividade/05-ponte-relatividade-geral.qmd` — Princípio da equivalência (ponte p/ RG)
 
 ---
 

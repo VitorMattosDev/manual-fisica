@@ -102,6 +102,7 @@ book:
         - volumes/v10-relatividade/02-dilatacao-contracao.qmd
         - volumes/v10-relatividade/03-dinamica-relativistica.qmd
         - volumes/v10-relatividade/04-quadrivetores-minkowski.qmd
+        - volumes/v10-relatividade/05-ponte-relatividade-geral.qmd
   appendices:
     - constantes.qmd
 

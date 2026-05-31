@@ -1,0 +1,125 @@
+---
+title: "Dinâmica Relativística: Energia e Momento"
+---
+
+## Motivação
+
+Se o tempo e o espaço se transformam, a mecânica de Newton — construída sobre tempo
+absoluto — precisa ser refeita. O momento $p = mv$ e a energia cinética
+$\tfrac12 mv^2$ não sobrevivem intactos a altas velocidades. Dessa reformulação
+surge a equação mais famosa da ciência, $E = mc^2$, que revela massa e energia como
+a mesma coisa — e explica o Sol, as bombas nucleares e os aceleradores de
+partículas. Este capítulo reconstrói momento e energia na relatividade.
+
+## Momento relativístico
+
+Para conservar o momento em todos os referenciais, ele precisa ser redefinido com o
+fator de Lorentz.
+
+::: {.callout-important}
+## Momento relativístico
+$$\vec{p} = \gamma\,m\vec{v} = \frac{m\vec{v}}{\sqrt{1 - v^2/c^2}}.$$ {#eq-momento-relativistico}
+À medida que $v\to c$, $\gamma\to\infty$ e o momento **diverge** — por isso nenhum
+corpo com massa atinge a velocidade da luz: exigiria momento (e energia) infinitos.
+:::
+
+A velocidade da luz emerge, assim, como **limite de velocidade do universo**. Não é
+uma barreira de engenharia, e sim uma propriedade da estrutura do espaço-tempo.
+
+## Energia e a equivalência massa-energia
+
+::: {.callout-important}
+## Energia relativística total
+A energia total de uma partícula de massa $m$ é
+$$E = \gamma\,m c^2.$$ {#eq-energia-relativistica}
+Mesmo em repouso ($\gamma=1$), ela possui uma **energia de repouso**
+$$E_0 = m c^2.$$ {#eq-emc2}
+:::
+
+A @eq-emc2 é a célebre equivalência massa-energia: massa **é** uma forma de energia,
+e podem se converter uma na outra. Uma quantidade minúscula de massa equivale a uma
+energia colossal (o fator $c^2 \approx 9\times10^{16}$ é gigantesco).
+
+::: {.callout-note}
+## De onde vem a energia das estrelas
+No núcleo do Sol, quatro núcleos de hidrogênio fundem-se em um de hélio, que tem
+massa **ligeiramente menor** que a soma dos quatro. Essa diferença de massa $\Delta m$
+vira energia, $E = \Delta m\,c^2$ — a luz e o calor que nos mantêm vivos. O mesmo
+princípio, na fissão, alimenta usinas e bombas nucleares (Volume XIV).
+:::
+
+## A relação energia-momento
+
+Combinando momento e energia relativísticos, obtém-se uma relação fundamental, que
+vale inclusive para partículas **sem massa**.
+
+::: {.callout-important}
+## Relação energia-momento
+$$E^2 = (pc)^2 + (mc^2)^2.$$ {#eq-energia-momento}
+Para a luz (fótons, $m=0$): $E = pc$. Para corpos lentos, reduz-se a
+$E \approx mc^2 + \tfrac12 mv^2$ — a energia de repouso mais a cinética newtoniana.
+:::
+
+::: {.proof}
+## O limite newtoniano da energia cinética
+A energia cinética é $K = E - mc^2 = (\gamma - 1)mc^2$. Para $v\ll c$, expandindo
+$\gamma = (1 - v^2/c^2)^{-1/2} \approx 1 + \tfrac12 v^2/c^2$:
+$$K \approx \left(\tfrac12\frac{v^2}{c^2}\right)mc^2 = \tfrac12 m v^2,$$
+recuperando a energia cinética de Newton (princípio da correspondência).
+$\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-energia-repouso}
+Qual a energia de repouso de um elétron?
+($m_e = 9{,}11\times10^{-31}\ \mathrm{kg}$, $c = 3{,}0\times10^{8}\ \mathrm{m/s}$.)
+:::
+
+**Solução.** Por @eq-emc2:
+$$E_0 = m_e c^2 = 9{,}11\times10^{-31}\times(3{,}0\times10^{8})^2 = 9{,}11\times10^{-31}\times9{,}0\times10^{16} \approx 8{,}2\times10^{-14}\ \mathrm{J},$$
+equivalente a cerca de $0{,}51\ \mathrm{MeV}$ — valor onipresente na física de
+partículas.
+
+::: {#exm-energia-total}
+Qual a energia total de um próton ($E_0 = 938\ \mathrm{MeV}$) a $0{,}80\,c$?
+:::
+
+**Solução.** Com $\gamma = 1{,}67$ (do @exm-gamma), a @eq-energia-relativistica dá
+$$E = \gamma\,m c^2 = 1{,}67\times938 \approx 1{,}57\times10^{3}\ \mathrm{MeV} = 1{,}57\ \mathrm{GeV}.$$
+A energia cinética é $E - E_0 \approx 630\ \mathrm{MeV}$.
+
+## Exercícios
+
+::: {#exr-foton}
+Um fóton tem energia $E = 2{,}0\ \mathrm{eV}$. Qual seu momento? (Use $E = pc$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Para o fóton ($m=0$, @eq-energia-momento), $p = E/c$. Com
+$E = 2{,}0\ \mathrm{eV} = 3{,}2\times10^{-19}\ \mathrm{J}$:
+$p = 3{,}2\times10^{-19}/3{,}0\times10^{8} \approx 1{,}1\times10^{-27}\ \mathrm{kg\,m/s}$.
+:::
+
+::: {#exr-conversao-massa}
+Quanta energia seria liberada na conversão total de $1{,}0\ \mathrm{g}$ de massa?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E = mc^2 = 1{,}0\times10^{-3}\times(3{,}0\times10^{8})^2 = 9{,}0\times10^{13}\ \mathrm{J}$
+(@eq-emc2) — comparável a uma bomba atômica, de apenas um grama.
+:::
+
+::: {#exr-limite-c}
+Por que uma partícula com massa nunca pode atingir a velocidade da luz?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por @eq-momento-relativistico e @eq-energia-relativistica, quando $v\to c$ o fator
+$\gamma\to\infty$, então momento e energia tenderiam ao infinito. Seria preciso
+energia infinita para acelerá-la até $c$ — impossível. Só partículas **sem massa**
+(fótons) viajam a $c$.
+:::

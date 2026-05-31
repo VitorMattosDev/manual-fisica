@@ -100,6 +100,7 @@ book:
       chapters:
         - volumes/v10-relatividade/01-postulados-cinematica.qmd
         - volumes/v10-relatividade/02-dilatacao-contracao.qmd
+        - volumes/v10-relatividade/03-dinamica-relativistica.qmd
   appendices:
     - constantes.qmd
 

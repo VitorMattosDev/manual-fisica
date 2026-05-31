@@ -56,6 +56,7 @@ book:
     - part: "Volume V — Ondas e Acústica"
       chapters:
         - volumes/v5-ondas/01-movimento-ondulatorio.qmd
+        - volumes/v5-ondas/02-ondas-meios.qmd
   appendices:
     - constantes.qmd
 

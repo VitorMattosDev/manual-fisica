@@ -1,0 +1,130 @@
+---
+title: "Ondas em Cordas e Meios"
+---
+
+## Motivação
+
+Por que a corda grossa de um violão soa grave e a fina, aguda? Por que apertar uma
+corda (aumentar a tração) eleva o tom? A resposta está em como a **velocidade** de
+uma onda depende das propriedades do meio. No capítulo anterior tomamos $v$ como
+dado; agora a calculamos a partir do que o meio é feito. Veremos também como uma
+onda transporta **energia** e o que acontece quando ela encontra uma fronteira
+entre dois meios — reflexão e transmissão.
+
+## Velocidade de uma onda numa corda
+
+A velocidade de propagação não depende da onda, mas do meio: de quão "rígido" e
+quão "inerte" ele é. Numa corda, a rigidez é a tração e a inércia é a massa por
+comprimento.
+
+::: {.callout-important}
+## Velocidade na corda
+A velocidade de uma onda transversal numa corda de tração $F$ e densidade linear
+$\mu = m/L$ é
+$$v = \sqrt{\frac{F}{\mu}}.$$ {#eq-velocidade-corda}
+:::
+
+::: {.proof}
+## Origem da fórmula por análise dimensional
+Como antecipado no @exr-velocidade-onda (Volume I), a velocidade só pode depender
+de $F$ (dimensão $\mathsf{M}\mathsf{L}\mathsf{T}^{-2}$) e $\mu$
+($\mathsf{M}\mathsf{L}^{-1}$). A única combinação com dimensão de velocidade é
+$\sqrt{F/\mu}$: igualar potências de $\mathsf{M}, \mathsf{L}, \mathsf{T}$ força os
+expoentes $+\tfrac12$ e $-\tfrac12$, e a constante numérica é 1. $\qquad\blacksquare$
+:::
+
+Isso explica o violão: corda mais grossa = $\mu$ maior = $v$ menor = som mais grave;
+apertar a tarraxa aumenta $F$ = $v$ maior = som mais agudo.
+
+::: {.callout-note}
+## A velocidade do som
+O mesmo princípio "rigidez sobre inércia" vale para o som. Num fluido,
+$v = \sqrt{B/\rho}$, com $B$ o módulo volumétrico (Volume IV) e $\rho$ a densidade.
+Num sólido, $v = \sqrt{E/\rho}$, com $E$ o módulo de Young. O som é mais rápido em
+sólidos rígidos (aço, $\sim5000\ \mathrm{m/s}$) que no ar ($\sim340\ \mathrm{m/s}$).
+:::
+
+## Energia e potência de uma onda
+
+Uma onda harmônica carrega energia. Cada elemento do meio oscila em MHS, com
+energia proporcional ao **quadrado** da amplitude e da frequência.
+
+::: {.callout-important}
+## Potência transmitida por uma onda na corda
+$$P = \tfrac12\,\mu\,\omega^2\,A^2\,v.$$ {#eq-potencia-onda}
+A energia transportada cresce com o **quadrado da amplitude** e com o **quadrado da
+frequência** — dobrar a amplitude quadruplica a energia.
+:::
+
+A dependência $P\propto A^2$ é geral para ondas e fundamental: a intensidade
+sonora, o brilho da luz, a energia de um terremoto, todos escalam com o quadrado da
+amplitude.
+
+## Reflexão e transmissão em fronteiras
+
+Quando uma onda atinge a junção entre dois meios, parte **reflete** e parte
+**transmite**. O que determina a reflexão é a diferença de velocidades (ou de
+densidades).
+
+::: {.callout-note}
+## Inversão de fase na reflexão
+- Numa extremidade **fixa** (meio "mais denso", como uma parede), a onda
+  refletida **inverte** (sofre defasagem de meia onda, $\pi$).
+- Numa extremidade **livre** (meio "menos denso"), a onda reflete **sem inverter**.
+
+Esses comportamentos determinam quais ondas estacionárias podem se formar — tema do
+capítulo de ondas estacionárias.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-corda-violao}
+Uma corda de violão de $\mu = 5{,}0\times10^{-3}\ \mathrm{kg/m}$ está sob tração de
+$80\ \mathrm{N}$. Qual a velocidade das ondas nela?
+:::
+
+**Solução.** Pela @eq-velocidade-corda:
+$$v = \sqrt{\frac{F}{\mu}} = \sqrt{\frac{80}{5{,}0\times10^{-3}}} = \sqrt{1{,}6\times10^{4}} = 1{,}26\times10^{2}\ \mathrm{m/s}.$$
+
+::: {#exm-dobrar-tracao}
+Em quanto se altera a velocidade de uma onda numa corda se a tração for
+**quadruplicada**?
+:::
+
+**Solução.** Como $v \propto \sqrt{F}$ (@eq-velocidade-corda), quadruplicar $F$
+multiplica $v$ por $\sqrt{4} = 2$. A velocidade **dobra**.
+
+## Exercícios
+
+::: {#exr-densidade-linear}
+Uma corda de $2{,}0\ \mathrm{m}$ e massa $10\ \mathrm{g}$ está sob tração de
+$50\ \mathrm{N}$. Qual a velocidade das ondas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mu = m/L = 0{,}010/2{,}0 = 5{,}0\times10^{-3}\ \mathrm{kg/m}$. Então
+$v = \sqrt{F/\mu} = \sqrt{50/5{,}0\times10^{-3}} = \sqrt{10^{4}} = 100\ \mathrm{m/s}$.
+:::
+
+::: {#exr-amplitude-energia}
+Se a amplitude de uma onda triplica (mantidos $\mu$, $\omega$, $v$), em quanto
+aumenta a potência transmitida?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por @eq-potencia-onda, $P\propto A^2$. Triplicar $A$ multiplica $P$ por
+$3^2 = 9$.
+:::
+
+::: {#exr-som-aco}
+A velocidade do som no aço é $v = \sqrt{E/\rho}$. Estime-a com
+$E = 2{,}0\times10^{11}\ \mathrm{Pa}$ e $\rho = 7800\ \mathrm{kg/m^3}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$v = \sqrt{2{,}0\times10^{11}/7800} = \sqrt{2{,}56\times10^{7}} \approx 5{,}1\times10^{3}\ \mathrm{m/s}$ —
+cerca de 15 vezes a velocidade do som no ar.
+:::

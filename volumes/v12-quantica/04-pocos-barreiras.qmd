@@ -1,0 +1,120 @@
+---
+title: "Poços, Barreiras e Tunelamento"
+---
+
+## Motivação
+
+A equação de Schrödinger é abstrata; sua física fica viva quando aplicada a casos
+concretos. O mais simples — uma partícula presa numa "caixa" — já revela a
+quantização da energia de forma cristalina. E ao enfrentar uma barreira de
+potencial, a partícula quântica faz algo impossível na física clássica:
+**atravessa** mesmo sem ter energia suficiente, o **tunelamento**. Esse efeito,
+longe de exótico, faz o Sol brilhar, os transistores funcionarem e os microscópios
+de tunelamento "verem" átomos. Este capítulo resolve esses problemas-modelo.
+
+## A partícula numa caixa
+
+::: {#def-poco-infinito}
+O **poço de potencial infinito** confina a partícula numa região $0 \le x \le L$,
+com $V=0$ dentro e $V=\infty$ fora. A partícula não pode escapar: $\psi$ deve se
+anular nas paredes.
+:::
+
+Resolvendo a @eq-schrodinger-estacionaria com essas condições (como uma corda
+vibrante presa nas pontas, Volume V), obtêm-se ondas estacionárias e energias
+discretas.
+
+::: {.callout-important}
+## Níveis de energia do poço infinito
+$$E_n = \frac{n^2\pi^2\hbar^2}{2mL^2} = \frac{n^2 h^2}{8mL^2}, \qquad n = 1, 2, 3, \dots$$ {#eq-poco}
+A energia é **quantizada**, cresce com $n^2$, e o estado fundamental ($n=1$) tem
+energia **não nula** — a partícula nunca está em repouso absoluto.
+:::
+
+::: {.callout-note}
+## Energia de ponto zero
+O nível mais baixo, $E_1 > 0$, é a **energia de ponto zero**: confinar uma partícula
+custa energia, mesmo no zero absoluto. É uma consequência direta do princípio da
+incerteza (próximo capítulo): localizar a partícula numa caixa de tamanho $L$ obriga
+uma dispersão mínima de momento, e portanto energia cinética. Quanto menor a caixa,
+maior a energia — por isso átomos não colapsam.
+:::
+
+## Tunelamento quântico
+
+Coloque agora uma **barreira** de potencial $V_0$ mais alta que a energia $E$ da
+partícula. Classicamente, ela ricocheteia — não tem energia para passar.
+Quanticamente, a função de onda penetra a barreira e emerge do outro lado, embora
+atenuada.
+
+::: {.callout-important}
+## Tunelamento
+Uma partícula de energia $E < V_0$ tem probabilidade **não nula** de atravessar uma
+barreira de potencial. A probabilidade de transmissão cai exponencialmente com a
+largura $L$ e a "altura" da barreira:
+$$T \approx e^{-2\kappa L}, \qquad \kappa = \frac{\sqrt{2m(V_0 - E)}}{\hbar}.$$ {#eq-tunelamento}
+:::
+
+::: {.callout-note}
+## O tunelamento no mundo real
+O tunelamento explica fenômenos centrais: a **fusão nuclear** no Sol (os prótons
+tunelam a repulsão elétrica, Volume XIV), o **decaimento alfa**, o **diodo túnel** e
+a memória flash. O **microscópio de tunelamento** (STM) mede a corrente de elétrons
+que tunelam entre uma ponta e a superfície, resolvendo átomos individuais — porque
+$T$ é tão sensível à distância (exponencial) que detecta variações de fração de
+nanômetro.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-poco-eletron}
+Um elétron está confinado numa caixa de $L = 1{,}0\times10^{-10}\ \mathrm{m}$
+(tamanho atômico). Qual a energia do estado fundamental?
+($m = 9{,}1\times10^{-31}\ \mathrm{kg}$, $h = 6{,}63\times10^{-34}\ \mathrm{J\,s}$.)
+:::
+
+**Solução.** Por @eq-poco com $n=1$:
+$$E_1 = \frac{h^2}{8mL^2} = \frac{(6{,}63\times10^{-34})^2}{8\times9{,}1\times10^{-31}\times(1{,}0\times10^{-10})^2} \approx 6{,}0\times10^{-18}\ \mathrm{J} \approx 38\ \mathrm{eV}.$$
+Energias dessa ordem (dezenas de eV) são típicas de elétrons confinados em átomos.
+
+::: {#exm-niveis}
+No poço do @exm-poco-eletron, qual a razão entre as energias do segundo e do
+primeiro nível?
+:::
+
+**Solução.** Como $E_n \propto n^2$ (@eq-poco),
+$E_2/E_1 = 2^2/1^2 = 4$. O segundo nível tem quatro vezes a energia do fundamental.
+
+## Exercícios
+
+::: {#exr-poco-n3}
+No poço infinito, qual a energia do nível $n=3$ em função de $E_1$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E_3 = 3^2 E_1 = 9 E_1$ (@eq-poco, $E_n \propto n^2$).
+:::
+
+::: {#exr-tunelamento-largura}
+Se a largura de uma barreira dobra, o que acontece (qualitativamente) com a
+probabilidade de tunelamento?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Como $T \approx e^{-2\kappa L}$ (@eq-tunelamento), dobrar $L$ eleva o expoente ao
+quadrado em termos do fator: $T \to T^2$. A probabilidade cai **exponencialmente** —
+drasticamente menor. Essa sensibilidade é a base do microscópio de tunelamento.
+:::
+
+::: {#exr-ponto-zero}
+Por que a energia mínima de uma partícula numa caixa não é zero?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela @eq-poco, $E_1 = h^2/8mL^2 > 0$. Confinar a partícula impede que ela esteja
+totalmente em repouso (princípio da incerteza): há uma **energia de ponto zero**
+irredutível. Repouso absoluto violaria a incerteza posição-momento.
+:::

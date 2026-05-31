@@ -181,7 +181,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 
 - [x] `volumes/v14-nuclear-particulas/01-estrutura-nuclear.qmd` — Estrutura nuclear
 - [x] `volumes/v14-nuclear-particulas/02-radioatividade.qmd` — Radioatividade e decaimento
-- [ ] `volumes/v14-nuclear-particulas/03-reacoes-nucleares.qmd` — Reações, fissão e fusão
+- [x] `volumes/v14-nuclear-particulas/03-reacoes-nucleares.qmd` — Reações, fissão e fusão
 - [ ] `volumes/v14-nuclear-particulas/04-particulas-elementares.qmd` — Partículas e Modelo Padrão
 - [ ] `volumes/v14-nuclear-particulas/05-interacoes-fundamentais.qmd` — Interações fundamentais
 

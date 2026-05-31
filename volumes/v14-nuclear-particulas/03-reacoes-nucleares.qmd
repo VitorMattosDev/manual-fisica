@@ -1,0 +1,120 @@
+---
+title: "Reações Nucleares, Fissão e Fusão"
+---
+
+## Motivação
+
+Da bomba que encerrou uma guerra à usina que ilumina uma cidade, da energia do Sol à
+síntese dos elementos de que somos feitos — tudo são **reações nucleares**. Elas
+liberam energias milhões de vezes maiores que as reações químicas, porque mexem na
+força nuclear, não nas ligações eletrônicas. Este capítulo, ancorado na curva de
+energia de ligação (Volume XIV, cap. 1), explica a fissão e a fusão, as duas faces
+da energia nuclear, e o porquê de uma alimentar reatores e a outra, as estrelas.
+
+## Reações nucleares e conservação
+
+::: {#def-reacao-nuclear}
+Uma **reação nuclear** transforma núcleos, conservando o número total de núcleons e
+a carga. A energia liberada (ou absorvida), o **valor Q**, vem da variação de massa:
+$$Q = (m_\text{inicial} - m_\text{final})\,c^2.$$ {#eq-valor-q}
+Se $Q>0$, a reação libera energia (exotérmica); se $Q<0$, absorve.
+:::
+
+As energias nucleares são da ordem de **MeV** por reação — contra eV nas reações
+químicas. Essa razão de um milhão é a origem do poder da energia nuclear.
+
+## Fissão nuclear
+
+::: {.callout-important}
+## Fissão
+Na **fissão**, um núcleo pesado (como o $^{235}\mathrm{U}$) captura um nêutron e se
+parte em dois núcleos menores, liberando energia e **mais nêutrons**. Esses nêutrons
+podem provocar novas fissões — uma **reação em cadeia**.
+:::
+
+::: {.callout-note}
+## Massa crítica e o reator
+Se cada fissão provoca, em média, mais de uma fissão seguinte, a reação cresce
+exponencialmente (bomba); se exatamente uma, mantém-se estável (reator). A **massa
+crítica** é a quantidade mínima de combustível para sustentar a cadeia. Num reator,
+**barras de controle** absorvem o excesso de nêutrons, mantendo a reação no limiar
+controlado — a engenharia de manter o fator de multiplicação em exatamente 1.
+:::
+
+## Fusão nuclear
+
+::: {.callout-important}
+## Fusão
+Na **fusão**, núcleos **leves** se unem formando um mais pesado, liberando energia
+ainda maior por núcleon que a fissão. A reação que alimenta o Sol funde hidrogênio
+em hélio:
+$$4\,^1\mathrm{H} \to\ ^4\mathrm{He} + 2e^+ + 2\nu + \text{energia}.$$ {#eq-fusao}
+:::
+
+::: {.callout-note}
+## Por que a fusão é tão difícil na Terra
+Para fundir, os núcleos precisam vencer a enorme **repulsão de Coulomb** entre suas
+cargas positivas — o que exige temperaturas de milhões de graus (no Sol, a gravidade
+e o **tunelamento quântico**, Volume XII, ajudam). Reproduzir isso na Terra, em
+reatores de fusão controlada (tokamaks), é um dos maiores desafios tecnológicos: o
+prêmio é energia quase ilimitada e limpa, usando o hidrogênio da água. A fusão é a
+fonte de energia das estrelas e a esperança energética da humanidade.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-valor-q}
+Numa reação, a massa diminui em $\Delta m = 0{,}0186\ \mathrm{u}$. Qual o valor Q?
+($1\ \mathrm{u}\,c^2 = 931\ \mathrm{MeV}$.)
+:::
+
+**Solução.** Por @eq-valor-q:
+$$Q = \Delta m\,c^2 = 0{,}0186\times931 \approx 17{,}3\ \mathrm{MeV},$$
+energia liberada (é, aproximadamente, a reação de fusão deutério-trítio).
+
+::: {#exm-energia-fissao}
+Cada fissão de $^{235}\mathrm{U}$ libera cerca de $200\ \mathrm{MeV}$. Quanta
+energia (em joules) liberam $10^{20}$ fissões?
+:::
+
+**Solução.** Com $1\ \mathrm{MeV} = 1{,}6\times10^{-13}\ \mathrm{J}$:
+$$E = 10^{20}\times200\times1{,}6\times10^{-13} = 10^{20}\times3{,}2\times10^{-11} = 3{,}2\times10^{9}\ \mathrm{J},$$
+alguns gigajoules de uma pitada de núcleos — o equivalente a centenas de quilos de
+TNT.
+
+## Exercícios
+
+::: {#exr-cadeia}
+O que é necessário para sustentar uma reação em cadeia de fissão?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Que cada fissão provoque, em média, ao menos **uma** fissão subsequente (fator de
+multiplicação $\ge 1$), o que requer uma **massa crítica** de combustível para que
+os nêutrons liberados encontrem outros núcleos antes de escapar.
+:::
+
+::: {#exr-fusao-fissao}
+Por núcleon, qual libera mais energia: a fusão de núcleos leves ou a fissão de
+pesados?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **fusão** de núcleos leves libera mais energia por núcleon, porque o salto na
+energia de ligação por núcleon (rumo ao ferro) é maior na região dos leves do que na
+dos pesados (Volume XIV, cap. 1).
+:::
+
+::: {#exr-coulomb-fusao}
+Por que a fusão exige temperaturas tão altas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Para que os núcleos se aproximem o suficiente para a força forte agir, eles precisam
+vencer a forte **repulsão elétrica** de Coulomb entre suas cargas positivas. Isso só
+ocorre com energia cinética altíssima — ou seja, temperaturas de milhões de graus
+(auxiliadas pelo tunelamento quântico).
+:::

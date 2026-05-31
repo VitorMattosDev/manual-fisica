@@ -1,0 +1,143 @@
+---
+title: "Momento Linear e Colisões"
+---
+
+## Motivação
+
+Duas bolas de bilhar colidem e disparam em direções novas; um rifle recua ao
+disparar; um foguete avança expelindo gás. Em todos esses casos, calcular as
+forças instante a instante é inviável — as interações são intensas e brevíssimas.
+Há, porém, uma grandeza que atravessa a colisão intacta: o **momento linear**.
+Sua conservação, consequência direta da terceira lei de Newton, resolve problemas
+que a dinâmica das forças tornaria proibitivos. Este capítulo a estabelece e a
+aplica a colisões e a impulsos.
+
+## Momento linear e impulso
+
+::: {#def-momento}
+O **momento linear** (ou quantidade de movimento) de uma partícula de massa $m$ e
+velocidade $\vec{v}$ é o vetor
+$$\vec{p} = m\,\vec{v}.$$ {#eq-momento}
+Sua unidade é $\mathrm{kg\,m/s}$.
+:::
+
+A segunda lei de Newton, na forma original de Newton, fala de momento: a força
+resultante é a taxa de variação do momento.
+
+::: {.callout-important}
+## Segunda lei na forma de momento
+$$\vec{F}_\text{res} = \frac{\mathrm{d}\vec{p}}{\mathrm{d}t}.$$ {#eq-newton-momento}
+Para massa constante, isso reduz-se a $\vec{F} = m\vec{a}$; mas a forma acima é
+mais geral e vale também quando a massa varia (foguetes).
+:::
+
+::: {#def-impulso}
+O **impulso** de uma força num intervalo é a integral da força no tempo, e é igual
+à variação do momento:
+$$\vec{J} = \int_{t_i}^{t_f} \vec{F}\,\mathrm{d}t = \Delta\vec{p}.$$ {#eq-impulso}
+:::
+
+A @eq-impulso é o **teorema do impulso–momento**, análogo temporal do
+trabalho–energia. Ele explica air bags e luvas de boxe: ao prolongar o tempo de
+contato $\Delta t$, reduz-se a força para a mesma variação de momento.
+
+## Conservação do momento
+
+::: {.callout-important}
+## Conservação do momento linear
+Se a força resultante **externa** sobre um sistema é nula, o momento total se
+conserva:
+$$\vec{F}_\text{ext} = \vec{0} \;\Longrightarrow\; \vec{p}_\text{total} = \sum_i m_i\vec{v}_i = \text{constante}.$$ {#eq-conservacao-momento}
+:::
+
+::: {.proof}
+## Conservação a partir da terceira lei
+Num sistema isolado de duas partículas, as forças internas formam um par
+ação–reação: $\vec{F}_{1\to2} = -\vec{F}_{2\to1}$ (@eq-newton3). Pela
+@eq-newton-momento, $\mathrm{d}\vec{p}_1/\mathrm{d}t = \vec{F}_{2\to1}$ e
+$\mathrm{d}\vec{p}_2/\mathrm{d}t = \vec{F}_{1\to2}$. Somando,
+$$\frac{\mathrm{d}}{\mathrm{d}t}(\vec{p}_1 + \vec{p}_2) = \vec{F}_{2\to1} + \vec{F}_{1\to2} = \vec{0},$$
+logo $\vec{p}_1 + \vec{p}_2$ é constante. $\qquad\blacksquare$
+:::
+
+## Colisões
+
+Numa colisão, as forças externas (gravidade, atrito) são desprezíveis frente às
+forças internas enormes do impacto, durante o breve tempo de contato. Logo o
+**momento se conserva** em toda colisão. A energia cinética, porém, pode ou não se
+conservar.
+
+::: {#def-tipos-colisao}
+- **Colisão elástica:** conserva momento **e** energia cinética.
+- **Colisão inelástica:** conserva momento, mas **não** energia cinética (parte
+  vira calor, som, deformação).
+- **Perfeitamente inelástica:** os corpos seguem **grudados** após o choque — a
+  perda de energia cinética é máxima.
+:::
+
+::: {.callout-note}
+## Colisão elástica unidimensional
+Para duas massas com $m_2$ inicialmente em repouso, conservação de momento e
+energia dão as velocidades finais
+$$v_1' = \frac{m_1-m_2}{m_1+m_2}\,v_1, \qquad v_2' = \frac{2m_1}{m_1+m_2}\,v_1.$$ {#eq-elastica-1d}
+Casos-limite reveladores: massas iguais **trocam** velocidades; uma massa leve
+contra uma parede pesada ($m_2 \gg m_1$) **ricocheteia** com $v_1' \approx -v_1$.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-perfeitamente-inelastica}
+Um vagão de $4000\ \mathrm{kg}$ a $3{,}0\ \mathrm{m/s}$ engata num vagão parado de
+$2000\ \mathrm{kg}$. Qual a velocidade comum após o engate?
+:::
+
+**Solução.** Perfeitamente inelástica: conserva momento (@eq-conservacao-momento)
+e os corpos seguem juntos com velocidade $v'$:
+$$m_1 v_1 = (m_1+m_2)\,v' \;\Longrightarrow\; v' = \frac{4000\times3{,}0}{6000} = 2{,}0\ \mathrm{m/s}.$$
+
+::: {#exm-recuo}
+Um rifle de $4{,}0\ \mathrm{kg}$ dispara uma bala de $20\ \mathrm{g}$ a
+$500\ \mathrm{m/s}$. Qual a velocidade de recuo do rifle?
+:::
+
+**Solução.** O sistema parte do repouso, momento total nulo. Por
+@eq-conservacao-momento, $0 = m_b v_b + m_r v_r$:
+$$v_r = -\frac{m_b v_b}{m_r} = -\frac{0{,}020\times500}{4{,}0} = -2{,}5\ \mathrm{m/s}.$$
+O sinal indica recuo no sentido oposto ao da bala.
+
+## Exercícios
+
+::: {#exr-impulso-bola}
+Uma bola de $0{,}15\ \mathrm{kg}$ chega a $20\ \mathrm{m/s}$ e volta a
+$20\ \mathrm{m/s}$ após bater na parede. Qual o impulso sobre a bola?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Tomando o sentido inicial como positivo,
+$\Delta p = m(v_f - v_i) = 0{,}15(-20 - 20) = -6{,}0\ \mathrm{kg\,m/s}$. O impulso
+(@eq-impulso) tem módulo $6{,}0\ \mathrm{N\,s}$, dirigido para fora da parede.
+:::
+
+::: {#exr-explosao}
+Um corpo em repouso de $10\ \mathrm{kg}$ explode em dois pedaços. Um, de
+$4{,}0\ \mathrm{kg}$, sai a $6{,}0\ \mathrm{m/s}$. Qual a velocidade do outro?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Momento inicial nulo: $0 = m_1 v_1 + m_2 v_2$. Com $m_2 = 6{,}0\ \mathrm{kg}$:
+$v_2 = -\dfrac{4{,}0\times6{,}0}{6{,}0} = -4{,}0\ \mathrm{m/s}$ (sentido oposto).
+:::
+
+::: {#exr-elastica-iguais}
+Numa colisão elástica 1D, uma bola atinge outra idêntica em repouso. Use a
+@eq-elastica-1d para mostrar que elas trocam de velocidade.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Com $m_1 = m_2$: $v_1' = \dfrac{m_1-m_2}{m_1+m_2}v_1 = 0$ e
+$v_2' = \dfrac{2m_1}{m_1+m_2}v_1 = v_1$. A primeira para e a segunda parte com a
+velocidade da primeira — a clássica "troca" do bilhar.
+:::

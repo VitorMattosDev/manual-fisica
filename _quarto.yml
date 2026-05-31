@@ -36,6 +36,7 @@ book:
         - volumes/v2-mecanica1/04-aplicacoes-newton.qmd
         - volumes/v2-mecanica1/05-trabalho-energia.qmd
         - volumes/v2-mecanica1/06-conservacao-energia.qmd
+        - volumes/v2-mecanica1/07-momento-linear.qmd
   appendices:
     - constantes.qmd
 

@@ -1,0 +1,118 @@
+---
+title: "Momento Angular e Spin"
+---
+
+## Motivação
+
+O momento angular, que na física clássica descrevia planetas e piões (Volume III),
+torna-se na quântica uma das grandezas mais fundamentais — e mais estranhas. Ele é
+**quantizado**, e os átomos só existem porque suas regras restringem como os
+elétrons se organizam. Mais surpreendente ainda é o **spin**: um momento angular
+"intrínseco" que as partículas carregam sem girar no sentido usual, e que não tem
+análogo clássico. Spin explica o magnetismo, a tabela periódica e a própria
+estabilidade da matéria. Este capítulo trata do momento angular quântico e do spin.
+
+## Quantização do momento angular
+
+::: {.callout-important}
+## Momento angular quantizado
+O momento angular orbital é quantizado tanto em **módulo** quanto em **projeção**:
+$$|\vec{L}| = \sqrt{\ell(\ell+1)}\,\hbar, \qquad L_z = m_\ell\,\hbar,$$ {#eq-momento-angular-quantico}
+com $\ell = 0, 1, 2, \dots$ (número quântico azimutal) e
+$m_\ell = -\ell, \dots, 0, \dots, +\ell$ (número quântico magnético).
+:::
+
+Note que só **uma** componente ($L_z$) pode ser conhecida ao mesmo tempo que o
+módulo — as componentes $L_x, L_y, L_z$ não comutam entre si (como $x$ e $p$). O
+momento angular nunca aponta exatamente num eixo; há sempre uma incerteza
+irredutível nas outras direções.
+
+## O spin
+
+::: {#def-spin}
+O **spin** é um momento angular **intrínseco** das partículas, sem relação com
+movimento espacial. Segue as mesmas regras de quantização, com número quântico de
+spin $s$:
+$$|\vec{S}| = \sqrt{s(s+1)}\,\hbar, \qquad S_z = m_s\,\hbar,$$ {#eq-spin}
+com $m_s = -s, \dots, +s$. O elétron, o próton e o nêutron têm $s = \tfrac12$ (dois
+estados: "para cima" e "para baixo").
+:::
+
+O spin foi revelado pelo experimento de Stern-Gerlach: um feixe de átomos, ao
+passar por um campo magnético não uniforme, dividiu-se em **dois** — evidência de um
+momento angular de apenas dois valores, impossível classicamente.
+
+## Férmions, bósons e o princípio de Pauli
+
+O valor do spin divide todas as partículas em duas famílias com comportamentos
+opostos.
+
+::: {.callout-important}
+## Férmions e bósons
+- **Férmions** (spin semi-inteiro: $\tfrac12, \tfrac32, \dots$) — elétrons,
+  prótons, nêutrons — obedecem ao **princípio de exclusão de Pauli**: dois férmions
+  idênticos **não** podem ocupar o mesmo estado quântico.
+- **Bósons** (spin inteiro: $0, 1, 2, \dots$) — fótons — podem se acumular no mesmo
+  estado, sem limite.
+:::
+
+::: {.callout-note}
+## Por que a matéria é estável e a tabela periódica existe
+O princípio de exclusão de Pauli é o que impede todos os elétrons de um átomo de
+caírem no nível mais baixo: forçados a ocupar estados distintos, eles preenchem
+camadas sucessivas — e essa estrutura de camadas **é** a tabela periódica (Volume
+XIII). Sem Pauli, não haveria química, nem matéria sólida, nem nós. O spin
+semi-inteiro do elétron sustenta literalmente o mundo material.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-momento-angular}
+Para $\ell = 2$, quantos valores de $m_\ell$ existem, e qual o módulo de $\vec{L}$?
+:::
+
+**Solução.** Os valores de $m_\ell$ vão de $-2$ a $+2$:
+$\{-2, -1, 0, +1, +2\}$ — **cinco** valores ($2\ell+1$). O módulo (@eq-momento-angular-quantico)
+é $|\vec L| = \sqrt{2(2+1)}\,\hbar = \sqrt{6}\,\hbar \approx 2{,}45\,\hbar$.
+
+::: {#exm-spin-eletron}
+Quais os possíveis valores de $S_z$ para um elétron?
+:::
+
+**Solução.** Com $s = \tfrac12$ (@eq-spin), $m_s = \pm\tfrac12$, então
+$S_z = \pm\tfrac12\hbar$: os dois estados "spin para cima" e "spin para baixo". É o
+que o experimento de Stern-Gerlach revelou ao dividir o feixe em dois.
+
+## Exercícios
+
+::: {#exr-estados-l1}
+Quantos estados (valores de $m_\ell$) há para $\ell = 1$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$m_\ell \in \{-1, 0, +1\}$: **três** estados ($2\ell + 1 = 3$). Correspondem aos
+três orbitais $p$.
+:::
+
+::: {#exr-pauli}
+Por que dois elétrons num átomo não podem ter todos os números quânticos iguais?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pelo **princípio de exclusão de Pauli**: elétrons são férmions (spin $\tfrac12$), e
+dois férmions idênticos não podem ocupar o mesmo estado quântico. Eles devem diferir
+em ao menos um número quântico — o que estrutura as camadas eletrônicas.
+:::
+
+::: {#exr-boson-fermion}
+O fóton tem spin 1. É férmion ou bóson? O que isso permite?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Spin inteiro → **bóson**. Bósons podem ocupar o mesmo estado quântico em número
+ilimitado, o que permite, por exemplo, o **laser** (muitos fótons no mesmo estado) e
+o condensado de Bose-Einstein (Volume XIII).
+:::

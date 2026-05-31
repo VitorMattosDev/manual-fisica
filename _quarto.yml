@@ -38,6 +38,9 @@ book:
         - volumes/v2-mecanica1/06-conservacao-energia.qmd
         - volumes/v2-mecanica1/07-momento-linear.qmd
         - volumes/v2-mecanica1/08-centro-massa.qmd
+    - part: "Volume III — Mecânica Clássica II"
+      chapters:
+        - volumes/v3-mecanica2/01-cinematica-rotacional.qmd
   appendices:
     - constantes.qmd
 

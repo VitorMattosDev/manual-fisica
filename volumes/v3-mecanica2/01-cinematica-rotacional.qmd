@@ -1,0 +1,135 @@
+---
+title: "Cinemática Rotacional"
+---
+
+## Motivação
+
+Uma roda gigante, um disco rígido, a Terra girando: corpos que rodam sem mudar de
+lugar. A cinemática de translação que vimos no Volume II não descreve diretamente
+essa rotação — precisamos de novas grandezas (ângulo, velocidade angular,
+aceleração angular) que digam *quão depressa o corpo gira*, não *quão depressa ele
+viaja*. A boa notícia é que essas grandezas obedecem a equações **idênticas em
+forma** às da cinemática linear; trocar $x \to \theta$, $v \to \omega$,
+$a \to \alpha$ reaproveita tudo o que já sabemos. Este capítulo monta esse
+dicionário, ponto de partida para a dinâmica de rotação.
+
+## Grandezas angulares
+
+::: {#def-grandezas-angulares}
+Para um corpo que gira em torno de um eixo fixo, descrevemos a rotação por:
+
+- a **posição angular** $\theta$, em radianos, medida a partir de uma referência;
+- a **velocidade angular** $\omega = \dfrac{\mathrm{d}\theta}{\mathrm{d}t}$, em
+  $\mathrm{rad/s}$;
+- a **aceleração angular** $\alpha = \dfrac{\mathrm{d}\omega}{\mathrm{d}t}$, em
+  $\mathrm{rad/s^2}$.
+:::
+
+O radiano é definido por $\theta = s/r$ (arco sobre raio), o que o torna
+adimensional e faz as relações com as grandezas lineares ficarem limpas. Todas as
+partes de um corpo rígido compartilham o **mesmo** $\theta$, $\omega$ e $\alpha$ —
+essa é a vantagem das grandezas angulares: uma só descrição para o corpo inteiro.
+
+## Relação com as grandezas lineares
+
+Um ponto a distância $r$ do eixo descreve um círculo de raio $r$. Suas grandezas
+lineares ligam-se às angulares de forma direta:
+
+::: {.callout-important}
+## Ponte angular–linear
+$$s = r\theta, \qquad v = r\omega, \qquad a_t = r\alpha,$$ {#eq-ponte-angular}
+onde $v$ é a rapidez tangencial e $a_t$ a aceleração tangencial. Há ainda a
+aceleração **centrípeta** $a_c = \omega^2 r = v^2/r$, sempre presente quando há
+rotação, mesmo com $\omega$ constante.
+:::
+
+Quanto mais longe do eixo, maior a velocidade linear — por isso a borda de um
+disco se move mais depressa que um ponto próximo ao centro, embora ambos girem com
+o mesmo $\omega$.
+
+## Rotação com aceleração angular constante
+
+Como as definições de $\omega$ e $\alpha$ são idênticas em forma às de $v$ e $a$,
+a integração que deu o MUV no Volume II dá agora as equações da rotação
+uniformemente variada.
+
+::: {.callout-important}
+## Equações da rotação uniformemente variada
+Para $\alpha$ constante, com $\theta_0, \omega_0$ iniciais:
+$$\omega = \omega_0 + \alpha\,t,$$ {#eq-rot-omega}
+$$\theta = \theta_0 + \omega_0\,t + \tfrac12 \alpha\,t^2,$$ {#eq-rot-theta}
+$$\omega^2 = \omega_0^2 + 2\alpha\,(\theta - \theta_0).$$ {#eq-rot-torricelli}
+São as equações do MUV com $x\to\theta$, $v\to\omega$, $a\to\alpha$.
+:::
+
+::: {.callout-note}
+## O dicionário translação ↔ rotação
+| Translação | Rotação |
+|---|---|
+| posição $x$ | ângulo $\theta$ |
+| velocidade $v$ | velocidade angular $\omega$ |
+| aceleração $a$ | aceleração angular $\alpha$ |
+
+Toda fórmula de cinemática linear tem uma gêmea rotacional. Vale memorizar o
+dicionário: ele reaparece na dinâmica (massa ↔ momento de inércia, força ↔ torque)
+nos próximos capítulos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-disco-parando}
+Um disco gira a $\omega_0 = 30\ \mathrm{rad/s}$ e desacelera uniformemente até
+parar em $6{,}0\ \mathrm{s}$. Qual a aceleração angular e quantas voltas dá até
+parar?
+:::
+
+**Solução.** Por @eq-rot-omega com $\omega=0$:
+$\alpha = (0 - 30)/6{,}0 = -5{,}0\ \mathrm{rad/s^2}$. O ângulo total, por
+@eq-rot-torricelli:
+$$\theta = \frac{\omega_0^2}{2|\alpha|} = \frac{(30)^2}{2\times5{,}0} = 90\ \mathrm{rad}.$$
+Em voltas: $90/(2\pi) \approx 14{,}3\ \mathrm{voltas}$.
+
+::: {#exm-roda-ponto}
+Uma roda de raio $0{,}40\ \mathrm{m}$ acelera de $\omega_0 = 2{,}0\ \mathrm{rad/s}$
+a $\omega = 8{,}0\ \mathrm{rad/s}$ em $3{,}0\ \mathrm{s}$. Ache a aceleração
+tangencial de um ponto da borda.
+:::
+
+**Solução.** A aceleração angular é
+$\alpha = (8{,}0 - 2{,}0)/3{,}0 = 2{,}0\ \mathrm{rad/s^2}$. Pela
+@eq-ponte-angular, $a_t = r\alpha = 0{,}40\times2{,}0 = 0{,}80\ \mathrm{m/s^2}$.
+
+## Exercícios
+
+::: {#exr-ventilador}
+Um ventilador parte do repouso e atinge $1200\ \mathrm{rpm}$ em $4{,}0\ \mathrm{s}$.
+Qual a aceleração angular em $\mathrm{rad/s^2}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\omega = 1200\ \mathrm{rpm} = 1200\times\dfrac{2\pi}{60} = 40\pi \approx 126\ \mathrm{rad/s}$.
+Então $\alpha = \omega/t = 126/4{,}0 \approx 31{,}4\ \mathrm{rad/s^2}$.
+:::
+
+::: {#exr-velocidade-borda}
+A Terra gira uma volta em $24\ \mathrm{h}$. Estime a velocidade tangencial de um
+ponto no equador ($R \approx 6{,}4\times10^{6}\ \mathrm{m}$).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\omega = 2\pi/(24\times3600) \approx 7{,}3\times10^{-5}\ \mathrm{rad/s}$. Pela
+@eq-ponte-angular, $v = \omega R = 7{,}3\times10^{-5}\times6{,}4\times10^{6} \approx 4{,}6\times10^{2}\ \mathrm{m/s}$
+(cerca de $1700\ \mathrm{km/h}$).
+:::
+
+::: {#exr-pneu}
+Um carro a $20\ \mathrm{m/s}$ tem pneus de raio $0{,}30\ \mathrm{m}$. Qual a
+velocidade angular dos pneus?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Rolamento sem deslizar: $v = \omega r \Rightarrow \omega = v/r = 20/0{,}30 \approx 67\ \mathrm{rad/s}$.
+:::

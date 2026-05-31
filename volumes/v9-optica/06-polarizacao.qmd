@@ -1,0 +1,121 @@
+---
+title: "Polarização"
+---
+
+## Motivação
+
+Óculos de sol polarizados cortam o brilho da água; telas LCD apagam quando você
+inclina a cabeça com esses óculos; fotógrafos usam filtros para escurecer o céu.
+Todos exploram a **polarização** — uma propriedade da luz que revela, sozinha, que
+ela é uma onda **transversal**. Som e outras ondas longitudinais não podem ser
+polarizados; a luz pode. Este capítulo, que encerra a óptica, explica o que é a
+polarização, como produzi-la e a lei que governa sua transmissão.
+
+## O que é polarização
+
+::: {#def-polarizacao}
+A **polarização** de uma onda eletromagnética é a direção de oscilação do seu campo
+elétrico $\vec{E}$. A luz é **linearmente polarizada** quando $\vec{E}$ oscila
+sempre na mesma direção, e **não polarizada** quando oscila em direções aleatórias
+(como a luz do Sol e das lâmpadas comuns).
+:::
+
+Só ondas **transversais** podem ser polarizadas — a oscilação tem de ser
+perpendicular à propagação para haver "escolha" de direção. Que a luz se polarize é,
+portanto, prova direta de seu caráter transversal, em harmonia com Maxwell (Volume
+VIII).
+
+## Polarizadores e a lei de Malus
+
+Um **polarizador** é um filtro que só transmite a componente de $\vec{E}$ ao longo
+de seu eixo. Luz não polarizada que o atravessa sai polarizada (e com metade da
+intensidade).
+
+::: {.callout-important}
+## Lei de Malus
+Quando luz **já polarizada** de intensidade $I_0$ atravessa um polarizador cujo
+eixo faz ângulo $\theta$ com a polarização da luz, a intensidade transmitida é
+$$I = I_0\cos^2\theta.$$ {#eq-malus}
+:::
+
+::: {.proof}
+## Origem do $\cos^2\theta$
+O polarizador transmite apenas a componente do campo ao longo de seu eixo,
+$E = E_0\cos\theta$. Como a intensidade é proporcional ao **quadrado** do campo
+(@eq-intensidade-em), $I \propto E^2 = E_0^2\cos^2\theta$, isto é
+$I = I_0\cos^2\theta$. $\qquad\blacksquare$
+:::
+
+Consequência marcante: dois polarizadores **cruzados** ($\theta = 90^\circ$) bloqueiam
+toda a luz ($\cos^2 90^\circ = 0$) — mas inserir um terceiro polarizador entre eles,
+em ângulo, faz a luz **voltar** a passar, um resultado surpreendente da
+@eq-malus.
+
+## Polarização por reflexão e por espalhamento
+
+::: {.callout-note}
+## Por que os óculos polarizados cortam o reflexo
+A luz refletida em superfícies horizontais (água, asfalto, vidro) fica
+**parcialmente polarizada na horizontal**. Óculos polarizados têm o eixo
+**vertical**, bloqueando justamente esse brilho refletido. No ângulo de Brewster,
+$\tan\theta_B = n_2/n_1$, a luz refletida fica **totalmente** polarizada. O céu azul
+também é polarizado, por espalhamento da luz solar nas moléculas do ar — daí filtros
+polarizadores escurecerem o céu nas fotos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-malus}
+Luz polarizada de intensidade $I_0$ atravessa um polarizador a $30^\circ$ de sua
+polarização. Qual a fração transmitida?
+:::
+
+**Solução.** Por @eq-malus:
+$$\frac{I}{I_0} = \cos^2 30^\circ = \left(\frac{\sqrt{3}}{2}\right)^2 = \frac{3}{4} = 0{,}75.$$
+Passam $75\%$ da intensidade.
+
+::: {#exm-dois-polarizadores}
+Luz **não polarizada** de intensidade $I_0$ passa por dois polarizadores, o segundo
+a $60^\circ$ do primeiro. Qual a intensidade final?
+:::
+
+**Solução.** O primeiro polarizador transmite metade: $I_1 = I_0/2$. O segundo
+aplica a lei de Malus (@eq-malus):
+$$I_2 = I_1\cos^2 60^\circ = \frac{I_0}{2}\times\left(\frac12\right)^2 = \frac{I_0}{2}\times\frac14 = \frac{I_0}{8}.$$
+
+## Exercícios
+
+::: {#exr-malus-45}
+Luz polarizada passa por um polarizador a $45^\circ$. Que fração de intensidade é
+transmitida?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$I/I_0 = \cos^2 45^\circ = (1/\sqrt2)^2 = 0{,}50$ — metade (@eq-malus).
+:::
+
+::: {#exr-cruzados}
+Dois polarizadores estão cruzados ($90^\circ$). Quanta luz passa? E se um terceiro
+for inserido a $45^\circ$ entre eles?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Cruzados: $\cos^2 90^\circ = 0$, **nada** passa. Com o terceiro a $45^\circ$: após o
+1º (intensidade $I_1$), o do meio dá $I_1\cos^2 45^\circ = I_1/2$, e o último (a
+$45^\circ$ do meio) dá $(I_1/2)\cos^2 45^\circ = I_1/4$. A luz **volta a passar** —
+um resultado contraintuitivo da @eq-malus.
+:::
+
+::: {#exr-transversal}
+Por que o som não pode ser polarizado, mas a luz pode?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O som é uma onda **longitudinal** (oscila na direção de propagação), então não há
+direção transversal a "escolher". A luz é **transversal**, com $\vec{E}$ podendo
+oscilar em diferentes direções perpendiculares à propagação — por isso pode ser
+polarizada. A polarização é prova do caráter transversal da luz.
+:::

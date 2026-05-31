@@ -95,6 +95,7 @@ book:
         - volumes/v9-optica/03-espelhos-lentes.qmd
         - volumes/v9-optica/04-interferencia.qmd
         - volumes/v9-optica/05-difracao.qmd
+        - volumes/v9-optica/06-polarizacao.qmd
   appendices:
     - constantes.qmd
 

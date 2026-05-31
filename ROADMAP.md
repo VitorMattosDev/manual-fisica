@@ -126,7 +126,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v9-optica/03-espelhos-lentes.qmd` — Espelhos, lentes, instrumentos
 - [x] `volumes/v9-optica/04-interferencia.qmd` — Interferência (Young, filmes finos)
 - [x] `volumes/v9-optica/05-difracao.qmd` — Difração
-- [ ] `volumes/v9-optica/06-polarizacao.qmd` — Polarização
+- [x] `volumes/v9-optica/06-polarizacao.qmd` — Polarização
 
 ## Volume X — Relatividade Especial
 *Objetivo: espaço-tempo. Pré-requisitos: III, VIII. (Matemática: ver nota.)*

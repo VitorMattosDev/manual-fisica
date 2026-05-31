@@ -114,6 +114,7 @@ book:
     - part: "Volume XII — Mecânica Quântica"
       chapters:
         - volumes/v12-quantica/01-origens-quantica.qmd
+        - volumes/v12-quantica/02-dualidade.qmd
   appendices:
     - constantes.qmd
 

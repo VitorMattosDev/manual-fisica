@@ -1,0 +1,124 @@
+---
+title: "Dualidade Onda-Partícula"
+---
+
+## Motivação
+
+Einstein mostrara que a luz, tida como onda, também é partícula (o fóton). Em 1924,
+um jovem aristocrata francês, Louis de Broglie, fez a pergunta simétrica e ousada:
+se a onda é partícula, será que a **partícula é onda**? Sua hipótese — de que
+elétrons, átomos, e em princípio qualquer matéria têm um comprimento de onda — soava
+absurda, mas foi confirmada experimentalmente em poucos anos. A dualidade
+onda-partícula é o coração conceitual da mecânica quântica, e deste capítulo
+emergirá a equação de Schrödinger.
+
+## A hipótese de de Broglie
+
+::: {.callout-important}
+## Comprimento de onda de de Broglie
+Toda partícula de momento $p$ tem associado um comprimento de onda
+$$\lambda = \frac{h}{p} = \frac{h}{m v}.$$ {#eq-de-broglie}
+Quanto maior o momento, menor o comprimento de onda.
+:::
+
+A simetria com o fóton é perfeita: para a luz, $p = h/\lambda$ (Volume X); de
+Broglie simplesmente inverteu a relação e a aplicou à matéria. Para objetos
+macroscópicos, $\lambda$ é absurdamente pequeno (o momento é enorme), e a natureza
+ondulatória é imperceptível — daí não notarmos bolas de futebol difratando.
+
+::: {.callout-note}
+## Por que não vemos a onda das coisas grandes
+Uma bola de $0{,}1\ \mathrm{kg}$ a $10\ \mathrm{m/s}$ tem $\lambda \sim 10^{-34}\ \mathrm{m}$
+— bilhões de vezes menor que um núcleo. Já um elétron, leviano, tem $\lambda$
+comparável ao tamanho dos átomos, e seu caráter ondulatório domina. A fronteira
+entre o clássico e o quântico é, em essência, uma questão de escala de $\lambda$
+frente ao sistema.
+:::
+
+## Confirmação: difração de elétrons
+
+A prova veio com Davisson e Germer (1927): um feixe de elétrons, ao atingir um
+cristal, produziu um **padrão de difração** — exatamente como ondas (Volume IX),
+com máximos e mínimos previstos pela @eq-de-broglie. Elétrons, partículas por
+excelência, comportavam-se como ondas.
+
+::: {.callout-note}
+## A experiência da fenda dupla com elétrons
+O experimento definitivo: elétrons disparados **um a um** contra fenda dupla
+constroem, ao longo do tempo, um padrão de interferência (Volume V) — como se cada
+elétron passasse pelas duas fendas e interferisse consigo mesmo. Mas, ao tentar
+**detectar** por qual fenda ele passa, o padrão **desaparece**: a observação destrói
+a interferência. Esse é o mistério central da quântica — a partícula é onda de
+*possibilidades* até ser medida.
+:::
+
+## A função de onda
+
+A síntese, devida a Born, é que a "onda" da matéria é uma **onda de probabilidade**.
+
+::: {.callout-important}
+## Interpretação probabilística de Born
+A cada partícula associa-se uma **função de onda** $\psi(x,t)$, e o quadrado de seu
+módulo dá a **densidade de probabilidade** de encontrar a partícula:
+$$P(x) = |\psi(x,t)|^2.$$ {#eq-born}
+A partícula não tem posição definida até ser medida — apenas probabilidades.
+:::
+
+Essa é a ruptura mais radical com a física clássica: o determinismo é substituído
+pela probabilidade. A função de onda $\psi$, cuja evolução a equação de Schrödinger
+governará (próximo capítulo), contém **tudo** o que se pode saber do sistema.
+
+## Exemplos resolvidos
+
+::: {#exm-lambda-eletron}
+Qual o comprimento de onda de de Broglie de um elétron
+($m = 9{,}1\times10^{-31}\ \mathrm{kg}$) a $v = 1{,}0\times10^{6}\ \mathrm{m/s}$?
+:::
+
+**Solução.** Por @eq-de-broglie:
+$$\lambda = \frac{h}{mv} = \frac{6{,}63\times10^{-34}}{9{,}1\times10^{-31}\times1{,}0\times10^{6}} = \frac{6{,}63\times10^{-34}}{9{,}1\times10^{-25}} \approx 7{,}3\times10^{-10}\ \mathrm{m},$$
+da ordem do tamanho atômico — por isso elétrons difratam em cristais.
+
+::: {#exm-lambda-bola}
+Qual o comprimento de onda de uma bola de $0{,}10\ \mathrm{kg}$ a
+$10\ \mathrm{m/s}$? Comente.
+:::
+
+**Solução.** $\lambda = h/(mv) = 6{,}63\times10^{-34}/(0{,}10\times10) = 6{,}63\times10^{-34}\ \mathrm{m}$.
+Inimaginavelmente pequeno — por isso a bola não exibe comportamento ondulatório
+algum, e a física clássica basta para descrevê-la.
+
+## Exercícios
+
+::: {#exr-momento-lambda}
+Um próton tem $\lambda = 1{,}0\times10^{-12}\ \mathrm{m}$. Qual seu momento?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$p = h/\lambda = 6{,}63\times10^{-34}/1{,}0\times10^{-12} = 6{,}63\times10^{-22}\ \mathrm{kg\,m/s}$
+(@eq-de-broglie).
+:::
+
+::: {#exr-probabilidade}
+Se $|\psi|^2$ é maior numa região, o que isso significa fisicamente?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Que a probabilidade de **encontrar a partícula** ali ao medir é maior (@eq-born). A
+função de onda não diz onde a partícula está, mas a distribuição de probabilidades
+de onde ela pode ser encontrada.
+:::
+
+::: {#exr-fenda-eletrons}
+O que acontece com o padrão de interferência na fenda dupla se um detector
+identifica por qual fenda cada elétron passou?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O padrão de interferência **desaparece**: ao obter a informação de trajetória, a
+superposição é destruída e os elétrons se comportam como partículas clássicas (duas
+faixas, sem franjas). A medição altera o sistema.
+:::

@@ -37,6 +37,7 @@ book:
         - volumes/v2-mecanica1/05-trabalho-energia.qmd
         - volumes/v2-mecanica1/06-conservacao-energia.qmd
         - volumes/v2-mecanica1/07-momento-linear.qmd
+        - volumes/v2-mecanica1/08-centro-massa.qmd
   appendices:
     - constantes.qmd
 

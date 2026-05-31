@@ -1,0 +1,131 @@
+---
+title: "Temperatura e Dilatação"
+---
+
+## Motivação
+
+O que é, afinal, "quente"? A sensação térmica engana — uma maçaneta de metal e uma
+porta de madeira na mesma sala parecem ter temperaturas diferentes ao toque. A
+física precisa de uma definição objetiva de **temperatura** e de uma maneira de
+medi-la. Deste conceito, e da observação de que os corpos mudam de tamanho ao
+serem aquecidos, nasce a termodinâmica — a ciência do calor, da energia e, no fim,
+da seta do tempo. Este capítulo abre o volume estabelecendo temperatura, equilíbrio
+térmico e dilatação.
+
+## Temperatura e equilíbrio térmico
+
+Coloque dois corpos em contato e, após um tempo, suas temperaturas se igualam:
+atingem o **equilíbrio térmico**. Essa observação simples é elevada a lei.
+
+::: {.callout-important}
+## Lei Zero da Termodinâmica
+Se dois corpos $A$ e $B$ estão, cada um, em equilíbrio térmico com um terceiro
+corpo $C$, então $A$ e $B$ estão em equilíbrio térmico entre si. Isso garante que a
+**temperatura** é uma propriedade bem definida, e que um termômetro ($C$) pode
+medi-la por comparação.
+:::
+
+::: {#def-temperatura}
+A **temperatura** é a grandeza que governa o sentido do fluxo de calor: o calor
+flui espontaneamente do corpo de maior para o de menor temperatura, até o
+equilíbrio. Microscopicamente (Volume sobre teoria cinética), ela mede a energia
+cinética média das partículas.
+:::
+
+## Escalas de temperatura
+
+::: {.callout-note}
+## Celsius, Kelvin e a temperatura absoluta
+A escala **Celsius** ($^\circ\mathrm{C}$) fixa $0$ na fusão e $100$ na ebulição da
+água. A escala **Kelvin** ($\mathrm{K}$), do SI, tem o mesmo tamanho de grau, mas
+parte do **zero absoluto** — a menor temperatura possível, onde o movimento
+térmico é mínimo:
+$$T(\mathrm{K}) = T(^\circ\mathrm{C}) + 273{,}15.$$ {#eq-kelvin}
+Não existe temperatura abaixo de $0\ \mathrm{K}$. Em fórmulas físicas (gases,
+radiação), use **sempre** a escala absoluta.
+:::
+
+## Dilatação térmica
+
+Quase todos os materiais se expandem ao aquecer: o aumento de temperatura
+intensifica a vibração dos átomos, que ocupam mais espaço em média.
+
+::: {.callout-important}
+## Dilatação linear, superficial e volumétrica
+Para uma variação de temperatura $\Delta T$ pequena, as variações são
+proporcionais:
+$$\Delta L = \alpha\,L_0\,\Delta T, \qquad \Delta A = 2\alpha\,A_0\,\Delta T, \qquad \Delta V = \beta\,V_0\,\Delta T,$$ {#eq-dilatacao}
+onde $\alpha$ é o coeficiente de dilatação **linear** e, para materiais isotrópicos,
+o coeficiente **volumétrico** é $\beta \approx 3\alpha$.
+:::
+
+::: {.proof}
+## Por que $\beta \approx 3\alpha$
+Um cubo de aresta $L_0$ tem volume $V_0 = L_0^3$. Após aquecer, cada aresta vira
+$L_0(1 + \alpha\Delta T)$, então
+$$V = L_0^3(1 + \alpha\Delta T)^3 \approx L_0^3(1 + 3\alpha\Delta T),$$
+desprezando termos de ordem $(\alpha\Delta T)^2$, minúsculos. Logo
+$\Delta V \approx 3\alpha V_0\Delta T$, isto é $\beta = 3\alpha$. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## A anomalia da água
+A água é uma exceção famosa: entre $0$ e $4\ \mathrm{^\circ C}$ ela **contrai** ao
+aquecer (e expande ao resfriar). Por isso o gelo flutua e os lagos congelam de
+cima para baixo, preservando a vida aquática no fundo — uma anomalia de
+consequências ecológicas profundas.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-trilho}
+Um trilho de aço ($\alpha = 1{,}2\times10^{-5}\ \mathrm{^\circ C^{-1}}$) tem
+$30{,}0\ \mathrm{m}$ a $10\ \mathrm{^\circ C}$. Quanto se alonga ao chegar a
+$50\ \mathrm{^\circ C}$?
+:::
+
+**Solução.** Por @eq-dilatacao, com $\Delta T = 40\ \mathrm{^\circ C}$:
+$$\Delta L = \alpha L_0\Delta T = 1{,}2\times10^{-5}\times30{,}0\times40 = 1{,}44\times10^{-2}\ \mathrm{m} \approx 1{,}4\ \mathrm{cm}.$$
+Daí as juntas de dilatação entre trilhos e nas pontes.
+
+::: {#exm-conversao-temp}
+A que temperatura na escala Kelvin corresponde $37\ \mathrm{^\circ C}$ (temperatura
+do corpo humano)?
+:::
+
+**Solução.** Por @eq-kelvin: $T = 37 + 273{,}15 = 310{,}15\ \mathrm{K} \approx 310\ \mathrm{K}$.
+
+## Exercícios
+
+::: {#exr-ponte}
+Uma ponte de concreto ($\alpha = 1{,}0\times10^{-5}\ \mathrm{^\circ C^{-1}}$) de
+$100\ \mathrm{m}$ sofre variação de $30\ \mathrm{^\circ C}$ entre inverno e verão.
+Qual a variação de comprimento?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta L = \alpha L_0\Delta T = 1{,}0\times10^{-5}\times100\times30 = 3{,}0\times10^{-2}\ \mathrm{m} = 3{,}0\ \mathrm{cm}$.
+:::
+
+::: {#exr-volume-liquido}
+Um líquido de $\beta = 5{,}0\times10^{-4}\ \mathrm{^\circ C^{-1}}$ ocupa
+$2{,}0\ \mathrm{L}$. Qual a variação de volume ao aquecer $40\ \mathrm{^\circ C}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta V = \beta V_0\Delta T = 5{,}0\times10^{-4}\times2{,}0\times40 = 4{,}0\times10^{-2}\ \mathrm{L} = 40\ \mathrm{mL}$.
+:::
+
+::: {#exr-zero-absoluto}
+Qual é o zero absoluto em graus Celsius, e por que não há temperatura menor?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$0\ \mathrm{K} = -273{,}15\ \mathrm{^\circ C}$. É o limite em que o movimento
+térmico das partículas atinge o mínimo possível (energia de ponto zero na visão
+quântica); não há estado térmico mais frio, então a escala absoluta não vai abaixo
+disso.
+:::

@@ -61,6 +61,9 @@ book:
         - volumes/v5-ondas/04-ondas-estacionarias.qmd
         - volumes/v5-ondas/05-som-acustica.qmd
         - volumes/v5-ondas/06-efeito-doppler.qmd
+    - part: "Volume VI — Termodinâmica e Física Estatística"
+      chapters:
+        - volumes/v6-termodinamica/01-temperatura-dilatacao.qmd
   appendices:
     - constantes.qmd
 

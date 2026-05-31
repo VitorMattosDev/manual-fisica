@@ -88,7 +88,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume VI — Termodinâmica e Física Estatística
 *Objetivo: calor, entropia e o mundo dos muitos corpos. Pré-requisitos: II.*
 
-- [ ] `volumes/v6-termodinamica/01-temperatura-dilatacao.qmd` — Temperatura e dilatação
+- [x] `volumes/v6-termodinamica/01-temperatura-dilatacao.qmd` — Temperatura e dilatação
 - [ ] `volumes/v6-termodinamica/02-calor-primeira-lei.qmd` — Calor e primeira lei
 - [ ] `volumes/v6-termodinamica/03-teoria-cinetica.qmd` — Teoria cinética dos gases
 - [ ] `volumes/v6-termodinamica/04-segunda-lei-entropia.qmd` — Segunda lei e entropia

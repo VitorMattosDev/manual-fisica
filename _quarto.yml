@@ -9,10 +9,10 @@ lang: pt
 book:
   title: "Manual de Física"
   subtitle: "Do básico ao avançado"
-  author: "SEU-NOME"
+  author: "Vitor Mattos"
   date: today
   search: true
-  repo-url: https://github.com/SEU-USUARIO/manual-fisica
+  repo-url: https://github.com/VitorMattosDev/manual-fisica
   repo-actions: [edit, issue]
   sidebar:
     style: docked

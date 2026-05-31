@@ -66,6 +66,10 @@ inteira antes da Fase 2.
 
 ## Estado atual
 
-- Scaffold pronto. Único capítulo escrito: o gabarito
-  `v2-mecanica1/06-conservacao-energia.qmd` (`[x]` no ROADMAP). Próximo item da
-  fila: `v1-fundamentos/01-grandezas-unidades.qmd`. Prioridade: fechar o Volume I.
+- **Obra completa.** Todos os 93 capítulos (Volumes I a XV, Fases 1 e 2) escritos,
+  registrados no `_quarto.yml` e marcados `[x]` no `ROADMAP.md`. O projeto compila
+  em HTML e em PDF (render completo validado). `constantes.qmd` consolida o
+  formulário de toda a obra.
+- Manutenção daqui em diante: revisões, correções e eventuais novos apêndices.
+  Ao editar matemática inline, lembre-se de **não deixar espaço antes do `$` de
+  fechamento** (o Pandoc não reconhece como matemática e quebra o PDF).

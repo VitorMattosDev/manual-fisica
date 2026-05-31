@@ -79,6 +79,9 @@ book:
         - volumes/v7-eletromagnetismo1/05-capacitancia.qmd
         - volumes/v7-eletromagnetismo1/06-corrente-resistencia.qmd
         - volumes/v7-eletromagnetismo1/07-circuitos-dc.qmd
+    - part: "Volume VIII — Eletromagnetismo II"
+      chapters:
+        - volumes/v8-eletromagnetismo2/01-campo-magnetico.qmd
   appendices:
     - constantes.qmd
 

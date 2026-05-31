@@ -110,7 +110,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 ## Volume VIII — Eletromagnetismo II (Magnetismo e Maxwell)
 *Objetivo: do magnetismo às ondas EM. Pré-requisitos: VII.*
 
-- [ ] `volumes/v8-eletromagnetismo2/01-campo-magnetico.qmd` — Campo magnético e força de Lorentz
+- [x] `volumes/v8-eletromagnetismo2/01-campo-magnetico.qmd` — Campo magnético e força de Lorentz
 - [ ] `volumes/v8-eletromagnetismo2/02-fontes-campo-magnetico.qmd` — Biot-Savart e Ampère
 - [ ] `volumes/v8-eletromagnetismo2/03-inducao-eletromagnetica.qmd` — Faraday e Lenz
 - [ ] `volumes/v8-eletromagnetismo2/04-indutancia.qmd` — Indutância

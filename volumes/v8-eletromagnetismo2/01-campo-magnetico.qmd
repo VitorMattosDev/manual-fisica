@@ -1,0 +1,123 @@
+---
+title: "Campo Magnético e Força de Lorentz"
+---
+
+## Motivação
+
+Uma bússola aponta o norte; um ímã levanta clipes; um motor elétrico gira. Por trás
+de tudo está o **campo magnético** — primo do campo elétrico, mas com regras
+próprias e surpreendentes. Ao contrário da força elétrica, a magnética depende da
+**velocidade** da carga e atua **perpendicularmente** a ela, o que produz
+trajetórias circulares em vez de retas. Este capítulo abre o magnetismo definindo o
+campo magnético pela força que ele exerce, e explorando o movimento de cargas e as
+forças sobre correntes.
+
+## A força magnética sobre uma carga
+
+::: {#def-forca-magnetica}
+Uma carga $q$ que se move com velocidade $\vec{v}$ num campo magnético $\vec{B}$
+sofre a **força magnética**
+$$\vec{F} = q\,\vec{v}\times\vec{B}, \qquad |\vec{F}| = |q|\,v\,B\,\mathrm{sen}\,\theta,$$ {#eq-forca-magnetica}
+onde $\theta$ é o ângulo entre $\vec{v}$ e $\vec{B}$. A unidade de $B$ é o **tesla**
+($1\ \mathrm{T} = 1\ \mathrm{kg/(A\,s^2)}$).
+:::
+
+O produto vetorial traz três consequências marcantes: a força é **perpendicular** a
+$\vec{v}$ e a $\vec{B}$ (regra da mão direita); é **nula** para cargas paradas
+($v=0$) ou que se movem ao longo de $\vec{B}$ ($\theta=0$); e, sendo perpendicular
+ao movimento, **não realiza trabalho** — só muda a direção, nunca a rapidez.
+
+::: {.callout-important}
+## Força de Lorentz
+Quando há campos elétrico e magnético, a força total sobre a carga é a **força de
+Lorentz**:
+$$\vec{F} = q\left(\vec{E} + \vec{v}\times\vec{B}\right).$$ {#eq-lorentz}
+Ela reúne toda a influência eletromagnética sobre uma carga.
+:::
+
+## Movimento circular num campo magnético
+
+Como a força magnética é sempre perpendicular à velocidade, uma carga que entra
+num campo uniforme (perpendicular a $\vec{v}$) descreve um **círculo**: a força
+magnética faz o papel de força centrípeta.
+
+::: {.callout-important}
+## Raio da trajetória (raio de cíclotron)
+Igualando a força magnética à centrípeta, $qvB = mv^2/R$:
+$$R = \frac{m v}{q B}.$$ {#eq-raio-ciclotron}
+O período $T = 2\pi m/(qB)$ **não depende da velocidade** — base do cíclotron.
+:::
+
+## Força sobre um fio com corrente
+
+Uma corrente é carga em movimento, então um fio percorrido por corrente num campo
+magnético sofre força.
+
+::: {.callout-important}
+## Força magnética sobre um condutor
+Um fio retilíneo de comprimento $L$ conduzindo corrente $I$ num campo $\vec{B}$
+sofre
+$$\vec{F} = I\,\vec{L}\times\vec{B}, \qquad |\vec{F}| = B I L\,\mathrm{sen}\,\theta.$$ {#eq-forca-fio}
+:::
+
+::: {.callout-note}
+## O motor elétrico
+Numa espira de corrente dentro de um campo, lados opostos sofrem forças contrárias
+(@eq-forca-fio), produzindo um **torque** que a faz girar. Esse é o princípio do
+motor elétrico — e, ao contrário (girar a espira gera corrente), do gerador, tema
+do capítulo de indução.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-proton-campo}
+Um próton ($q = 1{,}6\times10^{-19}\ \mathrm{C}$) move-se a
+$2{,}0\times10^{6}\ \mathrm{m/s}$ perpendicular a um campo de $0{,}50\ \mathrm{T}$.
+Qual a força sobre ele?
+:::
+
+**Solução.** Por @eq-forca-magnetica com $\theta=90^\circ$:
+$$F = qvB = 1{,}6\times10^{-19}\times2{,}0\times10^{6}\times0{,}50 = 1{,}6\times10^{-13}\ \mathrm{N}.$$
+
+::: {#exm-raio-eletron}
+Um elétron ($m = 9{,}1\times10^{-31}\ \mathrm{kg}$, $q = 1{,}6\times10^{-19}\ \mathrm{C}$)
+a $1{,}0\times10^{7}\ \mathrm{m/s}$ entra perpendicular a um campo de
+$0{,}010\ \mathrm{T}$. Qual o raio de sua órbita?
+:::
+
+**Solução.** Por @eq-raio-ciclotron:
+$$R = \frac{mv}{qB} = \frac{9{,}1\times10^{-31}\times1{,}0\times10^{7}}{1{,}6\times10^{-19}\times0{,}010} = \frac{9{,}1\times10^{-24}}{1{,}6\times10^{-21}} \approx 5{,}7\times10^{-3}\ \mathrm{m}.$$
+
+## Exercícios
+
+::: {#exr-forca-fio}
+Um fio de $0{,}20\ \mathrm{m}$ conduz $5{,}0\ \mathrm{A}$ perpendicular a um campo
+de $0{,}30\ \mathrm{T}$. Qual a força sobre ele?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$F = BIL = 0{,}30\times5{,}0\times0{,}20 = 0{,}30\ \mathrm{N}$ (@eq-forca-fio).
+:::
+
+::: {#exr-carga-paralela}
+Por que uma carga que se move **paralela** a um campo magnético não sofre força?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela @eq-forca-magnetica, $F = qvB\,\mathrm{sen}\,\theta$. Se $\vec{v}\parallel\vec{B}$,
+$\theta=0$ e $\mathrm{sen}\,0 = 0$, logo $F=0$. O produto vetorial de vetores
+paralelos é nulo.
+:::
+
+::: {#exr-trabalho-magnetico}
+Mostre que a força magnética nunca altera a energia cinética de uma carga.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A força (@eq-forca-magnetica) é sempre perpendicular a $\vec{v}$, então
+$\vec{F}\cdot\vec{v} = 0$: a potência $P = \vec{F}\cdot\vec{v}$ é nula e nenhum
+trabalho é realizado. A rapidez (e $K$) permanece constante; só a direção muda.
+:::

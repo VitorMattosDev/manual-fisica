@@ -60,6 +60,7 @@ book:
         - volumes/v5-ondas/03-superposicao-interferencia.qmd
         - volumes/v5-ondas/04-ondas-estacionarias.qmd
         - volumes/v5-ondas/05-som-acustica.qmd
+        - volumes/v5-ondas/06-efeito-doppler.qmd
   appendices:
     - constantes.qmd
 

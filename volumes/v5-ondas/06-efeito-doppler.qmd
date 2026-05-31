@@ -1,0 +1,117 @@
+---
+title: "Efeito Doppler"
+---
+
+## Motivação
+
+A sirene de uma ambulância soa mais aguda quando ela se aproxima e mais grave
+quando se afasta — embora o motorista dentro dela ouça sempre a mesma nota. Esse é
+o **efeito Doppler**, a mudança de frequência percebida quando fonte e observador
+estão em movimento relativo. Não é curiosidade: é a base do radar de velocidade,
+do ultrassom médico que mede o fluxo sanguíneo, e da descoberta de que o universo
+está em expansão (o "desvio para o vermelho" das galáxias). Este capítulo, que
+fecha o estudo das ondas, deduz e aplica o efeito.
+
+## O efeito Doppler para o som
+
+A ideia central: o movimento comprime ou estica os comprimentos de onda que chegam
+ao observador. Se a fonte se aproxima, cada frente de onda é emitida um pouco mais à
+frente — as cristas se amontoam, $\lambda$ diminui, $f$ aumenta.
+
+::: {.callout-important}
+## Fórmula do efeito Doppler (som)
+A frequência percebida $f'$ relaciona-se à emitida $f$ por
+$$f' = f\,\frac{v \pm v_O}{v \mp v_S},$$ {#eq-doppler}
+onde $v$ é a velocidade do som, $v_O$ a do observador e $v_S$ a da fonte. **Os
+sinais escolhem-se de modo que aproximação aumente $f'$ e afastamento a diminua**:
+no numerador, use $+v_O$ se o observador se aproxima; no denominador, use $-v_S$ se
+a fonte se aproxima.
+:::
+
+::: {.proof}
+## Fonte em movimento, observador parado
+Numa fonte que se aproxima a $v_S$, durante um período $T$ ela avança $v_S T$ na
+direção do observador. O comprimento de onda percebido encurta de $\lambda = vT$
+para $\lambda' = (v - v_S)T$. Como $f' = v/\lambda'$:
+$$f' = \frac{v}{(v - v_S)T} = f\,\frac{v}{v - v_S},$$
+que é a @eq-doppler com $v_O = 0$ e o sinal de aproximação. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Fonte se move ≠ observador se move
+Embora ambos os movimentos mudem $f'$, eles **não** são simétricos para o som: o
+meio (ar) define um referencial privilegiado. A fonte movendo-se altera o
+*comprimento de onda* real; o observador movendo-se altera a *velocidade de
+encontro* com as cristas. Só no caso da luz (sem meio) os dois efeitos se fundem
+num só — assunto da relatividade (Volume X).
+:::
+
+## Ondas de choque
+
+Quando a fonte iguala ou supera a velocidade do som ($v_S \ge v$), as frentes de
+onda não conseguem mais "escapar" à frente: elas se acumulam num **cone de Mach**,
+formando uma **onda de choque** — o estrondo sônico de um avião supersônico.
+
+::: {.callout-note}
+## O número de Mach
+A razão $\mathrm{Ma} = v_S/v$ é o **número de Mach**. Para $\mathrm{Ma}>1$
+(supersônico), forma-se a onda de choque cônica, cujo semiângulo $\theta$ satisfaz
+$\mathrm{sen}\,\theta = v/v_S = 1/\mathrm{Ma}$.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-ambulancia}
+Uma ambulância com sirene de $700\ \mathrm{Hz}$ aproxima-se a $30\ \mathrm{m/s}$ de
+um observador parado. Que frequência ele ouve? ($v_\text{som} = 340\ \mathrm{m/s}$.)
+:::
+
+**Solução.** Fonte se aproxima, observador parado ($v_O=0$). Use a @eq-doppler com
+o sinal que **aumenta** $f'$ (denominador $v - v_S$):
+$$f' = f\,\frac{v}{v - v_S} = 700\times\frac{340}{340 - 30} = 700\times\frac{340}{310} \approx 768\ \mathrm{Hz}.$$
+Ao passar e se afastar, ouviria $f' = 700\times340/(340+30) \approx 643\ \mathrm{Hz}$
+— a queda brusca característica.
+
+::: {#exm-mach}
+Um avião voa a $\mathrm{Ma} = 2{,}0$. Qual o semiângulo do cone de Mach?
+:::
+
+**Solução.** $\mathrm{sen}\,\theta = 1/\mathrm{Ma} = 1/2{,}0 = 0{,}50$, logo
+$\theta = 30^\circ$.
+
+## Exercícios
+
+::: {#exr-doppler-afastando}
+Uma fonte de $500\ \mathrm{Hz}$ afasta-se de um observador parado a
+$20\ \mathrm{m/s}$. Que frequência ele ouve? ($v = 340\ \mathrm{m/s}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Fonte se afasta → frequência menor → denominador $v + v_S$:
+$f' = 500\times340/(340+20) = 500\times340/360 \approx 472\ \mathrm{Hz}$.
+:::
+
+::: {#exr-doppler-observador}
+Um observador aproxima-se a $34\ \mathrm{m/s}$ de uma fonte parada de
+$340\ \mathrm{Hz}$. Que frequência ele percebe? ($v = 340\ \mathrm{m/s}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Observador se aproxima → numerador $v + v_O$, fonte parada ($v_S=0$):
+$f' = 340\times(340+34)/340 = 340\times374/340 = 374\ \mathrm{Hz}$.
+:::
+
+::: {#exr-redshift}
+Astrônomos observam que a luz de galáxias distantes chega com frequência **menor**
+que a emitida ("desvio para o vermelho"). O que isso indica sobre o movimento
+delas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Frequência menor = efeito Doppler de **afastamento**: as galáxias estão se
+afastando de nós. Quanto mais distante, maior o desvio — evidência da **expansão
+do universo** (Hubble), retomada no Volume XV.
+:::

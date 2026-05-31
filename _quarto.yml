@@ -133,6 +133,7 @@ book:
     - part: "Volume XIV — Física Nuclear e de Partículas"
       chapters:
         - volumes/v14-nuclear-particulas/01-estrutura-nuclear.qmd
+        - volumes/v14-nuclear-particulas/02-radioatividade.qmd
   appendices:
     - constantes.qmd
 

@@ -1,0 +1,120 @@
+---
+title: "Radioatividade e Decaimento"
+---
+
+## Motivação
+
+Alguns núcleos são instáveis: mais cedo ou mais tarde, eles se transformam,
+emitindo radiação. Becquerel descobriu o fenômeno por acaso, em 1896, ao notar que
+sais de urânio velavam chapas fotográficas no escuro. A **radioatividade** revelou
+que os átomos não são imutáveis — e deu à humanidade a datação por carbono, a
+medicina nuclear e, com ela, riscos reais. Este capítulo descreve os tipos de
+decaimento e a lei estatística que governa o tempo de vida dos núcleos.
+
+## Os tipos de decaimento
+
+::: {.callout-important}
+## Os três decaimentos radioativos
+- **Decaimento alfa ($\alpha$):** o núcleo emite uma partícula alfa
+  ($^4\mathrm{He}$, 2 prótons + 2 nêutrons), reduzindo $Z$ em 2 e $A$ em 4. Típico
+  de núcleos pesados.
+- **Decaimento beta ($\beta$):** um nêutron vira próton (emitindo elétron e
+  antineutrino, $\beta^-$) ou vice-versa ($\beta^+$); $A$ não muda, $Z$ varia em 1.
+- **Decaimento gama ($\gamma$):** o núcleo excitado emite um fóton de alta energia,
+  sem mudar $Z$ nem $A$ — apenas perde energia.
+:::
+
+::: {.callout-note}
+## Poder de penetração e os neutrinos
+A radiação alfa é detida por uma folha de papel; a beta, por alumínio fino; a gama,
+só por chumbo grosso ou concreto. Quanto à carga: alfa e beta são partículas
+carregadas; gama é fóton. O decaimento beta também produz **neutrinos** —
+partículas quase sem massa e quase sem interação, postuladas por Pauli para salvar a
+conservação de energia, e detectadas só décadas depois. Trilhões deles atravessam
+seu corpo a cada segundo, sem efeito.
+:::
+
+## A lei do decaimento radioativo
+
+O decaimento de um núcleo individual é **imprevisível** — puro acaso quântico. Mas
+um grande número de núcleos obedece a uma lei estatística precisa.
+
+::: {.callout-important}
+## Lei do decaimento exponencial
+O número de núcleos não decaídos decresce exponencialmente:
+$$N(t) = N_0\,e^{-\lambda t},$$ {#eq-decaimento}
+onde $\lambda$ é a **constante de decaimento**. A **meia-vida** $T_{1/2}$ — tempo
+para metade decair — relaciona-se a $\lambda$ por
+$$T_{1/2} = \frac{\ln 2}{\lambda} \approx \frac{0{,}693}{\lambda}.$$ {#eq-meia-vida}
+:::
+
+::: {.proof}
+## Da taxa de decaimento à exponencial
+A hipótese fundamental: a taxa de decaimentos é proporcional ao número de núcleos
+presentes, $\mathrm{d}N/\mathrm{d}t = -\lambda N$. Essa equação diferencial tem
+solução $N(t) = N_0 e^{-\lambda t}$ (Volume I). Fazendo $N = N_0/2$ obtém-se
+$e^{-\lambda T_{1/2}} = 1/2$, isto é $T_{1/2} = \ln2/\lambda$. $\qquad\blacksquare$
+:::
+
+## Datação radiométrica
+
+::: {.callout-note}
+## O relógio dos átomos
+A meia-vida é um relógio confiável. O **carbono-14** ($T_{1/2}\approx5730$ anos)
+data restos orgânicos de até dezenas de milhares de anos: medindo quanto $^{14}\mathrm{C}$
+resta, calcula-se quando o organismo morreu. Para escalas geológicas, o **urânio-chumbo**
+($T_{1/2}$ de bilhões de anos) data rochas e meteoritos — foi assim que se determinou
+a idade da Terra, $\approx 4{,}5$ bilhões de anos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-meia-vida}
+Uma amostra tem $T_{1/2} = 8{,}0\ \mathrm{dias}$. Que fração resta após
+$24\ \mathrm{dias}$?
+:::
+
+**Solução.** $24\ \mathrm{dias} = 3\,T_{1/2}$. A cada meia-vida resta metade, então
+$$\frac{N}{N_0} = \left(\frac{1}{2}\right)^3 = \frac{1}{8} = 0{,}125.$$
+Resta $12{,}5\%$ da amostra (@eq-decaimento).
+
+::: {#exm-constante-decaimento}
+Calcule a constante de decaimento de um isótopo com $T_{1/2} = 5730\ \mathrm{anos}$
+(carbono-14).
+:::
+
+**Solução.** Por @eq-meia-vida:
+$$\lambda = \frac{\ln 2}{T_{1/2}} = \frac{0{,}693}{5730} \approx 1{,}21\times10^{-4}\ \mathrm{ano^{-1}}.$$
+
+## Exercícios
+
+::: {#exr-alfa}
+No decaimento alfa do urânio-238 ($Z=92$, $A=238$), quais o $Z$ e o $A$ do núcleo
+resultante?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O decaimento alfa reduz $Z$ em 2 e $A$ em 4: $Z = 90$, $A = 234$ — é o
+**tório-234**.
+:::
+
+::: {#exr-fracao}
+Após 4 meias-vidas, que fração de uma amostra radioativa permanece?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$(1/2)^4 = 1/16 = 0{,}0625$, ou seja $6{,}25\%$.
+:::
+
+::: {#exr-datacao}
+Um osso tem $1/4$ do $^{14}\mathrm{C}$ de um organismo vivo. Há quantas meias-vidas
+ele morreu? ($T_{1/2} = 5730\ \mathrm{anos}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$1/4 = (1/2)^2$, então passaram **2 meias-vidas**, ou seja
+$2\times5730 \approx 11\,460$ anos.
+:::

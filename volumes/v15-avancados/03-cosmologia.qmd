@@ -1,0 +1,130 @@
+---
+title: "Cosmologia"
+---
+
+## Motivação
+
+Qual a maior estrutura que a física pode estudar? O **universo inteiro**. A
+cosmologia aplica a relatividade geral (cap. 1) e a física de partículas (Volume
+XIV) ao cosmos como um todo: sua origem, evolução e destino. Em um século, ela
+passou de especulação a ciência de precisão, capaz de medir a idade do universo e
+sua composição. E revelou que $95\%$ dele é feito de algo que **não entendemos** —
+matéria e energia escuras. Este capítulo conta essa história e expõe os grandes
+enigmas em aberto.
+
+## A expansão do universo
+
+::: {.callout-important}
+## Lei de Hubble
+As galáxias afastam-se de nós com velocidade proporcional à distância:
+$$v = H_0\,d,$$ {#eq-hubble}
+onde $H_0 \approx 70\ \mathrm{km/s/Mpc}$ é a constante de Hubble. O universo está
+**em expansão** — não as galáxias se movendo *no* espaço, mas o próprio **espaço se
+expandindo** entre elas.
+:::
+
+A expansão foi descoberta por Hubble (1929) pelo **desvio para o vermelho** das
+galáxias (efeito Doppler, Volume V): quanto mais distantes, mais avermelhada sua luz,
+logo mais rápido se afastam. Revertendo o filme da expansão, chega-se a um início
+quente e denso.
+
+## O Big Bang
+
+::: {.callout-important}
+## O modelo do Big Bang
+O universo começou há cerca de **$13{,}8$ bilhões de anos** num estado extremamente
+quente e denso, e expande-se e esfria desde então. Duas evidências centrais:
+
+- a **radiação cósmica de fundo** (CMB) — o "eco" térmico do Big Bang, hoje a
+  $2{,}7\ \mathrm{K}$, detectado em todas as direções;
+- a **abundância dos elementos leves** (hidrogênio, hélio), formados nos primeiros
+  minutos (nucleossíntese primordial), nas proporções previstas.
+:::
+
+::: {.callout-note}
+## A imagem do bebê universo
+A radiação cósmica de fundo é a luz liberada quando o universo, $380$ mil anos após o
+Big Bang, esfriou o bastante para os átomos se formarem e a luz viajar livre. Suas
+minúsculas variações de temperatura (uma parte em $10^{5}$) são as **sementes** das
+galáxias — mapeá-las (COBE, WMAP, Planck) transformou a cosmologia em ciência de
+precisão, fixando a idade e a composição do universo.
+:::
+
+## Matéria escura e energia escura
+
+A cosmologia moderna trouxe a descoberta mais humilhante da física: a matéria que
+conhecemos é uma minoria.
+
+::: {.callout-important}
+## A composição do universo
+- **$\sim5\%$ matéria comum** (átomos — tudo o que vemos).
+- **$\sim27\%$ matéria escura** — não emite luz, detectada só pela gravidade
+  (mantém as galáxias coesas).
+- **$\sim68\%$ energia escura** — uma energia que **acelera** a expansão do
+  universo, de natureza desconhecida.
+:::
+
+::: {.callout-note}
+## Os maiores enigmas da física
+A **matéria escura** revela-se pela rotação das galáxias (giram rápido demais para a
+matéria visível) e pelas lentes gravitacionais — mas nenhuma partícula que a explique
+foi detectada. A **energia escura**, descoberta em 1998 ao se notar que a expansão
+**acelera**, pode ser a energia do vácuo quântico (Volume XV, cap. 2) — mas o cálculo
+erra por $120$ ordens de grandeza. Juntas, somam $95\%$ do universo e são as duas
+maiores questões abertas da ciência.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-hubble}
+Uma galáxia está a $d = 100\ \mathrm{Mpc}$. A que velocidade ela se afasta?
+($H_0 = 70\ \mathrm{km/s/Mpc}$.)
+:::
+
+**Solução.** Por @eq-hubble:
+$$v = H_0\,d = 70\times100 = 7000\ \mathrm{km/s}.$$
+A galáxia recua a $7000\ \mathrm{km/s}$ — o desvio para o vermelho de sua luz
+confirma a expansão.
+
+::: {#exm-idade-universo}
+Estime a idade do universo a partir de $H_0$, supondo expansão constante.
+($1/H_0$ em segundos, com $H_0 \approx 2{,}3\times10^{-18}\ \mathrm{s^{-1}}$.)
+:::
+
+**Solução.** Uma estimativa grosseira é o "tempo de Hubble" $t \approx 1/H_0$:
+$$t \approx \frac{1}{2{,}3\times10^{-18}} \approx 4{,}3\times10^{17}\ \mathrm{s} \approx 14\ \text{bilhões de anos},$$
+notavelmente próximo da idade precisa ($13{,}8$ bilhões de anos).
+
+## Exercícios
+
+::: {#exr-redshift-cosmo}
+A luz de galáxias distantes chega avermelhada. O que isso indica?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Que elas se **afastam** de nós (desvio Doppler para o vermelho, Volume V) — e quanto
+mais distantes, mais rápido (lei de Hubble, @eq-hubble). É a evidência da **expansão
+do universo**.
+:::
+
+::: {#exr-cmb}
+O que é a radiação cósmica de fundo e o que ela comprova?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+É a radiação térmica remanescente do Big Bang (hoje a $2{,}7\ \mathrm{K}$),
+liberada quando o universo esfriou o bastante para formar átomos. Ela é uma das
+principais **evidências do Big Bang** e de um universo quente e denso no passado.
+:::
+
+::: {#exr-composicao}
+Que fração do universo é feita da matéria comum (átomos) que conhecemos?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Apenas cerca de **$5\%$**. O restante é matéria escura ($\sim27\%$) e energia escura
+($\sim68\%$), ambas de natureza ainda desconhecida.
+:::

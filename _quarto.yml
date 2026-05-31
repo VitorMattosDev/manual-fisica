@@ -141,6 +141,7 @@ book:
       chapters:
         - volumes/v15-avancados/01-relatividade-geral.qmd
         - volumes/v15-avancados/02-teoria-quantica-campos.qmd
+        - volumes/v15-avancados/03-cosmologia.qmd
   appendices:
     - constantes.qmd
 

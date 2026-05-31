@@ -1,0 +1,152 @@
+---
+title: "As Leis de Newton"
+---
+
+## Motivação
+
+A cinemática descreve o movimento, mas não diz por que um corpo acelera. A
+resposta — uma das maiores sínteses da história da ciência — está em três leis
+enunciadas por Isaac Newton em 1687. Elas conectam **força** (a causa) a
+**aceleração** (o efeito) e fundam a dinâmica. Com elas, o mesmo conjunto de
+princípios explica a maçã que cai, a Lua que orbita e o foguete que decola. Este
+capítulo apresenta as três leis, o conceito de massa inercial e a técnica do
+**diagrama de corpo livre**, ferramenta central para resolver qualquer problema de
+dinâmica.
+
+## Força e a primeira lei
+
+::: {#def-forca}
+**Força** é a interação capaz de alterar o estado de movimento de um corpo. É uma
+grandeza vetorial, medida em **newtons** ($1\ \mathrm{N} = 1\ \mathrm{kg\,m/s^2}$).
+Quando várias forças atuam, o que importa é a **resultante** $\vec{F}_\text{res} = \sum_i \vec{F}_i$.
+:::
+
+::: {.callout-important}
+## Primeira Lei de Newton (inércia)
+Todo corpo permanece em repouso ou em movimento retilíneo uniforme **a menos que
+uma força resultante atue sobre ele**:
+$$\vec{F}_\text{res} = \vec{0} \;\Longleftrightarrow\; \vec{v} = \text{constante}.$$ {#eq-newton1}
+:::
+
+A primeira lei rompe com a intuição aristotélica de que "mover exige força". Não:
+manter velocidade constante (inclusive nula) **não** requer força. Força é
+necessária apenas para *mudar* a velocidade. O referencial em que a lei vale é dito
+**inercial**.
+
+## A segunda lei
+
+::: {.callout-important}
+## Segunda Lei de Newton
+A aceleração de um corpo é proporcional à força resultante e inversamente
+proporcional à sua massa:
+$$\vec{F}_\text{res} = m\,\vec{a}.$$ {#eq-newton2}
+:::
+
+A massa $m$ é a medida da **inércia** — a resistência do corpo a ser acelerado.
+Para a mesma força, dobrar a massa reduz a aceleração à metade. A
+@eq-newton2 é vetorial: vale componente a componente, e a aceleração tem sempre a
+direção e o sentido da força resultante.
+
+::: {.callout-note}
+## A primeira lei é caso particular da segunda?
+Quase. Fazendo $\vec{F}_\text{res}=\vec{0}$ em @eq-newton2 obtém-se $\vec{a}=\vec{0}$,
+que é a primeira lei. Mas a primeira tem um papel mais profundo: ela *define* quais
+referenciais são inerciais — aqueles em que a segunda lei vale na forma simples.
+:::
+
+## A terceira lei
+
+::: {.callout-important}
+## Terceira Lei de Newton (ação e reação)
+Se um corpo A exerce força $\vec{F}_{A\to B}$ sobre B, então B exerce sobre A uma
+força de mesmo módulo e direção, e sentido oposto:
+$$\vec{F}_{A\to B} = -\,\vec{F}_{B\to A}.$$ {#eq-newton3}
+:::
+
+O par ação–reação atua sempre em **corpos diferentes** — por isso nunca se
+cancela. O chão empurra seus pés para cima (normal) enquanto seus pés empurram o
+chão para baixo: forças iguais e opostas, mas em corpos distintos, e é por isso
+que você não afunda nem flutua.
+
+## Tipos de força e o diagrama de corpo livre
+
+Algumas forças aparecem em quase todo problema: o **peso** $\vec{P} = m\vec{g}$
+(atração gravitacional), a **normal** $\vec{N}$ (reação perpendicular de uma
+superfície), a **tração** $\vec{T}$ (de fios) e o **atrito** (tratado no próximo
+capítulo).
+
+::: {.callout-note}
+## O diagrama de corpo livre (DCL)
+Para aplicar a @eq-newton2, isole **um** corpo e desenhe **todas** as forças que
+agem *sobre ele* (nunca as que ele exerce sobre outros). Escolha eixos, projete
+cada força e escreva $\sum F_x = m a_x$ e $\sum F_y = m a_y$. O DCL transforma a
+física do problema em álgebra.
+:::
+
+<!-- TODO figura: diagrama de corpo livre de um bloco em plano inclinado -->
+
+## Exemplos resolvidos
+
+::: {#exm-elevador}
+Uma pessoa de massa $70\ \mathrm{kg}$ está sobre uma balança no piso de um
+elevador que sobe com aceleração $2{,}0\ \mathrm{m/s^2}$. Que força normal a
+balança indica? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Sobre a pessoa atuam a normal $N$ (para cima) e o peso $mg$ (para
+baixo). Tomando para cima como positivo, a @eq-newton2 dá
+$$N - mg = m a \;\Longrightarrow\; N = m(g + a) = 70(9{,}8 + 2{,}0) = 826\ \mathrm{N}.$$
+A balança lê mais que o peso real ($686\ \mathrm{N}$): é a sensação de "ficar mais
+pesado" na arrancada do elevador.
+
+::: {#exm-dois-blocos}
+Dois blocos, $m_1 = 2{,}0\ \mathrm{kg}$ e $m_2 = 3{,}0\ \mathrm{kg}$, encostados,
+são empurrados sobre superfície lisa por uma força horizontal
+$F = 10\ \mathrm{N}$ aplicada em $m_1$. Ache a aceleração e a força de contato
+entre eles.
+:::
+
+**Solução.** O sistema todo acelera junto. Tratando os dois como um corpo de massa
+$m_1+m_2$ (@eq-newton2):
+$$a = \frac{F}{m_1+m_2} = \frac{10}{5{,}0} = 2{,}0\ \mathrm{m/s^2}.$$
+A força de contato $F_c$ é a única que acelera $m_2$:
+$F_c = m_2\,a = 3{,}0 \times 2{,}0 = 6{,}0\ \mathrm{N}$.
+
+## Exercícios
+
+::: {#exr-forca-resultante}
+Sobre um corpo de $4{,}0\ \mathrm{kg}$ atuam duas forças horizontais opostas, de
+$12\ \mathrm{N}$ e $4{,}0\ \mathrm{N}$. Qual é a aceleração?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Resultante $F_\text{res} = 12 - 4{,}0 = 8{,}0\ \mathrm{N}$. Por @eq-newton2,
+$a = F_\text{res}/m = 8{,}0/4{,}0 = 2{,}0\ \mathrm{m/s^2}$, no sentido da força
+maior.
+:::
+
+::: {#exr-tracao}
+Um bloco de $5{,}0\ \mathrm{kg}$ pende de um fio preso ao teto de um elevador.
+Qual a tração no fio quando o elevador desce com aceleração $3{,}0\ \mathrm{m/s^2}$?
+($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Tomando para baixo como positivo: $mg - T = ma \Rightarrow T = m(g-a) = 5{,}0(9{,}8-3{,}0) = 34\ \mathrm{N}$.
+O fio "alivia" porque o elevador acelera para baixo.
+:::
+
+::: {#exr-acao-reacao}
+Um cavalo puxa uma carroça. Um aluno argumenta: "pela terceira lei, a carroça puxa
+o cavalo com força igual e oposta, então nada se move". Onde está o erro?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+As forças do par ação–reação atuam em **corpos diferentes** (uma na carroça, outra
+no cavalo) e nunca se cancelam. O que move a carroça é a resultante das forças
+*sobre a carroça*: a tração do cavalo menos o atrito. Quem acelera o cavalo é o
+atrito do chão sobre seus cascos. Somar forças de corpos distintos é o erro.
+:::

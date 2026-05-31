@@ -84,6 +84,7 @@ book:
         - volumes/v8-eletromagnetismo2/01-campo-magnetico.qmd
         - volumes/v8-eletromagnetismo2/02-fontes-campo-magnetico.qmd
         - volumes/v8-eletromagnetismo2/03-inducao-eletromagnetica.qmd
+        - volumes/v8-eletromagnetismo2/04-indutancia.qmd
   appendices:
     - constantes.qmd
 

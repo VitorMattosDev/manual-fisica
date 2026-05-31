@@ -1,0 +1,120 @@
+---
+title: "Indutância"
+---
+
+## Motivação
+
+Uma bobina não gosta de mudanças. Ligue ou desligue a corrente que a percorre e ela
+"reage", gerando uma fem que se opõe à variação — pela lei de Lenz, aplicada a si
+mesma. Essa propriedade, a **indutância**, faz da bobina um elemento de circuito
+tão fundamental quanto o resistor e o capacitor. É ela que armazena energia em
+campo magnético, faz faíscas saltarem ao desligar interruptores e, combinada a um
+capacitor, produz oscilações elétricas. Este capítulo define a auto e a mútua
+indutância e a energia do campo magnético.
+
+## Autoindutância
+
+::: {#def-indutancia}
+A **autoindutância** $L$ de uma bobina relaciona o fluxo magnético total que ela
+concatena à corrente que a percorre:
+$$N\Phi_B = L\,I.$$ {#eq-indutancia}
+Pela lei de Faraday, uma corrente variável gera uma fem **autoinduzida**
+$$\varepsilon = -L\,\frac{\mathrm{d}I}{\mathrm{d}t}.$$ {#eq-fem-autoinduzida}
+A unidade de $L$ é o **henry** ($1\ \mathrm{H} = 1\ \mathrm{Wb/A} = 1\ \mathrm{V\,s/A}$).
+:::
+
+O sinal negativo (Lenz) diz que o indutor **resiste a variações de corrente**: opõe-se
+ao aumento e sustenta a corrente quando ela tenta cair. Por isso a corrente num
+indutor não muda instantaneamente — análogo magnético da inércia.
+
+::: {.callout-important}
+## Indutância de um solenoide
+Para um solenoide de $N$ espiras, comprimento $\ell$ e área $A$,
+$$L = \frac{\mu_0 N^2 A}{\ell}.$$ {#eq-indutancia-solenoide}
+Depende só da geometria (e do material do núcleo), como a capacitância.
+:::
+
+## Energia armazenada no campo magnético
+
+Estabelecer corrente num indutor exige trabalho contra a fem autoinduzida; esse
+trabalho fica armazenado no campo magnético.
+
+::: {.callout-important}
+## Energia de um indutor
+$$U = \tfrac12\,L\,I^2.$$ {#eq-energia-indutor}
+:::
+
+::: {.proof}
+## Dedução da energia magnética
+A potência entregue ao indutor é $P = \varepsilon I = L\,(\mathrm{d}I/\mathrm{d}t)\,I$.
+A energia total ao levar a corrente de $0$ a $I$ é
+$$U = \int P\,\mathrm{d}t = \int_0^I L\,I'\,\mathrm{d}I' = \tfrac12 L I^2,$$
+em perfeita analogia com a energia do capacitor (@eq-energia-capacitor), trocando
+$C\to L$ e $V\to I$. $\qquad\blacksquare$
+:::
+
+## Indutância mútua e o transformador
+
+::: {.callout-note}
+## Indutância mútua
+Quando duas bobinas estão próximas, a corrente variável numa induz fem na outra —
+a **indutância mútua** $M$. É o princípio do **transformador**: a razão das tensões
+iguala a razão dos números de espiras,
+$$\frac{V_2}{V_1} = \frac{N_2}{N_1}.$$ {#eq-transformador}
+Transformadores elevam ou abaixam tensões, tornando viável a transmissão de energia
+em alta tensão (e baixa corrente, menos perdas — como visto no Volume VII).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-fem-indutor}
+Num indutor de $L = 0{,}50\ \mathrm{H}$, a corrente varia a
+$4{,}0\ \mathrm{A/s}$. Qual a fem autoinduzida?
+:::
+
+**Solução.** Por @eq-fem-autoinduzida (em módulo):
+$$|\varepsilon| = L\frac{\mathrm{d}I}{\mathrm{d}t} = 0{,}50\times4{,}0 = 2{,}0\ \mathrm{V}.$$
+
+::: {#exm-energia-indutor}
+Quanta energia armazena um indutor de $L = 2{,}0\ \mathrm{H}$ percorrido por
+$3{,}0\ \mathrm{A}$?
+:::
+
+**Solução.** Por @eq-energia-indutor:
+$$U = \tfrac12 L I^2 = \tfrac12\times2{,}0\times(3{,}0)^2 = 9{,}0\ \mathrm{J}.$$
+
+## Exercícios
+
+::: {#exr-transformador}
+Um transformador tem $N_1 = 1000$ espiras no primário (a $120\ \mathrm{V}$) e
+$N_2 = 50$ no secundário. Qual a tensão de saída?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$V_2 = V_1\,N_2/N_1 = 120\times50/1000 = 6{,}0\ \mathrm{V}$ (@eq-transformador). É um
+transformador **abaixador**.
+:::
+
+::: {#exr-indutor-corrente}
+Que taxa de variação de corrente produz $5{,}0\ \mathrm{V}$ num indutor de
+$0{,}25\ \mathrm{H}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mathrm{d}I/\mathrm{d}t = \varepsilon/L = 5{,}0/0{,}25 = 20\ \mathrm{A/s}$ (@eq-fem-autoinduzida).
+:::
+
+::: {#exr-faisca}
+Por que aparece uma faísca ao se desligar bruscamente um circuito com um grande
+indutor (como um motor)?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Ao abrir o circuito, $\mathrm{d}I/\mathrm{d}t$ é enorme (corrente cai muito rápido),
+gerando uma fem autoinduzida altíssima (@eq-fem-autoinduzida) que ioniza o ar e
+produz a faísca. O indutor "tenta" manter a corrente, descarregando sua energia
+$\tfrac12 LI^2$.
+:::

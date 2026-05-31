@@ -1,0 +1,132 @@
+---
+title: "Superposição e Interferência"
+---
+
+## Motivação
+
+Duas pedras lançadas num lago criam padrões que se cruzam, formando regiões de
+ondas reforçadas e regiões de água quase parada. Fones com cancelamento de ruído
+silenciam o mundo somando som com "antissom". Esses fenômenos nascem de um
+princípio simples e profundo: quando ondas se encontram, seus deslocamentos
+**somam-se**. Da superposição surgem a interferência, os batimentos e — no próximo
+capítulo — as ondas estacionárias. Este capítulo estabelece o princípio e suas
+duas manifestações mais importantes.
+
+## O princípio da superposição
+
+::: {.callout-important}
+## Princípio da superposição
+Quando duas ou mais ondas se sobrepõem num mesmo ponto, o deslocamento resultante
+é a **soma** dos deslocamentos individuais:
+$$y(x,t) = y_1(x,t) + y_2(x,t).$$ {#eq-superposicao}
+Após se cruzarem, as ondas seguem inalteradas, como se nunca tivessem se
+encontrado.
+:::
+
+Esse princípio vale porque a equação de onda (@eq-equacao-onda) é **linear**: a
+soma de duas soluções é também solução. É o que permite que inúmeras conversas,
+músicas e sinais de rádio coexistam no ar sem se corromperem mutuamente.
+
+## Interferência
+
+Quando duas ondas de **mesma frequência** se superpõem, o resultado depende da
+diferença de fase entre elas.
+
+::: {#def-interferencia}
+A **interferência** de duas ondas de mesma amplitude e frequência é:
+
+- **construtiva** quando elas estão **em fase** (diferença de fase $0, 2\pi, \dots$
+  ou diferença de caminho de um número inteiro de $\lambda$): as amplitudes somam,
+  resultando em amplitude $2A$;
+- **destrutiva** quando estão **em oposição de fase** (diferença de fase
+  $\pi, 3\pi,\dots$ ou diferença de caminho de meio-inteiro de $\lambda$): as
+  amplitudes cancelam, resultando em amplitude nula.
+:::
+
+::: {.callout-important}
+## Condição de interferência por diferença de caminho
+Para duas fontes em fase, num ponto que dista $d_1$ e $d_2$ delas, a interferência
+é dada pela diferença de caminho $\Delta = |d_2 - d_1|$:
+$$\Delta = n\lambda \;\Rightarrow\; \text{construtiva}, \qquad \Delta = \left(n+\tfrac12\right)\lambda \;\Rightarrow\; \text{destrutiva},$$ {#eq-condicao-interferencia}
+com $n = 0, 1, 2, \dots$
+:::
+
+Essa condição é a base do experimento de fenda dupla de Young (Volume IX), que
+revelou a natureza ondulatória da luz.
+
+## Batimentos
+
+Quando as frequências são **ligeiramente diferentes**, a interferência alterna no
+tempo entre construtiva e destrutiva, produzindo uma pulsação na intensidade — os
+**batimentos**.
+
+::: {.callout-important}
+## Frequência de batimento
+Duas ondas de frequências $f_1$ e $f_2$ próximas produzem batimentos com
+frequência igual ao módulo da diferença:
+$$f_\text{bat} = |f_1 - f_2|.$$ {#eq-batimento}
+:::
+
+::: {.callout-note}
+## Afinando instrumentos pelos batimentos
+Um músico afina uma corda contra um diapasão ouvindo os batimentos: quanto mais
+próximas as frequências, mais lenta a pulsação. Quando os batimentos cessam
+($f_\text{bat}=0$), as frequências são iguais e o instrumento está afinado.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-interferencia-alto-falantes}
+Dois alto-falantes em fase emitem som de $\lambda = 0{,}50\ \mathrm{m}$. Num ponto,
+as distâncias aos falantes são $3{,}0\ \mathrm{m}$ e $3{,}75\ \mathrm{m}$. A
+interferência é construtiva ou destrutiva?
+:::
+
+**Solução.** A diferença de caminho é $\Delta = 3{,}75 - 3{,}0 = 0{,}75\ \mathrm{m}$.
+Em unidades de $\lambda$: $\Delta/\lambda = 0{,}75/0{,}50 = 1{,}5 = (1 + \tfrac12)$.
+Por @eq-condicao-interferencia, é um meio-inteiro de $\lambda$: interferência
+**destrutiva** (ponto silencioso).
+
+::: {#exm-batimento-diapasao}
+Um diapasão de $440\ \mathrm{Hz}$ e uma corda produzem $3$ batimentos por segundo.
+Quais as possíveis frequências da corda?
+:::
+
+**Solução.** Por @eq-batimento, $f_\text{bat} = |f_\text{corda} - 440| = 3\ \mathrm{Hz}$,
+logo $f_\text{corda} = 437\ \mathrm{Hz}$ ou $443\ \mathrm{Hz}$. (Para decidir qual,
+basta apertar levemente a corda e ver se os batimentos aceleram ou diminuem.)
+
+## Exercícios
+
+::: {#exr-construtiva}
+Duas fontes em fase de $\lambda = 2{,}0\ \mathrm{m}$ atingem um ponto com diferença
+de caminho de $6{,}0\ \mathrm{m}$. Construtiva ou destrutiva?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta/\lambda = 6{,}0/2{,}0 = 3$, inteiro. Interferência **construtiva**
+(@eq-condicao-interferencia com $n=3$).
+:::
+
+::: {#exr-batimento-pianos}
+Duas notas de $256\ \mathrm{Hz}$ e $260\ \mathrm{Hz}$ soam juntas. Quantos
+batimentos por segundo se ouvem?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$f_\text{bat} = |260 - 256| = 4\ \mathrm{Hz}$ — quatro batimentos por segundo.
+:::
+
+::: {#exr-cancelamento}
+Em fones com cancelamento de ruído, que onda o aparelho deve gerar para silenciar
+um ruído $y_1(t)$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Uma onda em **oposição de fase**, $y_2 = -y_1$, de mesma amplitude e frequência.
+Pela superposição (@eq-superposicao), $y_1 + y_2 = 0$: interferência destrutiva
+total, o ruído é cancelado.
+:::

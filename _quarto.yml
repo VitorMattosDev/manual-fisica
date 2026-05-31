@@ -57,6 +57,7 @@ book:
       chapters:
         - volumes/v5-ondas/01-movimento-ondulatorio.qmd
         - volumes/v5-ondas/02-ondas-meios.qmd
+        - volumes/v5-ondas/03-superposicao-interferencia.qmd
   appendices:
     - constantes.qmd
 

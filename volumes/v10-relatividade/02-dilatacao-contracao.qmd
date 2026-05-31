@@ -1,0 +1,132 @@
+---
+title: "Dilatação do Tempo e Contração do Comprimento"
+---
+
+## Motivação
+
+Se a velocidade da luz é a mesma para todos, algo precisa ceder — e o que cede é
+nada menos que **o tempo e o espaço**. Relógios em movimento andam mais devagar;
+réguas em movimento encolhem. Não são ilusões nem defeitos de medição: são
+propriedades reais do espaço-tempo, confirmadas por múons cósmicos, partículas em
+aceleradores e relógios atômicos em aviões. Este capítulo deduz a dilatação do
+tempo e a contração do comprimento a partir dos postulados, e enfrenta o famoso
+paradoxo dos gêmeos.
+
+## Dilatação do tempo
+
+::: {#def-tempo-proprio}
+O **tempo próprio** $\Delta t_0$ é o intervalo entre dois eventos medido no
+referencial em que eles ocorrem no **mesmo lugar** (por um único relógio). É o menor
+intervalo possível entre os eventos.
+:::
+
+::: {.callout-important}
+## Dilatação do tempo
+Um intervalo de tempo próprio $\Delta t_0$ é medido por um observador em movimento
+relativo $v$ como um intervalo **maior**:
+$$\Delta t = \gamma\,\Delta t_0 = \frac{\Delta t_0}{\sqrt{1 - v^2/c^2}}.$$ {#eq-dilatacao-tempo}
+"Relógios em movimento andam mais devagar."
+:::
+
+::: {.proof}
+## O relógio de luz
+Imagine um relógio que marca o tempo por um pulso de luz que sobe e desce entre dois
+espelhos separados por $L$. No referencial do relógio, um tique leva
+$\Delta t_0 = 2L/c$. Visto por quem o vê passar a velocidade $v$, a luz percorre um
+caminho **diagonal** mais longo (o relógio se desloca enquanto a luz sobe). Como a
+luz ainda viaja a $c$ (postulado 2), esse tique demora mais. A geometria do triângulo
+dá exatamente $\Delta t = \gamma\,\Delta t_0$. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Os múons que chegam ao chão
+Múons criados no alto da atmosfera vivem só $\sim2\ \mu\mathrm{s}$ — tempo
+insuficiente para chegar ao solo, classicamente. Mas, viajando a $\sim0{,}998\,c$,
+seu "relógio" anda devagar para nós ($\gamma\approx16$), e eles vivem o bastante
+para alcançar detectores na superfície. É confirmação experimental diária da
+@eq-dilatacao-tempo.
+:::
+
+## Contração do comprimento
+
+O espaço também se ajusta. Um objeto em movimento encolhe na direção do movimento.
+
+::: {.callout-important}
+## Contração do comprimento
+Um comprimento próprio $L_0$ (medido em repouso com o objeto) é visto por um
+observador em movimento relativo $v$ como **menor**:
+$$L = \frac{L_0}{\gamma} = L_0\sqrt{1 - v^2/c^2}.$$ {#eq-contracao}
+A contração ocorre **apenas** na direção do movimento.
+:::
+
+A dilatação e a contração são duas faces da mesma moeda: do ponto de vista do múon,
+não é seu tempo que dilata — é a **atmosfera que encolhe**, ficando fina o
+suficiente para ele atravessar no seu curto tempo de vida. Os dois observadores
+discordam sobre o quê dilata, mas concordam no resultado físico.
+
+## O paradoxo dos gêmeos
+
+::: {.callout-note}
+## Por que não há paradoxo
+Uma gêmea viaja a alta velocidade e volta; o gêmeo fica na Terra. Cada um vê o
+relógio do outro andar devagar — então quem envelhece menos? A resposta: a
+**viajante**. A aparente simetria se quebra porque ela **acelera** (para virar e
+voltar), saindo de um único referencial inercial; o gêmeo em casa permanece inercial
+o tempo todo. Não é um paradoxo, e sim um efeito real: a viajante volta mais jovem.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-dilatacao}
+Uma nave viaja a $0{,}80\,c$. Um relógio a bordo mede $1{,}0\ \mathrm{h}$ de
+viagem. Quanto tempo passou na Terra?
+:::
+
+**Solução.** O tempo a bordo é próprio ($\Delta t_0 = 1{,}0\ \mathrm{h}$). Com
+$\gamma = 1{,}67$ (do @exm-gamma), a @eq-dilatacao-tempo dá
+$$\Delta t = \gamma\,\Delta t_0 = 1{,}67\times1{,}0 \approx 1{,}7\ \mathrm{h}.$$
+Passou mais tempo na Terra.
+
+::: {#exm-contracao}
+Uma régua de $1{,}0\ \mathrm{m}$ (própria) passa a $0{,}60\,c$. Qual seu
+comprimento medido no laboratório?
+:::
+
+**Solução.** Com $\gamma = 1{,}25$ (do @exr-gamma-09), a @eq-contracao dá
+$$L = \frac{L_0}{\gamma} = \frac{1{,}0}{1{,}25} = 0{,}80\ \mathrm{m}.$$
+A régua encolhe para $80\ \mathrm{cm}$ na direção do movimento.
+
+## Exercícios
+
+::: {#exr-vida-particula}
+Uma partícula vive $2{,}0\times10^{-8}\ \mathrm{s}$ em repouso. A $0{,}80\,c$,
+quanto vive no laboratório?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta t = \gamma\,\Delta t_0 = 1{,}67\times2{,}0\times10^{-8} \approx 3{,}3\times10^{-8}\ \mathrm{s}$
+(@eq-dilatacao-tempo).
+:::
+
+::: {#exr-nave-contraida}
+Uma nave de $100\ \mathrm{m}$ (própria) viaja a $0{,}80\,c$. Qual seu comprimento
+para um observador parado?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$L = L_0/\gamma = 100/1{,}67 \approx 60\ \mathrm{m}$ (@eq-contracao).
+:::
+
+::: {#exr-gemeos}
+No paradoxo dos gêmeos, qual deles envelhece menos, e por quê não há contradição?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O gêmeo **viajante** envelhece menos. A simetria se quebra porque ele acelera (ao
+inverter o movimento para voltar), deixando de ser inercial; o gêmeo na Terra
+permanece num único referencial inercial. Logo, a dilatação se aplica de forma
+assimétrica, sem paradoxo.
+:::

@@ -99,6 +99,7 @@ book:
     - part: "Volume X — Relatividade Especial"
       chapters:
         - volumes/v10-relatividade/01-postulados-cinematica.qmd
+        - volumes/v10-relatividade/02-dilatacao-contracao.qmd
   appendices:
     - constantes.qmd
 

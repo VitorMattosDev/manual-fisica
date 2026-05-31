@@ -102,7 +102,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v7-eletromagnetismo1/01-carga-coulomb.qmd` — Carga e lei de Coulomb
 - [x] `volumes/v7-eletromagnetismo1/02-campo-eletrico.qmd` — Campo elétrico
 - [x] `volumes/v7-eletromagnetismo1/03-lei-gauss.qmd` — Lei de Gauss
-- [ ] `volumes/v7-eletromagnetismo1/04-potencial-eletrico.qmd` — Potencial elétrico
+- [x] `volumes/v7-eletromagnetismo1/04-potencial-eletrico.qmd` — Potencial elétrico
 - [ ] `volumes/v7-eletromagnetismo1/05-capacitancia.qmd` — Capacitância e dielétricos
 - [ ] `volumes/v7-eletromagnetismo1/06-corrente-resistencia.qmd` — Corrente, resistência, Ohm
 - [ ] `volumes/v7-eletromagnetismo1/07-circuitos-dc.qmd` — Circuitos DC (Kirchhoff, RC)

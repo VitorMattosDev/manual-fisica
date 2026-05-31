@@ -1,0 +1,121 @@
+---
+title: "Potencial Elétrico"
+---
+
+## Motivação
+
+Falamos em "voltagem" o tempo todo: uma pilha de $1{,}5\ \mathrm{V}$, a tomada de
+$220\ \mathrm{V}$. Mas o que é, fisicamente, um volt? É a linguagem do **potencial
+elétrico** — a energia potencial por unidade de carga, o análogo elétrico da
+"altura" no campo gravitacional. Trabalhar com potencial (um **escalar**) é muitas
+vezes mais simples do que com o campo (um vetor), e é a forma natural de tratar
+circuitos. Este capítulo introduz a energia potencial elétrica, o potencial e sua
+relação com o campo.
+
+## Energia potencial elétrica
+
+A força elétrica é conservativa (como a gravitacional), então admite energia
+potencial. Para duas cargas pontuais, integra-se a lei de Coulomb.
+
+::: {.callout-important}
+## Energia potencial de duas cargas
+Tomando $U\to0$ no infinito, a energia potencial de duas cargas $q_1, q_2$
+separadas por $r$ é
+$$U = k\,\frac{q_1 q_2}{r}.$$ {#eq-energia-potencial-eletrica}
+É **positiva** para cargas de mesmo sinal (precisaram de energia para se
+aproximar) e **negativa** para opostas (ligadas).
+:::
+
+## Potencial elétrico
+
+::: {#def-potencial}
+O **potencial elétrico** num ponto é a energia potencial por unidade de carga de
+prova:
+$$V = \frac{U}{q_0}, \qquad [\,V\,] = \mathrm{J/C} = \mathrm{volt\ (V)}.$$ {#eq-potencial}
+Para uma carga pontual $Q$,
+$$V = k\,\frac{Q}{r}.$$ {#eq-potencial-pontual}
+:::
+
+O potencial é um **escalar** — soma-se aritmeticamente, sem vetores:
+$V = \sum_i kQ_i/r_i$. Só **diferenças** de potencial têm significado físico; o
+zero é uma escolha de referência (em geral o infinito ou o "terra").
+
+::: {.callout-important}
+## Diferença de potencial e trabalho
+O trabalho para levar uma carga $q$ de um ponto $A$ a outro $B$ é
+$$W_{A\to B} = q\,(V_A - V_B) = -q\,\Delta V.$$ {#eq-trabalho-potencial-eletrico}
+A **diferença de potencial** $U_{AB} = V_A - V_B$ é a "voltagem" entre os pontos.
+:::
+
+## Relação entre campo e potencial
+
+Campo e potencial são duas faces da mesma física: o campo é a "taxa de queda" do
+potencial no espaço.
+
+::: {.callout-important}
+## Campo a partir do potencial
+$$\vec{E} = -\,\frac{\mathrm{d}V}{\mathrm{d}x}\ (\text{em 1D}), \qquad \Delta V = -\int \vec{E}\cdot\mathrm{d}\vec{r}.$$ {#eq-campo-potencial}
+O campo aponta no sentido em que o potencial **decresce** mais rapidamente.
+:::
+
+::: {.callout-note}
+## Superfícies equipotenciais
+Pontos de mesmo potencial formam **superfícies equipotenciais**, sempre
+**perpendiculares** às linhas de campo. Nenhum trabalho é feito ao mover uma carga
+sobre uma equipotencial ($\Delta V=0$). A superfície de um condutor em equilíbrio é
+equipotencial — por isso o campo sai dela perpendicularmente.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-potencial-carga}
+Qual o potencial a $0{,}30\ \mathrm{m}$ de uma carga de $+6{,}0\ \mu\mathrm{C}$?
+:::
+
+**Solução.** Por @eq-potencial-pontual:
+$$V = k\frac{Q}{r} = 8{,}99\times10^{9}\frac{6{,}0\times10^{-6}}{0{,}30} \approx 1{,}8\times10^{5}\ \mathrm{V}.$$
+
+::: {#exm-trabalho-carga}
+Quanto trabalho é preciso para levar uma carga de $2{,}0\ \mathrm{nC}$ de um ponto
+a $100\ \mathrm{V}$ para outro a $300\ \mathrm{V}$?
+:::
+
+**Solução.** O trabalho **externo** é $W = q\,\Delta V = q(V_B - V_A)$:
+$$W = 2{,}0\times10^{-9}\times(300 - 100) = 2{,}0\times10^{-9}\times200 = 4{,}0\times10^{-7}\ \mathrm{J}.$$
+Positivo: empurrar carga positiva para potencial maior custa energia.
+
+## Exercícios
+
+::: {#exr-potencial-soma}
+Duas cargas de $+2{,}0\ \mu\mathrm{C}$ e $-2{,}0\ \mu\mathrm{C}$ estão cada uma a
+$0{,}10\ \mathrm{m}$ de um ponto $P$. Qual o potencial em $P$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Potencial é escalar e soma direto (@eq-potencial-pontual):
+$V = k(+2{,}0\times10^{-6})/0{,}10 + k(-2{,}0\times10^{-6})/0{,}10 = 0$. Os
+potenciais se cancelam (embora o campo em $P$ não seja nulo).
+:::
+
+::: {#exr-campo-uniforme-ddp}
+Num campo uniforme de $500\ \mathrm{V/m}$, qual a diferença de potencial entre dois
+pontos separados por $0{,}20\ \mathrm{m}$ ao longo do campo?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$|\Delta V| = E\,d = 500\times0{,}20 = 100\ \mathrm{V}$ (@eq-campo-potencial). O
+potencial cai $100\ \mathrm{V}$ no sentido do campo.
+:::
+
+::: {#exr-eletronvolt}
+Um elétron é acelerado por uma diferença de potencial de $1000\ \mathrm{V}$. Qual a
+energia cinética que adquire, em joules?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\Delta K = e\,\Delta V = 1{,}6\times10^{-19}\times1000 = 1{,}6\times10^{-16}\ \mathrm{J}$
+(equivale a $1000\ \mathrm{eV} = 1\ \mathrm{keV}$, definindo o elétron-volt).
+:::

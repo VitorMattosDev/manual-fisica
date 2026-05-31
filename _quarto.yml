@@ -34,6 +34,7 @@ book:
         - volumes/v2-mecanica1/02-cinematica-vetorial.qmd
         - volumes/v2-mecanica1/03-leis-newton.qmd
         - volumes/v2-mecanica1/04-aplicacoes-newton.qmd
+        - volumes/v2-mecanica1/05-trabalho-energia.qmd
         - volumes/v2-mecanica1/06-conservacao-energia.qmd
   appendices:
     - constantes.qmd

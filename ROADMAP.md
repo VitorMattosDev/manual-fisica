@@ -42,7 +42,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v1-fundamentos/03-medicao-erros.qmd` — Medição, algarismos significativos, teoria de erros
 - [x] `volumes/v1-fundamentos/04-vetores.qmd` — Vetores e álgebra vetorial
 - [x] `volumes/v1-fundamentos/05-ferramentas-calculo.qmd` — Derivadas e integrais na física
-- [ ] `volumes/v1-fundamentos/06-modelagem.qmd` — Modelagem e método científico
+- [x] `volumes/v1-fundamentos/06-modelagem.qmd` — Modelagem e método científico
 
 ## Volume II — Mecânica Clássica I (Cinemática e Dinâmica)
 *Objetivo: descrever e prever o movimento. Pré-requisitos: I.*

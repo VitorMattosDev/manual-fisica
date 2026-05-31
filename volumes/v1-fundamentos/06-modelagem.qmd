@@ -1,0 +1,165 @@
+---
+title: "Modelagem e Método Científico"
+---
+
+## Motivação
+
+Um planeta é uma bola de rocha e metal com montanhas, oceanos e atmosfera. No
+entanto, para prever sua órbita, Newton o tratou como um **ponto**. Essa ousadia
+— ignorar quase tudo e ainda assim acertar — é a essência da física. Não
+estudamos a realidade em toda a sua complexidade; estudamos **modelos**:
+representações simplificadas que retêm o essencial e descartam o resto. Este
+capítulo, que fecha os fundamentos, torna explícita essa arte: o que é um modelo,
+como o método científico o testa, e por que saber *quando* um modelo vale é tão
+importante quanto saber resolvê-lo.
+
+## O que é um modelo físico
+
+::: {#def-modelo}
+Um **modelo físico** é uma representação idealizada de um sistema real que
+conserva apenas as características relevantes para a questão em estudo, desprezando
+as demais. Suas previsões valem dentro de um **domínio de validade** — a faixa de
+condições em que as simplificações são boas aproximações.
+:::
+
+Modelar é escolher o que ignorar. As idealizações recorrentes da física são quase
+todas formas de simplificação:
+
+- **Partícula (ponto material):** corpo cujo tamanho e forma são irrelevantes; só
+  importam massa e posição.
+- **Corpo rígido:** objeto que não se deforma — distâncias internas fixas.
+- **Fio ideal, superfície sem atrito, gás ideal:** efeitos secundários
+  (massa do fio, atrito, interações moleculares) postos a zero.
+
+::: {.callout-note}
+## Toda idealização tem um preço
+"Sem atrito" é falso para qualquer superfície real, mas é uma excelente
+aproximação para um disco de gelo e péssima para um tijolo no asfalto. O erro do
+modelo não é um defeito a esconder, e sim uma grandeza a estimar: um bom físico
+sabe *de quanto* erra ao desprezar algo.
+:::
+
+## Hipóteses, leis e teorias
+
+A física organiza o conhecimento em camadas de generalidade crescente. Vale
+distinguir os termos, frequentemente confundidos.
+
+::: {#def-lei-teoria}
+- Uma **hipótese** é uma conjectura proposta para explicar observações, ainda não
+  testada de forma decisiva.
+- Uma **lei** é uma regularidade empírica concisa, em geral matemática, válida
+  num amplo conjunto de fenômenos (a lei de Hooke, a lei de Coulomb).
+- Uma **teoria** é um arcabouço explicativo amplo, logicamente articulado e
+  reiteradamente testado, do qual as leis decorrem (a mecânica newtoniana, o
+  eletromagnetismo de Maxwell).
+:::
+
+Em ciência, "teoria" **não** significa "palpite": é o grau mais alto de confiança
+que uma ideia pode alcançar — sempre, ainda assim, provisória.
+
+## O método científico e a falseabilidade
+
+::: {.callout-important}
+## O ciclo do método científico
+O conhecimento físico avança por um ciclo de confronto entre ideia e experimento:
+$$\text{observação} \to \text{hipótese/modelo} \to \text{previsão} \to \text{experimento} \to \text{revisão}.$$ {#eq-metodo}
+Uma previsão confirmada **corrobora** o modelo (não o prova); uma previsão
+refutada **falseia** o modelo e exige revisão ou abandono.
+:::
+
+O ponto decisivo, enfatizado por Karl Popper, é a **falseabilidade**: uma
+afirmação só é científica se for possível conceber um experimento capaz de
+contrariá-la. "Todo corpo cai com $g = 9{,}8\ \mathrm{m/s^2}$" é científica —
+basta medir. Uma afirmação que nenhum experimento poderia contradizer não pertence
+à física.
+
+::: {.callout-note}
+## O princípio da navalha de Occam
+Entre dois modelos que explicam igualmente bem os mesmos dados, prefere-se o mais
+**simples** — o com menos hipóteses livres. Não porque a natureza seja
+obrigatoriamente simples, mas porque hipóteses supérfluas não podem ser testadas e
+nada acrescentam à previsão.
+:::
+
+## Limites de validade e correspondência
+
+Nenhum modelo é a palavra final; cada um é caso-limite de outro mais geral. A
+mecânica de Newton é o limite de baixas velocidades da relatividade
+($v \ll c$) e o limite de grandes escalas da mecânica quântica. Isso não a torna
+"errada": dentro do seu domínio, ela é exata o quanto se queira.
+
+::: {.callout-important}
+## Princípio da correspondência
+Uma teoria mais geral deve **reproduzir** as previsões da teoria anterior no
+regime em que esta já era bem-sucedida. Assim a relatividade reduz-se a Newton
+quando $v/c \to 0$, e a física nova herda — em vez de descartar — os acertos da
+antiga.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-pendulo-modelo}
+O período de um pêndulo simples é $T = 2\pi\sqrt{L/g}$. Identifique as
+idealizações desse modelo e o seu domínio de validade.
+:::
+
+**Solução.** O modelo supõe: (i) toda a massa concentrada num ponto (partícula);
+(ii) fio inextensível e sem massa; (iii) ausência de atrito e de resistência do
+ar; (iv) ângulos **pequenos**, pois a fórmula vem da aproximação
+$\mathrm{sen}\,\theta \approx \theta$. O domínio de validade é, portanto,
+oscilações de pequena amplitude (digamos $\theta \lesssim 15^\circ$) num meio de
+atrito desprezível. Fora disso — amplitudes grandes, fio elástico, ar viscoso — o
+período real desvia da previsão, e o modelo precisa ser refinado.
+
+::: {#exm-queda}
+Por que tratar uma pedra e uma pena como "iguais" em queda livre é legítimo no
+vácuo, mas não no ar?
+:::
+
+**Solução.** O modelo de queda livre despreza a resistência do ar, mantendo só a
+gravidade; nele, $a = g$ para qualquer corpo e ambos caem juntos. A idealização é
+ótima quando a força de arrasto é pequena frente ao peso — caso da pedra. Para a
+pena, leve e de grande área, o arrasto é comparável ao peso e **não** pode ser
+desprezado: o modelo sai do seu domínio de validade. No vácuo, removida a única
+força desprezada, pedra e pena de fato caem juntas (como demonstrado na Lua pela
+Apollo 15).
+
+## Exercícios
+
+::: {#exr-falseabilidade}
+Classifique como científica (falseável) ou não: (a) "a Lua exerce força
+gravitacional sobre os oceanos"; (b) "existe um campo invisível que não afeta
+nenhuma medida possível".
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+(a) É **falseável/científica**: prevê marés, que se medem e poderiam contrariar a
+afirmação. (b) **Não é científica**: por construção nenhum experimento pode
+detectá-la ou refutá-la — viola a falseabilidade.
+:::
+
+::: {#exr-occam}
+Dois modelos ajustam igualmente bem os dados de um lançamento: um usa apenas a
+gravidade; outro adiciona uma "força extra" cujo valor foi ajustado para ficar
+nula no fim. Qual escolher e por quê?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela navalha de Occam, escolhe-se o modelo só com gravidade: ele explica os mesmos
+dados com menos hipóteses. A "força extra" ajustada para se anular não acrescenta
+poder preditivo e introduz um parâmetro não testável.
+:::
+
+::: {#exr-correspondencia}
+A energia cinética relativística reduz-se a $K \approx \tfrac12 m v^2$ quando
+$v \ll c$. Que princípio isso ilustra?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O **princípio da correspondência** (@eq-metodo e a caixa correspondente): a
+teoria mais geral (relatividade) reproduz a previsão da teoria anterior (Newton)
+no regime em que esta funcionava, aqui o de baixas velocidades.
+:::

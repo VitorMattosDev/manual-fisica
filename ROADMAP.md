@@ -124,7 +124,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v9-optica/01-natureza-luz.qmd` — Natureza e propagação da luz
 - [x] `volumes/v9-optica/02-optica-geometrica.qmd` — Reflexão e refração
 - [x] `volumes/v9-optica/03-espelhos-lentes.qmd` — Espelhos, lentes, instrumentos
-- [ ] `volumes/v9-optica/04-interferencia.qmd` — Interferência (Young, filmes finos)
+- [x] `volumes/v9-optica/04-interferencia.qmd` — Interferência (Young, filmes finos)
 - [ ] `volumes/v9-optica/05-difracao.qmd` — Difração
 - [ ] `volumes/v9-optica/06-polarizacao.qmd` — Polarização
 

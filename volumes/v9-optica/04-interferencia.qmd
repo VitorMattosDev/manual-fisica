@@ -1,0 +1,125 @@
+---
+title: "Interferência da Luz"
+---
+
+## Motivação
+
+Por que uma bolha de sabão exibe cores que não estão no sabão? Por que uma mancha
+de óleo na água brilha como arco-íris? Por que um CD difrata luz colorida? A
+resposta está na **interferência** — a soma de ondas luminosas que se reforçam ou se
+cancelam. Foi o experimento de fenda dupla de Thomas Young, em 1801, que provou
+definitivamente que a luz é uma **onda**, ao exibir franjas que partículas jamais
+produziriam. Este capítulo aplica à luz o princípio da superposição (Volume V) e
+explica esses fenômenos coloridos.
+
+## A condição de coerência
+
+::: {#def-coerencia}
+Para produzir interferência observável, as fontes de luz devem ser **coerentes**:
+manter uma diferença de fase constante no tempo e ter a mesma frequência. A luz de
+duas lâmpadas comuns é incoerente (fases aleatórias); por isso usam-se fendas
+iluminadas pela **mesma** fonte, ou lasers.
+:::
+
+## O experimento de fenda dupla de Young
+
+Luz coerente atravessa duas fendas estreitas e separadas, e na tela aparece um
+padrão de franjas claras e escuras — a assinatura inconfundível de ondas.
+
+::: {.callout-important}
+## Franjas de interferência de Young
+Para duas fendas separadas por $d$, a uma tela distante, há franjas **brilhantes**
+(interferência construtiva) nos ângulos $\theta$ que satisfazem
+$$d\,\mathrm{sen}\,\theta = m\lambda, \qquad m = 0, 1, 2, \dots$$ {#eq-young}
+e franjas **escuras** (destrutiva) em $d\,\mathrm{sen}\,\theta = (m+\tfrac12)\lambda$.
+:::
+
+::: {.proof}
+## A condição de máximo
+A diferença de caminho entre as luzes das duas fendas até um ponto da tela é
+$\Delta = d\,\mathrm{sen}\,\theta$. Pela condição geral de interferência
+(@eq-condicao-interferencia, Volume V), há reforço quando $\Delta$ é múltiplo
+inteiro de $\lambda$, isto é $d\,\mathrm{sen}\,\theta = m\lambda$. $\qquad\blacksquare$
+:::
+
+Para ângulos pequenos, as franjas brilhantes ficam igualmente espaçadas na tela,
+por $\Delta y \approx \lambda L/d$ (com $L$ a distância à tela) — o que permite
+**medir o comprimento de onda da luz** com uma régua.
+
+## Interferência em filmes finos
+
+Numa película fina (bolha, óleo, revestimento de lentes), a luz refletida na
+superfície de cima interfere com a refletida na de baixo. A diferença de caminho —
+mais uma possível inversão de fase na reflexão — decide as cores reforçadas.
+
+::: {.callout-important}
+## Filme fino
+Para um filme de espessura $e$ e índice $n$, a diferença de caminho das duas
+reflexões é $2ne$. Contando a inversão de fase de meia onda que ocorre na reflexão
+no meio mais denso, a interferência **construtiva** (na incidência quase normal)
+satisfaz
+$$2ne = \left(m + \tfrac12\right)\lambda, \qquad m = 0, 1, 2, \dots$$ {#eq-filme-fino}
+:::
+
+::: {.callout-note}
+## As cores das bolhas e o revestimento antirreflexo
+Como a condição da @eq-filme-fino depende de $\lambda$, cada cor é reforçada numa
+espessura diferente — daí o arco-íris das bolhas e do óleo. O mesmo princípio,
+invertido, cria **revestimentos antirreflexo** em lentes e óculos: escolhe-se a
+espessura para a luz refletida interferir **destrutivamente**, eliminando reflexos.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-young}
+Em um experimento de Young, fendas separadas por $d = 0{,}10\ \mathrm{mm}$ são
+iluminadas por luz de $\lambda = 600\ \mathrm{nm}$. Qual o ângulo da primeira franja
+brilhante ($m=1$)?
+:::
+
+**Solução.** Por @eq-young com $m=1$:
+$$\mathrm{sen}\,\theta = \frac{m\lambda}{d} = \frac{1\times600\times10^{-9}}{0{,}10\times10^{-3}} = \frac{6{,}0\times10^{-7}}{1{,}0\times10^{-4}} = 6{,}0\times10^{-3},$$
+logo $\theta \approx 0{,}34^\circ$ — um ângulo pequeno, como típico.
+
+::: {#exm-espacamento}
+No experimento acima, a tela está a $L = 2{,}0\ \mathrm{m}$. Qual o espaçamento
+entre franjas brilhantes?
+:::
+
+**Solução.** $\Delta y = \lambda L/d = (600\times10^{-9}\times2{,}0)/(0{,}10\times10^{-3}) = (1{,}2\times10^{-6})/(1{,}0\times10^{-4}) = 1{,}2\times10^{-2}\ \mathrm{m} = 1{,}2\ \mathrm{cm}$.
+
+## Exercícios
+
+::: {#exr-young-lambda}
+Franjas de Young distam $\Delta y = 5{,}0\ \mathrm{mm}$ numa tela a $1{,}5\ \mathrm{m}$,
+com fendas a $d = 0{,}15\ \mathrm{mm}$. Qual o comprimento de onda da luz?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\lambda = \Delta y\,d/L = (5{,}0\times10^{-3}\times0{,}15\times10^{-3})/1{,}5 = (7{,}5\times10^{-7})/1{,}5 = 5{,}0\times10^{-7}\ \mathrm{m} = 500\ \mathrm{nm}$.
+:::
+
+::: {#exr-terceira-franja}
+Para $d = 0{,}20\ \mathrm{mm}$ e $\lambda = 500\ \mathrm{nm}$, qual o ângulo da
+terceira franja brilhante?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mathrm{sen}\,\theta = 3\lambda/d = 3\times500\times10^{-9}/0{,}20\times10^{-3} = 7{,}5\times10^{-3}$,
+$\theta \approx 0{,}43^\circ$.
+:::
+
+::: {#exr-antirreflexo}
+Por que lentes de câmera têm um revestimento que as faz parecer levemente
+coloridas em reflexão?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+É um **revestimento antirreflexo** de filme fino: sua espessura é escolhida para
+que a luz refletida interfira **destrutivamente** (@eq-filme-fino), reduzindo
+reflexos e aumentando a luz transmitida. A leve cor residual vem das frequências não
+perfeitamente canceladas.
+:::

@@ -1,0 +1,173 @@
+---
+title: "Medição, Algarismos Significativos e Erros"
+---
+
+## Motivação
+
+Meça a largura de uma mesa com uma trena de marcações em centímetros e você dirá
+"$74{,}3\ \mathrm{cm}$", talvez "$74{,}35\ \mathrm{cm}$" — mas jamais
+"$74{,}3500000\ \mathrm{cm}$". Há um limite até onde sua medida tem sentido, e
+escrever além dele é mentir sobre a precisão. Toda medida física carrega uma
+**incerteza**, e comunicar essa incerteza honestamente é tão importante quanto o
+valor central. Este capítulo ensina a linguagem da medida: algarismos
+significativos, tipos de erro e como a incerteza se propaga pelos cálculos.
+
+## Erro, exatidão e precisão
+
+::: {#def-erro}
+O **erro** de uma medida é a diferença entre o valor medido e o valor
+verdadeiro (em geral desconhecido). Distinguem-se dois tipos:
+
+- **Erro sistemático:** desvio sempre no mesmo sentido (uma régua dilatada, um
+  instrumento descalibrado). Afeta a **exatidão**.
+- **Erro aleatório:** flutuação imprevisível de uma medida para outra. Afeta a
+  **precisão** e pode ser reduzido repetindo a medida.
+:::
+
+::: {.callout-note}
+## Exatidão × precisão
+**Exatidão** é proximidade do valor verdadeiro; **precisão** é
+reprodutibilidade. Tiros agrupados longe do centro são precisos mas inexatos
+(erro sistemático); tiros espalhados em torno do centro são exatos na média mas
+imprecisos (erro aleatório). O ideal é ser ambos.
+:::
+
+## Algarismos significativos
+
+::: {#def-algarismos}
+Os **algarismos significativos** de uma medida são todos os dígitos confiáveis
+mais o primeiro dígito duvidoso. Regras práticas:
+
+- Dígitos não nulos são sempre significativos: $74{,}3$ tem 3.
+- Zeros entre não nulos contam: $7{,}03$ tem 3.
+- Zeros à esquerda **não** contam (são posicionais): $0{,}008$ tem 1.
+- Zeros à direita após a vírgula contam: $7{,}30$ tem 3 (o último zero informa
+  precisão).
+:::
+
+A notação científica remove a ambiguidade dos zeros: $1500$ pode ter 2, 3 ou 4
+significativos, mas $1{,}50 \times 10^{3}$ tem inequivocamente 3.
+
+::: {.callout-important}
+## Regras de arredondamento em operações
+- **Multiplicação e divisão:** o resultado tem tantos significativos quantos o
+  fator com **menos** significativos.
+- **Adição e subtração:** o resultado tem tantas casas decimais quantas a parcela
+  com **menos** casas decimais.
+
+$$\underbrace{2{,}0}_{2\ \text{s.f.}} \times \underbrace{3{,}14159}_{6\ \text{s.f.}} = 6{,}3 \quad (2\ \text{s.f.}).$$ {#eq-arredondamento}
+:::
+
+## Incerteza e sua representação
+
+Uma medida completa é escrita como **valor $\pm$ incerteza**:
+$$x = (74{,}3 \pm 0{,}1)\ \mathrm{cm}.$$
+A incerteza $\delta x$ pode ser **absoluta** (mesma unidade de $x$) ou
+**relativa** (adimensional, frequentemente em porcentagem):
+
+::: {#def-incerteza-relativa}
+A **incerteza relativa** de uma medida $x \pm \delta x$ é
+$$\varepsilon_x = \frac{\delta x}{|x|},$$ {#eq-incerteza-relativa}
+muitas vezes expressa em porcentagem. Ela diz quão boa é a medida *em proporção*
+ao seu valor.
+:::
+
+Para um conjunto de $N$ medidas repetidas $x_1,\dots,x_N$, o melhor valor é a
+**média** e a incerteza típica de uma medida individual é o **desvio padrão**:
+$$\bar{x} = \frac{1}{N}\sum_{i=1}^{N} x_i, \qquad s = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(x_i-\bar{x})^2}.$$ {#eq-media-desvio}
+A incerteza da **média** ainda diminui com a repetição: vale $s/\sqrt{N}$.
+
+## Propagação de incertezas
+
+Quando uma grandeza é calculada a partir de outras medidas, suas incertezas se
+**propagam**. As regras seguem da forma como pequenas variações se combinam.
+
+::: {.callout-important}
+## Propagação para somas e produtos
+Para grandezas independentes, com $q$ calculado de $x$ e $y$:
+
+- **Soma/diferença** $q = x \pm y$: somam-se as incertezas **absolutas** (em
+  quadratura, se aleatórias e independentes):
+  $$\delta q = \sqrt{(\delta x)^2 + (\delta y)^2}.$$ {#eq-prop-soma}
+- **Produto/quociente** $q = x\,y$ ou $q = x/y$: somam-se as incertezas
+  **relativas** (em quadratura):
+  $$\frac{\delta q}{|q|} = \sqrt{\left(\frac{\delta x}{x}\right)^2 + \left(\frac{\delta y}{y}\right)^2}.$$ {#eq-prop-produto}
+- **Potência** $q = x^{n}$: a incerteza relativa multiplica-se por $|n|$:
+  $\delta q/|q| = |n|\,\delta x/|x|$.
+:::
+
+::: {.proof}
+## Origem da regra do produto
+Para $q = x\,y$, uma variação pequena dá, por diferenciação,
+$\mathrm{d}q = y\,\mathrm{d}x + x\,\mathrm{d}y$. Dividindo por $q = xy$:
+$$\frac{\mathrm{d}q}{q} = \frac{\mathrm{d}x}{x} + \frac{\mathrm{d}y}{y}.$$
+Tratando as variações como incertezas independentes, combinam-se em quadratura
+(pois desvios aleatórios independentes não se somam linearmente, mas como
+catetos), o que dá a @eq-prop-produto. $\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-area-incerteza}
+Um retângulo tem lados $a = (12{,}0 \pm 0{,}1)\ \mathrm{cm}$ e
+$b = (8{,}0 \pm 0{,}1)\ \mathrm{cm}$. Calcule a área com sua incerteza.
+:::
+
+**Solução.** A área é $A = a\,b = 12{,}0 \times 8{,}0 = 96\ \mathrm{cm^2}$. Como é
+um produto, somam-se as incertezas relativas (@eq-prop-produto):
+$$\frac{\delta A}{A} = \sqrt{\left(\frac{0{,}1}{12{,}0}\right)^2 + \left(\frac{0{,}1}{8{,}0}\right)^2} = \sqrt{(0{,}0083)^2 + (0{,}0125)^2} \approx 0{,}015.$$
+Então $\delta A = 0{,}015 \times 96 \approx 1{,}4\ \mathrm{cm^2}$, e escrevemos
+$A = (96 \pm 1)\ \mathrm{cm^2}$ (a incerteza limita a precisão a 2 significativos).
+
+::: {#exm-media}
+Cinco medidas de um intervalo de tempo deram, em segundos: $2{,}1$; $2{,}3$;
+$2{,}2$; $2{,}0$; $2{,}4$. Dê o melhor valor e a incerteza da média.
+:::
+
+**Solução.** A média (@eq-media-desvio) é
+$\bar{t} = (2{,}1+2{,}3+2{,}2+2{,}0+2{,}4)/5 = 2{,}20\ \mathrm{s}$. Os desvios são
+$-0{,}1, +0{,}1, 0, -0{,}2, +0{,}2$, cuja soma dos quadrados é
+$0{,}01+0{,}01+0+0{,}04+0{,}04 = 0{,}10$. Logo
+$s = \sqrt{0{,}10/4} = \sqrt{0{,}025} \approx 0{,}16\ \mathrm{s}$, e a incerteza da
+média é $s/\sqrt{5} \approx 0{,}07\ \mathrm{s}$. Resultado:
+$t = (2{,}20 \pm 0{,}07)\ \mathrm{s}$.
+
+## Exercícios
+
+::: {#exr-sf}
+Quantos algarismos significativos têm os números $0{,}00450$,
+$1{,}200 \times 10^{4}$ e $305$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$0{,}00450$: os zeros à esquerda não contam, o zero final à direita conta → **3**.
+$1{,}200 \times 10^{4}$: todos os dígitos do coeficiente contam → **4**.
+$305$: o zero está entre não nulos → **3**.
+:::
+
+::: {#exr-volume}
+Uma esfera tem raio $R = (2{,}00 \pm 0{,}05)\ \mathrm{cm}$. Usando
+$V = \tfrac{4}{3}\pi R^3$, calcule $V$ e sua incerteza relativa.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$V = \tfrac43\pi(2{,}00)^3 = 33{,}5\ \mathrm{cm^3}$. Como $V \propto R^3$, a regra
+da potência dá $\delta V/V = 3\,(\delta R/R) = 3 \times (0{,}05/2{,}00) = 0{,}075$,
+isto é $7{,}5\%$. Assim $\delta V \approx 0{,}075 \times 33{,}5 \approx 2{,}5\ \mathrm{cm^3}$
+e $V = (33{,}5 \pm 2{,}5)\ \mathrm{cm^3}$.
+:::
+
+::: {#exr-soma-incerteza}
+Dois trechos medem $L_1 = (1{,}50 \pm 0{,}02)\ \mathrm{m}$ e
+$L_2 = (2{,}30 \pm 0{,}03)\ \mathrm{m}$. Qual é o comprimento total e sua
+incerteza?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$L = L_1 + L_2 = 3{,}80\ \mathrm{m}$. Soma → incertezas absolutas em quadratura
+(@eq-prop-soma): $\delta L = \sqrt{(0{,}02)^2+(0{,}03)^2} = \sqrt{0{,}0013} \approx 0{,}036\ \mathrm{m}$.
+Logo $L = (3{,}80 \pm 0{,}04)\ \mathrm{m}$.
+:::

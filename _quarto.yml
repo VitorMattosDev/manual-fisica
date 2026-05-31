@@ -47,6 +47,9 @@ book:
         - volumes/v3-mecanica2/05-gravitacao.qmd
         - volumes/v3-mecanica2/06-mhs.qmd
         - volumes/v3-mecanica2/07-oscilacoes-amortecidas.qmd
+    - part: "Volume IV — Fluidos e Meios Contínuos"
+      chapters:
+        - volumes/v4-fluidos/01-estatica-fluidos.qmd
   appendices:
     - constantes.qmd
 

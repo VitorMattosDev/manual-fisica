@@ -1,0 +1,142 @@
+---
+title: "Estática dos Fluidos"
+---
+
+## Motivação
+
+Por que um navio de aço flutua e um prego afunda? Por que sentimos os ouvidos
+"taparem" ao mergulhar na piscina? Por que um canudo funciona? Todas essas
+perguntas pertencem à **estática dos fluidos** — o estudo de líquidos e gases em
+repouso. A grandeza central é a **pressão**, e dela decorrem dois princípios
+poderosos, de Pascal e de Arquimedes, que governam desde prensas hidráulicas até
+balões e submarinos. Este capítulo abre o estudo dos meios contínuos, em que a
+matéria é tratada não como partículas isoladas, mas como um todo que preenche o
+espaço.
+
+## Pressão e densidade
+
+::: {#def-pressao}
+A **pressão** é a força perpendicular por unidade de área exercida sobre uma
+superfície:
+$$p = \frac{F_\perp}{A}.$$ {#eq-pressao}
+A unidade SI é o **pascal** ($1\ \mathrm{Pa} = 1\ \mathrm{N/m^2}$). Num fluido em
+repouso, a pressão num ponto age **igualmente em todas as direções**.
+:::
+
+::: {#def-densidade}
+A **densidade** (massa específica) de um material é a massa por unidade de volume,
+$$\rho = \frac{m}{V}.$$ {#eq-densidade}
+A água tem $\rho \approx 1000\ \mathrm{kg/m^3}$; o ar, $\approx 1{,}2\ \mathrm{kg/m^3}$.
+:::
+
+## Pressão hidrostática
+
+Num fluido em repouso, a pressão cresce com a profundidade, porque cada camada
+sustenta o peso de tudo o que está acima dela.
+
+::: {.callout-important}
+## Lei de Stevin (pressão com a profundidade)
+Num fluido de densidade $\rho$ uniforme, a pressão a uma profundidade $h$ abaixo da
+superfície é
+$$p = p_0 + \rho g h,$$ {#eq-stevin}
+onde $p_0$ é a pressão na superfície (em geral a atmosférica). A pressão depende
+**só da profundidade**, não do formato do recipiente.
+:::
+
+::: {.proof}
+## Dedução da lei de Stevin
+Considere uma coluna cilíndrica de fluido de área $A$ e altura $h$. Seu peso é
+$\rho g\,(Ah)$. Em equilíbrio, a diferença de pressão entre base e topo deve
+sustentar esse peso: $(p - p_0)A = \rho g A h$. Dividindo por $A$,
+$p - p_0 = \rho g h$, a @eq-stevin. $\qquad\blacksquare$
+:::
+
+Disso vem o **princípio de Pascal**: como a pressão num ponto se transmite
+integralmente a todo o fluido, uma pressão aplicada num êmbolo pequeno reaparece
+num êmbolo grande multiplicada pela razão de áreas — a base da prensa hidráulica e
+dos freios de carro.
+
+::: {.callout-note}
+## Princípio de Pascal
+Uma variação de pressão aplicada a um fluido confinado transmite-se igualmente a
+todos os pontos. Numa prensa hidráulica, $F_1/A_1 = F_2/A_2$, de modo que uma
+força pequena em $A_1$ produz uma força grande em $A_2 \gg A_1$.
+:::
+
+## Empuxo: o princípio de Arquimedes
+
+::: {.callout-important}
+## Princípio de Arquimedes
+Todo corpo total ou parcialmente imerso num fluido sofre uma força vertical para
+cima — o **empuxo** — igual ao **peso do fluido deslocado**:
+$$E = \rho_\text{fluido}\,g\,V_\text{deslocado}.$$ {#eq-empuxo}
+:::
+
+::: {.proof}
+## Por que o empuxo é o peso do fluido deslocado
+Imagine substituir o corpo imerso por uma porção do próprio fluido com o mesmo
+formato. Essa porção está em equilíbrio, então a força resultante de pressão do
+fluido ao redor (o empuxo) equilibra exatamente seu peso, $\rho_\text{fluido}gV$.
+Como a distribuição de pressão depende só do formato e da posição — não do que há
+dentro —, o mesmo empuxo age sobre o corpo real. $\qquad\blacksquare$
+:::
+
+Um corpo **flutua** quando seu peso iguala o empuxo máximo; **afunda** quando é
+mais denso que o fluido. O navio de aço flutua porque seu casco oco desloca um
+volume enorme de água, cujo peso supera o do navio.
+
+## Exemplos resolvidos
+
+::: {#exm-mergulho}
+Qual a pressão total a $10\ \mathrm{m}$ de profundidade na água?
+($p_0 = 1{,}0\times10^{5}\ \mathrm{Pa}$, $\rho = 1000\ \mathrm{kg/m^3}$,
+$g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Por @eq-stevin:
+$$p = p_0 + \rho g h = 1{,}0\times10^{5} + 1000\times9{,}8\times10 = 1{,}0\times10^{5} + 0{,}98\times10^{5} \approx 2{,}0\times10^{5}\ \mathrm{Pa}.$$
+A cada $10\ \mathrm{m}$ de água, a pressão aumenta cerca de **1 atmosfera**.
+
+::: {#exm-bloco-flutuando}
+Um bloco de madeira ($\rho = 600\ \mathrm{kg/m^3}$) flutua na água
+($\rho_a = 1000\ \mathrm{kg/m^3}$). Que fração do volume fica submersa?
+:::
+
+**Solução.** Flutuação: peso = empuxo (@eq-empuxo). Com $V$ o volume total e
+$V_s$ o submerso:
+$$\rho V g = \rho_a V_s g \;\Longrightarrow\; \frac{V_s}{V} = \frac{\rho}{\rho_a} = \frac{600}{1000} = 0{,}60.$$
+$60\%$ do bloco fica submerso — exatamente a razão das densidades. (É por isso que
+"a ponta do iceberg" é só $\sim10\%$: o gelo tem $\rho \approx 0{,}9\rho_a$.)
+
+## Exercícios
+
+::: {#exr-prensa}
+Numa prensa hidráulica, o êmbolo pequeno tem área $5{,}0\ \mathrm{cm^2}$ e o
+grande, $500\ \mathrm{cm^2}$. Que força no pequeno equilibra $10\,000\ \mathrm{N}$
+no grande?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Princípio de Pascal: $F_1/A_1 = F_2/A_2 \Rightarrow F_1 = F_2(A_1/A_2) = 10\,000\times(5{,}0/500) = 100\ \mathrm{N}$.
+A prensa multiplica a força por 100.
+:::
+
+::: {#exr-empuxo-pedra}
+Uma pedra de volume $2{,}0\times10^{-3}\ \mathrm{m^3}$ está totalmente submersa na
+água. Qual o empuxo sobre ela? ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E = \rho_a g V = 1000\times9{,}8\times2{,}0\times10^{-3} = 19{,}6\ \mathrm{N}$.
+:::
+
+::: {#exr-densidade-flutua}
+Um objeto flutua com $3/4$ do volume submerso em água. Qual sua densidade?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$V_s/V = \rho/\rho_a = 3/4 \Rightarrow \rho = 0{,}75\times1000 = 750\ \mathrm{kg/m^3}$.
+:::

@@ -118,6 +118,7 @@ book:
         - volumes/v12-quantica/03-equacao-schrodinger.qmd
         - volumes/v12-quantica/04-pocos-barreiras.qmd
         - volumes/v12-quantica/05-formalismo.qmd
+        - volumes/v12-quantica/06-oscilador-harmonico.qmd
   appendices:
     - constantes.qmd
 

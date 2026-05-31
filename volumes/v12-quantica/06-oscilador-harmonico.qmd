@@ -1,0 +1,121 @@
+---
+title: "O Oscilador Harmônico Quântico"
+---
+
+## Motivação
+
+O oscilador harmônico foi o modelo mais reaproveitado da física clássica (Volume
+III); na quântica, sua importância é ainda maior. Qualquer sistema perto de um
+mínimo de energia comporta-se como um oscilador, então ele descreve vibrações
+moleculares, fônons em cristais, e — crucialmente — os próprios **campos** na teoria
+quântica de campos, onde cada modo do campo eletromagnético é um oscilador cujos
+quanta são os fótons. Resolver o oscilador quântico é, portanto, abrir a porta para
+a física de partículas. Este capítulo o trata.
+
+## O potencial e seus níveis de energia
+
+::: {#def-oscilador-quantico}
+O **oscilador harmônico quântico** é uma partícula no potencial
+$V(x) = \tfrac12 m\omega^2 x^2$, onde $\omega = \sqrt{k/m}$ é a frequência clássica.
+Sua equação de Schrödinger estacionária (@eq-schrodinger-estacionaria) tem soluções
+para um conjunto discreto de energias.
+:::
+
+::: {.callout-important}
+## Níveis de energia do oscilador
+$$E_n = \left(n + \tfrac12\right)\hbar\omega, \qquad n = 0, 1, 2, \dots$$ {#eq-oscilador-niveis}
+Os níveis são **igualmente espaçados** por $\hbar\omega$, e o estado fundamental
+($n=0$) tem energia de ponto zero $E_0 = \tfrac12\hbar\omega \neq 0$.
+:::
+
+Duas características marcantes contrastam com o poço infinito (onde
+$E_n \propto n^2$): aqui o espaçamento é **uniforme** ($\Delta E = \hbar\omega$),
+e há energia de ponto zero $\tfrac12\hbar\omega$.
+
+::: {.callout-note}
+## A energia de ponto zero e o vácuo
+Que o estado fundamental tenha $E_0 = \tfrac12\hbar\omega > 0$ é exigido pelo
+princípio da incerteza: a partícula não pode estar parada no fundo do poço (isso
+fixaria $x$ e $p$ juntos). Na teoria quântica de campos, essa energia de ponto zero,
+somada sobre todos os modos, é a **energia do vácuo** — relacionada ao efeito Casimir
+e ao enigma da energia escura (Volume XV). O vácuo quântico nunca está realmente
+vazio.
+:::
+
+## Operadores de criação e aniquilação
+
+Há um método algébrico elegante (de Dirac) que resolve o oscilador sem equações
+diferenciais, introduzindo operadores que sobem e descem os níveis.
+
+::: {.callout-important}
+## Operadores escada
+Definem-se os operadores de **aniquilação** $\hat{a}$ e **criação**
+$\hat{a}^\dagger$, que conectam níveis vizinhos:
+$$\hat{a}\,|n\rangle = \sqrt{n}\,|n-1\rangle, \qquad \hat{a}^\dagger\,|n\rangle = \sqrt{n+1}\,|n+1\rangle.$$ {#eq-escada}
+A hamiltoniana fica $\hat{H} = \hbar\omega\!\left(\hat{a}^\dagger\hat{a} + \tfrac12\right)$,
+e $\hat{a}^\dagger\hat{a}|n\rangle = n|n\rangle$ conta os quanta.
+:::
+
+::: {.callout-note}
+## Quanta como partículas
+Os operadores escada são a semente da **segunda quantização**: cada "degrau" $n$ é
+interpretado como o número de **quanta** presentes. Para o campo eletromagnético, o
+quantum é o **fóton**; para vibrações de um cristal, o **fônon**.
+$\hat{a}^\dagger$ literalmente **cria** uma partícula, $\hat{a}$ a **aniquila**.
+Essa é a linguagem da teoria quântica de campos (Volume XV) — e tudo começa no
+humilde oscilador.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-energia-fundamental}
+Uma molécula vibra com $\omega = 1{,}0\times10^{14}\ \mathrm{rad/s}$. Qual sua
+energia de ponto zero? ($\hbar = 1{,}05\times10^{-34}\ \mathrm{J\,s}$.)
+:::
+
+**Solução.** Por @eq-oscilador-niveis com $n=0$:
+$$E_0 = \tfrac12\hbar\omega = \tfrac12\times1{,}05\times10^{-34}\times1{,}0\times10^{14} \approx 5{,}3\times10^{-21}\ \mathrm{J} \approx 0{,}033\ \mathrm{eV}.$$
+
+::: {#exm-espacamento}
+Qual a energia do fóton emitido quando o oscilador do @exm-energia-fundamental
+desce um nível?
+:::
+
+**Solução.** O espaçamento entre níveis é $\Delta E = \hbar\omega$ (@eq-oscilador-niveis):
+$$\Delta E = \hbar\omega = 1{,}05\times10^{-34}\times1{,}0\times10^{14} \approx 1{,}05\times10^{-20}\ \mathrm{J} \approx 0{,}066\ \mathrm{eV}.$$
+Transições entre níveis vibracionais emitem no infravermelho — base da espectroscopia
+vibracional.
+
+## Exercícios
+
+::: {#exr-nivel-n2}
+Qual a energia do nível $n=2$ do oscilador, em unidades de $\hbar\omega$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E_2 = (2 + \tfrac12)\hbar\omega = \tfrac52\hbar\omega$ (@eq-oscilador-niveis).
+:::
+
+::: {#exr-espacamento-uniforme}
+Em que o espectro do oscilador difere do espectro do poço infinito?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+No oscilador, os níveis são **igualmente espaçados** ($E_n \propto n + \tfrac12$,
+$\Delta E = \hbar\omega$ constante); no poço infinito, eles se afastam como $n^2$
+($\Delta E$ cresce). Ambos têm energia de ponto zero não nula.
+:::
+
+::: {#exr-criacao}
+O que o operador $\hat a^\dagger$ faz ao estado $|n\rangle$, e qual sua
+interpretação na teoria de campos?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\hat a^\dagger|n\rangle = \sqrt{n+1}\,|n+1\rangle$ (@eq-escada): ele **sobe** um
+nível. Na teoria quântica de campos, $\hat a^\dagger$ **cria** uma partícula (um
+quantum do campo — um fóton, um fônon).
+:::

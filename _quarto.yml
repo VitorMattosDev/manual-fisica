@@ -51,6 +51,7 @@ book:
       chapters:
         - volumes/v4-fluidos/01-estatica-fluidos.qmd
         - volumes/v4-fluidos/02-dinamica-fluidos.qmd
+        - volumes/v4-fluidos/03-viscosidade.qmd
   appendices:
     - constantes.qmd
 

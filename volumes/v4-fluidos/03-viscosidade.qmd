@@ -1,0 +1,143 @@
+---
+title: "Viscosidade e Fluidos Reais"
+---
+
+## Motivação
+
+O mel escorre devagar; a água, depressa; o ar, quase sem resistência. A diferença
+tem nome: **viscosidade**, o atrito interno dos fluidos, justamente o que o
+modelo de fluido ideal do capítulo anterior ignorava. É a viscosidade que explica
+por que a água perde pressão ao longo de um cano longo, por que o sangue precisa de
+um coração que bombeia, e por que pequenas gotas caem com velocidade limitada.
+Este capítulo reintroduz a viscosidade e distingue os dois regimes fundamentais de
+escoamento — laminar e turbulento.
+
+## Viscosidade
+
+::: {#def-viscosidade}
+A **viscosidade** $\eta$ mede a resistência de um fluido ao cisalhamento. Entre
+duas camadas de fluido que deslizam uma sobre a outra com gradiente de velocidade
+$\mathrm{d}v/\mathrm{d}y$, a tensão de cisalhamento necessária é
+$$\frac{F}{A} = \eta\,\frac{\mathrm{d}v}{\mathrm{d}y}.$$ {#eq-viscosidade}
+A unidade SI é o $\mathrm{Pa\,s}$. Fluidos que obedecem à @eq-viscosidade com
+$\eta$ constante chamam-se **newtonianos** (água, ar, óleos leves).
+:::
+
+A viscosidade da água é $\approx 1{,}0\times10^{-3}\ \mathrm{Pa\,s}$; a do mel,
+milhares de vezes maior. Nos gases, $\eta$ **aumenta** com a temperatura; nos
+líquidos, **diminui** (por isso o óleo de motor fica mais "fino" quente).
+
+## Escoamento laminar em tubos: lei de Poiseuille
+
+Num tubo, a viscosidade faz o fluido grudar nas paredes (velocidade nula) e correr
+mais rápido no centro. A vazão resultante depende drasticamente do raio.
+
+::: {.callout-important}
+## Lei de Poiseuille
+Para escoamento laminar de um fluido newtoniano de viscosidade $\eta$ num tubo
+cilíndrico de raio $R$ e comprimento $L$, sob diferença de pressão $\Delta p$, a
+vazão é
+$$Q = \frac{\pi R^4\,\Delta p}{8\,\eta\,L}.$$ {#eq-poiseuille}
+:::
+
+::: {.callout-note}
+## A dependência com a quarta potência do raio
+O fator $R^4$ é dramático: dobrar o raio multiplica a vazão por **16**. Por isso
+uma pequena obstrução numa artéria (que reduz $R$) tem efeito enorme sobre o fluxo
+sanguíneo, e por que canos largos são tão mais eficientes. A pressão necessária
+para manter a vazão cresce com $1/R^4$.
+:::
+
+## Arrasto e a lei de Stokes
+
+Um corpo que se move num fluido sofre uma força de **arrasto** que se opõe ao
+movimento. Para uma esfera pequena e lenta (escoamento laminar), vale a lei de
+Stokes.
+
+::: {.callout-important}
+## Lei de Stokes
+A força de arrasto sobre uma esfera de raio $r$ movendo-se a velocidade $v$ num
+fluido de viscosidade $\eta$ é
+$$F_d = 6\pi\,\eta\,r\,v.$$ {#eq-stokes}
+:::
+
+O equilíbrio entre arrasto, peso e empuxo leva a uma **velocidade terminal**
+constante — a gota de chuva, a partícula que sedimenta, o paraquedista, todos
+atingem uma velocidade-limite em que a força resultante se anula.
+
+## Número de Reynolds: laminar ou turbulento?
+
+::: {#def-reynolds}
+O **número de Reynolds** é a razão adimensional entre forças inerciais e viscosas:
+$$\mathrm{Re} = \frac{\rho\,v\,L}{\eta},$$ {#eq-reynolds}
+onde $L$ é um comprimento característico. Baixo $\mathrm{Re}$ → escoamento
+**laminar** (suave, ordenado); alto $\mathrm{Re}$ → **turbulento** (caótico,
+com redemoinhos). A transição em tubos ocorre tipicamente em $\mathrm{Re}\sim2000$.
+:::
+
+A análise dimensional (Volume I) brilha aqui: $\mathrm{Re}$ é o número puro que
+governa a transição, e dois escoamentos com o mesmo $\mathrm{Re}$ se comportam de
+modo semelhante — princípio usado em testes com modelos em escala.
+
+## Exemplos resolvidos
+
+::: {#exm-velocidade-terminal}
+Uma esfera de raio $r = 1{,}0\ \mathrm{mm}$ e densidade
+$\rho_e = 2000\ \mathrm{kg/m^3}$ cai num líquido de
+$\rho_f = 1000\ \mathrm{kg/m^3}$ e $\eta = 1{,}0\ \mathrm{Pa\,s}$. Estime sua
+velocidade terminal. ($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** Na velocidade terminal, peso = empuxo + arrasto de Stokes
+(@eq-stokes). O peso aparente (peso menos empuxo) é
+$(\rho_e - \rho_f)g\,\tfrac43\pi r^3$, igualado a $6\pi\eta r v$:
+$$v = \frac{2 r^2 (\rho_e - \rho_f) g}{9\,\eta} = \frac{2(1{,}0\times10^{-3})^2(1000)(9{,}8)}{9\times1{,}0} \approx 2{,}2\times10^{-3}\ \mathrm{m/s}.$$
+
+::: {#exm-reynolds-agua}
+Água ($\rho = 1000\ \mathrm{kg/m^3}$, $\eta = 1{,}0\times10^{-3}\ \mathrm{Pa\,s}$)
+corre a $0{,}50\ \mathrm{m/s}$ num cano de diâmetro $2{,}0\ \mathrm{cm}$. O
+escoamento é laminar ou turbulento?
+:::
+
+**Solução.** Por @eq-reynolds, com $L = 0{,}020\ \mathrm{m}$:
+$$\mathrm{Re} = \frac{1000\times0{,}50\times0{,}020}{1{,}0\times10^{-3}} = \frac{10}{10^{-3}} = 1{,}0\times10^{4}.$$
+Como $\mathrm{Re} \gg 2000$, o escoamento é **turbulento**.
+
+## Exercícios
+
+::: {#exr-poiseuille-raio}
+Numa artéria, um depósito reduz o raio à metade. Mantida a mesma diferença de
+pressão, a quanto cai a vazão?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por @eq-poiseuille, $Q\propto R^4$. Com $R\to R/2$:
+$Q \to (1/2)^4 Q = Q/16$. A vazão cai a **um dezesseis avos** — daí o perigo das
+obstruções arteriais.
+:::
+
+::: {#exr-viscosidade-temp}
+Por que o óleo de um motor é mais eficaz a frio se for menos viscoso, e o que
+acontece com sua viscosidade ao aquecer?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Nos líquidos, a viscosidade **diminui** com a temperatura. Ao aquecer, o óleo fica
+menos viscoso ("mais fino"), escoando com mais facilidade. Óleos multiviscosos são
+formulados para variar pouco $\eta$ na faixa de operação.
+:::
+
+::: {#exr-reynolds-ar}
+Estime o número de Reynolds de uma bola de futebol ($L = 0{,}22\ \mathrm{m}$) a
+$20\ \mathrm{m/s}$ no ar ($\rho = 1{,}2\ \mathrm{kg/m^3}$,
+$\eta = 1{,}8\times10^{-5}\ \mathrm{Pa\,s}$). Laminar ou turbulento?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mathrm{Re} = \dfrac{1{,}2\times20\times0{,}22}{1{,}8\times10^{-5}} \approx \dfrac{5{,}3}{1{,}8\times10^{-5}} \approx 2{,}9\times10^{5}$.
+Altíssimo: escoamento **turbulento** (o que explica a esteira e os efeitos de
+curva da bola).
+:::

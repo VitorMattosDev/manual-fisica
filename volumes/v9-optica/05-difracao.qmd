@@ -1,0 +1,131 @@
+---
+title: "Difração"
+---
+
+## Motivação
+
+Por que não conseguimos ver detalhes arbitrariamente pequenos, por melhor que seja
+o microscópio? Por que as estrelas, mesmo em telescópios gigantes, aparecem como
+pequenos discos e não pontos? Por que um CD decompõe a luz em cores? A resposta é a
+**difração** — a tendência das ondas a se espalharem ao passar por aberturas ou
+contornarem obstáculos. Longe de ser um detalhe, a difração impõe um **limite
+fundamental** à nitidez de qualquer instrumento óptico. Este capítulo a estuda e
+explora a rede de difração.
+
+## Difração por uma fenda
+
+Quando a luz passa por uma fenda estreita, ela não projeta apenas uma faixa
+brilhante: espalha-se num padrão de máximos e mínimos. Cada ponto da fenda atua
+como fonte secundária (Huygens), e essas ondinhas interferem.
+
+::: {.callout-important}
+## Mínimos da difração por fenda única
+Para uma fenda de largura $a$, os **mínimos** (pontos escuros) do padrão de
+difração ocorrem em
+$$a\,\mathrm{sen}\,\theta = m\lambda, \qquad m = 1, 2, 3, \dots$$ {#eq-difracao-fenda}
+O máximo central, entre os primeiros mínimos, é o mais brilhante e tem o dobro da
+largura dos demais.
+:::
+
+Repare o contraste com Young: na fenda dupla, $d\,\mathrm{sen}\,\theta = m\lambda$
+dava **máximos**; aqui a mesma forma dá **mínimos**. Quanto mais **estreita** a
+fenda (menor $a$), mais a luz se espalha — a difração é mais intensa.
+
+## O limite de difração
+
+A difração limita a capacidade de qualquer instrumento de distinguir dois pontos
+próximos.
+
+::: {.callout-important}
+## Critério de Rayleigh (poder de resolução)
+Dois pontos só são distinguíveis se sua separação angular exceder
+$$\theta_\text{mín} \approx 1{,}22\,\frac{\lambda}{D},$$ {#eq-rayleigh}
+onde $D$ é o diâmetro da abertura (lente, espelho, pupila). Aberturas **maiores**
+resolvem detalhes **menores**.
+:::
+
+::: {.callout-note}
+## Por que telescópios são gigantes
+A @eq-rayleigh explica a corrida pelos maiores espelhos: dobrar $D$ dobra a
+resolução. É também por que microscópios eletrônicos superam os ópticos — elétrons
+têm $\lambda$ muitíssimo menor que a luz (Volume XII), permitindo resolver átomos.
+A difração é a fronteira última da nitidez: nenhum instrumento a contorna sem
+aumentar $D$ ou reduzir $\lambda$.
+:::
+
+## Redes de difração
+
+Uma **rede de difração** tem milhares de fendas paralelas igualmente espaçadas.
+Elas produzem máximos muito estreitos e brilhantes, em posições que dependem da cor.
+
+::: {.callout-important}
+## Equação da rede de difração
+Para uma rede com espaçamento $d$ entre fendas, os máximos principais ocorrem em
+$$d\,\mathrm{sen}\,\theta = m\lambda, \qquad m = 0, 1, 2, \dots$$ {#eq-rede}
+Como $\theta$ depende de $\lambda$, a rede **separa as cores** — é a base dos
+espectrômetros.
+:::
+
+::: {.callout-note}
+## Decompondo a luz
+Por separar com precisão os comprimentos de onda, a rede de difração é o coração da
+**espectroscopia** — a técnica que identifica a composição de estrelas, gases e
+materiais pelas cores que emitem ou absorvem (Volume XIII). É a rede, e não o
+prisma, o instrumento de precisão da análise espectral.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-fenda-unica}
+Luz de $\lambda = 600\ \mathrm{nm}$ passa por uma fenda de $a = 0{,}10\ \mathrm{mm}$.
+Em que ângulo está o primeiro mínimo?
+:::
+
+**Solução.** Por @eq-difracao-fenda com $m=1$:
+$$\mathrm{sen}\,\theta = \frac{\lambda}{a} = \frac{600\times10^{-9}}{0{,}10\times10^{-3}} = 6{,}0\times10^{-3},$$
+logo $\theta \approx 0{,}34^\circ$.
+
+::: {#exm-telescopio}
+Qual a separação angular mínima resolvível por um telescópio de $D = 2{,}0\ \mathrm{m}$
+em luz de $\lambda = 550\ \mathrm{nm}$?
+:::
+
+**Solução.** Por @eq-rayleigh:
+$$\theta_\text{mín} = 1{,}22\frac{\lambda}{D} = 1{,}22\frac{550\times10^{-9}}{2{,}0} \approx 3{,}4\times10^{-7}\ \mathrm{rad},$$
+cerca de $0{,}07$ segundo de arco — resolução altíssima.
+
+## Exercícios
+
+::: {#exr-rede}
+Uma rede tem $5000$ linhas por centímetro. Em que ângulo aparece o primeiro máximo
+($m=1$) para $\lambda = 500\ \mathrm{nm}$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$d = 1/(5000\ \mathrm{cm^{-1}}) = 2{,}0\times10^{-6}\ \mathrm{m}$.
+$\mathrm{sen}\,\theta = \lambda/d = 500\times10^{-9}/2{,}0\times10^{-6} = 0{,}25 \Rightarrow \theta \approx 14{,}5^\circ$ (@eq-rede).
+:::
+
+::: {#exr-resolucao-olho}
+Estime a resolução angular do olho humano ($D \approx 3{,}0\ \mathrm{mm}$,
+$\lambda = 550\ \mathrm{nm}$).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\theta_\text{mín} = 1{,}22\times550\times10^{-9}/3{,}0\times10^{-3} \approx 2{,}2\times10^{-4}\ \mathrm{rad}$
+(cerca de $0{,}013^\circ$, ou $\sim1$ minuto de arco) (@eq-rayleigh).
+:::
+
+::: {#exr-fenda-estreita}
+Se a largura de uma fenda diminui, o padrão de difração fica mais largo ou mais
+estreito?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Mais **largo**. Por @eq-difracao-fenda, $\mathrm{sen}\,\theta = \lambda/a$ cresce
+quando $a$ diminui: a luz se espalha mais. Quanto mais estreita a fenda, mais
+intensa a difração.
+:::

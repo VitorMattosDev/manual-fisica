@@ -63,7 +63,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v3-mecanica2/02-dinamica-rotacional.qmd` — Torque e dinâmica rotacional
 - [x] `volumes/v3-mecanica2/03-momento-angular.qmd` — Momento angular
 - [x] `volumes/v3-mecanica2/04-estatica-corpos-rigidos.qmd` — Estática e corpos rígidos
-- [ ] `volumes/v3-mecanica2/05-gravitacao.qmd` — Gravitação universal (Newton, Kepler)
+- [x] `volumes/v3-mecanica2/05-gravitacao.qmd` — Gravitação universal (Newton, Kepler)
 - [ ] `volumes/v3-mecanica2/06-mhs.qmd` — Movimento harmônico simples
 - [ ] `volumes/v3-mecanica2/07-oscilacoes-amortecidas.qmd` — Amortecidas, forçadas, ressonância
 

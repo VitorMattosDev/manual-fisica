@@ -1,0 +1,142 @@
+---
+title: "Gravitação Universal"
+---
+
+## Motivação
+
+A maçã cai; a Lua não. Por séculos pareceram fenômenos distintos, até Newton
+perceber que são o **mesmo**: a Lua "cai" continuamente em direção à Terra,
+apenas com velocidade lateral suficiente para nunca chegar. A mesma força que puxa
+a maçã governa as órbitas dos planetas. Essa unificação — céus e Terra sob uma só
+lei — é talvez o maior triunfo da física clássica. Este capítulo apresenta a lei
+da gravitação universal, deduz dela as leis de Kepler e introduz a energia
+potencial gravitacional exata.
+
+## A lei da gravitação universal
+
+::: {.callout-important}
+## Lei da Gravitação Universal de Newton
+Duas partículas de massas $m_1$ e $m_2$ separadas por uma distância $r$ atraem-se
+mutuamente com força de módulo
+$$F = G\,\frac{m_1 m_2}{r^2},$$ {#eq-gravitacao}
+dirigida ao longo da reta que as une. A constante
+$G = 6{,}674\times10^{-11}\ \mathrm{N\,m^2/kg^2}$ é universal.
+:::
+
+A força cai com o **quadrado** da distância: dobrar a separação reduz a atração a
+um quarto. $G$ é minúscula — por isso a gravidade só se faz notar quando ao menos
+uma das massas é astronômica. A força entre duas pessoas é real, mas desprezível.
+
+::: {.callout-note}
+## Massa gravitacional = massa inercial
+A massa que aparece em $F = G m_1 m_2/r^2$ (gravitacional) é, experimentalmente, a
+**mesma** que aparece em $F = ma$ (inercial). Essa igualdade — testada a altíssima
+precisão — é a razão de todos os corpos caírem com a mesma aceleração $g$, e será
+o ponto de partida da relatividade geral (Volume XV).
+:::
+
+## Campo gravitacional e o peso
+
+Perto da superfície de um planeta de massa $M$ e raio $R$, a @eq-gravitacao
+reproduz o peso $mg$:
+$$mg = G\frac{Mm}{R^2} \;\Longrightarrow\; g = \frac{GM}{R^2}.$$ {#eq-g-superficie}
+Isso explica por que $g$ é o mesmo para todos os corpos (a massa $m$ cancela) e
+permite "pesar" a Terra: medindo $g$, $R$ e $G$, obtém-se $M$.
+
+## Energia potencial gravitacional
+
+A energia potencial $U = mgy$ do Volume II só vale perto da superfície, onde $g$ é
+constante. Para distâncias quaisquer, integra-se a @eq-gravitacao.
+
+::: {.callout-important}
+## Energia potencial gravitacional (geral)
+Tomando $U \to 0$ no infinito, a energia potencial de duas massas separadas por
+$r$ é
+$$U(r) = -\,G\,\frac{M m}{r}.$$ {#eq-potencial-gravitacional}
+É **negativa**: reflete que é preciso fornecer energia para afastar as massas.
+:::
+
+::: {.callout-note}
+## Velocidade de escape
+A velocidade mínima para escapar da gravidade de um astro (chegar ao infinito com
+$v=0$) sai de $\tfrac12 m v_e^2 = GMm/R$:
+$$v_e = \sqrt{\frac{2GM}{R}}.$$ {#eq-velocidade-escape}
+Para a Terra, $v_e \approx 11{,}2\ \mathrm{km/s}$. Quando $v_e$ iguala a
+velocidade da luz, tem-se um **buraco negro** (Volume XV).
+:::
+
+## As leis de Kepler
+
+Antes de Newton, Kepler descrevera o movimento planetário em três leis empíricas.
+Newton mostrou que **todas** decorrem da @eq-gravitacao.
+
+::: {.callout-important}
+## Leis de Kepler
+1. **Órbitas:** os planetas descrevem elipses com o Sol num dos focos.
+2. **Áreas:** o raio-vetor Sol–planeta varre áreas iguais em tempos iguais
+   (consequência da conservação do momento angular).
+3. **Períodos:** o quadrado do período é proporcional ao cubo do semieixo maior:
+$$T^2 = \frac{4\pi^2}{GM}\,a^3.$$ {#eq-kepler3}
+:::
+
+::: {.proof}
+## Terceira lei para órbita circular
+Para uma órbita circular de raio $r$, a gravidade é a força centrípeta
+(@eq-forca-centripeta): $GMm/r^2 = m v^2/r$, logo $v^2 = GM/r$. Como
+$v = 2\pi r/T$, substituindo:
+$$\frac{4\pi^2 r^2}{T^2} = \frac{GM}{r} \;\Longrightarrow\; T^2 = \frac{4\pi^2}{GM}\,r^3,$$
+que é a @eq-kepler3 com $a = r$. $\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-orbita}
+Um satélite orbita a Terra num círculo de raio $r = 7{,}0\times10^{6}\ \mathrm{m}$.
+Qual sua rapidez orbital? ($GM_\oplus = 3{,}99\times10^{14}\ \mathrm{m^3/s^2}$.)
+:::
+
+**Solução.** Da dedução acima, $v = \sqrt{GM/r}$:
+$$v = \sqrt{\frac{3{,}99\times10^{14}}{7{,}0\times10^{6}}} = \sqrt{5{,}7\times10^{7}} \approx 7{,}6\times10^{3}\ \mathrm{m/s} \approx 7{,}6\ \mathrm{km/s}.$$
+
+::: {#exm-g-lua}
+A Lua tem massa $M = 7{,}35\times10^{22}\ \mathrm{kg}$ e raio
+$R = 1{,}74\times10^{6}\ \mathrm{m}$. Qual a gravidade em sua superfície?
+:::
+
+**Solução.** Por @eq-g-superficie:
+$$g = \frac{GM}{R^2} = \frac{6{,}674\times10^{-11}\times7{,}35\times10^{22}}{(1{,}74\times10^{6})^2} \approx \frac{4{,}9\times10^{12}}{3{,}0\times10^{12}} \approx 1{,}6\ \mathrm{m/s^2}.$$
+Cerca de $1/6$ da gravidade terrestre.
+
+## Exercícios
+
+::: {#exr-forca-gravitacional}
+Calcule a força gravitacional entre duas massas de $1000\ \mathrm{kg}$ separadas
+por $2{,}0\ \mathrm{m}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$F = G\dfrac{m_1 m_2}{r^2} = 6{,}674\times10^{-11}\dfrac{(1000)^2}{(2{,}0)^2} = 6{,}674\times10^{-11}\times2{,}5\times10^{5} \approx 1{,}7\times10^{-5}\ \mathrm{N}$ —
+minúscula.
+:::
+
+::: {#exr-escape-lua}
+Calcule a velocidade de escape da Lua (dados do @exm-g-lua).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$v_e = \sqrt{2GM/R} = \sqrt{2\times6{,}674\times10^{-11}\times7{,}35\times10^{22}/1{,}74\times10^{6}} \approx \sqrt{5{,}6\times10^{6}} \approx 2{,}4\times10^{3}\ \mathrm{m/s}$
+($2{,}4\ \mathrm{km/s}$).
+:::
+
+::: {#exr-kepler-aplicado}
+Marte tem semieixo maior $1{,}52$ vezes o da Terra. Quantos anos terrestres dura
+seu período orbital? Use a @eq-kepler3 (mesmo $M$ do Sol).
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$T \propto a^{3/2}$, então $T_M = (1{,}52)^{3/2}\,T_\oplus \approx 1{,}87\ \mathrm{ano}$.
+Marte leva cerca de $1{,}9$ ano terrestre para orbitar o Sol.
+:::

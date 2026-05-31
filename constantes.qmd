@@ -46,6 +46,13 @@ constante ou uma relação fundamental nova num capítulo, registre-a aqui.
 - Energia cinética: $K = \tfrac12 m v^2$
 - Energia potencial gravitacional (uniforme): $U = m g y$
 - Conservação da energia mecânica: $K_i + U_i = K_f + U_f$
+- Momento linear: $\vec{p} = m\vec{v}$; impulso $\vec{J} = \Delta\vec{p}$
+- Torque: $\vec{\tau} = \vec{r}\times\vec{F}$; segunda lei rotacional $\tau = I\alpha$
+- Momento angular: $L = I\omega$; conserva-se se $\tau_\text{ext}=0$
+- Energia cinética de rotação: $K_\text{rot} = \tfrac12 I\omega^2$
+- Gravitação: $F = G\,m_1 m_2/r^2$; $\ U(r) = -G M m/r$
+- Velocidade de escape: $v_e = \sqrt{2GM/R}$
+- Terceira lei de Kepler: $T^2 = (4\pi^2/GM)\,a^3$
 
 *(As demais seções — Termodinâmica, Eletromagnetismo, etc. — são adicionadas à
 medida que os volumes correspondentes são escritos.)*

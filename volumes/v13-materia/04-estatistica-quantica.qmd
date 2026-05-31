@@ -1,0 +1,134 @@
+---
+title: "Estatística Quântica: Fermi-Dirac e Bose-Einstein"
+---
+
+## Motivação
+
+A física estatística clássica (Volume VI) trata partículas como bolinhas
+distinguíveis. Mas elétrons, fótons e átomos são **indistinguíveis** — não há como
+"etiquetar" um elétron. Essa indistinguibilidade, combinada ao spin (Volume XII),
+muda radicalmente a estatística e explica fenômenos que a física clássica não
+alcança: por que os metais conduzem, por que estrelas anãs brancas não colapsam, e
+o estranho condensado de Bose-Einstein. Este capítulo apresenta as duas estatísticas
+quânticas.
+
+## Indistinguibilidade e as duas famílias
+
+Como vimos, o spin divide as partículas em **férmions** (semi-inteiro, obedecem a
+Pauli) e **bósons** (inteiro, sem restrição). Essa diferença gera duas distribuições
+de ocupação distintas, substituindo a de Boltzmann (Volume VI).
+
+::: {.callout-important}
+## As distribuições quânticas
+O número médio de partículas num estado de energia $E$ é:
+
+- **Fermi-Dirac** (férmions):
+  $$\bar{n} = \frac{1}{e^{(E - \mu)/k_B T} + 1};$$ {#eq-fermi-dirac}
+- **Bose-Einstein** (bósons):
+  $$\bar{n} = \frac{1}{e^{(E - \mu)/k_B T} - 1},$$ {#eq-bose-einstein}
+
+onde $\mu$ é o **potencial químico**. A diferença é o sinal no denominador — mas as
+consequências são profundas.
+:::
+
+O $+1$ de Fermi-Dirac garante $\bar n \le 1$ (Pauli: no máximo um férmion por
+estado); o $-1$ de Bose-Einstein permite $\bar n$ ilimitado (bósons se acumulam).
+
+## Gás de férmions e a energia de Fermi
+
+::: {#def-energia-fermi}
+A **energia de Fermi** $E_F$ é a energia do estado ocupado mais alto num gás de
+férmions no zero absoluto. A $T=0$, todos os estados abaixo de $E_F$ estão ocupados
+e todos acima, vazios (a distribuição de Fermi-Dirac vira um degrau).
+:::
+
+::: {.callout-note}
+## Por que os metais conduzem e as anãs brancas resistem
+Os elétrons de um metal formam um **gás de Fermi**: ocupam todos os níveis até
+$E_F$. Apenas os pouquíssimos elétrons perto de $E_F$ podem responder a campos
+elétricos e conduzir corrente — o que explica calor específico e condutividade dos
+metais, que a física clássica errava. Em escala estelar, a **pressão de
+degenerescência** dos elétrons (consequência de Pauli) sustenta as anãs brancas
+contra a gravidade; quando nem ela basta, o colapso forma estrelas de nêutrons ou
+buracos negros (Volume XV).
+:::
+
+## O condensado de Bose-Einstein
+
+Bósons fazem o oposto: a baixíssimas temperaturas, uma fração macroscópica deles
+"desaba" no **mesmo** estado fundamental.
+
+::: {.callout-important}
+## Condensado de Bose-Einstein
+Abaixo de uma temperatura crítica, um gás de bósons sofre uma transição em que um
+número macroscópico de partículas ocupa o **mesmo estado quântico fundamental**,
+formando um **condensado de Bose-Einstein** — um "superátomo" que se comporta como
+uma única onda quântica coerente.
+:::
+
+::: {.callout-note}
+## Quântica visível a olho nu
+Previsto em 1924, o condensado só foi produzido em 1995 (Nobel de 2001), resfriando
+átomos a bilionésimos de kelvin. Ele torna efeitos quânticos **macroscópicos**:
+superfluidez (fluxo sem viscosidade) e supercondutividade (próximo capítulo) são
+manifestações de bósons condensados. O mesmo princípio — muitos bósons no mesmo
+estado — está no **laser**, onde fótons ocupam coerentemente um único modo.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-fermi-meio}
+Na energia de Fermi ($E = \mu = E_F$), qual a ocupação média de Fermi-Dirac, a
+qualquer temperatura?
+:::
+
+**Solução.** Por @eq-fermi-dirac com $E = \mu$:
+$$\bar n = \frac{1}{e^{0} + 1} = \frac{1}{1 + 1} = \frac{1}{2}.$$
+O nível de Fermi é exatamente onde a ocupação é $1/2$ — uma definição prática de
+$E_F$ a temperatura finita.
+
+::: {#exm-limite-classico}
+Mostre que, para $E - \mu \gg k_B T$, ambas as distribuições quânticas reduzem-se à
+de Boltzmann.
+:::
+
+**Solução.** Quando $e^{(E-\mu)/k_BT} \gg 1$, o $\pm1$ nos denominadores das
+@eq-fermi-dirac e @eq-bose-einstein torna-se desprezível, e ambas viram
+$$\bar n \approx e^{-(E-\mu)/k_B T},$$
+o fator de Boltzmann (Volume VI). No regime diluído/quente, as estatísticas quânticas
+e a clássica coincidem — princípio da correspondência.
+
+## Exercícios
+
+::: {#exr-pauli-fermi}
+Por que a distribuição de Fermi-Dirac nunca dá ocupação maior que 1?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Porque $e^{(E-\mu)/k_BT} + 1 \ge 1$ sempre, então $\bar n = 1/(\dots) \le 1$
+(@eq-fermi-dirac). Fisicamente, reflete o **princípio de exclusão de Pauli**: no
+máximo um férmion por estado quântico.
+:::
+
+::: {#exr-bose-acumulo}
+Que característica da distribuição de Bose-Einstein permite o condensado?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O sinal $-1$ no denominador (@eq-bose-einstein) permite que $\bar n$ cresça sem
+limite quando $E \to \mu$. Bósons podem se acumular ilimitadamente no mesmo estado,
+possibilitando o condensado a baixas temperaturas.
+:::
+
+::: {#exr-eletrons-metal}
+Por que apenas uma pequena fração dos elétrons de um metal participa da condução?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A $T$ ambiente, quase todos os estados até $E_F$ estão preenchidos (Fermi-Dirac é
+quase um degrau). Só os elétrons perto de $E_F$ têm estados vazios próximos para os
+quais transitar e responder a um campo. Os demais estão "bloqueados" por Pauli.
+:::

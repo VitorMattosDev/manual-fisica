@@ -127,6 +127,7 @@ book:
         - volumes/v13-materia/01-estrutura-atomica.qmd
         - volumes/v13-materia/02-espectros.qmd
         - volumes/v13-materia/03-moleculas-ligacoes.qmd
+        - volumes/v13-materia/04-estatistica-quantica.qmd
   appendices:
     - constantes.qmd
 

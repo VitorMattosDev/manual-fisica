@@ -1,0 +1,124 @@
+---
+title: "Hamilton-Jacobi e Variáveis de Ação-Ângulo"
+---
+
+## Motivação
+
+A mecânica analítica atinge seu ápice na **teoria de Hamilton-Jacobi**: a busca por
+uma transformação canônica tão perfeita que resolve o movimento de uma vez,
+reduzindo-o a coordenadas que ou são constantes ou crescem uniformemente. É a
+formulação mais abstrata e poderosa da mecânica clássica — e, não por acaso, a mais
+próxima da mecânica quântica: a equação de Hamilton-Jacobi é o limite clássico da
+equação de Schrödinger. Este capítulo, que encerra a mecânica analítica, apresenta
+essa teoria e as variáveis de ação-ângulo, a ponte final para a quantização.
+
+## A equação de Hamilton-Jacobi
+
+A ideia: encontrar uma transformação canônica que leve a uma hamiltoniana
+**nula**, de modo que as novas coordenadas e momentos sejam todos constantes. A
+função geradora dessa transformação, $S$, satisfaz uma equação diferencial.
+
+::: {.callout-important}
+## Equação de Hamilton-Jacobi
+A **função principal de Hamilton** $S(q, t)$ satisfaz
+$$H\!\left(q, \frac{\partial S}{\partial q}, t\right) + \frac{\partial S}{\partial t} = 0.$$ {#eq-hamilton-jacobi}
+A função $S$ é exatamente a **ação** (Volume XI, @eq-acao): o momento é
+$p = \partial S/\partial q$, e resolver esta equação equivale a resolver todo o
+movimento.
+:::
+
+::: {.callout-note}
+## A ação como onda
+A equação de Hamilton-Jacobi trata a ação $S$ quase como a fase de uma onda que
+varre o espaço de configurações. Essa analogia óptico-mecânica — que Hamilton já
+percebera no século XIX, ligando seu princípio ao de Fermat — foi a inspiração
+direta de Schrödinger. Substituir $S$ por $-i\hbar\ln\psi$ na @eq-hamilton-jacobi
+conduz, no limite apropriado, à **equação de Schrödinger** (Volume XII). A mecânica
+clássica é a "óptica geométrica" de uma teoria ondulatória mais profunda.
+:::
+
+## Variáveis de ação-ângulo
+
+Para sistemas periódicos (órbitas, osciladores), há um par de coordenadas
+especialmente natural.
+
+::: {#def-acao-angulo}
+Para um sistema periódico, a **variável de ação** é a integral do momento sobre um
+ciclo completo,
+$$J = \oint p\,\mathrm{d}q,$$ {#eq-variavel-acao}
+e sua coordenada conjugada é o **ângulo** $\phi$, que avança uniformemente no tempo.
+A frequência do movimento é $\nu = \partial H/\partial J$.
+:::
+
+::: {.callout-important}
+## Por que ação-ângulo importa
+As variáveis de ação-ângulo isolam o que há de invariante num movimento periódico:
+$J$ é **constante** e $\phi$ cresce linearmente. A frequência sai diretamente, sem
+resolver a trajetória detalhada. Foi com elas que a **velha teoria quântica** (Bohr,
+Sommerfeld) formulou sua regra de quantização: $\oint p\,\mathrm{d}q = n h$.
+:::
+
+::: {.callout-note}
+## A regra de quantização de Bohr-Sommerfeld
+Antes da mecânica quântica completa, Bohr e Sommerfeld postularam que a variável de
+ação só pode assumir múltiplos inteiros da constante de Planck,
+$J = \oint p\,\mathrm{d}q = n h$. Essa regra — que reproduz os níveis do átomo de
+hidrogênio (Volume XII) — mostra que a quantização entra justamente pela variável de
+ação. A mecânica analítica não foi superada pela quântica: foi seu trampolim.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-acao-oscilador}
+Para o oscilador harmônico, mostre que a variável de ação leva à relação
+$E = J\nu$ entre energia, ação e frequência.
+:::
+
+**Solução.** A energia é $E = p^2/2m + \tfrac12 m\omega^2 q^2$, uma elipse no espaço
+de fase. A área dessa elipse é a variável de ação (@eq-variavel-acao):
+$$J = \oint p\,\mathrm{d}q = \frac{2\pi E}{\omega} = \frac{E}{\nu},$$
+com $\nu = \omega/2\pi$. Logo $E = J\nu$. (Impondo $J = nh$, obtém-se $E = nh\nu$ —
+os níveis de Planck!)
+
+::: {#exm-hj-livre}
+Escreva a equação de Hamilton-Jacobi para uma partícula livre em 1D ($H = p^2/2m$).
+:::
+
+**Solução.** Com $p = \partial S/\partial x$, a @eq-hamilton-jacobi fica
+$$\frac{1}{2m}\!\left(\frac{\partial S}{\partial x}\right)^2 + \frac{\partial S}{\partial t} = 0.$$
+Uma solução é $S = px - (p^2/2m)t$, com $p$ constante — que é a ação de uma
+partícula livre, descrevendo movimento uniforme.
+
+## Exercícios
+
+::: {#exr-bohr-sommerfeld}
+A regra de Bohr-Sommerfeld é $\oint p\,\mathrm{d}q = nh$. Que grandeza da mecânica
+analítica ela quantiza?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **variável de ação** $J = \oint p\,\mathrm{d}q$ (@eq-variavel-acao). A regra impõe
+que ela seja múltiplo inteiro de $h$, quantizando as órbitas.
+:::
+
+::: {#exr-s-acao}
+Na teoria de Hamilton-Jacobi, que interpretação física tem a função $S$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$S$ é a **ação** do sistema (a integral da lagrangiana, @eq-acao). Seu gradiente dá
+o momento, $p = \partial S/\partial q$, e ela é a função geradora que resolve o
+movimento.
+:::
+
+::: {#exr-energia-acao}
+No oscilador do @exm-acao-oscilador, o que se obtém ao impor $J = nh$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$E = J\nu = nh\nu$ — os **níveis de energia quantizados** $E_n = nh\nu$, exatamente a
+hipótese de Planck para o oscilador (Volume XII).
+:::

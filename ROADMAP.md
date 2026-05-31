@@ -151,7 +151,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v11-mecanica-analitica/03-aplicacoes-lagrangiana.qmd` — Aplicações lagrangianas
 - [x] `volumes/v11-mecanica-analitica/04-hamiltoniana.qmd` — Formulação hamiltoniana
 - [x] `volumes/v11-mecanica-analitica/05-transformacoes-canonicas.qmd` — Transformações canônicas e Poisson
-- [ ] `volumes/v11-mecanica-analitica/06-hamilton-jacobi.qmd` — Hamilton-Jacobi e ação-ângulo
+- [x] `volumes/v11-mecanica-analitica/06-hamilton-jacobi.qmd` — Hamilton-Jacobi e ação-ângulo
 
 ## Volume XII — Mecânica Quântica
 *Objetivo: o mundo quântico. Pré-requisitos: XI, VIII.*

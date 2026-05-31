@@ -1,0 +1,121 @@
+---
+title: "Supercondutividade"
+---
+
+## Motivação
+
+Em 1911, ao resfriar mercúrio perto do zero absoluto, Kamerlingh Onnes viu sua
+resistência elétrica **desaparecer por completo** — não cair, mas zerar. Uma
+corrente posta a circular num anel supercondutor flui por anos sem perda. Esse
+fenômeno espetacular, a **supercondutividade**, é a manifestação mais dramática da
+mecânica quântica em escala macroscópica, e sua explicação levou quase meio século.
+Este capítulo, que encerra a física da matéria condensada, descreve a
+supercondutividade, suas propriedades e a teoria BCS.
+
+## Resistência zero e o efeito Meissner
+
+::: {#def-supercondutor}
+Um **supercondutor** é um material que, abaixo de uma **temperatura crítica** $T_c$,
+exibe duas propriedades marcantes:
+
+- **resistência elétrica exatamente nula** — corrente flui sem dissipação;
+- **efeito Meissner** — expulsão completa do campo magnético de seu interior.
+:::
+
+O efeito Meissner é mais profundo que "resistência zero": o supercondutor não apenas
+impede a entrada de novo campo, mas **expulsa** o campo já presente, tornando-se um
+diamagneto perfeito. É o que permite a **levitação magnética** de um ímã sobre um
+supercondutor.
+
+## A teoria BCS: pares de Cooper
+
+Como elétrons, que se repelem, podem conduzir sem resistência? A resposta (Bardeen,
+Cooper e Schrieffer, 1957) é sutil e bela.
+
+::: {.callout-important}
+## Pares de Cooper
+Abaixo de $T_c$, os elétrons se agrupam em **pares de Cooper** — pares ligados por
+uma atração indireta mediada pelas vibrações do reticulado (fônons). Um par de
+Cooper tem spin total **inteiro**: comporta-se como um **bóson**.
+:::
+
+::: {.callout-note}
+## Um condensado que não resiste
+Sendo bósons, os pares de Cooper podem ocupar todos o **mesmo** estado quântico
+coletivo (Bose-Einstein, capítulo anterior), formando um condensado coerente que
+flui como uma única onda macroscópica. Para frear um elétron, seria preciso quebrar
+um par — o que custa uma energia mínima (o **gap supercondutor**) que as colisões
+térmicas, a baixa temperatura, não fornecem. Sem mecanismo de dissipação, a
+resistência é **exatamente** zero. A supercondutividade é um condensado de
+Bose-Einstein de pares de elétrons.
+:::
+
+## Aplicações e supercondutores de alta temperatura
+
+::: {.callout-note}
+## Da ressonância magnética aos trens-bala
+Supercondutores carregam correntes enormes sem perda, gerando campos magnéticos
+intensos: eles estão nos ímãs das máquinas de **ressonância magnética** (MRI), dos
+**aceleradores** como o LHC, e dos trens de **levitação magnética** (maglev). A
+descoberta, em 1986, de supercondutores de "alta temperatura" (acima de
+$77\ \mathrm{K}$, a do nitrogênio líquido, barato) ampliou as aplicações — embora o
+sonho de um supercondutor à temperatura ambiente, que revolucionaria a transmissão
+de energia, ainda seja perseguido.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-corrente-anel}
+Por que uma corrente induzida num anel supercondutor pode circular indefinidamente?
+:::
+
+**Solução.** Num supercondutor, a resistência é **exatamente** zero ($R=0$). A
+potência dissipada é $P = RI^2 = 0$ (Volume VII): a corrente não perde energia.
+Sem dissipação, ela circula sem decair — correntes persistentes já foram observadas
+por anos sem variação mensurável.
+
+::: {#exm-bcs-boson}
+Por que os pares de Cooper podem formar um condensado, mas elétrons isolados não?
+:::
+
+**Solução.** Elétrons isolados são férmions (spin $\tfrac12$) e obedecem a Pauli:
+não podem ocupar o mesmo estado. Já um par de Cooper tem spin total **inteiro**,
+comportando-se como **bóson** — e bósons podem se acumular no mesmo estado
+fundamental (Bose-Einstein), formando o condensado supercondutor.
+
+## Exercícios
+
+::: {#exr-meissner}
+O que distingue o efeito Meissner de um simples "condutor perfeito"?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Um condutor perfeito apenas **impediria mudanças** no campo interno. O efeito
+Meissner é mais forte: o supercondutor **expulsa ativamente** todo o campo magnético
+de seu interior, tornando-se um diamagneto perfeito — o que permite a levitação.
+:::
+
+::: {#exr-gap-supercondutor}
+O que mantém a resistência exatamente nula num supercondutor, mesmo com pequenas
+perturbações?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O **gap supercondutor**: para espalhar (frear) um elétron seria preciso quebrar um
+par de Cooper, o que exige uma energia mínima. A baixas temperaturas, as colisões
+térmicas não têm essa energia, então não há mecanismo de dissipação — resistência
+zero.
+:::
+
+::: {#exr-aplicacao-super}
+Cite uma aplicação que depende dos campos magnéticos intensos dos supercondutores.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **ressonância magnética (MRI)** médica, os ímãs de aceleradores como o **LHC**, ou
+os trens **maglev**. Todos exploram correntes enormes sem perda, que geram campos
+magnéticos muito intensos.
+:::

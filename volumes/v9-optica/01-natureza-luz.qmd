@@ -1,0 +1,129 @@
+---
+title: "Natureza e Propagação da Luz"
+---
+
+## Motivação
+
+A luz é talvez o objeto mais estudado da física, e o mais surpreendente: ora se
+comporta como onda, ora como partícula. Newton a via como corpúsculos; Huygens e
+Young, como ondas; Maxwell mostrou ser onda eletromagnética; Einstein revelou seu
+lado de partícula (o fóton). Antes de mergulhar nesse dualismo (Volume XII), porém,
+precisamos das ideias básicas: o que é a luz, como se propaga e a que velocidade.
+Este capítulo abre a óptica estabelecendo a natureza da luz, sua velocidade e o
+princípio que organiza tudo o que vem depois — o princípio de Fermat.
+
+## A natureza dual da luz
+
+::: {#def-luz}
+A **luz** é uma onda eletromagnética (Volume VIII) na faixa visível
+($\lambda \approx 0{,}4$–$0{,}7\ \mu\mathrm{m}$). Ela exibe **dualidade
+onda-partícula**: fenômenos de propagação (reflexão, refração, interferência) são
+descritos como onda; a interação com a matéria (emissão, absorção) revela seu
+caráter de **partícula**, o fóton de energia $E = hf$.
+:::
+
+Nesta parte da obra (óptica clássica), trataremos a luz como onda. O caráter
+corpuscular reaparece na física moderna.
+
+## A velocidade da luz
+
+::: {.callout-important}
+## A velocidade da luz no vácuo
+$$c \approx 3{,}00\times10^{8}\ \mathrm{m/s}.$$ {#eq-c}
+É uma constante fundamental: a mesma para toda onda EM e — como veremos na
+relatividade — a **velocidade-limite** do universo, igual para todos os
+observadores. Num meio material de índice $n$, a luz é mais lenta: $v = c/n$.
+:::
+
+::: {.callout-note}
+## Índice de refração
+O **índice de refração** $n = c/v$ mede quanto um meio retarda a luz. No vácuo
+$n=1$; na água $n\approx1{,}33$; no vidro $n\approx1{,}5$; no diamante $n\approx2{,}4$.
+A frequência da luz não muda ao entrar num meio (é fixada pela fonte), mas a
+velocidade e o comprimento de onda diminuem: $\lambda_\text{meio} = \lambda_\text{vácuo}/n$.
+:::
+
+## Raios, frentes de onda e o princípio de Huygens
+
+Para a óptica geométrica, modelamos a luz por **raios** — linhas perpendiculares às
+**frentes de onda** que indicam a direção de propagação. Huygens deu a regra de
+como as frentes avançam.
+
+::: {.callout-important}
+## Princípio de Huygens
+Cada ponto de uma frente de onda comporta-se como uma fonte de ondas secundárias
+esféricas; a nova frente de onda é a **envoltória** (superfície tangente) dessas
+ondinhas. Esse princípio explica geometricamente a reflexão, a refração e a
+difração.
+:::
+
+## O princípio de Fermat
+
+Há uma formulação ainda mais elegante, que antecipa a mecânica analítica (Volume
+XI): a luz "escolhe" o caminho de tempo extremo.
+
+::: {.callout-important}
+## Princípio de Fermat (do tempo mínimo)
+Entre dois pontos, a luz percorre o caminho que torna o **tempo de percurso**
+extremo (em geral, mínimo). Desse único princípio decorrem a propagação retilínea,
+a lei da reflexão e a lei de Snell da refração.
+:::
+
+::: {.callout-note}
+## A luz "sabe" para onde vai?
+O princípio de Fermat soa quase teleológico — como se a luz calculasse o caminho
+mais rápido de antemão. A interpretação moderna (via interferência de todos os
+caminhos possíveis, na formulação de Feynman, Volume XV) dissolve o mistério: os
+caminhos vizinhos ao de tempo extremo interferem construtivamente, e os demais se
+cancelam. A luz não escolhe — a física dos extremos emerge da soma de
+possibilidades.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-velocidade-agua}
+Qual a velocidade da luz na água ($n = 1{,}33$)?
+:::
+
+**Solução.** Por $v = c/n$ (@eq-c e definição de índice):
+$$v = \frac{c}{n} = \frac{3{,}00\times10^{8}}{1{,}33} \approx 2{,}26\times10^{8}\ \mathrm{m/s}.$$
+
+::: {#exm-comprimento-vidro}
+Luz de $\lambda = 600\ \mathrm{nm}$ no vácuo entra num vidro de $n = 1{,}5$. Qual
+seu comprimento de onda no vidro?
+:::
+
+**Solução.** A frequência não muda; o comprimento de onda diminui por $n$:
+$$\lambda_\text{vidro} = \frac{\lambda_\text{vácuo}}{n} = \frac{600}{1{,}5} = 400\ \mathrm{nm}.$$
+
+## Exercícios
+
+::: {#exr-indice}
+A luz viaja a $2{,}0\times10^{8}\ \mathrm{m/s}$ num certo vidro. Qual seu índice de
+refração?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$n = c/v = 3{,}0\times10^{8}/2{,}0\times10^{8} = 1{,}5$.
+:::
+
+::: {#exr-ano-luz}
+Quanto vale um ano-luz em metros? (Use $1\ \text{ano} \approx 3{,}15\times10^{7}\ \mathrm{s}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$d = c\,t = 3{,}0\times10^{8}\times3{,}15\times10^{7} \approx 9{,}5\times10^{15}\ \mathrm{m}$.
+:::
+
+::: {#exr-frequencia-meio}
+A frequência da luz muda ao passar do ar para a água? E o comprimento de onda?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **frequência não muda** (é determinada pela fonte). Já o comprimento de onda
+**diminui**: $\lambda_\text{água} = \lambda_\text{ar}/n$, pois $v = \lambda f$ cai
+com $v$.
+:::

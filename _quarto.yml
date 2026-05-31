@@ -88,6 +88,9 @@ book:
         - volumes/v8-eletromagnetismo2/05-circuitos-ac.qmd
         - volumes/v8-eletromagnetismo2/06-equacoes-maxwell.qmd
         - volumes/v8-eletromagnetismo2/07-ondas-eletromagneticas.qmd
+    - part: "Volume IX — Óptica"
+      chapters:
+        - volumes/v9-optica/01-natureza-luz.qmd
   appendices:
     - constantes.qmd
 

@@ -1,0 +1,116 @@
+---
+title: "Transformações Canônicas e Parênteses de Poisson"
+---
+
+## Motivação
+
+Um bom sistema de coordenadas pode transformar um problema difícil em um trivial. Na
+mecânica hamiltoniana, a liberdade de trocar coordenadas é ainda maior: podemos
+misturar posições e momentos, contanto que a estrutura das equações de Hamilton seja
+preservada — são as **transformações canônicas**. Acompanha-as uma estrutura
+algébrica elegante, os **parênteses de Poisson**, que codificam toda a dinâmica numa
+única operação e — espetacularmente — antecipam os comutadores da mecânica quântica.
+Este capítulo apresenta ambos.
+
+## Transformações canônicas
+
+::: {#def-transformacao-canonica}
+Uma **transformação canônica** é uma mudança de coordenadas no espaço de fase,
+$(q, p) \to (Q, P)$, que **preserva a forma** das equações de Hamilton
+(@eq-hamilton-canonicas). Nas novas variáveis, existe uma hamiltoniana $K(Q,P)$ tal
+que $\dot Q = \partial K/\partial P$ e $\dot P = -\partial K/\partial Q$.
+:::
+
+A liberdade é imensa: ao contrário da mecânica newtoniana, posições e momentos
+perdem seu status especial e podem ser embaralhados. O objetivo é achar coordenadas
+em que a hamiltoniana fique o mais simples possível — idealmente, em que muitas
+coordenadas sejam cíclicas e seus momentos, conservados.
+
+## Os parênteses de Poisson
+
+::: {.callout-important}
+## Parênteses de Poisson
+Para duas funções $f(q,p)$ e $g(q,p)$ no espaço de fase, o **parêntese de Poisson** é
+$$\{f, g\} = \sum_i\!\left(\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i} - \frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}\right).$$ {#eq-poisson}
+Em particular, as variáveis canônicas satisfazem
+$\{q_i, p_j\} = \delta_{ij}$ e $\{q_i, q_j\} = \{p_i, p_j\} = 0$.
+:::
+
+## A dinâmica em forma de parênteses
+
+Toda a evolução temporal de qualquer grandeza pode ser escrita com um único
+parêntese de Poisson com a hamiltoniana.
+
+::: {.callout-important}
+## Equação de movimento de Poisson
+A taxa de variação de qualquer grandeza $f(q,p)$ é
+$$\frac{\mathrm{d}f}{\mathrm{d}t} = \{f, H\} + \frac{\partial f}{\partial t}.$$ {#eq-poisson-movimento}
+Em particular, $f$ é uma **constante de movimento** se $\{f, H\} = 0$ (e $f$ não
+depende explicitamente de $t$).
+:::
+
+::: {.callout-note}
+## A ponte para a quântica
+Os parênteses de Poisson são o ancestral clássico direto dos **comutadores** da
+mecânica quântica. A regra de quantização canônica de Dirac é literalmente
+$$\{f, g\} \;\longrightarrow\; \frac{1}{i\hbar}[\hat f, \hat g],$$
+e a relação fundamental $\{q, p\} = 1$ vira a célebre
+$[\hat q, \hat p] = i\hbar$, raiz do princípio da incerteza (Volume XII). A mecânica
+hamiltoniana não é apenas elegante: é a estrutura clássica que a física quântica
+herda e deforma.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-poisson-qp}
+Calcule o parêntese de Poisson $\{q, p\}$ para um sistema de um grau de liberdade.
+:::
+
+**Solução.** Por @eq-poisson, com $f=q$ e $g=p$:
+$$\{q, p\} = \frac{\partial q}{\partial q}\frac{\partial p}{\partial p} - \frac{\partial q}{\partial p}\frac{\partial p}{\partial q} = 1\cdot1 - 0\cdot0 = 1.$$
+É a relação canônica fundamental.
+
+::: {#exm-conservacao-poisson}
+Use a @eq-poisson-movimento para verificar que a hamiltoniana se conserva (se não
+depende do tempo).
+:::
+
+**Solução.** Tome $f = H$. Então
+$$\frac{\mathrm{d}H}{\mathrm{d}t} = \{H, H\} + \frac{\partial H}{\partial t}.$$
+Como $\{H, H\} = 0$ (o parêntese de qualquer função consigo mesma é nulo), resta
+$\mathrm{d}H/\mathrm{d}t = \partial H/\partial t$. Se $H$ não depende explicitamente
+do tempo, $H$ se conserva — coerente com o capítulo anterior.
+
+## Exercícios
+
+::: {#exr-poisson-zero}
+Calcule $\{q, q\}$ e $\{p, p\}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Ambos são **zero**. Pela @eq-poisson, $\{q,q\}$ e $\{p,p\}$ envolvem termos que se
+cancelam (toda função tem parêntese nulo consigo mesma): $\{q,q\}=\{p,p\}=0$.
+:::
+
+::: {#exr-constante-movimento}
+Uma grandeza $f$ satisfaz $\{f, H\} = 0$ e não depende de $t$. O que se conclui?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela @eq-poisson-movimento, $\mathrm{d}f/\mathrm{d}t = 0$: $f$ é uma **constante de
+movimento** (grandeza conservada).
+:::
+
+::: {#exr-quantizacao}
+Qual relação quântica corresponde ao parêntese clássico $\{q, p\} = 1$ pela regra de
+Dirac?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$[\hat q, \hat p] = i\hbar$ — a relação de comutação canônica, que substitui
+$\{q,p\}=1$ via $\{\cdot,\cdot\}\to \frac{1}{i\hbar}[\cdot,\cdot]$. É a base do
+princípio da incerteza.
+:::

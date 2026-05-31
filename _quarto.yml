@@ -109,6 +109,7 @@ book:
         - volumes/v11-mecanica-analitica/02-lagrangiana.qmd
         - volumes/v11-mecanica-analitica/03-aplicacoes-lagrangiana.qmd
         - volumes/v11-mecanica-analitica/04-hamiltoniana.qmd
+        - volumes/v11-mecanica-analitica/05-transformacoes-canonicas.qmd
   appendices:
     - constantes.qmd
 

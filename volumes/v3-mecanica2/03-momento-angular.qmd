@@ -1,0 +1,130 @@
+---
+title: "Momento Angular"
+---
+
+## Motivação
+
+A patinadora recolhe os braços e gira mais rápido; um gato em queda se reorienta no
+ar; planetas varrem áreas iguais em tempos iguais. Por trás dos três está a mesma
+lei de conservação — a do **momento angular**, o análogo rotacional do momento
+linear. Assim como o momento linear se conserva na ausência de forças externas, o
+momento angular se conserva na ausência de **torques** externos. Este capítulo
+completa o paralelo translação–rotação com a grandeza conservada que faltava.
+
+## Momento angular
+
+::: {#def-momento-angular}
+O **momento angular** de uma partícula de momento linear $\vec{p} = m\vec{v}$ e
+vetor posição $\vec{r}$ relativo a um ponto é
+$$\vec{L} = \vec{r}\times\vec{p}, \qquad |\vec{L}| = r\,p\,\mathrm{sen}\,\phi.$$ {#eq-momento-angular}
+Para um corpo rígido girando com velocidade angular $\omega$ em torno de um eixo
+de simetria,
+$$L = I\,\omega.$$ {#eq-momento-angular-rigido}
+A unidade é $\mathrm{kg\,m^2/s}$.
+:::
+
+A forma $L = I\omega$ é o análogo perfeito de $p = mv$: o momento de inércia faz o
+papel da massa, e a velocidade angular o da velocidade.
+
+## A lei fundamental da rotação
+
+::: {.callout-important}
+## Torque e variação do momento angular
+O torque externo resultante é a taxa de variação do momento angular:
+$$\vec{\tau}_\text{ext} = \frac{\mathrm{d}\vec{L}}{\mathrm{d}t}.$$ {#eq-torque-momento-angular}
+É o análogo de $\vec{F} = \mathrm{d}\vec{p}/\mathrm{d}t$ e contém $\tau = I\alpha$
+como caso de $I$ constante.
+:::
+
+::: {.proof}
+## Derivando o momento angular
+Derive a @eq-momento-angular no tempo, usando a regra do produto para o produto
+vetorial:
+$$\frac{\mathrm{d}\vec{L}}{\mathrm{d}t} = \frac{\mathrm{d}\vec{r}}{\mathrm{d}t}\times\vec{p} + \vec{r}\times\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}.$$
+O primeiro termo é $\vec{v}\times m\vec{v} = \vec{0}$ (vetores paralelos). O
+segundo é $\vec{r}\times\vec{F} = \vec{\tau}$ (@eq-newton-momento e @eq-torque).
+Logo $\mathrm{d}\vec{L}/\mathrm{d}t = \vec{\tau}_\text{ext}$. $\qquad\blacksquare$
+:::
+
+## Conservação do momento angular
+
+::: {.callout-important}
+## Conservação do momento angular
+Se o torque externo resultante é nulo, o momento angular total se conserva:
+$$\vec{\tau}_\text{ext} = \vec{0} \;\Longrightarrow\; \vec{L} = I\,\omega = \text{constante}.$$ {#eq-conservacao-momento-angular}
+Em particular, se $I$ diminui, $\omega$ aumenta na mesma proporção (e vice-versa).
+:::
+
+::: {.callout-note}
+## A patinadora e a lei das áreas
+Ao recolher os braços, a patinadora reduz seu $I$; com $L = I\omega$ constante,
+$\omega$ cresce e ela gira mais rápido — sem nenhum torque externo. A mesma lei,
+aplicada a um planeta sob a força central do Sol (que não exerce torque em relação
+ao Sol), dá a **segunda lei de Kepler**: o raio-vetor varre áreas iguais em tempos
+iguais, pois a taxa de varredura de área é $\tfrac{1}{2}L/m = $ constante.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-patinadora}
+Uma patinadora gira a $\omega_0 = 2{,}0\ \mathrm{rad/s}$ com momento de inércia
+$I_0 = 5{,}0\ \mathrm{kg\,m^2}$. Ao recolher os braços, reduz $I$ para
+$2{,}0\ \mathrm{kg\,m^2}$. Qual a nova velocidade angular?
+:::
+
+**Solução.** Sem torque externo, $L$ se conserva
+(@eq-conservacao-momento-angular):
+$$I_0\,\omega_0 = I\,\omega \;\Longrightarrow\; \omega = \frac{I_0\,\omega_0}{I} = \frac{5{,}0\times2{,}0}{2{,}0} = 5{,}0\ \mathrm{rad/s}.$$
+Ela mais que dobra a rotação. (A energia cinética rotacional **aumenta** — o
+trabalho muscular de recolher os braços é a fonte.)
+
+::: {#exm-disco-massa}
+Um disco gira livremente a $\omega_0 = 10\ \mathrm{rad/s}$ com
+$I_0 = 0{,}40\ \mathrm{kg\,m^2}$. Deixa-se cair sobre ele, sem atrito com o eixo,
+um anel de $I_a = 0{,}10\ \mathrm{kg\,m^2}$ inicialmente parado. Qual a velocidade
+angular comum final?
+:::
+
+**Solução.** Tipo "colisão rotacional": momento angular conservado
+(@eq-conservacao-momento-angular), os dois passam a girar juntos:
+$$I_0\,\omega_0 = (I_0 + I_a)\,\omega \;\Longrightarrow\; \omega = \frac{0{,}40\times10}{0{,}50} = 8{,}0\ \mathrm{rad/s}.$$
+
+## Exercícios
+
+::: {#exr-particula-L}
+Uma partícula de $0{,}20\ \mathrm{kg}$ move-se a $3{,}0\ \mathrm{m/s}$ numa reta
+que passa a $0{,}50\ \mathrm{m}$ de um ponto $O$. Qual o módulo do momento angular
+em relação a $O$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$L = r_\perp\,p = 0{,}50\times(0{,}20\times3{,}0) = 0{,}50\times0{,}60 = 0{,}30\ \mathrm{kg\,m^2/s}$,
+onde $r_\perp = 0{,}50\ \mathrm{m}$ é a distância perpendicular (braço).
+:::
+
+::: {#exr-carrossel}
+Uma criança de $30\ \mathrm{kg}$ corre e sobe na borda de um carrossel de
+$I = 200\ \mathrm{kg\,m^2}$ e raio $2{,}0\ \mathrm{m}$, inicialmente parado,
+levando momento angular $L = 180\ \mathrm{kg\,m^2/s}$. Qual a velocidade angular
+do conjunto? (Trate a criança como ponto na borda.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$I$ da criança na borda: $mR^2 = 30\times(2{,}0)^2 = 120\ \mathrm{kg\,m^2}$. Total
+$I_\text{tot} = 200 + 120 = 320\ \mathrm{kg\,m^2}$. Conservando $L$:
+$\omega = L/I_\text{tot} = 180/320 \approx 0{,}56\ \mathrm{rad/s}$.
+:::
+
+::: {#exr-kepler}
+Um cometa está a $r_1$ do Sol movendo-se a $v_1$ (perpendicular ao raio) no
+periélio. No afélio, a $r_2 = 4r_1$, qual sua rapidez $v_2$ (também perpendicular)?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O torque do Sol sobre o cometa é nulo (força central), então $L = m r v$ se
+conserva: $r_1 v_1 = r_2 v_2 \Rightarrow v_2 = v_1\,r_1/r_2 = v_1/4$. Mais longe,
+mais devagar — a lei das áreas de Kepler.
+:::

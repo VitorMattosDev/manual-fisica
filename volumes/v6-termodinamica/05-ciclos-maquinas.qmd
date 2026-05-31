@@ -1,0 +1,124 @@
+---
+title: "Ciclos e Máquinas Térmicas"
+---
+
+## Motivação
+
+A Revolução Industrial foi movida a vapor — máquinas que transformam calor em
+trabalho. Mas há um limite fundamental: nenhuma delas converte todo o calor
+recebido em trabalho útil. Quanto, então, é possível? A resposta, dada por Sadi
+Carnot antes mesmo de a entropia ser formalizada, é uma das mais elegantes da
+física: a eficiência máxima depende **apenas das temperaturas** entre as quais a
+máquina opera. Este capítulo estuda os ciclos termodinâmicos, as máquinas
+térmicas e os refrigeradores, e o teorema de Carnot.
+
+## Máquinas térmicas
+
+::: {#def-maquina-termica}
+Uma **máquina térmica** opera em ciclos, retirando calor $Q_q$ de uma fonte quente
+(temperatura $T_q$), convertendo parte em trabalho $W$ e rejeitando o restante
+$Q_f$ para uma fonte fria ($T_f$). Como retorna ao estado inicial a cada ciclo,
+$\Delta U = 0$, e a primeira lei dá
+$$W = Q_q - Q_f.$$ {#eq-trabalho-maquina}
+:::
+
+::: {.callout-important}
+## Eficiência de uma máquina térmica
+A **eficiência** é a fração do calor recebido convertida em trabalho:
+$$\eta = \frac{W}{Q_q} = \frac{Q_q - Q_f}{Q_q} = 1 - \frac{Q_f}{Q_q}.$$ {#eq-eficiencia}
+Como $Q_f>0$ (a segunda lei proíbe $Q_f=0$), tem-se sempre $\eta<1$.
+:::
+
+## O ciclo e o teorema de Carnot
+
+Carnot imaginou a máquina ideal: um ciclo **reversível** formado por duas
+transformações isotérmicas e duas adiabáticas. Ele provou que essa máquina tem a
+maior eficiência possível entre duas temperaturas.
+
+::: {.callout-important}
+## Teorema de Carnot
+Nenhuma máquina térmica operando entre duas temperaturas $T_q$ e $T_f$ pode
+exceder a eficiência da máquina de Carnot reversível, que vale
+$$\eta_\text{Carnot} = 1 - \frac{T_f}{T_q},$$ {#eq-carnot}
+com as temperaturas em **kelvin**. Todas as máquinas reversíveis têm essa mesma
+eficiência; as reais, menos.
+:::
+
+::: {.proof}
+## Eficiência de Carnot a partir da entropia
+Num ciclo de Carnot, as trocas de calor ocorrem isotermicamente. Como a entropia é
+função de estado, sua variação no ciclo é nula:
+$\dfrac{Q_q}{T_q} - \dfrac{Q_f}{T_f} = 0$, logo $\dfrac{Q_f}{Q_q} = \dfrac{T_f}{T_q}$.
+Substituindo na @eq-eficiencia, $\eta = 1 - T_f/T_q$. $\qquad\blacksquare$
+:::
+
+::: {.callout-note}
+## Por que não existe eficiência de 100%
+A @eq-carnot mostra que $\eta=1$ exigiria $T_f = 0\ \mathrm{K}$ (zero absoluto,
+inatingível) ou $T_q\to\infty$. Toda máquina real precisa rejeitar calor a uma
+fonte fria de temperatura finita — é o tributo da segunda lei, não uma falha de
+engenharia.
+:::
+
+## Refrigeradores e bombas de calor
+
+Invertendo o ciclo, gasta-se trabalho para mover calor do frio para o quente — um
+**refrigerador**. Sua qualidade mede-se pelo **coeficiente de desempenho**:
+$$\mathrm{COP} = \frac{Q_f}{W} = \frac{Q_f}{Q_q - Q_f},$$ {#eq-cop}
+que pode ser **maior que 1** — uma geladeira move mais calor do que o trabalho que
+consome, sem violar nada (a energia total ainda se conserva).
+
+## Exemplos resolvidos
+
+::: {#exm-carnot}
+Uma máquina opera entre $T_q = 500\ \mathrm{K}$ e $T_f = 300\ \mathrm{K}$. Qual a
+máxima eficiência possível?
+:::
+
+**Solução.** A eficiência de Carnot (@eq-carnot) é o teto:
+$$\eta_\text{máx} = 1 - \frac{T_f}{T_q} = 1 - \frac{300}{500} = 1 - 0{,}60 = 0{,}40 = 40\%.$$
+Nenhuma máquina real entre essas temperaturas ultrapassa $40\%$.
+
+::: {#exm-trabalho-util}
+Uma máquina recebe $800\ \mathrm{J}$ por ciclo e rejeita $500\ \mathrm{J}$. Qual o
+trabalho e a eficiência?
+:::
+
+**Solução.** Por @eq-trabalho-maquina, $W = Q_q - Q_f = 800 - 500 = 300\ \mathrm{J}$.
+A eficiência (@eq-eficiencia) é $\eta = W/Q_q = 300/800 = 0{,}375 = 37{,}5\%$.
+
+## Exercícios
+
+::: {#exr-eficiencia-real}
+Uma usina opera entre $600\ \mathrm{K}$ e $300\ \mathrm{K}$, mas tem eficiência
+real de $35\%$. Compare com o limite de Carnot.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\eta_\text{Carnot} = 1 - 300/600 = 0{,}50 = 50\%$. A usina ($35\%$) opera abaixo do
+limite, como exige a segunda lei — perdas por irreversibilidades reduzem o
+rendimento.
+:::
+
+::: {#exr-cop-geladeira}
+Uma geladeira remove $300\ \mathrm{J}$ da câmara fria consumindo $100\ \mathrm{J}$
+de trabalho elétrico. Qual seu COP?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mathrm{COP} = Q_f/W = 300/100 = 3{,}0$ (@eq-cop). Move três vezes mais calor do
+que a energia que gasta.
+:::
+
+::: {#exr-calor-rejeitado}
+Uma máquina de Carnot entre $400\ \mathrm{K}$ e $300\ \mathrm{K}$ recebe
+$1200\ \mathrm{J}$ da fonte quente. Quanto calor rejeita?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Para Carnot, $Q_f/Q_q = T_f/T_q$, logo
+$Q_f = Q_q\,T_f/T_q = 1200\times300/400 = 900\ \mathrm{J}$.
+:::

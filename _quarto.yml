@@ -67,6 +67,7 @@ book:
         - volumes/v6-termodinamica/02-calor-primeira-lei.qmd
         - volumes/v6-termodinamica/03-teoria-cinetica.qmd
         - volumes/v6-termodinamica/04-segunda-lei-entropia.qmd
+        - volumes/v6-termodinamica/05-ciclos-maquinas.qmd
   appendices:
     - constantes.qmd
 

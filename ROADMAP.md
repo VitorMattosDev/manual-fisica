@@ -40,7 +40,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v1-fundamentos/01-grandezas-unidades.qmd` — Grandezas, SI e conversões
 - [x] `volumes/v1-fundamentos/02-analise-dimensional.qmd` — Análise dimensional
 - [x] `volumes/v1-fundamentos/03-medicao-erros.qmd` — Medição, algarismos significativos, teoria de erros
-- [ ] `volumes/v1-fundamentos/04-vetores.qmd` — Vetores e álgebra vetorial
+- [x] `volumes/v1-fundamentos/04-vetores.qmd` — Vetores e álgebra vetorial
 - [ ] `volumes/v1-fundamentos/05-ferramentas-calculo.qmd` — Derivadas e integrais na física
 - [ ] `volumes/v1-fundamentos/06-modelagem.qmd` — Modelagem e método científico
 

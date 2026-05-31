@@ -1,0 +1,173 @@
+---
+title: "Vetores e Álgebra Vetorial"
+---
+
+## Motivação
+
+Diga a alguém que ande "$3\ \mathrm{km}$" e a pergunta imediata é: *para onde?*
+Algumas grandezas — massa, tempo, temperatura — ficam completamente
+especificadas por um número e uma unidade. Outras — deslocamento, velocidade,
+força — exigem também uma **direção**. Estas são os **vetores**, e quase toda a
+física que vem a seguir (Newton, campos, ondas) é escrita na linguagem deles.
+Este capítulo constrói essa linguagem: como representar, somar e multiplicar
+vetores.
+
+## Escalares e vetores
+
+::: {#def-vetor}
+Uma **grandeza escalar** fica determinada por um único número (com unidade). Uma
+**grandeza vetorial** exige **módulo, direção e sentido**; é representada por um
+**vetor** $\vec{v}$, uma seta cujo comprimento é o módulo $|\vec{v}| = v$ e cuja
+orientação dá direção e sentido.
+:::
+
+Dois vetores são **iguais** quando têm o mesmo módulo, direção e sentido —
+independentemente de onde estão desenhados. Isso permite transportá-los
+livremente, o que é a base da soma geométrica.
+
+## Componentes de um vetor
+
+Geometria é intuitiva, mas para calcular usamos **componentes**. Fixado um sistema
+de eixos $x, y, z$ com vetores unitários $\hat{\imath}, \hat{\jmath}, \hat{k}$,
+todo vetor se escreve como combinação deles.
+
+::: {#def-componentes}
+Num plano, um vetor $\vec{v}$ que faz ângulo $\theta$ com o eixo $x$ tem
+**componentes cartesianas**
+$$v_x = v\cos\theta, \qquad v_y = v\,\mathrm{sen}\,\theta,$$ {#eq-componentes}
+e escreve-se $\vec{v} = v_x\,\hat{\imath} + v_y\,\hat{\jmath}$. O módulo e a
+direção recuperam-se por
+$$v = \sqrt{v_x^2 + v_y^2}, \qquad \tan\theta = \frac{v_y}{v_x}.$$ {#eq-modulo-direcao}
+:::
+
+::: {.callout-note}
+## Por que componentes
+Somar setas a olho acumula erro; somar componentes é exato e mecânico. A
+componente é a "sombra" do vetor sobre cada eixo, e os eixos sendo
+perpendiculares, as sombras não interferem entre si — cada eixo é um problema
+unidimensional independente.
+:::
+
+## Soma e multiplicação por escalar
+
+::: {.callout-important}
+## Álgebra vetorial elementar
+Sejam $\vec{a} = (a_x, a_y, a_z)$, $\vec{b} = (b_x, b_y, b_z)$ e $\lambda$ escalar.
+
+- **Soma** (regra do paralelogramo, componente a componente):
+  $$\vec{a} + \vec{b} = (a_x+b_x,\ a_y+b_y,\ a_z+b_z).$$ {#eq-soma-vetorial}
+- **Multiplicação por escalar:** $\lambda\vec{a} = (\lambda a_x, \lambda a_y, \lambda a_z)$,
+  que escala o módulo por $|\lambda|$ e inverte o sentido se $\lambda<0$.
+
+A soma é comutativa e associativa; o vetor nulo $\vec{0}$ é o elemento neutro e
+$-\vec{a}$ o oposto.
+:::
+
+## Produto escalar
+
+Há duas maneiras de multiplicar vetores, e cada uma captura uma física diferente.
+A primeira devolve um número e mede **alinhamento**.
+
+::: {#def-produto-escalar}
+O **produto escalar** (ou produto interno) de $\vec{a}$ e $\vec{b}$ é
+$$\vec{a}\cdot\vec{b} = a\,b\,\cos\theta = a_x b_x + a_y b_y + a_z b_z,$$ {#eq-produto-escalar}
+onde $\theta$ é o ângulo entre eles. O resultado é um **escalar**.
+:::
+
+O produto escalar é máximo quando os vetores são paralelos
+($\cos 0 = 1$), nulo quando perpendiculares ($\cos 90^\circ = 0$) e negativo
+quando apontam em sentidos opostos. É exatamente o que aparece na definição de
+trabalho, $W = \vec{F}\cdot\vec{d}$: só a parte da força alinhada ao deslocamento
+realiza trabalho.
+
+## Produto vetorial
+
+A segunda multiplicação devolve um **vetor** perpendicular aos dois e mede
+**rotação/área**.
+
+::: {#def-produto-vetorial}
+O **produto vetorial** $\vec{a}\times\vec{b}$ é o vetor de módulo
+$$|\vec{a}\times\vec{b}| = a\,b\,\mathrm{sen}\,\theta,$$ {#eq-produto-vetorial}
+direção perpendicular ao plano de $\vec{a}$ e $\vec{b}$, e sentido dado pela
+**regra da mão direita**. Em componentes,
+$$\vec{a}\times\vec{b} = (a_y b_z - a_z b_y,\ a_z b_x - a_x b_z,\ a_x b_y - a_y b_x).$$ {#eq-produto-vetorial-comp}
+:::
+
+::: {.callout-note}
+## Escalar × vetorial
+O produto **escalar** anula-se entre perpendiculares e é máximo entre paralelos; o
+**vetorial** faz o oposto — anula-se entre paralelos e é máximo entre
+perpendiculares. O primeiro mede projeção; o segundo, a área do paralelogramo
+gerado pelos dois vetores. Torque ($\vec{\tau} = \vec{r}\times\vec{F}$) e força
+magnética usam o produto vetorial.
+:::
+
+::: {.proof}
+## A componente $z$ do produto vetorial
+Para dois vetores no plano $xy$, $\vec{a} = (a_x, a_y, 0)$ e
+$\vec{b} = (b_x, b_y, 0)$, a @eq-produto-vetorial-comp dá apenas a componente $z$:
+$\vec{a}\times\vec{b} = (0, 0, a_x b_y - a_y b_x)$. Substituindo
+$a_x = a\cos\alpha$, $a_y = a\,\mathrm{sen}\,\alpha$ e idem para $\vec{b}$,
+$$a_x b_y - a_y b_x = ab(\cos\alpha\,\mathrm{sen}\,\beta - \mathrm{sen}\,\alpha\cos\beta) = ab\,\mathrm{sen}(\beta-\alpha),$$
+que é $ab\,\mathrm{sen}\,\theta$ com $\theta = \beta-\alpha$ o ângulo entre eles,
+confirmando a @eq-produto-vetorial. $\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-soma-componentes}
+Some $\vec{a} = 3\,\hat{\imath} + 4\,\hat{\jmath}$ e
+$\vec{b} = -1\,\hat{\imath} + 2\,\hat{\jmath}$, e dê o módulo do resultado.
+:::
+
+**Solução.** Pela @eq-soma-vetorial,
+$\vec{a}+\vec{b} = (3-1)\,\hat{\imath} + (4+2)\,\hat{\jmath} = 2\,\hat{\imath} + 6\,\hat{\jmath}$.
+O módulo (@eq-modulo-direcao) é
+$|\vec{a}+\vec{b}| = \sqrt{2^2 + 6^2} = \sqrt{40} \approx 6{,}3$.
+
+::: {#exm-angulo}
+Encontre o ângulo entre $\vec{a} = 3\,\hat{\imath} + 4\,\hat{\jmath}$ e
+$\vec{b} = 4\,\hat{\imath} + 3\,\hat{\jmath}$.
+:::
+
+**Solução.** Use a @eq-produto-escalar nas duas formas. O produto é
+$\vec{a}\cdot\vec{b} = 3\cdot4 + 4\cdot3 = 24$. Os módulos são $a = b = 5$. Então
+$$\cos\theta = \frac{\vec{a}\cdot\vec{b}}{ab} = \frac{24}{25} = 0{,}96 \;\Longrightarrow\; \theta \approx 16^\circ.$$
+
+## Exercícios
+
+::: {#exr-deslocamento}
+Uma pessoa anda $4{,}0\ \mathrm{m}$ para leste e depois $3{,}0\ \mathrm{m}$ para
+o norte. Qual é o módulo e a direção do deslocamento resultante?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Tome leste como $\hat{\imath}$ e norte como $\hat{\jmath}$:
+$\vec{d} = 4{,}0\,\hat{\imath} + 3{,}0\,\hat{\jmath}$. Módulo
+$d = \sqrt{4{,}0^2 + 3{,}0^2} = 5{,}0\ \mathrm{m}$; direção
+$\theta = \arctan(3{,}0/4{,}0) \approx 37^\circ$ ao norte do leste.
+:::
+
+::: {#exr-perpendicular}
+Para que valor de $c$ os vetores $\vec{a} = 2\,\hat{\imath} + 3\,\hat{\jmath}$ e
+$\vec{b} = c\,\hat{\imath} - 4\,\hat{\jmath}$ são perpendiculares?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Perpendiculares ⟺ produto escalar nulo (@eq-produto-escalar):
+$\vec{a}\cdot\vec{b} = 2c + 3(-4) = 2c - 12 = 0 \Rightarrow c = 6$.
+:::
+
+::: {#exr-area-paralelogramo}
+Calcule a área do paralelogramo gerado por
+$\vec{a} = \hat{\imath} + 2\,\hat{\jmath}$ e $\vec{b} = 3\,\hat{\imath} + \hat{\jmath}$.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A área é $|\vec{a}\times\vec{b}|$. No plano, a componente $z$ é
+$a_x b_y - a_y b_x = 1\cdot1 - 2\cdot3 = -5$, logo a área é $|-5| = 5$ (unidades de
+área).
+:::

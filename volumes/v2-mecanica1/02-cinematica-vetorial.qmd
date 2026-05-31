@@ -1,0 +1,151 @@
+---
+title: "Cinemática Vetorial: Projéteis e Movimento Circular"
+---
+
+## Motivação
+
+Uma bola chutada não anda em linha reta: sobe, curva e cai. Um satélite gira sem
+nunca se aproximar nem se afastar. Esses movimentos são bidimensionais, e
+descrevê-los exige promover posição, velocidade e aceleração a **vetores**. A boa
+notícia, já antecipada no capítulo de vetores, é que cada eixo se comporta de
+forma independente — o movimento 2D é a superposição de dois movimentos 1D. Disso
+sai toda a teoria dos projéteis e, com uma ideia nova (aceleração que só muda a
+direção), o movimento circular.
+
+## Vetores posição, velocidade e aceleração
+
+::: {#def-cinematica-vetorial}
+O **vetor posição** $\vec{r}(t)$ localiza a partícula a partir da origem. A
+**velocidade** e a **aceleração** são suas derivadas temporais, componente a
+componente:
+$$\vec{v} = \frac{\mathrm{d}\vec{r}}{\mathrm{d}t}, \qquad \vec{a} = \frac{\mathrm{d}\vec{v}}{\mathrm{d}t}.$$ {#eq-cinematica-vetorial}
+A velocidade é sempre **tangente** à trajetória.
+:::
+
+A chave operacional é a **independência dos eixos**: em
+$\vec{r} = x\,\hat{\imath} + y\,\hat{\jmath}$, cada componente evolui por sua
+própria equação de movimento, e basta resolver dois problemas 1D em paralelo.
+
+## Lançamento de projéteis
+
+Despreze a resistência do ar. A única força é a gravidade, vertical: logo
+$a_x = 0$ e $a_y = -g$. O movimento horizontal é **uniforme** e o vertical é de
+**queda livre**.
+
+::: {.callout-important}
+## Equações do projétil
+Com origem no ponto de lançamento, velocidade inicial $v_0$ a um ângulo $\theta$
+acima da horizontal ($v_{0x} = v_0\cos\theta$, $v_{0y} = v_0\,\mathrm{sen}\,\theta$):
+$$x = v_0\cos\theta\;t, \qquad y = v_0\,\mathrm{sen}\,\theta\;t - \tfrac12 g\,t^2.$$ {#eq-projetil}
+A trajetória resultante é uma **parábola**.
+:::
+
+::: {.proof}
+## A trajetória é uma parábola
+Isole o tempo na equação horizontal de @eq-projetil: $t = x/(v_0\cos\theta)$.
+Substitua na vertical:
+$$y = x\tan\theta - \frac{g}{2v_0^2\cos^2\theta}\,x^2.$$
+É da forma $y = bx - cx^2$, com $c>0$: uma parábola de concavidade para baixo.
+$\qquad\blacksquare$
+:::
+
+Duas grandezas resumem o voo (sobre solo plano):
+
+::: {.callout-note}
+## Alcance e altura máxima
+Anulando $y$ em @eq-projetil obtém-se o tempo de voo $t_v = 2v_0\,\mathrm{sen}\,\theta/g$,
+o **alcance**
+$$R = \frac{v_0^2\,\mathrm{sen}(2\theta)}{g}$$
+e a **altura máxima** $H = v_0^2\,\mathrm{sen}^2\theta/(2g)$. O alcance é máximo em
+$\theta = 45^\circ$, e ângulos complementares (p.ex. $30^\circ$ e $60^\circ$) dão
+o mesmo alcance.
+:::
+
+## Movimento circular
+
+Numa trajetória circular de raio $R$ a rapidez pode até ser constante, mas a
+**direção** da velocidade muda continuamente — e mudança de velocidade é
+aceleração.
+
+::: {#def-mcu}
+No **movimento circular uniforme** (MCU), a rapidez $v$ é constante e a partícula
+percorre o círculo em um **período** $T$. A velocidade é tangente; a aceleração
+aponta para o **centro** (centrípeta) e tem módulo
+$$a_c = \frac{v^2}{R}.$$ {#eq-centripeta}
+:::
+
+::: {.proof}
+## Por que a aceleração centrípeta vale $v^2/R$
+Em MCU, o vetor velocidade tem módulo fixo $v$ e gira com a partícula. Num
+intervalo $\Delta t$ a partícula varre um ângulo $\Delta\phi = v\Delta t/R$, e o
+vetor velocidade gira do mesmo ângulo. A variação $|\Delta\vec{v}| \approx v\,\Delta\phi$
+aponta para o centro. Logo
+$$a_c = \frac{|\Delta\vec{v}|}{\Delta t} = \frac{v\,\Delta\phi}{\Delta t} = v\cdot\frac{v}{R} = \frac{v^2}{R}. \qquad\blacksquare$$
+:::
+
+::: {.callout-note}
+## Velocidade angular
+Definindo a **velocidade angular** $\omega = 2\pi/T$ (em $\mathrm{rad/s}$), valem
+$v = \omega R$ e $a_c = \omega^2 R$. Se a rapidez também varia, surge ainda uma
+componente **tangencial** $a_t = \mathrm{d}v/\mathrm{d}t$, e a aceleração total é a
+soma vetorial de $a_c$ e $a_t$.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-projetil-horizontal}
+Uma bola é lançada horizontalmente a $10\ \mathrm{m/s}$ do alto de uma mesa de
+$1{,}25\ \mathrm{m}$. A que distância da base ela toca o chão?
+($g = 9{,}8\ \mathrm{m/s^2}$.)
+:::
+
+**Solução.** O tempo de queda vem só do movimento vertical
+($v_{0y}=0$, @eq-projetil): $1{,}25 = \tfrac12 g t^2 \Rightarrow t = \sqrt{2\cdot1{,}25/9{,}8} \approx 0{,}50\ \mathrm{s}$.
+Nesse tempo, o alcance horizontal é
+$x = v_0\,t = 10 \times 0{,}50 = 5{,}0\ \mathrm{m}$.
+
+::: {#exm-satelite}
+Uma estação espacial orbita a Terra num círculo a $v = 7{,}7\ \mathrm{km/s}$, com
+aceleração centrípeta igual a $g \approx 9{,}0\ \mathrm{m/s^2}$ nessa altitude.
+Estime o raio da órbita.
+:::
+
+**Solução.** De @eq-centripeta, $R = v^2/a_c$. Com $v = 7{,}7\times10^{3}\ \mathrm{m/s}$:
+$$R = \frac{(7{,}7\times10^{3})^2}{9{,}0} \approx \frac{5{,}9\times10^{7}}{9{,}0} \approx 6{,}6\times10^{6}\ \mathrm{m},$$
+coerente com uma órbita baixa, pouco acima do raio terrestre.
+
+## Exercícios
+
+::: {#exr-alcance-angulo}
+Um projétil é lançado a $20\ \mathrm{m/s}$ formando $30^\circ$ com a horizontal.
+Calcule seu alcance. ($g = 10\ \mathrm{m/s^2}$.)
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$R = v_0^2\,\mathrm{sen}(2\theta)/g = (20)^2\,\mathrm{sen}(60^\circ)/10 = 40 \times 0{,}866 \approx 35\ \mathrm{m}$.
+:::
+
+::: {#exr-mesma-altura}
+Mostre que, sobre solo plano, lançamentos a $\theta$ e a $90^\circ-\theta$ têm o
+mesmo alcance.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O alcance depende de $\mathrm{sen}(2\theta)$. Para $90^\circ-\theta$,
+$\mathrm{sen}(2(90^\circ-\theta)) = \mathrm{sen}(180^\circ - 2\theta) = \mathrm{sen}(2\theta)$.
+Os alcances coincidem.
+:::
+
+::: {#exr-roda}
+Um ponto na borda de uma roda de raio $0{,}30\ \mathrm{m}$ gira a
+$2{,}0\ \mathrm{rev/s}$. Calcule sua rapidez e a aceleração centrípeta.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\omega = 2\pi\times2{,}0 = 4\pi\ \mathrm{rad/s} \approx 12{,}6\ \mathrm{rad/s}$.
+Rapidez $v = \omega R = 12{,}6\times0{,}30 \approx 3{,}8\ \mathrm{m/s}$.
+Aceleração $a_c = \omega^2 R = (12{,}6)^2\times0{,}30 \approx 47\ \mathrm{m/s^2}$.
+:::

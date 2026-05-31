@@ -31,6 +31,7 @@ book:
     - part: "Volume II — Mecânica Clássica I"
       chapters:
         - volumes/v2-mecanica1/01-cinematica-1d.qmd
+        - volumes/v2-mecanica1/02-cinematica-vetorial.qmd
         - volumes/v2-mecanica1/06-conservacao-energia.qmd
   appendices:
     - constantes.qmd

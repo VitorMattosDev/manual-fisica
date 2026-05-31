@@ -64,6 +64,7 @@ book:
     - part: "Volume VI — Termodinâmica e Física Estatística"
       chapters:
         - volumes/v6-termodinamica/01-temperatura-dilatacao.qmd
+        - volumes/v6-termodinamica/02-calor-primeira-lei.qmd
   appendices:
     - constantes.qmd
 

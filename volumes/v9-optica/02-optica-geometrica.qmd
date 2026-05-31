@@ -1,0 +1,124 @@
+---
+title: "Reflexão e Refração"
+---
+
+## Motivação
+
+Por que vemos nossa imagem num espelho? Por que um lápis dentro d'água parece
+quebrado? Por que o fundo de uma piscina parece mais raso do que é? Tudo isso são
+manifestações de duas leis simples que governam o que a luz faz ao encontrar uma
+superfície: a **reflexão** (volta) e a **refração** (atravessa, mudando de
+direção). Este capítulo estabelece essas leis — a base da óptica geométrica e de
+todos os instrumentos ópticos do próximo capítulo.
+
+## A lei da reflexão
+
+::: {.callout-important}
+## Lei da reflexão
+Quando a luz reflete numa superfície, o **ângulo de reflexão** iguala o **ângulo de
+incidência**, ambos medidos em relação à normal:
+$$\theta_r = \theta_i.$$ {#eq-reflexao}
+O raio incidente, o refletido e a normal estão no mesmo plano.
+:::
+
+Superfícies polidas produzem reflexão **especular** (raios paralelos continuam
+paralelos — formam imagem); superfícies rugosas, reflexão **difusa** (raios
+espalhados — é por isso que vemos objetos foscos de qualquer ângulo).
+
+## A lei da refração (Snell)
+
+Ao passar de um meio para outro, a luz muda de velocidade e, em geral, de direção.
+
+::: {.callout-important}
+## Lei de Snell
+Na refração entre meios de índices $n_1$ e $n_2$,
+$$n_1\,\mathrm{sen}\,\theta_1 = n_2\,\mathrm{sen}\,\theta_2.$$ {#eq-snell}
+Ao entrar num meio **mais** refringente ($n_2>n_1$), o raio se aproxima da normal;
+ao entrar num **menos** refringente, afasta-se.
+:::
+
+::: {.proof}
+## Snell a partir do princípio de Fermat
+A luz vai de um ponto no meio 1 a outro no meio 2 pelo caminho de **tempo mínimo**.
+Como a velocidade é $v_i = c/n_i$ em cada meio, minimizar o tempo total em relação
+ao ponto de cruzamento da interface leva (por cálculo) exatamente à condição
+$n_1\,\mathrm{sen}\,\theta_1 = n_2\,\mathrm{sen}\,\theta_2$. A lei de Snell é o
+princípio de Fermat em ação. $\qquad\blacksquare$
+:::
+
+## Reflexão interna total
+
+Quando a luz vai de um meio mais refringente para um menos ($n_1>n_2$), o raio
+refratado afasta-se da normal. A partir de um certo ângulo, ele não consegue mais
+sair — toda a luz reflete.
+
+::: {.callout-important}
+## Ângulo crítico e reflexão interna total
+A reflexão interna total ocorre para ângulos de incidência maiores que o **ângulo
+crítico** $\theta_c$, dado por (fazendo $\theta_2 = 90^\circ$ na lei de Snell):
+$$\mathrm{sen}\,\theta_c = \frac{n_2}{n_1} \quad (n_1 > n_2).$$ {#eq-angulo-critico-optico}
+:::
+
+::: {.callout-note}
+## As fibras ópticas
+A reflexão interna total é o que torna possível a **fibra óptica**: a luz, lançada
+num ângulo maior que $\theta_c$, reflete-se indefinidamente nas paredes internas da
+fibra sem escapar, viajando quilômetros com perda mínima. É a espinha dorsal da
+internet. É também por que o diamante "brilha": seu altíssimo $n$ dá um $\theta_c$
+pequeno, aprisionando e reemitindo a luz em muitas reflexões internas.
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-refracao-agua}
+Luz incide do ar ($n_1=1{,}0$) na água ($n_2=1{,}33$) a $30^\circ$ da normal. Qual
+o ângulo de refração?
+:::
+
+**Solução.** Por @eq-snell:
+$$\mathrm{sen}\,\theta_2 = \frac{n_1\,\mathrm{sen}\,\theta_1}{n_2} = \frac{1{,}0\times\mathrm{sen}\,30^\circ}{1{,}33} = \frac{0{,}50}{1{,}33} \approx 0{,}376,$$
+logo $\theta_2 = \arcsin(0{,}376) \approx 22^\circ$. O raio se aproxima da normal, como
+esperado ao entrar num meio mais refringente.
+
+::: {#exm-angulo-critico}
+Qual o ângulo crítico para a luz que vai do vidro ($n_1=1{,}5$) para o ar
+($n_2=1{,}0$)?
+:::
+
+**Solução.** Por @eq-angulo-critico-optico:
+$$\mathrm{sen}\,\theta_c = \frac{n_2}{n_1} = \frac{1{,}0}{1{,}5} = 0{,}667 \;\Longrightarrow\; \theta_c \approx 42^\circ.$$
+Acima de $42^\circ$, a luz não sai do vidro.
+
+## Exercícios
+
+::: {#exr-snell}
+Luz passa do ar para o diamante ($n=2{,}4$) com incidência de $40^\circ$. Qual o
+ângulo de refração?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mathrm{sen}\,\theta_2 = \mathrm{sen}\,40^\circ/2{,}4 = 0{,}643/2{,}4 \approx 0{,}268$,
+logo $\theta_2 \approx 16^\circ$.
+:::
+
+::: {#exr-critico-agua}
+Qual o ângulo crítico na interface água ($n=1{,}33$)–ar?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$\mathrm{sen}\,\theta_c = 1{,}0/1{,}33 = 0{,}752 \Rightarrow \theta_c \approx 49^\circ$
+(@eq-angulo-critico-optico).
+:::
+
+::: {#exr-espelho}
+Um raio incide num espelho plano a $25^\circ$ da superfície. Qual o ângulo de
+reflexão (medido da normal)?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+O ângulo com a normal é $90^\circ - 25^\circ = 65^\circ$. Pela lei da reflexão
+(@eq-reflexao), o ângulo de reflexão também é $65^\circ$.
+:::

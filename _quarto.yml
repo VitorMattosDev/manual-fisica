@@ -91,6 +91,7 @@ book:
     - part: "Volume IX — Óptica"
       chapters:
         - volumes/v9-optica/01-natureza-luz.qmd
+        - volumes/v9-optica/02-optica-geometrica.qmd
   appendices:
     - constantes.qmd
 

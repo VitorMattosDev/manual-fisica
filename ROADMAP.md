@@ -158,7 +158,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 
 - [x] `volumes/v12-quantica/01-origens-quantica.qmd` — Origens (corpo negro, fotoelétrico, Bohr)
 - [x] `volumes/v12-quantica/02-dualidade.qmd` — Dualidade onda-partícula (de Broglie)
-- [ ] `volumes/v12-quantica/03-equacao-schrodinger.qmd` — Equação de Schrödinger
+- [x] `volumes/v12-quantica/03-equacao-schrodinger.qmd` — Equação de Schrödinger
 - [ ] `volumes/v12-quantica/04-pocos-barreiras.qmd` — Poços, barreiras, tunelamento
 - [ ] `volumes/v12-quantica/05-formalismo.qmd` — Formalismo (Hilbert, operadores)
 - [ ] `volumes/v12-quantica/06-oscilador-harmonico.qmd` — Oscilador harmônico quântico

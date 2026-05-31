@@ -1,0 +1,125 @@
+---
+title: "A Equação de Schrödinger"
+---
+
+## Motivação
+
+De Broglie disse que a matéria é onda; Born, que a onda é de probabilidade. Faltava
+a lei que diz **como essa onda evolui** — o equivalente quântico da segunda lei de
+Newton. Erwin Schrödinger forneceu-a em 1926, e ela é a equação central de toda a
+mecânica quântica não relativística: dela saem os átomos, as moléculas, os sólidos,
+a química inteira. Este capítulo apresenta a equação de Schrödinger, seu significado
+e a estrutura dos estados estacionários.
+
+## A equação de Schrödinger
+
+::: {.callout-important}
+## Equação de Schrödinger dependente do tempo
+A função de onda $\psi(x,t)$ de uma partícula de massa $m$ num potencial $V(x)$
+evolui segundo
+$$i\hbar\,\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \psi}{\partial x^2} + V(x)\,\psi,$$ {#eq-schrodinger}
+onde $\hbar = h/2\pi$. O lado direito é a hamiltoniana (Volume XI) atuando sobre
+$\psi$: energia cinética (a derivada segunda) mais potencial.
+:::
+
+A presença da unidade imaginária $i$ é essencial — a função de onda é
+**complexa**, e é o que permite a interferência e a fase quântica. A equação é
+**linear**: combinações de soluções são soluções (princípio da superposição,
+agora fundamental).
+
+## Estados estacionários
+
+Quando o potencial não depende do tempo, busca-se soluções de energia definida, em
+que a dependência temporal se separa.
+
+::: {.callout-important}
+## Equação de Schrödinger independente do tempo
+Para estados de energia $E$ bem definida, $\psi(x,t) = \phi(x)\,e^{-iEt/\hbar}$, e a
+parte espacial satisfaz
+$$-\frac{\hbar^2}{2m}\frac{\mathrm{d}^2\phi}{\mathrm{d}x^2} + V(x)\,\phi = E\,\phi.$$ {#eq-schrodinger-estacionaria}
+É uma equação de **autovalores**: só certos valores de $E$ admitem solução
+fisicamente aceitável — a origem da **quantização** dos níveis de energia.
+:::
+
+::: {.callout-note}
+## Por que a energia é quantizada
+A quantização não é imposta (como no modelo de Bohr): ela **emerge**. Exigir que
+$\phi$ seja finita, contínua e normalizável só é possível para valores discretos de
+$E$ — exatamente como uma corda presa nas pontas só vibra em frequências discretas
+(Volume V). Os níveis de energia atômicos são os "harmônicos" da onda de matéria
+confinada.
+:::
+
+## Condições sobre a função de onda
+
+::: {.callout-important}
+## Requisitos físicos de $\psi$
+Para ter sentido probabilístico, a função de onda deve ser:
+
+- **normalizável:** $\displaystyle\int_{-\infty}^{\infty} |\psi|^2\,\mathrm{d}x = 1$
+  (a partícula está em algum lugar);
+- **contínua** e com derivada contínua (onde $V$ é finito);
+- **finita** em todo o espaço.
+:::
+
+Essas condições, aplicadas à @eq-schrodinger-estacionaria, são o que selecciona os
+níveis de energia permitidos em cada problema — como veremos nos poços e no oscilador.
+
+## Exemplos resolvidos
+
+::: {#exm-onda-plana}
+Mostre que $\psi = A\,e^{i(kx - \omega t)}$ representa uma partícula livre
+($V=0$) e relacione $E$ a $k$.
+:::
+
+**Solução.** Substitua na @eq-schrodinger com $V=0$. As derivadas dão
+$i\hbar(-i\omega)\psi = -\frac{\hbar^2}{2m}(-k^2)\psi$, isto é
+$\hbar\omega = \frac{\hbar^2 k^2}{2m}$. Com $E = \hbar\omega$ e $p = \hbar k$
+(de Broglie), isso é $E = p^2/2m$ — a energia cinética clássica. A onda plana é o
+estado de momento definido da partícula livre.
+
+::: {#exm-normalizacao}
+Uma função de onda vale $\psi = C$ (constante) em $0 \le x \le L$ e zero fora.
+Determine $C$ pela normalização.
+:::
+
+**Solução.** A normalização exige $\int_0^L |C|^2\,\mathrm{d}x = 1$, ou seja
+$|C|^2 L = 1$, donde $C = 1/\sqrt{L}$. A densidade de probabilidade
+$|\psi|^2 = 1/L$ é uniforme na caixa.
+
+## Exercícios
+
+::: {#exr-significado-psi2}
+Qual o significado físico de $\int_a^b |\psi|^2\,\mathrm{d}x$?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+É a **probabilidade** de encontrar a partícula entre $a$ e $b$ ao medir sua posição
+(@eq-born). A integral sobre todo o espaço vale 1 (normalização).
+:::
+
+::: {#exr-linearidade}
+Se $\psi_1$ e $\psi_2$ são soluções da equação de Schrödinger, $\psi_1 + \psi_2$
+também é? Por quê?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Sim. A equação de Schrödinger (@eq-schrodinger) é **linear**, então qualquer
+combinação linear de soluções é solução — é o princípio da superposição quântico,
+base da interferência.
+:::
+
+::: {#exr-energia-autovalor}
+Por que apenas certos valores de energia são permitidos para uma partícula
+confinada?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Porque a @eq-schrodinger-estacionaria é uma equação de **autovalores**: só valores
+discretos de $E$ admitem soluções $\phi$ que satisfaçam as condições físicas
+(normalizável, contínua, finita). A quantização emerge dessas condições de
+contorno.
+:::

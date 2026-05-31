@@ -1,0 +1,126 @@
+---
+title: "As Equações de Maxwell"
+---
+
+## Motivação
+
+Ao longo deste volume e do anterior, encontramos quatro leis fundamentais —
+Gauss elétrica, Gauss magnética, Faraday e Ampère. Em 1865, James Clerk Maxwell
+percebeu que, juntas (com uma correção crucial sua), elas formavam uma teoria
+completa e autoconsistente do eletromagnetismo. Mais: ele descobriu que essas
+equações *previam* a existência de **ondas eletromagnéticas** viajando à velocidade
+da luz — e concluiu que a luz **é** uma onda eletromagnética. Foi a segunda grande
+unificação da física, depois da gravitação. Este capítulo reúne as quatro equações
+e mostra como delas brota a luz.
+
+## As quatro equações
+
+::: {.callout-important}
+## As equações de Maxwell (no vácuo)
+$$\oint \vec{E}\cdot\mathrm{d}\vec{A} = \frac{Q_\text{int}}{\varepsilon_0} \qquad\text{(Gauss elétrica)}$$ {#eq-maxwell-gauss-e}
+$$\oint \vec{B}\cdot\mathrm{d}\vec{A} = 0 \qquad\text{(Gauss magnética)}$$ {#eq-maxwell-gauss-b}
+$$\oint \vec{E}\cdot\mathrm{d}\vec{l} = -\frac{\mathrm{d}\Phi_B}{\mathrm{d}t} \qquad\text{(Faraday)}$$ {#eq-maxwell-faraday}
+$$\oint \vec{B}\cdot\mathrm{d}\vec{l} = \mu_0 I_\text{enc} + \mu_0\varepsilon_0\frac{\mathrm{d}\Phi_E}{\mathrm{d}t} \qquad\text{(Ampère-Maxwell)}$$ {#eq-maxwell-ampere}
+:::
+
+Em palavras, cada uma diz: **(1)** cargas criam campo elétrico (linhas que começam
+e terminam em cargas); **(2)** não há cargas magnéticas (linhas de $\vec{B}$ são
+fechadas); **(3)** campo magnético variável cria campo elétrico; **(4)** correntes
+*e campos elétricos variáveis* criam campo magnético.
+
+## A corrente de deslocamento
+
+O acréscimo de Maxwell à lei de Ampère — o termo $\mu_0\varepsilon_0\,\mathrm{d}\Phi_E/\mathrm{d}t$
+— é o coração da teoria.
+
+::: {.callout-note}
+## A simetria que faltava
+A lei de Faraday dizia que $\vec{B}$ variável gera $\vec{E}$. Maxwell, por simetria
+e consistência, postulou o inverso: $\vec{E}$ variável gera $\vec{B}$ (a **corrente
+de deslocamento**). Sem esse termo, as equações seriam inconsistentes para
+correntes não estacionárias. Com ele, campos elétrico e magnético variáveis podem
+se **sustentar mutuamente** — e foi assim que surgiu a previsão das ondas.
+:::
+
+## A luz como onda eletromagnética
+
+Combinando Faraday e Ampère-Maxwell no vácuo (sem cargas nem correntes), os campos
+satisfazem a equação de onda (@eq-equacao-onda) — e a velocidade de propagação sai
+das constantes eletromagnéticas.
+
+::: {.callout-important}
+## A velocidade da luz a partir do eletromagnetismo
+As ondas eletromagnéticas propagam-se no vácuo com velocidade
+$$c = \frac{1}{\sqrt{\mu_0\varepsilon_0}} \approx 3{,}00\times10^{8}\ \mathrm{m/s},$$ {#eq-velocidade-luz}
+que coincide com a velocidade medida da luz. Logo, **a luz é uma onda
+eletromagnética**.
+:::
+
+::: {.proof}
+## A velocidade vem das constantes
+Substituindo os valores $\mu_0 = 4\pi\times10^{-7}\ \mathrm{T\,m/A}$ e
+$\varepsilon_0 = 8{,}85\times10^{-12}\ \mathrm{F/m}$:
+$$c = \frac{1}{\sqrt{(4\pi\times10^{-7})(8{,}85\times10^{-12})}} = \frac{1}{\sqrt{1{,}11\times10^{-17}}} \approx 3{,}0\times10^{8}\ \mathrm{m/s}.$$
+Que duas constantes medidas em laboratório com ímãs e capacitores entreguem a
+velocidade da luz foi um dos momentos mais espantosos da física. $\qquad\blacksquare$
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-verificar-c}
+Mostre, por análise dimensional, que $1/\sqrt{\mu_0\varepsilon_0}$ tem dimensão de
+velocidade. ($[\mu_0]=\mathrm{T\,m/A}$, $[\varepsilon_0]=\mathrm{F/m}$.)
+:::
+
+**Solução.** É mais direto usar a coincidência numérica: já verificamos na
+@eq-velocidade-luz que o valor é $3{,}0\times10^{8}\ \mathrm{m/s}$, que é uma
+velocidade. Dimensionalmente, $\mu_0\varepsilon_0$ tem unidades de
+$\mathrm{s^2/m^2}$ (pode-se checar de $c^2 = 1/\mu_0\varepsilon_0$), logo sua raiz
+inversa é $\mathrm{m/s}$ — uma velocidade, consistente com @eq-velocidade-luz.
+
+::: {#exm-significado}
+Qual das equações de Maxwell expressa a inexistência de monopolos magnéticos, e o
+que ela afirma geometricamente?
+:::
+
+**Solução.** É a lei de Gauss magnética (@eq-maxwell-gauss-b),
+$\oint\vec{B}\cdot\mathrm{d}\vec{A}=0$. Geometricamente, afirma que o fluxo
+magnético através de qualquer superfície fechada é nulo: as linhas de $\vec{B}$ não
+têm começo nem fim (são fechadas), pois não há cargas magnéticas de onde sair ou
+para onde entrar.
+
+## Exercícios
+
+::: {#exr-qual-equacao}
+Qual equação de Maxwell descreve o funcionamento de um gerador elétrico?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A lei de **Faraday** (@eq-maxwell-faraday): a variação do fluxo magnético induz um
+campo elétrico (fem), que é o princípio do gerador.
+:::
+
+::: {#exr-termo-maxwell}
+Qual contribuição de Maxwell tornou possível a previsão das ondas
+eletromagnéticas?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+A **corrente de deslocamento** $\mu_0\varepsilon_0\,\mathrm{d}\Phi_E/\mathrm{d}t$ na
+lei de Ampère-Maxwell (@eq-maxwell-ampere). Ela permite que um campo elétrico
+variável gere campo magnético, fechando o ciclo de autossustentação das ondas.
+:::
+
+::: {#exr-c-mudaria}
+Se a permissividade $\varepsilon_0$ do vácuo fosse maior, a velocidade da luz seria
+maior ou menor?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Por $c = 1/\sqrt{\mu_0\varepsilon_0}$ (@eq-velocidade-luz), $c$ é inversamente
+proporcional a $\sqrt{\varepsilon_0}$. Maior $\varepsilon_0$ implicaria **menor**
+velocidade da luz.
+:::

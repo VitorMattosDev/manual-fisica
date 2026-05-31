@@ -115,7 +115,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v8-eletromagnetismo2/03-inducao-eletromagnetica.qmd` — Faraday e Lenz
 - [x] `volumes/v8-eletromagnetismo2/04-indutancia.qmd` — Indutância
 - [x] `volumes/v8-eletromagnetismo2/05-circuitos-ac.qmd` — Circuitos AC e RLC
-- [ ] `volumes/v8-eletromagnetismo2/06-equacoes-maxwell.qmd` — Equações de Maxwell
+- [x] `volumes/v8-eletromagnetismo2/06-equacoes-maxwell.qmd` — Equações de Maxwell
 - [ ] `volumes/v8-eletromagnetismo2/07-ondas-eletromagneticas.qmd` — Ondas eletromagnéticas
 
 ## Volume IX — Óptica

@@ -1,0 +1,120 @@
+---
+title: "Ondas Eletromagnéticas"
+---
+
+## Motivação
+
+A luz que você vê, o calor do Sol, o sinal do Wi-Fi, o raio X de uma radiografia, as
+micro-ondas que aquecem o jantar: todos são a **mesma** coisa — ondas
+eletromagnéticas, diferindo apenas na frequência. Foi a maior revelação das
+equações de Maxwell. Este capítulo, que fecha o eletromagnetismo, descreve a
+estrutura dessas ondas, a energia que transportam e o **espectro eletromagnético**
+que as unifica, preparando o terreno para a óptica (Volume IX) e a física quântica.
+
+## Estrutura de uma onda eletromagnética
+
+::: {#def-onda-em}
+Uma **onda eletromagnética** consiste em campos elétrico e magnético oscilantes,
+**perpendiculares entre si** e **perpendiculares à direção de propagação** (onda
+transversal). No vácuo, propaga-se com velocidade $c$, e os módulos dos campos
+relacionam-se por
+$$E = c\,B.$$ {#eq-E-cB}
+:::
+
+Os campos oscilam em fase, sustentando-se mutuamente conforme as equações de
+Maxwell: o $\vec{E}$ variável gera $\vec{B}$, que ao variar regenera $\vec{E}$, e
+assim a onda se propaga indefinidamente no vácuo, **sem precisar de meio**. Foi essa
+dispensa do meio que abriu caminho para a relatividade (Volume X).
+
+## Energia e intensidade
+
+As ondas EM carregam energia — é como o Sol nos aquece a $150$ milhões de
+quilômetros de distância.
+
+::: {.callout-important}
+## Intensidade de uma onda eletromagnética
+A intensidade média (potência por área) de uma onda EM é
+$$I = \frac{1}{2}\,c\,\varepsilon_0\,E_0^2,$$ {#eq-intensidade-em}
+onde $E_0$ é a amplitude do campo elétrico. Como toda onda, a intensidade cresce
+com o **quadrado da amplitude** (compare com a @eq-potencia-onda).
+:::
+
+::: {.callout-note}
+## Pressão de radiação
+A luz também transporta **momento**, então exerce **pressão** ao incidir numa
+superfície. É minúscula no cotidiano, mas real: empurra as caudas dos cometas (que
+apontam sempre para longe do Sol) e pode impulsionar **velas solares** — naves que
+"velejam" na luz estelar.
+:::
+
+## O espectro eletromagnético
+
+Todas as ondas EM têm a mesma natureza e velocidade $c$; diferem apenas em
+frequência (e, por $c = \lambda f$, em comprimento de onda).
+
+::: {.callout-important}
+## O espectro eletromagnético
+Em ordem crescente de frequência (decrescente de $\lambda$):
+$$\underbrace{\text{rádio}}_{\text{maior }\lambda} \to \text{micro-ondas} \to \text{infravermelho} \to \underbrace{\text{visível}}_{0{,}4\text{–}0{,}7\,\mu\mathrm{m}} \to \text{ultravioleta} \to \text{raios X} \to \underbrace{\text{raios }\gamma}_{\text{menor }\lambda}.$$ {#eq-espectro}
+A luz **visível** é a estreitíssima faixa a que nossos olhos respondem.
+:::
+
+::: {.callout-note}
+## Mesma física, usos distintos
+A frequência determina como a onda interage com a matéria: ondas de rádio atravessam
+paredes (comunicação), o infravermelho faz moléculas vibrarem (calor), o visível
+excita a retina, o ultravioleta e os raios X ionizam (daí seu perigo e seu uso
+médico). Tudo isso é eletromagnetismo — só muda a escala de energia, $E = hf$
+(Volume XII).
+:::
+
+## Exemplos resolvidos
+
+::: {#exm-campo-magnetico-luz}
+Uma onda de luz tem campo elétrico de amplitude $E_0 = 100\ \mathrm{V/m}$. Qual a
+amplitude do campo magnético?
+:::
+
+**Solução.** Por @eq-E-cB:
+$$B_0 = \frac{E_0}{c} = \frac{100}{3{,}0\times10^{8}} \approx 3{,}3\times10^{-7}\ \mathrm{T}.$$
+O campo magnético da luz é numericamente minúsculo — daí a interação da luz com a
+matéria ser dominada pelo campo elétrico.
+
+::: {#exm-comprimento-microondas}
+Um forno de micro-ondas opera a $2{,}45\ \mathrm{GHz}$. Qual o comprimento de onda?
+:::
+
+**Solução.** Por $c = \lambda f$ (@eq-fundamental-ondas, válida também para a luz):
+$$\lambda = \frac{c}{f} = \frac{3{,}0\times10^{8}}{2{,}45\times10^{9}} \approx 0{,}12\ \mathrm{m} = 12\ \mathrm{cm}.$$
+
+## Exercícios
+
+::: {#exr-raio-x}
+Um raio X tem $\lambda = 1{,}0\times10^{-10}\ \mathrm{m}$. Qual sua frequência?
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$f = c/\lambda = 3{,}0\times10^{8}/1{,}0\times10^{-10} = 3{,}0\times10^{18}\ \mathrm{Hz}$.
+:::
+
+::: {#exr-ordem-espectro}
+Ordene por frequência crescente: luz verde, onda de rádio FM, raio gama,
+infravermelho.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+Pela @eq-espectro: rádio FM < infravermelho < luz verde < raio gama.
+:::
+
+::: {#exr-distancia-sol}
+A luz do Sol leva cerca de $500\ \mathrm{s}$ para chegar à Terra. Estime a distância
+Terra-Sol.
+:::
+
+::: {.callout-note collapse="true"}
+## Solução
+$d = c\,t = 3{,}0\times10^{8}\times500 = 1{,}5\times10^{11}\ \mathrm{m}$ — cerca de
+$150$ milhões de km, a unidade astronômica.
+:::

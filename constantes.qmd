@@ -74,6 +74,13 @@ constante ou uma relação fundamental nova num capítulo, registre-a aqui.
 - Corrente: $I = \mathrm{d}Q/\mathrm{d}t$; lei de Ohm $V = RI$
 - Resistividade: $R = \rho L/A$; potência $P = VI = RI^2 = V^2/R$
 - Constante de tempo RC: $\tau = RC$
+- Força de Lorentz: $\vec{F} = q(\vec{E} + \vec{v}\times\vec{B})$
+- Campo de fio: $B = \mu_0 I/(2\pi d)$; solenoide $B = \mu_0 n I$
+- Raio de cíclotron: $R = mv/(qB)$
+- Lei de Faraday: $\varepsilon = -\,\mathrm{d}\Phi_B/\mathrm{d}t$; fem de movimento $\varepsilon = BLv$
+- Indutor: $\varepsilon = -L\,\mathrm{d}I/\mathrm{d}t$; energia $U = \tfrac12 LI^2$
+- Reatâncias: $X_L = \omega L$, $X_C = 1/\omega C$; ressonância $\omega_0 = 1/\sqrt{LC}$
+- Velocidade da luz: $c = 1/\sqrt{\mu_0\varepsilon_0}$; onda EM $E = cB$
 
 *(As demais seções — Óptica, Física Moderna, etc. — são adicionadas à medida que os
 volumes correspondentes são escritos.)*

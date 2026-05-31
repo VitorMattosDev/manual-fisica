@@ -116,7 +116,7 @@ Estado atual: **1** pronto (gabarito), **92** pendentes.
 - [x] `volumes/v8-eletromagnetismo2/04-indutancia.qmd` — Indutância
 - [x] `volumes/v8-eletromagnetismo2/05-circuitos-ac.qmd` — Circuitos AC e RLC
 - [x] `volumes/v8-eletromagnetismo2/06-equacoes-maxwell.qmd` — Equações de Maxwell
-- [ ] `volumes/v8-eletromagnetismo2/07-ondas-eletromagneticas.qmd` — Ondas eletromagnéticas
+- [x] `volumes/v8-eletromagnetismo2/07-ondas-eletromagneticas.qmd` — Ondas eletromagnéticas
 
 ## Volume IX — Óptica
 *Objetivo: comportamento da luz. Pré-requisitos: V (ondas), VIII (ondas EM).*

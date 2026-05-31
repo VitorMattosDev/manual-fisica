@@ -87,6 +87,7 @@ book:
         - volumes/v8-eletromagnetismo2/04-indutancia.qmd
         - volumes/v8-eletromagnetismo2/05-circuitos-ac.qmd
         - volumes/v8-eletromagnetismo2/06-equacoes-maxwell.qmd
+        - volumes/v8-eletromagnetismo2/07-ondas-eletromagneticas.qmd
   appendices:
     - constantes.qmd
 

@@ -3,6 +3,8 @@
 Livro aberto em [Quarto](https://quarto.org), segundo título da série *Manuais de
 Ciências*. Cobre a física do básico ao avançado, em 15 volumes.
 
+**📖 Leia online:** https://vitormattosdev.github.io/manual-fisica/
+
 ## Setup em uma máquina nova
 
 Duas ferramentas precisam estar instaladas **localmente** (o conteúdo vem do Git,

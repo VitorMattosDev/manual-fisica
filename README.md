@@ -53,7 +53,7 @@ Configuração de primeira vez:
 
 ## Estrutura
 
-Veja `CLAUDE.md` (como o projeto funciona), `PLANO.md` (guia de estilo) e
+Veja `PLANO.md` (guia de estilo) e
 `ROADMAP.md` (o plano completo, capítulo a capítulo).
 
 ## (Opcional) Diagramas TikZ no HTML
